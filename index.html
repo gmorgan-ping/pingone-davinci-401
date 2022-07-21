@@ -2,6 +2,67 @@
   <head>
     <title>Beginner's Luck Online Gaming &amp; Casino</title>
     <link rel="stylesheet" href="style.css" />
+    <script>
+      
+    function loadwidget() {    
+      const skApiBaseUrl = "https://api.singularkey.com/v1";
+      const companyId = "20814b75-1dd6-4c91-8962-445cf5ec7fa0";
+      const skApiKey =
+        "764d5efa2538f79040363933311ef38c1797fead7f3266ad0f82a167e198b058010a203cf695d8694ff51b924e56ca9a162c4d86ce9989d2f947e84144f5f92a4106e882bd0a2101ba530313cf2b9e95702bb19b15988b18abd24daa795b9ea1230a3c400b9f2377cf2aa0e00321f244e7882abf141539faa8ade45ac03870de";
+      const skPolicyId = "93c777f6702961fa3b7e77b329e9cac9";
+
+      const skGetTokenUrl =
+        skApiBaseUrl + "/company/" + companyId + "/sdkToken";
+
+      //*** Add the API Key from your SK Application. ***/
+      var headers = new Headers();
+      headers.append("X-SK-API-KEY", skApiKey);
+      headers.append("Content-type", "application/json");
+
+      var requestOptions = {
+        method: "GET",
+        headers: headers,
+        redirect: "follow",
+      };
+
+      //*** Retrieve SK Token ***/
+      fetch(skGetTokenUrl, requestOptions)
+        .then((response) => response.json())
+        .then((responseData) => {
+          var props = {
+            config: {
+              method: "runFlow",
+              apiRoot: skApiBaseUrl,
+              accessToken: responseData.access_token,
+              companyId: companyId,
+              policyId: skPolicyId,
+            },
+            useModal: false,
+            successCallback,
+            errorCallback,
+            onCloseModal,
+          };
+          /*** Invoke Singular Key Widget ****/
+          console.log(props);
+          singularkey.skRenderScreen(document.getElementById("modal-content"), props);
+        })
+        .catch((error) => console.log("error", error));
+    }
+
+    function successCallback(response) {
+      console.log(response);
+    }
+
+    function errorCallback(error) {
+      console.log(error);
+    }
+
+    function onCloseModal() {
+      console.log("onCloseModal");
+    }
+  </script>
+    
+    
   </head>
   <body>
     <div class="top-bar">
@@ -42,10 +103,41 @@
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close">&times;</span>
-    <p>Some text in the Modal..</p>
+    <div id="register-widget"></div>                            
   </div>
 
 </div>
+    <script>
+    // Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  loadwidget()
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+    
+  }
+}
+    
+    
+    </script>
     
     
   </body>
