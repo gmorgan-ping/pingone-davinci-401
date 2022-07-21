@@ -1,0 +1,49 @@
+/* Google Font Titillium */
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;400;700&display=swap");
+/* Awesome Icons */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+:root {
+  --theme-font-color: #303030;
+  --theme-primary-color: #20AACA;
+  --theme-secondary-color: #6CB352;
+  --theme-highlight-color: #3FB9D9;
+  --theme-secondary-highlight-color: #73BF5C;
+  --theme-error-message-color: #ed4337;
+  --theme-content-border-color: #CECECE;
+  --theme-readonly-input:#f2f3f5;
+  --theme-logo: url("https://cdn.glitch.global/f9c4e592-c539-40d1-9db1-bae3029913cb/playcards-logo.png?v=1657546882083");
+}
+
+/***************************************
+* HTML Clear default padding/margin
+***************************************/
+html {
+  margin: 0;
+  padding: 0;
+}
+
+/***************************************
+* Set page font. 
+*      See https://fonts.google.com/
+***************************************/
+body {
+  font-family: "Titillium Web", sans-serif;
+  font-size: 12pt;
+  color: var(--theme-font-color);
+}
+
+/***************************************
+* Page panel 
+***************************************/
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.topbar{
+  background-color: #EFEFEF;
+  height: 70px;
+    
+}
