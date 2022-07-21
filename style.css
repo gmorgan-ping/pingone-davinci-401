@@ -60,6 +60,7 @@ body {
   height: 70px;
  
   margin: 0 auto;
+  margin-bottom: 55px;
   
 }
 
@@ -78,6 +79,10 @@ body {
 
 .centered {
   text-align: center;
+}
+
+.margin-top {
+  margin-top: 30px;
 }
 
 /***************************************
@@ -126,8 +131,15 @@ button {
 .glitch {
   width: 100%;
   text-align: center;
-  margin-top: 100px;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 img.glitch-logo {
   content: url("https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2FLogo_Color.svg?v=1618199565140")
+}
+hr {
+  border-top: 1px solid #EFEFEF;
+}
+.pingenablement {
+  text-align:center; font-size: smaller
 }
