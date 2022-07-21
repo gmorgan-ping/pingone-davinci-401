@@ -40,10 +40,22 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+  border: solid 1px black;
+  width: 1000px;
 }
 
 .topbar{
   background-color: #EFEFEF;
   height: 70px;
-    
+  align-items: center;
+  justify-content: center;
+}
+
+/***************************************
+* Company Logo
+***************************************/
+.logo {
+  content: var(--theme-logo);
+  height: 80px;
+ 
 }
