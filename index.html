@@ -46,7 +46,7 @@
             onCloseModal,
           };
           /*** Invoke DaVinci Widget ****/
-          singularkey.skRenderScreen(document.getElementById("register-widget"), props);
+          singularkey.skRenderScreen(document.getElementById("flow-widget"), props);
         })
         .catch((error) => console.log("error", error));
     }
@@ -63,41 +63,31 @@
     }
       
     function initializeHandlers() {
-      // Get the modal
-      var modal = document.getElementById("myModal");
+      // Get modal div
+      var modalPopup = document.getElementById("modalPopup");
 
-      // Get the button that opens the modal
-      var btn = document.getElementById("btn-register");
-
-      // Get the <span> element that closes the modal
-      var span = document.getElementsByClassName("close")[0];
-
-      // When the user clicks on the button, open the modal
-      btn.onclick = function() {
+      // Register button click handler
+      var registerBtn = document.getElementById("btn-register");
+      registerBtn.onclick = function() {
         loadwidget()
-        modal.style.display = "block";
+        modalPopup.style.display = "block";
       }
 
-      // When the user clicks on <span> (x), close the modal
-      span.onclick = function() {
-        modal.style.display = "none";
-        //Remove the existing widget
-              singularkey.cleanup(document.getElementById("register-widget"));
+      // Close button click handler
+      var closeBtn = document.getElementById("closeBtn");
+      // When the user clicks on close button, close the modal
+      closeBtn.onclick = function() {
+        modalPopup.style.display = "none";
+        singularkey.cleanup(document.getElementById("flow-widget"));
       }
 
-      // When the user clicks anywhere outside of the modal, close it
+      // When the user clicks anywhere outside of the modal popup, close it
       window.onclick = function(event) {
-        if (event.target == modal) {
-          modal.style.display = "none";
-          
+        if (event.target === modalPopup) {
+          modalPopup.style.display = "none";
+          singularkey.cleanup(document.getElementById("flow-widget"));
 
         }
-      }
-      
-      function hideRegistration() {
-        var registerDialog = document.getElementById("myModal");
-        singularkey.cleanup(document.getElementById("register-widget"));
-        registerDialog.style.display = "none";
       }
     }
   </script>
@@ -132,26 +122,15 @@
       </a>    
     </div>
     <hr/>
-    
-    <!-- Trigger/Open The Modal -->
+      
+    <!-- PopUp Modal Dialog where the DaVinci Flow will be placed -->
+    <div id="modalPopup" class="modal">
+      <div class="modal-content">
+        <div id="closeBtn" class="close">&times;</div>
+        <div id="flow-widget" class="flow-widget"></div>                            
+      </div>
 
-
-<!-- The Modal -->
-<div id="myModal" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content">
-    <div class="close">&times;</div>
-    <div id="register-widget" class="flow-widget"></div>                            
-  </div>
-
-</div>
-    <script>
-
-    
-    
-    </script>
-    
+    </div>
     
   </body>
 </html>
