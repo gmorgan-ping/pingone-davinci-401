@@ -176,7 +176,7 @@ section label {
 * First section on page
 ***************************************/
 section:first-of-type {
-  margin-top: 100px;
+  margin-top: 20px;
 }
 
 /***************************************

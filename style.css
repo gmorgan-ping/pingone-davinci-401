@@ -67,7 +67,7 @@ body {
 /***************************************
 * Company Logo
 ***************************************/
-.logo {
+.main-site-logo {
   content: var(--theme-logo);
   height: 70px;
   display: block;
