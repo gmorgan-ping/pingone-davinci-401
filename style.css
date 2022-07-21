@@ -47,8 +47,16 @@ body {
 .topbar{
   background-color: #EFEFEF;
   height: 70px;
-  align-items: center;
-  justify-content: center;
+  padding: 10px;
+ 
+  width: 100%;
+}
+.menu-bar {
+  width: 900px;
+  height: 50px;
+  border: solid 1px black;
+  margin: 0 auto;
+  
 }
 
 /***************************************
