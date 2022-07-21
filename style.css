@@ -36,14 +36,14 @@ body {
 /***************************************
 * Page panel 
 ***************************************/
-section {
+/* section {
   display: flex;
   align-items: center;
   justify-content: center;
   border: solid 1px black;
   width: 1000px;
 }
-
+ */
 .topbar{
   background-color: #EFEFEF;
   height: 70px;
