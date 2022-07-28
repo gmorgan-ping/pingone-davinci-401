@@ -1,12 +1,12 @@
 {
   "jackpots":[
    {
-     "country": "ca",
+     "country": "CA",
      "symbol": "$",
      "amount": 100000
    },
    {
-     "country": "uk",
+     "country": "UK",
      "symbol": "£",
      "amount": 70000
    } 
