@@ -7,16 +7,29 @@
     ></script> -->
     <script src="scripts/jackpot-api.js"></script>
     <script>
-    function loadJackpotData() {
+//     function loadJackpotData() {
       
-      // fetchJackpotData().then((data) => { 
-      //   document.getElementById('success').innerHTML = JSON.stringify(data) 
-      // })
-      element = document.getElementById('success');
-    fetchJackpotData(element)
+//       fetchJackpotData().then((result) => { 
+//         document.getElementById('success').innerHTML = result
       
       
-    }
+      
+//       })
+//       element = document.getElementById('success');
+//     fetchJackpotData(element)
+      
+      
+//     }
+      
+      function loadJackpotData() {
+        //load jackpot data
+        fetchJackpotData(loadJackpotSuccess)
+        
+      }
+      
+      function loadJackpotSuccess(data) {
+         document.getElementById('success').innerHTML = JSON.stringify(data)
+      }
     
     </script>
     
