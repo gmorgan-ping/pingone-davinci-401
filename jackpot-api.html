@@ -1,10 +1,10 @@
 <html>
   <head>
     <title>API Test</title>
-    <script
+<!--     <script
       type="text/javascript"
       src="https://sdk.singularkey.com/latest/singularkey.js"
-    ></script>
+    ></script> -->
     <script src="scripts/jackpot-api-consts.js"></script>
     <script>
     function loadJackpotData() {
@@ -44,9 +44,24 @@
           var requestOptions = {
             method: "POST",
             headers: myHeaders,
-            body: raw,
             redirect: "follow",
-          };  
+          }; 
+        
+          fetch(jackpotFlowURL, requestOptions)
+          .then((response) => response.text())
+          .then((result) => {
+            var jsonData = JSON.parse(result);
+            if(jsonData.additionalProperties.httpStatusCode === 200){
+              let jackpotCountry = jsonData.additionalProperties.jackpot_country_code
+              let jackpotCurrency = jsonData.additionalProperties.jackpot_currency
+              let jackpotAmount = 
+              successDiv.innerHTML +=`<p>Result: ${JSON.stringify(jsonData.additionalProperties)}</p>`;
+            } else {
+              console.log("Error!");
+            }
+            
+          })
+          .catch((error) => console.log("error", error));
         
           })
         .catch((error) => errorDiv.innerHTML +=`<p>error: ${error}</p>`);
