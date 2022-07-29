@@ -15,6 +15,27 @@
      "country": "US",
      "currency_symbol": "$",
      "amount": 80000
-   } 
+   },
+    {
+     "country": "DE",
+     "currency_symbol": "€",
+     "amount": 40000
+   },
+    {
+     "country": "CN",
+     "currency_symbol": "¥",
+     "amount": 500000
+   }, 
+    {
+     "country": "AU",
+     "currency_symbol": "$",
+     "amount": 110000
+   },
+    {
+     "country": "IL",
+     "currency_symbol": "₪",
+     "amount": 240000
+   }
   ]
 }
+
