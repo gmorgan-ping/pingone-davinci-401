@@ -9,6 +9,8 @@
     <script>
     function loadJackpotData() {
       const successDiv = document.getElementById('success');
+      const errorDiv = document.getElementById('error');
+      
       
       var jackpotTokenUrl = jackpotBaseURL + "/company/" + jackpotCompanyId + "/sdkToken";
       var jackpotFlowURL = jackpotBaseURL + "/auth/" + jackpotCompanyId + "/policy/" + jackpotPolicyId + "/start";
@@ -32,41 +34,28 @@
       fetch(jackpotTokenUrl, requestOptions)
         .then((response) => response.json())
         .then((responseData) => {
-          var props = {
-            config: {
-              method: "runFlow",
-              apiRoot: skApiBaseUrl,
-              accessToken: responseData.access_token,
-              companyId: companyId,
-              policyId: skPolicyId,
-            },
-            useModal: false,
-            successCallback,
-            errorCallback,
-            onCloseModal,
-          };
-          /*** Invoke DaVinci Widget ****/
-          console.log(props);
-          singularkey.skRenderScreen(document.getElementById("widget"), props);
-        })
-        .catch((error) => console.log("error", error));
+          const jackpotAccessToken = responseData.access_token
+          successDiv.innerHTML +=`<p>jackpotAccessToken: ${jackpotAccessToken}</p>`;
+        
+          const myHeaders = new Headers();
+          myHeaders.append("Authorization", "Bearer " + jackpotAccessToken);
+          myHeaders.append("Content-Type", "application/json");
+        
+          var requestOptions = {
+            method: "POST",
+            headers: myHeaders,
+            body: raw,
+            redirect: "follow",
+          };  
+        
+          })
+        .catch((error) => errorDiv.innerHTML +=`<p>error: ${error}</p>`);
       }
 
-      function successCallback(response) {
-        console.log(response);
-      }
-
-      function errorCallback(error) {
-        document.getElementById('widget').innerHTML= JSON.stringify(error);
-      }
-
-      function onCloseModal() {
-        console.log("onCloseModal");
-      }  
     
       
       
-    }
+   
     
     </script>
     
