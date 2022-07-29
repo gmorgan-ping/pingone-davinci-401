@@ -9,9 +9,11 @@
     <script>
     function loadJackpotData() {
       
-      fetchJackpotData().then((data) => { })
-      document.getElementById('success').innerHTML = JSON.stringify(jackpotData)
-    
+      // fetchJackpotData().then((data) => { 
+      //   document.getElementById('success').innerHTML = JSON.stringify(data) 
+      // })
+      element = document.getElementById('success');
+    fetchJackpotData(element)
       
       
     }

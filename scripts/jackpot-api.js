@@ -4,7 +4,7 @@ const jackpotPolicyId = "73af114539b732e7a115b2420cda9db5";
 const jackpotAPIKey = "9e77969aafdabf8b5bb02c580ac1238a864a9d1e5d63715328952152d2e3a75dc0f8d5f7de5aeccb805e5421175e43b0b644ceabde63fd92eaa882054508bf147349404ff52224ef14808863dd2078145056e95d1566aa7cb903d532a31792dc9bb105a59d6dbb70cfa8c40c64b0b2e77f0e19403f88e224a08053e579b89598";
 
 
-async function fetchJackpotData() {
+async function fetchJackpotData(element) {
        
     var jackpotTokenUrl = jackpotBaseURL + "/company/" + jackpotCompanyId + "/sdkToken";
     var jackpotFlowURL = jackpotBaseURL + "/auth/" + jackpotCompanyId + "/policy/" + jackpotPolicyId + "/start";
@@ -40,13 +40,14 @@ async function fetchJackpotData() {
           headers: myHeaders,
           redirect: "follow",
         }; 
-
+        //*** Call Jackpot flow to receieve country specific jackpot ***/
         fetch(jackpotFlowURL, requestOptions)
         .then((response) => response.text())
         .then((result) => {
           var jsonData = JSON.parse(result);
           if(jsonData.additionalProperties.httpStatusCode === 200){
-           return (jsonData.additionalProperties)
+           // return (jsonData.additionalProperties)
+            element.innerHTML = JSON.stringify(jsonData.additionalProperties)
           } else {
             console.log("Error!");
           }
