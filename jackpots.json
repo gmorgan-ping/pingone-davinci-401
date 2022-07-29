@@ -2,13 +2,19 @@
   "jackpots":[
    {
      "country": "CA",
-     "symbol": "$",
+     "currency_symbol": "$",
      "amount": 100000
    },
    {
-     "country": "UK",
-     "symbol": "£",
+     "country": "GB",
+     "currency_symbol": "£",
      "amount": 70000
+   }
+    ,
+   {
+     "country": "US",
+     "currency_symbol": "$",
+     "amount": 80000
    } 
   ]
 }
