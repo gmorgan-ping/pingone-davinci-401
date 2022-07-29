@@ -10,9 +10,60 @@
     function loadJackpotData() {
       const successDiv = document.getElementById('success');
       
-      var jackpotURL = jackpotBaseURL + "/auth/" + jackpotCompanyId + "/policy/" + jackpotPolicyId + "/start";
+      var jackpotTokenUrl = jackpotBaseURL + "/company/" + jackpotCompanyId + "/sdkToken";
+      var jackpotFlowURL = jackpotBaseURL + "/auth/" + jackpotCompanyId + "/policy/" + jackpotPolicyId + "/start";
       
-      console.log("Jackpot : " + jackpotURL);
+      successDiv.innerHTML +=`<p>Jackpot Token URL: ${jackpotTokenUrl}</p>`;
+      successDiv.innerHTML +=`<p>Jackpot URL: ${jackpotFlowURL}</p>`;
+      successDiv.innerHTML +=`<p>API Key: ${jackpotAPIKey}</p>`;
+      
+      //*** Add the API Key from your DaVinci Application. ***/
+      var headers = new Headers();
+      headers.append("X-SK-API-KEY", jackpotAPIKey);
+      headers.append("Content-type", "application/json");
+      
+      var requestOptions = {
+        method: "GET",
+        headers: headers,
+        redirect: "follow",
+      };
+
+      //*** Retrieve DaVinci Token ***/
+      fetch(jackpotTokenUrl, requestOptions)
+        .then((response) => response.json())
+        .then((responseData) => {
+          var props = {
+            config: {
+              method: "runFlow",
+              apiRoot: skApiBaseUrl,
+              accessToken: responseData.access_token,
+              companyId: companyId,
+              policyId: skPolicyId,
+            },
+            useModal: false,
+            successCallback,
+            errorCallback,
+            onCloseModal,
+          };
+          /*** Invoke DaVinci Widget ****/
+          console.log(props);
+          singularkey.skRenderScreen(document.getElementById("widget"), props);
+        })
+        .catch((error) => console.log("error", error));
+      }
+
+      function successCallback(response) {
+        console.log(response);
+      }
+
+      function errorCallback(error) {
+        document.getElementById('widget').innerHTML= JSON.stringify(error);
+      }
+
+      function onCloseModal() {
+        console.log("onCloseModal");
+      }  
+    
       
       
     }
@@ -22,10 +73,13 @@
     <style>
       #success,
       #error {
-        width: 400px;
-        height: 300px;
-        border: solid 1px black;
+        width: 800px;
+/*         height: 300px; */
+/*         border: solid 1px black; */
         margin: 20px;
+      }
+      p {
+        margin-bottom: 7px;
       }
     </style>
     
