@@ -5,10 +5,14 @@
       type="text/javascript"
       src="https://sdk.singularkey.com/latest/singularkey.js"
     ></script>
+    <script src="scripts/jackpot-api-consts.js"></script>
     <script>
-    function loadJackPotData() {
+    function loadJackpotData() {
+      const successDiv = document.getElementById('success');
       
+      var jackpotURL = jackpotBaseURL + "/auth/" + jackpotCompanyId + "/policy/" + jackpotPolicyId + "/start";
       
+      console.log("Jackpot : " + jackpotURL);
       
       
     }
@@ -26,7 +30,7 @@
     </style>
     
   </head>
-  <body>
+  <body onload="loadJackpotData()">
     Success
     <div id="success">
     <!-- Success Output Goes Here      -->
