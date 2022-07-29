@@ -35,6 +35,11 @@
      "country": "IL",
      "currency_symbol": "₪",
      "amount": 240000
+   },
+    {
+     "country": "FR",
+     "currency_symbol": "€",
+     "amount": 40000
    }
   ]
 }
