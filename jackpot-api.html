@@ -5,72 +5,16 @@
       type="text/javascript"
       src="https://sdk.singularkey.com/latest/singularkey.js"
     ></script> -->
-    <script src="scripts/jackpot-api-consts.js"></script>
+    <script src="scripts/jackpot-api.js"></script>
     <script>
     function loadJackpotData() {
-      const successDiv = document.getElementById('success');
-      const errorDiv = document.getElementById('error');
       
-      
-      var jackpotTokenUrl = jackpotBaseURL + "/company/" + jackpotCompanyId + "/sdkToken";
-      var jackpotFlowURL = jackpotBaseURL + "/auth/" + jackpotCompanyId + "/policy/" + jackpotPolicyId + "/start";
-      
-      successDiv.innerHTML +=`<p>Jackpot Token URL: ${jackpotTokenUrl}</p>`;
-      successDiv.innerHTML +=`<p>Jackpot URL: ${jackpotFlowURL}</p>`;
-      successDiv.innerHTML +=`<p>API Key: ${jackpotAPIKey}</p>`;
-      
-      //*** Add the API Key from your DaVinci Application. ***/
-      var headers = new Headers();
-      headers.append("X-SK-API-KEY", jackpotAPIKey);
-      headers.append("Content-type", "application/json");
-      
-      var requestOptions = {
-        method: "GET",
-        headers: headers,
-        redirect: "follow",
-      };
-
-      //*** Retrieve DaVinci Token ***/
-      fetch(jackpotTokenUrl, requestOptions)
-        .then((response) => response.json())
-        .then((responseData) => {
-          const jackpotAccessToken = responseData.access_token
-          successDiv.innerHTML +=`<p>jackpotAccessToken: ${jackpotAccessToken}</p>`;
-        
-          const myHeaders = new Headers();
-          myHeaders.append("Authorization", "Bearer " + jackpotAccessToken);
-          myHeaders.append("Content-Type", "application/json");
-        
-          var requestOptions = {
-            method: "POST",
-            headers: myHeaders,
-            redirect: "follow",
-          }; 
-        
-          fetch(jackpotFlowURL, requestOptions)
-          .then((response) => response.text())
-          .then((result) => {
-            var jsonData = JSON.parse(result);
-            if(jsonData.additionalProperties.httpStatusCode === 200){
-              let jackpotCountry = jsonData.additionalProperties.jackpot_country_code
-              let jackpotCurrency = jsonData.additionalProperties.jackpot_currency
-              let jackpotAmount = 
-              successDiv.innerHTML +=`<p>Result: ${JSON.stringify(jsonData.additionalProperties)}</p>`;
-            } else {
-              console.log("Error!");
-            }
-            
-          })
-          .catch((error) => console.log("error", error));
-        
-          })
-        .catch((error) => errorDiv.innerHTML +=`<p>error: ${error}</p>`);
-      }
-
+      fetchJackpotData().then((data) => { })
+      document.getElementById('success').innerHTML = JSON.stringify(jackpotData)
     
       
       
-   
+    }
     
     </script>
     
