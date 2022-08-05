@@ -1,7 +1,7 @@
-# DaVinci 202, Exercise 1
-## Modal Widget
+# DaVinci 202, Exercise 4
+## Input Schema
 
 In this exercise:
-* We'll integrate the flow into an existing webpage 
+* We'll create an input schema 
 * Display the modal widget when the Register button is clicked
 * Clear the flow state when the flow is hidden
