@@ -1,6 +1,6 @@
 # DaVinci 202, Exercise 1
-## Flow CSS
+## Modal Widget
 
 In this example:
-* We'll move the CSS from the DaVinci flow and include it within the page's CSS declarations
+* We'll integrate the flow into a webpage and 
 * Modify the CSS to demo UX flexibility without modification of the flow
