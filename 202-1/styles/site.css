@@ -1,0 +1,26 @@
+/***************************************
+* Webpage Glitch button 
+***************************************/
+.remix {
+  padding: 5px 10px;
+  font-size: 1.1rem;
+  line-height: 1rem;
+  font-weight: 500;
+  height: 30px;
+  align-items: center;
+  cursor: pointer;
+  background: #ffffff;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #20AACA;
+  white-space: nowrap;
+}
+
+.glitch {
+  width: 100%;
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
