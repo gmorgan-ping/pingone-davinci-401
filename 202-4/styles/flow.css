@@ -273,3 +273,7 @@ label.checkbox {
   margin-left: -30px; 
   cursor: pointer;
 }
+
+img.underage {
+  content: url("https://cdn.glitch.global/2ef0ca36-d8d7-4c06-b231-374cc15fda3a/underage.png?v=1659727925131")
+}
