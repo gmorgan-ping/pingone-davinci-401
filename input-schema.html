@@ -1,0 +1,160 @@
+<html>
+  <head>
+    <title>Beginner's Luck Online Gaming &amp; Casino</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="201-flow-style.css" />
+    <script type="text/javascript" src="https://pingsandboxsdk.singularkey.com/latest/singularkey.js" ></script>
+   
+   <script src="scripts/jackpot-api.js"></script>
+    
+    <script>
+      let COUNTRY_CODE = "";
+      function loadwidget() {    
+      const skApiBaseUrl = "https://api.singularkey.com/v1";
+      const companyId = "04e094d2-69e6-4604-822f-fb52d702ce0c";
+      const skApiKey =
+        "2552dcdc41cfe793ffd7a3532764064fbec7df5a6b82a26f95780e331c8dd26d96f9bb68cb055407ceb0f3c078ada037dc920b167bb8bb05bf5151799181abf18f4499e86c09afb05bb0d8f1ba3cfc24ed442f5945ea9f9d822c4aa50db493397b38d57e3770999b1dd59433ec186ecf8b69d5bf187924e49fbb42c372fbb494";
+      const skPolicyId = "28f180bf66ef52978d3ced91c15db544";
+
+      const skGetTokenUrl =
+        skApiBaseUrl + "/company/" + companyId + "/sdkToken";
+
+      //*** Add the API Key from your SK Application. ***/
+      var headers = new Headers();
+      headers.append("X-SK-API-KEY", skApiKey);
+      headers.append("Content-type", "application/json");
+
+      var requestOptions = {
+        method: "GET",
+        headers: headers,
+        redirect: "follow",
+      };
+
+      //*** Retrieve SK Token ***/
+      fetch(skGetTokenUrl, requestOptions)
+        .then((response) => response.json())
+        .then((responseData) => {
+          var props = {
+            config: {
+              method: "runFlow",
+              apiRoot: skApiBaseUrl,
+              accessToken: responseData.access_token,
+              companyId: companyId,
+              policyId: skPolicyId,
+            },
+            useModal: false,
+            successCallback,
+            errorCallback,
+            onCloseModal,
+          };
+          /*** Invoke DaVinci Widget ****/
+          singularkey.skRenderScreen(document.getElementById("flow-widget"), props);
+        })
+        .catch((error) => console.log("error", error));
+    }
+    function successCallback(response) {
+      console.log(response);
+    }
+
+    function errorCallback(error) {
+      console.log(error);
+    }
+
+    function onCloseModal() {
+      console.log("onCloseModal");
+    }
+      
+    function initializeHandlers() {
+      // Get modal div
+      var modalPopup = document.getElementById("modalPopup");
+
+      // Register button click handler
+      var registerBtn = document.getElementById("btn-register");
+      registerBtn.onclick = function() {
+        loadwidget()
+        modalPopup.style.display = "block";
+      }
+
+      // Close button click handler
+      var closeBtn = document.getElementById("closeBtn");
+      // When the user clicks on close button, close the modal
+      closeBtn.onclick = function() {
+        modalPopup.style.display = "none";
+        singularkey.cleanup(document.getElementById("flow-widget"));
+      }
+
+      // When the user clicks anywhere outside of the modal popup, close it
+      window.onclick = function(event) {
+        if (event.target === modalPopup) {
+          modalPopup.style.display = "none";
+          singularkey.cleanup(document.getElementById("flow-widget"));
+
+        }
+      }
+    }
+    function loadJackpotData() {
+      //load jackpot data
+      fetchJackpotData(loadJackpotSuccess)
+
+    }
+
+    function loadJackpotSuccess(data) {
+      const element = document.getElementById('jackpot')
+      const registerBtn = document.getElementById('btn-register')
+      
+      element.innerHTML = `
+      This week's ${data.jackpotCountryEmoji} jackpot is ${data.jackpot_currency}${data.jackpot_amount}`
+      
+      COUNTRY_CODE = data.jackpot_country_code
+      
+      alert(COUNTRY_CODE)
+      registerBtn.disabled = false
+     
+    }
+  </script>
+   
+  </head>
+  <body onload="initializeHandlers(); loadJackpotData()">
+    <div class="top-bar">
+        <table class="menu-bar">
+          <tr>
+            <td><img class="main-site-logo"/></td>
+            <td ><h1>Beginner's Luck Online Gaming &amp; Casino</h1> </td>
+            <td><button id="signOnBtn" onclick="alert('Not yet Implement. Come back for our 401 session!')"><i class="fa fa-sign-in" aria-hidden="true"></i> Sign On</button></td>
+          </tr>          
+        </table>
+    </div>
+    <table class="menu-bar" style="margin-top: 60px;">
+      <tr>       
+        <td style="vertical-align:top; text-align: center">
+          <h2>Welcome to Beginner's Luck!</h2>
+          <p>If this is your first visit, please click the <strong>Register Now</strong> below you create your free account</p>
+          <p>Already registered? Great to see you back! Please click the <strong>Sign On</strong> button above</p>  
+          <button id="btn-register" class="margin-top" disabled><i class="fa fa-user-plus" aria-hidden="true"></i> Register Now!</button>
+          <div id="jackpot" style="text-align:center"></div>
+        </td>
+      <td><img class="casino" /></td>
+      </tr>
+    </table>
+   
+      
+     <hr/>
+    <div class="pingenablement">&copy; 2022 Ping Identity - DaVinci Enablement Session Material</div>
+    <div class="glitch">
+      <a class="remix" target="_top" href="https://glitch.com/edit/#!/remix/pingone-davinci-201">
+        <img class="glitch-logo"/>Remix on Glitch
+      </a>    
+    </div>
+    <hr/>
+      
+    <!-- PopUp Modal Dialog where the DaVinci Flow will be placed -->
+    <div id="modalPopup" class="modal">
+      <div class="modal-content">
+        <div id="closeBtn" class="close">&times;</div>
+        <div id="flow-widget" class="flow-widget"></div>                            
+      </div>
+
+    </div>
+    
+  </body>
+</html>
