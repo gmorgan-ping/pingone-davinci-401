@@ -193,3 +193,8 @@ hr {
 p {
   padding: 10px;
 }
+
+p.jackpot {
+  font-size: larger;
+  margin: 20px;
+}

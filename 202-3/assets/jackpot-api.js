@@ -48,9 +48,8 @@ async function fetchJackpotData(callbackHandler) {
           if(jsonData.additionalProperties.httpStatusCode === 200){
             result = jsonData.additionalProperties
            callbackHandler(result)
-            // element.innerHTML = JSON.stringify(jsonData.additionalProperties)
           } else {
-            console.log("Error!");
+            console.log("Error retriving jackpot data!");
           }
 
         }).catch((error) => console.log("error", error))
