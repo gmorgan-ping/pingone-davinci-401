@@ -1,5 +1,5 @@
 {
-  "jackpots": [
+  "legalAges": [
     {
       "country": "CA",
       "age": "19"
@@ -22,18 +22,15 @@
     },
     {
       "country": "AU",
-      "currency_symbol": "$",
-      "amount": 110000
+       "age": "18"
     },
     {
       "country": "IL",
-      "currency_symbol": "₪",
-      "amount": 240000
+      "age": "18"
     },
     {
       "country": "FR",
-      "currency_symbol": "€",
-      "amount": 40000
+      "age": "18"
     }
   ]
 }
