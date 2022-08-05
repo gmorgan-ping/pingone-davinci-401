@@ -97,8 +97,10 @@
 
     function loadJackpotSuccess(data) {
       const element = document.getElementById('jackpot')
+      const registerBtn = document.getElementById('btn-register')
       element.innerHTML = `
-      <p class="jackpot"><strong>Get in on the action!</strong><br/>This week's ${data.jackpotCountryEmoji} jackpot is ${data.jackpot_currency}${data.jackpot_amount.toLocaleString()}</p>`     
+      <p class="jackpot"><strong>Get in on the action!</strong><br/>This week's ${data.jackpotCountryEmoji} jackpot is ${data.jackpot_currency}${data.jackpot_amount.toLocaleString()}</p>`    
+      registerBtn.disabled = false;
     }
   </script>
    
@@ -119,7 +121,7 @@
           <h2>Welcome to Beginner's Luck!</h2>
           <p>If this is your first visit, please click the <strong>Register Now</strong> below you create your free account</p>
           <p>Already registered? Great to see you back! Please click the <strong>Sign On</strong> button above</p>  
-          <button id="btn-register" class="margin-top"><i class="fa fa-user-plus" aria-hidden="true"></i> Register Now!</button>
+          <button id="btn-register" class="margin-top" disabled><i class="fa fa-user-plus" aria-hidden="true"></i> Register Now!</button>
           <div id="jackpot" style="text-align:center"></div>
         </td>
       <td><img class="casino" /></td>

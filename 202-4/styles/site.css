@@ -105,6 +105,13 @@ button {
   background-color: var(--theme-primary-color);
   color: white;
 }
+
+button:disabled {
+  background-color: var(--theme-readonly-input);
+  color: black
+}
+
+
 .casino {
   content: url("https://cdn.glitch.global/deee0fd1-6cbf-4fd4-b0ab-9e576ed71f35/casino.png?v=1658425210316");
   width: 300px;
