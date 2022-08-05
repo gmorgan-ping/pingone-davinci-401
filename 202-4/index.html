@@ -13,8 +13,8 @@
       function loadwidget() {    
         const skApiBaseUrl = "https://api.singularkey.com/v1";
         const companyId = "04e094d2-69e6-4604-822f-fb52d702ce0c";
-        const skApiKey = "e9be1b2318e4c3d78c4f0537f4a06411a6134d30333783c75d6d793c52022ab4f3b10df0ef5243d52dc03d184efd3ae8c6a3fb3789f0f88d897f111f658f0d6b18606ed283e544217791305de93da53fef122a8dda5446159c1dc1f72e664b4f130a7034090d2e75f3a0beecd9af51591be392907d562a30fdc2e4f115b09ad7";
-        const skPolicyId = "bd802d2f50d723ad5baf055e4cd30160";
+        const skApiKey = "5f65409eb02144c7adca4da847b3f40a6f28c438bd1ad03f0039a8e98272739eb0fb523bb03b9d8a9650d33f48691bc53863dd1a795793c245c1113d87bb33d9ccfc61cb2e8f7dcffe30c2fcee92c062bf481a597ceb64efd1f5078a13e966402ce45c5af24bef75c479a40c260203ada403574c900f485bd4bd3d62d639576b";
+        const skPolicyId = "0f79b0bb4aa506bed5b6335043a44f39";
 
       const skGetTokenUrl =
         skApiBaseUrl + "/company/" + companyId + "/sdkToken";
@@ -41,6 +41,9 @@
               accessToken: responseData.access_token,
               companyId: companyId,
               policyId: skPolicyId,
+              parameters: {
+                countryCode: COUNTRY_CODE
+              },
             },
             useModal: false,
             successCallback,
@@ -143,9 +146,6 @@
       </a>    
     </div>
     <hr/>
-    <button onclick="alert(COUNTRY_CODE)" >
-      Country
-    </button>
       
     <!-- PopUp Modal Dialog where the DaVinci Flow will be placed -->
     <div id="modalPopup" class="modal">
