@@ -1,0 +1,195 @@
+/* Google Font Titillium */
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;400;700&display=swap");
+/* Awesome Icons */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+:root {
+  --theme-font-color: #303030;
+  --theme-primary-color: #20AACA;
+  --theme-secondary-color: #6CB352;
+  --theme-highlight-color: #3FB9D9;
+  --theme-secondary-highlight-color: #73BF5C;
+  --theme-error-message-color: #ed4337;
+  --theme-content-border-color: #CECECE;
+  --theme-readonly-input:#f2f3f5;
+  --theme-logo: url("https://cdn.glitch.global/f9c4e592-c539-40d1-9db1-bae3029913cb/playcards-logo.png?v=1657546882083");
+}
+
+/***************************************
+* HTML Clear default padding/margin
+***************************************/
+html {
+  margin: 0;
+  padding: 0;
+}
+
+/***************************************
+* Set page font. 
+*      See https://fonts.google.com/
+***************************************/
+body {
+  font-family: "Titillium Web", sans-serif;
+  font-size: 12pt;
+  color: var(--theme-font-color);
+  padding: 0;
+  margin: 0;
+}
+
+/***************************************
+* Page panel 
+***************************************/
+/* section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 1px black;
+  width: 1000px;
+}
+ */
+.top-bar{
+  background-color: #EFEFEF;
+  height: 70px;
+  padding: 10px;
+ 
+  width: 100%;
+}
+.menu-bar {
+  
+ width: 1000px;
+ 
+  height: 70px;
+ 
+  margin: 0 auto;
+  margin-bottom: 55px;
+  
+}
+
+/***************************************
+* Company Logo
+***************************************/
+.main-site-logo {
+  content: var(--theme-logo);
+  height: 70px;
+  display: block;
+}
+.site-logo {
+  width: 100px;
+
+}
+
+.centered {
+  text-align: center;
+}
+
+.margin-top {
+  margin-top: 30px;
+}
+
+/***************************************
+* H1 page within section
+***************************************/
+h1,h2,h3 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+ 
+}
+
+button {
+  padding: 5px;
+  width: 120px;
+  height: 30px;
+  transition-duration: 0.2s;
+  border: 1px solid var(--theme-font-color);
+  border-radius: 3px;
+  background-color: var(--theme-primary-color);
+  color: white;
+}
+.casino {
+  content: url("https://cdn.glitch.global/deee0fd1-6cbf-4fd4-b0ab-9e576ed71f35/casino.png?v=1658425210316");
+  width: 300px;
+
+}
+
+.remix {
+  padding: 5px 10px;
+  font-size: 1.1rem;
+  line-height: 1rem;
+  font-weight: 500;
+  height: 30px;
+  align-items: center;
+  cursor: pointer;
+  background: #ffffff;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #565857;
+  white-space: nowrap;
+}
+
+.glitch {
+  width: 100%;
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+img.glitch-logo {
+  content: url("https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2FLogo_Color.svg?v=1618199565140")
+}
+hr {
+  border-top: 1px solid #EFEFEF;
+}
+.pingenablement {
+  margin-top: 10px;
+  text-align:center; 
+  font-size: smaller
+}
+
+/* MODAL POPUP */
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888888;
+  width: 400px; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.flow-widget {
+  padding: 20px;
+}
+
+p {
+  padding: 10px;
+}
