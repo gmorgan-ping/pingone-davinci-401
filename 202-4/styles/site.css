@@ -104,11 +104,11 @@ button {
   border-radius: 3px;
   background-color: var(--theme-primary-color);
   color: white;
+  opacity: 1;
 }
 
 button:disabled {
-  background-color: var(--theme-readonly-input);
-  color: black
+  opacity: 0.3;
 }
 
 

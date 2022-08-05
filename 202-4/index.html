@@ -1,12 +1,15 @@
 <html>
   <head>
     <title>Beginner's Luck Online Gaming &amp; Casino</title>
+    <link rel="icon" href="https://cdn.glitch.global/deee0fd1-6cbf-4fd4-b0ab-9e576ed71f35/favicon.png?v=1658494414762" />
     <link rel="stylesheet" href="styles/site.css" />
     <link rel="stylesheet" href="styles/flow.css" />
     <script type="text/javascript" src="https://sdk.singularkey.com/latest/singularkey.js" ></script>
     <script src="assets/jackpot-api.js"></script>
     
     <script>
+      let COUNTRY_CODE = ""
+      
       function loadwidget() {    
         const skApiBaseUrl = "https://api.singularkey.com/v1";
         const companyId = "04e094d2-69e6-4604-822f-fb52d702ce0c";
@@ -98,6 +101,9 @@
     function loadJackpotSuccess(data) {
       const element = document.getElementById('jackpot')
       const registerBtn = document.getElementById('btn-register')
+      
+      COUNTRY_CODE = data.jackpot_country_code
+      
       element.innerHTML = `
       <p class="jackpot"><strong>Get in on the action!</strong><br/>This week's ${data.jackpotCountryEmoji} jackpot is ${data.jackpot_currency}${data.jackpot_amount.toLocaleString()}</p>`    
       registerBtn.disabled = false;
@@ -137,6 +143,9 @@
       </a>    
     </div>
     <hr/>
+    <button onclick="alert(COUNTRY_CODE)" >
+      Country
+    </button>
       
     <!-- PopUp Modal Dialog where the DaVinci Flow will be placed -->
     <div id="modalPopup" class="modal">
