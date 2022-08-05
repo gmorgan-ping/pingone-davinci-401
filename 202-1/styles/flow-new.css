@@ -43,17 +43,6 @@ section {
 }
 
 /***************************************
-* links
-***************************************/
-a, a:visited {
-  color: var(--theme-secondary-color);
-}
-
-a:hover {
-  color: var(--theme-secondary-highlight-color);
-}
-
-/***************************************
 * paragraphs
 ***************************************/
 section p {
