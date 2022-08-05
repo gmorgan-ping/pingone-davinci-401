@@ -2,28 +2,23 @@
   "jackpots": [
     {
       "country": "CA",
-      "currency_symbol": "$",
-      "amount": 140000
+      "age": "19"
     },
     {
       "country": "GB",
-      "currency_symbol": "£",
-      "amount": 70000
+      "age": "18"
     },
     {
       "country": "US",
-      "currency_symbol": "$",
-      "amount": 90000
+      "age": "21"
     },
     {
       "country": "DE",
-      "currency_symbol": "€",
-      "amount": 40000
+      "age": "18"
     },
     {
       "country": "CN",
-      "currency_symbol": "¥",
-      "amount": 500000
+      "age": "18"
     },
     {
       "country": "AU",
