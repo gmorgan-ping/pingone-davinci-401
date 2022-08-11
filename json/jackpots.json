@@ -1,0 +1,44 @@
+{
+  "jackpots": [
+    {
+      "country": "CA",
+      "currency_symbol": "$",
+      "amount": 136000
+    },
+    {
+      "country": "GB",
+      "currency_symbol": "£",
+      "amount": 70000
+    },
+    {
+      "country": "US",
+      "currency_symbol": "$",
+      "amount": 90000
+    },
+    {
+      "country": "DE",
+      "currency_symbol": "€",
+      "amount": 40000
+    },
+    {
+      "country": "CN",
+      "currency_symbol": "¥",
+      "amount": 500000
+    },
+    {
+      "country": "AU",
+      "currency_symbol": "$",
+      "amount": 110000
+    },
+    {
+      "country": "IL",
+      "currency_symbol": "₪",
+      "amount": 240000
+    },
+    {
+      "country": "FR",
+      "currency_symbol": "€",
+      "amount": 40000
+    }
+  ]
+}
