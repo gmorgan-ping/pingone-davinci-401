@@ -35,33 +35,17 @@ body {
   margin: 0;
 }
 
-/***************************************
-* Page panel 
-***************************************/
-/* section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: solid 1px black;
-  width: 1000px;
-}
- */
 .top-bar{
   background-color: #EFEFEF;
   height: 70px;
   padding: 10px;
- 
   width: 100%;
 }
 .menu-bar {
-  
- width: 1000px;
- 
+  width: 1000px;
   height: 70px;
- 
   margin: 0 auto;
   margin-bottom: 55px;
-  
 }
 
 /***************************************
@@ -74,7 +58,6 @@ body {
 }
 .site-logo {
   width: 100px;
-
 }
 
 .centered {
@@ -92,7 +75,6 @@ h1,h2,h3 {
   margin: 0;
   padding: 0;
   text-align: center;
- 
 }
 
 button {
@@ -105,6 +87,7 @@ button {
   background-color: var(--theme-primary-color);
   color: white;
 }
+
 .casino {
   content: url("https://cdn.glitch.global/deee0fd1-6cbf-4fd4-b0ab-9e576ed71f35/casino.png?v=1658425210316");
   width: 300px;
@@ -134,12 +117,15 @@ button {
   margin-top: 25px;
   margin-bottom: 25px;
 }
+
 img.glitch-logo {
   content: url("https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2FLogo_Color.svg?v=1618199565140")
 }
+
 hr {
   border-top: 1px solid #EFEFEF;
 }
+
 .pingenablement {
   margin-top: 10px;
   text-align:center; 
