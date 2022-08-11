@@ -88,6 +88,10 @@ button {
   color: white;
 }
 
+button:disabled {
+  opacity: 0.3;
+}
+
 .casino {
   content: url("https://cdn.glitch.global/deee0fd1-6cbf-4fd4-b0ab-9e576ed71f35/casino.png?v=1658425210316");
   width: 300px;
@@ -151,4 +155,9 @@ hr {
 
 p {
   padding: 10px;
+}
+
+p.jackpot {
+  font-size: larger;
+  margin: 20px;
 }
