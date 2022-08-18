@@ -42,7 +42,7 @@ body {
   width: 100%;
 }
 
-.menu-bar {
+table.content-holder {
   width: 1000px;
   height: 70px;
   margin: 0 auto;
