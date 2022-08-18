@@ -49,6 +49,10 @@ table.content-holder {
   margin-bottom: 55px;
 }
 
+table.top-spacer {
+  margin-top: 60px;
+}
+
 td.main-content {
   vertical-align: top;
   text-align: center;
@@ -138,6 +142,7 @@ hr {
   padding: 20px;
   border: 1px solid #888888;
   width: 400px; /* Could be more or less, depending on screen size */
+  min-height: 40px;
 }
 
 /* The Close Button */
