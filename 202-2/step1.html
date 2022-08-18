@@ -9,31 +9,27 @@
     
    <script>
       
-    function initializeHandlers() {
-      // Get modal div
+    function initialize() {
+      // Retrieve the modal popup div
       var modalPopup = document.getElementById("modalPopup");
 
-      // Register button click handler
+      // Create 'Register Now' button click handler
       var registerBtn = document.getElementById("btn-register");
       registerBtn.onclick = function() {
-        
         modalPopup.style.display = "block";
       }
 
-      // Close button click handler
+      // Create the 'Close' 'X' button click handler
       var closeBtn = document.getElementById("closeBtn");
-      // When the user clicks on close button, close the modal
       closeBtn.onclick = function() {
-        modalPopup.style.display = "none";
-        
+        closeModalPopup();  
       }
 
-      // When the user clicks anywhere outside of the modal popup, close it
+      /* Create the Window click handle that will close the popup
+         if the user clicks anywhere outside of it */
       window.onclick = function(event) {
         if (event.target === modalPopup) {
          closeModalPopup();
-         
-
         }
       }
       
@@ -44,23 +40,29 @@
   </script>
    
   </head>
-  <body onload="initializeHandlers()">
+  <body onload="initialize()">
     <div class="top-bar">
         <table class="menu-bar">
           <tr>
             <td><img class="main-site-logo"/></td>
             <td ><h1>Beginner's Luck Online Gaming &amp; Casino</h1> </td>
-            <td><button id="signOnBtn" onclick="alert('Not yet Implement. Come back for our 401 session!')"><i class="fa fa-sign-in" aria-hidden="true"></i> Sign On</button></td>
+            <td>
+              <button id="signOnBtn" onclick="alert('Not yet Implement. Come back for our 401 session!')">
+                <i class="fa fa-sign-in" aria-hidden="true"></i> Sign On
+              </button>
+            </td>
           </tr>          
         </table>
     </div>
     <table class="menu-bar" style="margin-top: 60px;">
       <tr>       
-        <td style="vertical-align:top; text-align: center">
+        <td class="main-content">
           <h2>Welcome to Beginner's Luck!</h2>
           <p>If this is your first visit, please click the <strong>Register Now</strong> below you create your free account</p>
           <p>Already registered? Great to see you back! Please click the <strong>Sign On</strong> button above</p>  
-          <button id="btn-register" class="margin-top"><i class="fa fa-user-plus" aria-hidden="true"></i> Register Now!</button>
+          <button id="btn-register" class="margin-top">
+            <i class="fa fa-user-plus" aria-hidden="true"></i> Register Now!
+          </button>
         </td>
       <td><img class="casino" /></td>
       </tr>
@@ -77,10 +79,8 @@
     <!-- PopUp Modal Dialog where the DaVinci Flow will be placed -->
     <div id="modalPopup" class="modal">
       <div class="modal-content">
-        <div id="closeBtn" class="close">&times;</div>
-        <div id="flow-widget" class="flow-widget"></div>                            
+        <div id="closeBtn" class="close">&times;</div>                       
       </div>
-
     </div>
     
   </body>

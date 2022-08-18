@@ -5,13 +5,13 @@
 
 :root {
   --theme-font-color: #303030;
-  --theme-primary-color: #20AACA;
-  --theme-secondary-color: #6CB352;
-  --theme-highlight-color: #3FB9D9;
-  --theme-secondary-highlight-color: #73BF5C;
+  --theme-primary-color: #20aaca;
+  --theme-secondary-color: #6cb352;
+  --theme-highlight-color: #3fb9d9;
+  --theme-secondary-highlight-color: #73bf5c;
   --theme-error-message-color: #ed4337;
-  --theme-content-border-color: #CECECE;
-  --theme-readonly-input:#f2f3f5;
+  --theme-content-border-color: #cecece;
+  --theme-readonly-input: #f2f3f5;
   --theme-logo: url("https://cdn.glitch.global/f9c4e592-c539-40d1-9db1-bae3029913cb/playcards-logo.png?v=1657546882083");
 }
 
@@ -35,17 +35,23 @@ body {
   margin: 0;
 }
 
-.top-bar{
-  background-color: #EFEFEF;
+.top-bar {
+  background-color: #efefef;
   height: 70px;
   padding: 10px;
   width: 100%;
 }
+
 .menu-bar {
   width: 1000px;
   height: 70px;
   margin: 0 auto;
   margin-bottom: 55px;
+}
+
+td.main-content {
+  vertical-align: top;
+  text-align: center;
 }
 
 /***************************************
@@ -71,7 +77,9 @@ body {
 /***************************************
 * H1 page within section
 ***************************************/
-h1,h2,h3 {
+h1,
+h2,
+h3 {
   margin: 0;
   padding: 0;
   text-align: center;
@@ -95,18 +103,16 @@ button:disabled {
 .casino {
   content: url("https://cdn.glitch.global/deee0fd1-6cbf-4fd4-b0ab-9e576ed71f35/casino.png?v=1658425210316");
   width: 300px;
-
 }
 
-
 hr {
-  border-top: 1px solid #EFEFEF;
+  border-top: 1px solid #efefef;
 }
 
 .pingenablement {
   margin-top: 10px;
-  text-align:center; 
-  font-size: smaller
+  text-align: center;
+  font-size: smaller;
 }
 
 /* MODAL POPUP */
@@ -121,8 +127,8 @@ hr {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
 /* Modal Content/Box */
