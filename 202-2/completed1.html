@@ -4,6 +4,7 @@
     <link rel="icon" href="https://cdn.glitch.global/2ef0ca36-d8d7-4c06-b231-374cc15fda3a/favicon.png?v=1661169643668" />
     <link rel="stylesheet" href="../css/glitch.css" />
     <link rel="stylesheet" href="../css/site.css" />
+    <link rel="stylesheet" href="../css/flow.css" />
     
     <!-- PingOne DaVinci Javascript library -->
     <script type="text/javascript" src="https://sdk.singularkey.com/latest/singularkey.js" ></script>
@@ -17,7 +18,7 @@
         registerBtn.onclick = function() {
           // Display the modal popup div
           modalPopup.style.display = "block";
-          loadwidget()
+          loadRegistrationFlow()
         }
 
         // Create the 'Close' 'X' button click handler
@@ -39,10 +40,11 @@
       function closeModalPopup() {
         // Hide the modal popup div
         modalPopup.style.display = "none";
+        singularkey.cleanup(document.getElementById("flow-widget"));        
       }  
       
       // Load DaVinci Flow
-      function loadwidget() {    
+      function loadRegistrationFlow() {    
         const skApiBaseUrl = "https://api.singularkey.com/v1";
         const companyId = "04e094d2-69e6-4604-822f-fb52d702ce0c";
         const skApiKey = "e9be1b2318e4c3d78c4f0537f4a06411a6134d30333783c75d6d793c52022ab4f3b10df0ef5243d52dc03d184efd3ae8c6a3fb3789f0f88d897f111f658f0d6b18606ed283e544217791305de93da53fef122a8dda5446159c1dc1f72e664b4f130a7034090d2e75f3a0beecd9af51591be392907d562a30fdc2e4f115b09ad7";
