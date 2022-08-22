@@ -5,7 +5,9 @@
     <link rel="stylesheet" href="../css/glitch.css" />
     <link rel="stylesheet" href="../css/site.css" />
         
-    <script>
+    <script type="text/javascript">
+      
+      // Initialize click handlers      
       function initialize() {
         // Retrieve the modal popup div
         var modalPopup = document.getElementById("modalPopup");
@@ -15,6 +17,7 @@
         registerBtn.onclick = function() {
           // Display the modal popup div
           modalPopup.style.display = "block";
+          loadRegistrationFlow()
         }
 
         // Create the 'Close' 'X' button click handler
@@ -37,6 +40,7 @@
         // Hide the modal popup div
         modalPopup.style.display = "none";
       }
+      
     </script>
    
   </head>

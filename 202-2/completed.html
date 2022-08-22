@@ -1,121 +1,142 @@
 <html>
   <head>
     <title>Beginner's Luck Online Gaming &amp; Casino</title>
-    <link rel="icon" href="https://cdn.glitch.global/deee0fd1-6cbf-4fd4-b0ab-9e576ed71f35/favicon.png?v=1658494414762" />
+    <link rel="icon" href="https://cdn.glitch.global/2ef0ca36-d8d7-4c06-b231-374cc15fda3a/favicon.png?v=1661169643668" />
     <link rel="stylesheet" href="../css/glitch.css" />
     <link rel="stylesheet" href="../css/site.css" />
     <link rel="stylesheet" href="../css/flow.css" />
-    <script type="text/javascript" src="https://sdk.singularkey.com/latest/singularkey.js" ></script>
-    <script src="site-scripts.js"></script>
     
-    <script>
-      function loadwidget() {    
-      const skApiBaseUrl = "https://api.singularkey.com/v1";
-      const companyId = "04e094d2-69e6-4604-822f-fb52d702ce0c";
-      const skApiKey = "e9be1b2318e4c3d78c4f0537f4a06411a6134d30333783c75d6d793c52022ab4f3b10df0ef5243d52dc03d184efd3ae8c6a3fb3789f0f88d897f111f658f0d6b18606ed283e544217791305de93da53fef122a8dda5446159c1dc1f72e664b4f130a7034090d2e75f3a0beecd9af51591be392907d562a30fdc2e4f115b09ad7";
-      const skPolicyId = "bd802d2f50d723ad5baf055e4cd30160";
-
-      const skGetTokenUrl =
-        skApiBaseUrl + "/company/" + companyId + "/sdkToken";
-
-      //*** Add the API Key from your SK Application. ***/
-      var headers = new Headers();
-      headers.append("X-SK-API-KEY", skApiKey);
-      headers.append("Content-type", "application/json");
-
-      var requestOptions = {
-        method: "GET",
-        headers: headers,
-        redirect: "follow",
-      };
-
-      //*** Retrieve SK Token ***/
-      fetch(skGetTokenUrl, requestOptions)
-        .then((response) => response.json())
-        .then((responseData) => {
-          var props = {
-            config: {
-              method: "runFlow",
-              apiRoot: skApiBaseUrl,
-              accessToken: responseData.access_token,
-              companyId: companyId,
-              policyId: skPolicyId,
-            },
-            useModal: false,
-            successCallback,
-            errorCallback,
-            onCloseModal,
-          };
-          /*** Invoke DaVinci Widget ****/
-          singularkey.skRenderScreen(document.getElementById("flow-widget"), props);
-        })
-        .catch((error) => console.log("error", error));
-    }
-    function successCallback(response) {
-      console.log(response);
-    }
-
-    function errorCallback(error) {
-      console.log(error);
-    }
-
-    function onCloseModal() {
-      console.log("onCloseModal");
-    }
+    <!-- PingOne DaVinci Javascript library -->
+    <script type="text/javascript" src="https://sdk.singularkey.com/latest/singularkey.js" ></script>
+    
+    <script type="text/javascript">
       
-    function initializeHandlers() {
-      // Get modal div
-      var modalPopup = document.getElementById("modalPopup");
+      // Initialize click handlers      
+      function initialize() {
+        // Retrieve the modal popup div
+        var modalPopup = document.getElementById("modalPopup");
 
-      // Register button click handler
-      var registerBtn = document.getElementById("btn-register");
-      registerBtn.onclick = function() {
-        loadwidget()
-        modalPopup.style.display = "block";
-      }
+        // Create 'Register Now' button click handler
+        var registerBtn = document.getElementById("btn-register");
+        registerBtn.onclick = function() {
+          // Display the modal popup div
+          modalPopup.style.display = "block";
+          loadRegistrationFlow()
+        }
 
-      // Close button click handler
-      var closeBtn = document.getElementById("closeBtn");
-      // When the user clicks on close button, close the modal
-      closeBtn.onclick = function() {
-        modalPopup.style.display = "none";
-        singularkey.cleanup(document.getElementById("flow-widget"));
-      }
+        // Create the 'Close' 'X' button click handler
+        var closeBtn = document.getElementById("closeBtn");
+        closeBtn.onclick = function() {
+          closeModalPopup();  
+        }
 
-      // When the user clicks anywhere outside of the modal popup, close it
-      window.onclick = function(event) {
-        if (event.target === modalPopup) {
-          modalPopup.style.display = "none";
-          singularkey.cleanup(document.getElementById("flow-widget"));
-
+        /* Create the Window click handle that will close the popup
+           if the user clicks anywhere outside of it */
+        window.onclick = function(event) {
+          if (event.target === modalPopup) {
+           closeModalPopup();
+          }
         }
       }
-    }
-  </script>
+      
+      // Close the modal popup
+      function closeModalPopup() {
+        // Hide the modal popup div
+        modalPopup.style.display = "none";
+        singularkey.cleanup(document.getElementById("flow-widget"));        
+      }  
+      
+      // Load DaVinci Flow
+      function loadRegistrationFlow() {    
+        const skApiBaseUrl = "https://api.singularkey.com/v1";
+        const companyId = "04e094d2-69e6-4604-822f-fb52d702ce0c";
+        const skApiKey = "e9be1b2318e4c3d78c4f0537f4a06411a6134d30333783c75d6d793c52022ab4f3b10df0ef5243d52dc03d184efd3ae8c6a3fb3789f0f88d897f111f658f0d6b18606ed283e544217791305de93da53fef122a8dda5446159c1dc1f72e664b4f130a7034090d2e75f3a0beecd9af51591be392907d562a30fdc2e4f115b09ad7";
+        const skPolicyId = "bd802d2f50d723ad5baf055e4cd30160";
+
+        const skGetTokenUrl =
+          skApiBaseUrl + "/company/" + companyId + "/sdkToken";
+
+        //*** Add the API Key from your DaVinci Application. ***/
+        var headers = new Headers();
+        headers.append("X-SK-API-KEY", skApiKey);
+        headers.append("Content-type", "application/json");
+
+        var requestOptions = {
+          method: "GET",
+          headers: headers,
+          redirect: "follow",
+        };
+
+        //*** Retrieve DaVinci Token ***/
+        fetch(skGetTokenUrl, requestOptions)
+          .then((response) => response.json())
+          .then((responseData) => {
+            var props = {
+              config: {
+                method: "runFlow",
+                apiRoot: skApiBaseUrl,
+                accessToken: responseData.access_token,
+                companyId: companyId,
+                policyId: skPolicyId,
+              },
+              useModal: false,
+              successCallback,
+              errorCallback,
+              onCloseModal,
+            };
+            /*** Invoke DaVinci Widget ****/
+            singularkey.skRenderScreen(document.getElementById("flow-widget"), props);
+          })
+          .catch((error) => console.log("error", error));
+      }
+      
+      function successCallback(response) {
+        console.log(response);
+      }
+
+      function errorCallback(error) {
+        console.log(error);
+      }
+
+      function onCloseModal() {
+        console.log("Modal flow Closed");
+      }
+    </script>
    
   </head>
-  <body onload="initializeHandlers()">
+  
+  <body onload="initialize()">    
     <div class="top-bar">
-        <table class="menu-bar">
+        <table class="content-holder">
           <tr>
             <td><img class="main-site-logo"/></td>
             <td ><h1>Beginner's Luck Online Gaming &amp; Casino</h1> </td>
-            <td><button id="signOnBtn" onclick="alert('Not yet Implement. Come back for our 401 session!')"><i class="fa fa-sign-in" aria-hidden="true"></i> Sign On</button></td>
+            <td>
+              <button id="signOnBtn" onclick="alert('Not yet Implement. Come back for our 401 session!')">
+                <i class="fa fa-sign-in" aria-hidden="true"></i> Sign On
+              </button>
+            </td>
           </tr>          
         </table>
-    </div>
-    <table class="menu-bar" style="margin-top: 60px;">
-      <tr>       
-        <td style="vertical-align:top; text-align: center">
-          <h2>Welcome to Beginner's Luck!</h2>
-          <p>If this is your first visit, please click the <strong>Register Now</strong> below you create your free account</p>
-          <p>Already registered? Great to see you back! Please click the <strong>Sign On</strong> button above</p>  
-          <button id="btn-register" class="margin-top"><i class="fa fa-user-plus" aria-hidden="true"></i> Register Now!</button>
-        </td>
-      <td><img class="casino" /></td>
-      </tr>
-    </table>
-     <hr/>
+    </div>    
+    <div>
+      <table class="content-holder top-spacer">
+        <tr>       
+          <td class="main-content">
+            <h2>Welcome to Beginner's Luck!</h2>
+            <p>If this is your first visit, please click the <strong>Register Now</strong> below you create your free account</p>
+            <p>Already registered? Great to see you back! Please click the <strong>Sign On</strong> button above</p>  
+            <button id="btn-register" class="margin-top">
+              <i class="fa fa-user-plus" aria-hidden="true"></i> Register Now!
+            </button>
+          </td>
+          <td>
+            <img class="casino"/>
+          </td>
+        </tr>
+      </table>
+    </div>    
+    <hr/>
     <div class="pingenablement">&copy; 2022 Ping Identity - DaVinci Enablement Session Material</div>
     <div class="glitch">
       <a class="remix" target="_top" href="https://glitch.com/edit/#!/remix/pingone-davinci-201">
@@ -128,9 +149,8 @@
     <div id="modalPopup" class="modal">
       <div class="modal-content">
         <div id="closeBtn" class="close">&times;</div>
-        <div id="flow-widget" class="flow-widget"></div>                            
+        <div id="flow-widget" class="flow-widget"></div>
       </div>
-
     </div>
     
   </body>
