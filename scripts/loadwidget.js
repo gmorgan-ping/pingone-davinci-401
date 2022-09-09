@@ -1,4 +1,4 @@
-function loadwidget(policyId, renderComponent) {
+function loadwidget(policyId, renderComponent, flowInputVariables) {
   const tokenURL = "https://orchestrate-api.pingone.com";
   const flowURL = "https://auth.pingone.com/";
   const companyId = "ff4f6c34-2ed5-4210-9ad6-266b4f2412bd";
@@ -29,6 +29,7 @@ function loadwidget(policyId, renderComponent) {
           accessToken: responseData.access_token,
           companyId: companyId,
           policyId: policyId,
+          parameters: flowInputVariables,
         },
         useModal: false,
         successCallback,
