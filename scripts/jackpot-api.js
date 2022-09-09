@@ -1,38 +1,10 @@
-const jackpotBaseURL = "https://api.singularkey.com/v1";
-const jackpotCompanyId = "04e094d2-69e6-4604-822f-fb52d702ce0c";
-const jackpotPolicyId = "73af114539b732e7a115b2420cda9db5";
-const jackpotAPIKey =
-  "9e77969aafdabf8b5bb02c580ac1238a864a9d1e5d63715328952152d2e3a75dc0f8d5f7de5aeccb805e5421175e43b0b644ceabde63fd92eaa882054508bf147349404ff52224ef14808863dd2078145056e95d1566aa7cb903d532a31792dc9bb105a59d6dbb70cfa8c40c64b0b2e77f0e19403f88e224a08053e579b89598";
-
-async function fetchJackpotData(callbackHandler) {
-  var jackpotTokenUrl =
-    jackpotBaseURL + "/company/" + jackpotCompanyId + "/sdkToken";
-  var jackpotFlowURL = jackpotBaseURL + "/auth/" + jackpotCompanyId + "/policy/" +  jackpotPolicyId + "/start";
-
-  console.log(`Jackpot Token URL: ${jackpotTokenUrl}`);
-  console.log(`Jackpot URL: ${jackpotFlowURL}`);
-  console.log(`API Key: ${jackpotAPIKey}`);
-
-  //*** Add the API Key from your DaVinci Application. ***/
-  var headers = new Headers();
-  headers.append("X-SK-API-KEY", jackpotAPIKey);
-  headers.append("Content-type", "application/json");
-
-  var requestOptions = {
-    method: "GET",
-    headers: headers,
-    redirect: "follow",
-  };
-
-  //*** Retrieve DaVinci Token ***/
-  fetch(jackpotTokenUrl, requestOptions)
-    .then((response) => response.json())
-    .then((responseData) => {
-      const jackpotAccessToken = responseData.access_token;
-      console.log(`jackpotAccessToken: ${jackpotAccessToken}`);
-
-      const myHeaders = new Headers();
-      myHeaders.append("Authorization", "Bearer " + jackpotAccessToken);
+async function fetchJackpotData2(policyId, callbackHandler) {
+  const companyId = "ff4f6c34-2ed5-4210-9ad6-266b4f2412bd";
+  const apiKey = "f94829acebaec6f61c33fdf369a25adf6237c7e5f6142a7cbe5ba588ab134a01e30f43402446f1e5c591a90b073dbebe4d230af523cc4b2fc28ec7708a82dab323d4562554c470b4f6cebf0b256f55357ae46f1af27a15f8c9815bec37634644431451a4823c028eadc59390991ffcff7adb84e8f9288fd42ae7237c70e01cb4"
+  const flowURL = `https://orchestrate-api.pingone.com/v1/company/${companyId}/policy/${policyId}/start`
+   
+  const myHeaders = new Headers();
+      myHeaders.append("X-SK-API-KEY", apiKey);
       myHeaders.append("Content-Type", "application/json");
 
       var requestOptions = {
@@ -41,7 +13,7 @@ async function fetchJackpotData(callbackHandler) {
         redirect: "follow",
       };
       //*** Call Jackpot flow to receieve country specific jackpot ***/
-      fetch(jackpotFlowURL, requestOptions)
+      fetch(flowURL, requestOptions)
         .then((response) => response.text())
         .then((result) => {
           var jsonData = JSON.parse(result);
@@ -53,6 +25,5 @@ async function fetchJackpotData(callbackHandler) {
           }
         })
         .catch((error) => console.log("error", error));
-    })
-    .catch((error) => console.log("error", error));
+   
 }
