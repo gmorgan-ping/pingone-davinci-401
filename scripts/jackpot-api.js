@@ -3,8 +3,8 @@ const apiKey = "f94829acebaec6f61c33fdf369a25adf6237c7e5f6142a7cbe5ba588ab134a01
 
 async function fetchJackpotData(policyId, callbackHandler) {
   const flowURL = `https://orchestrate-api.pingone.com/v1/company/${companyId}/policy/${policyId}/start`;
-  console.log(flowURL)
-  console.log(apiKey)
+  console.log(`Flow URL: ${flowURL}`)
+  console.log(`X-SK-API-KEY: ${apiKey}`)
 
   const myHeaders = new Headers();
   myHeaders.append("X-SK-API-KEY", apiKey);
