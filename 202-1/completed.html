@@ -9,12 +9,13 @@
 
         <script type="text/javascript" src="https://assets.pingone.com/davinci/latest/davinci.js" ></script>
     <!--  Script containing method to render DaVinci Flow    -->
-    <script type="text/javascript" src="scripts/loadwidget.js" defer></script>
+    <script type="text/javascript" src="../scripts/loadwidget.js" defer></script>
     
     <script type="text/javascript">
       function displayDaVinciFlow() {
         const policyId = "6ce5990b898ee53eb49edb53e7c535ac"
-        loadwidget(policyId)
+        const divComponent = "widget"
+        loadwidget(policyId, divComponent)
       }
     </script>
   </head>
