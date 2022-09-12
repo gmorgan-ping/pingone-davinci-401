@@ -30,11 +30,20 @@ h1,h2,h3 {
 }
 
 a, a:visited {
-  color: black;
+  border: 1px solid #CECECE;
+  padding: 5px 10px;
+  width: 100px;
+  display: inline-block;
+  text-align: center;
+  background-color: #ecf1f2;
+  color: #001728;
+  text-decoration: none;
 }
 
 a:hover {
-  color: blue;
+  background-color: #001728;
+  color: #ecf1f2;
+  
 }
 .enablement {
   content: url("https://cdn.glitch.global/2ef0ca36-d8d7-4c06-b231-374cc15fda3a/dv-enablement-logo.png?v=1662986206024");
@@ -53,8 +62,9 @@ a:hover {
   border-radius: 5px;
 }
 .description-box{
-  height: 120px;
+  height: 140px;
 }
+
 h3 {
   background-color:#ecf1f2;
   padding: 10px;
