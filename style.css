@@ -22,6 +22,7 @@ body {
 h1,h2,h3 {
   margin: 0;
   padding: 0;
+  color: #001728;
 }
 
 .margin-top {
@@ -56,6 +57,4 @@ h3 {
   padding: 10px;
   color: #001728;
 }
-h1, h2 {
-  color: #001728;
-}
+
