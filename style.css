@@ -32,12 +32,20 @@ h1,h2,h3 {
 a, a:visited {
   border: 1px solid #CECECE;
   padding: 5px 10px;
-  width: 100px;
+  width: 120px;
   display: inline-block;
   text-align: center;
   background-color: #ecf1f2;
   color: #001728;
   text-decoration: none;
+}
+a.start {
+  background-color: #ecf1f2;
+}
+
+a.complete {
+  background-color: #CDEDFD;
+  float:right;
 }
 
 a:hover {
