@@ -2,11 +2,11 @@
 * Webpage Glitch button 
 ***************************************/
 .remix {
-  padding: 5px 10px;
+  padding: 10px 10px;
   font-size: 1.1rem;
-  line-height: 1rem;
+
   font-weight: 500;
-  height: 30px;
+ 
   align-items: center;
   cursor: pointer;
   background: #ffffff;
@@ -16,6 +16,7 @@
   text-decoration: none;
   color: #565857;
   white-space: nowrap;
+  width: 220px;
 }
 
 .glitch {
