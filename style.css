@@ -48,5 +48,14 @@ a:hover {
 .bordered-box {
   border: 1px solid #CECECE;
   padding: 10px;
-  margin: 10px 0px;
+  margin: 10px 10px 30px;
+  border-radius: 5px;
+}
+h3 {
+  background-color:#ecf1f2;
+  padding: 10px;
+  color: #001728;
+}
+h1, h2 {
+  color: #001728;
 }
