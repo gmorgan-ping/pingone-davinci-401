@@ -64,10 +64,11 @@
       }
 
        function loadJackpotSuccess(data) {
-        const element = document.getElementById('jackpot')
-        element.innerHTML = `
-              <p class="jackpot"><strong>Get in on the action!</strong><br/>
-              This week's ${data.jackpotCountryEmoji} jackpot is ${data.jackpot_currency}${data.jackpot_amount.toLocaleString()}</p>`     
+         alert(JSON.stringify(data))
+        // const element = document.getElementById('jackpot')
+        // element.innerHTML = `
+        //       <p class="jackpot"><strong>Get in on the action!</strong><br/>
+        //       This week's ${data.jackpotCountryEmoji} jackpot is ${data.jackpot_currency}${data.jackpot_amount.toLocaleString()}</p>`     
        }
     </script>
    
