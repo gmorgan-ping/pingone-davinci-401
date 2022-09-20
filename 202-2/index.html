@@ -4,6 +4,7 @@
     <link rel="icon" href="https://cdn.glitch.global/2ef0ca36-d8d7-4c06-b231-374cc15fda3a/favicon.png?v=1661169643668" />
     <link rel="stylesheet" href="../css/glitch.css" />
     <link rel="stylesheet" href="../css/site.css" />
+    <link rel="stylesheet" href="../css/flow.css" />
     
     <script type="text/javascript" src="https://assets.pingone.com/davinci/latest/davinci.js" ></script>
     
@@ -21,7 +22,7 @@
         registerBtn.onclick = function() {
           // Display the modal popup div
           modalPopup.style.display = "block";
-          
+          loadRegistrationFlow()
         }
 
         // Create the 'Close' 'X' button click handler
@@ -49,7 +50,7 @@
       function loadRegistrationFlow() {    
         const policyId = "6ce5990b898ee53eb49edb53e7c535ac"
         const divComponent = "flow-widget"
-        
+        loadwidget(policyId, divComponent)
       }
       
     </script>
