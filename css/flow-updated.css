@@ -1,5 +1,5 @@
 /* Google Font Titillium */
-@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 /* Awesome Icons */
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 
@@ -10,7 +10,7 @@
   --theme-highlight-color: #3DB8A5;
   --theme-secondary-highlight-color: #73BF5C;
   --theme-error-message-color: #EE010B;
-  --theme-content-border-color: #2B2C28;
+  --theme-content-border-color: #339989;
   --theme-readonly-input:#f2f3f5;
   --theme-logo: url("https://cdn.glitch.global/2ef0ca36-d8d7-4c06-b231-374cc15fda3a/new-logo.png?v=1659716385635");
 }
@@ -28,7 +28,7 @@ html {
 *      See https://fonts.google.com/
 ***************************************/
 body {
-  font-family: "Titillium Web", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 12pt;
   color: var(--theme-font-color);
 }
