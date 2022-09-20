@@ -5,10 +5,6 @@
     <link rel="stylesheet" href="../css/glitch.css" />
     <link rel="stylesheet" href="../css/site.css" />
     <link rel="stylesheet" href="../css/flow.css" />
-    <!-- PingOne DaVinci Javascript library -->
-    <script type="text/javascript" src="https://assets.pingone.com/davinci/latest/davinci.js" ></script>
-    
-    <script type="text/javascript" src="/scripts/loadwidget.js" ></script>
 
     <script type="text/javascript">
       
@@ -44,15 +40,8 @@
       function closeModalPopup() {
         // Hide the modal popup div
         modalPopup.style.display = "none";
+        davinci.cleanup(document.getElementById("flow-widget"));
       }
-      
-      function loadRegistrationFlow() {
-        const policyId = "6ce5990b898ee53eb49edb53e7c535ac"
-        const divComponent = "flow-widget"
-        loadwidget(policyId, divComponent)
-
-      }
-      
      
     </script>
    
@@ -96,7 +85,7 @@
     <div id="modalPopup" class="modal">
       <div class="modal-content">
         <div id="closeBtn" class="close">&times;</div>  
-        <div id="flow-widget"></div>
+       
       </div>
     </div>
     
