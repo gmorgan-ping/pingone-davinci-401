@@ -9,8 +9,6 @@
     <script type="text/javascript" src="https://assets.pingone.com/davinci/latest/davinci.js" ></script>
     <!--  Script containing method to render DaVinci Flow    -->
     <script type="text/javascript" src="../scripts/loadwidget.js" defer></script>
-    <!-- Script to retrieve jackpot data  -->
-    <script src="../scripts/jackpot-api.js"></script>
 
     
     <script type="text/javascript">
@@ -58,22 +56,11 @@
         loadwidget(policyId, divComponent)
       }
       
-      function loadJackpotData() {
-        const policyId = "833139e29766ecb8ca7dc9986bca4407"
-        fetchJackpotData(policyId, loadJackpotSuccess)
-      }
-      
-      function loadJackpotSuccess(data) {
-        const element = document.getElementById('jackpot')
-        
-
-      }
-      
     </script>
    
   </head>
   
-  <body onload="initialize(); loadJackpotData()">    
+  <body onload="initialize();">    
     <div class="top-bar">
         <table class="content-holder">
           <tr>
@@ -97,7 +84,7 @@
             <button id="btn-register" class="margin-top">
               <i class="fa fa-user-plus" aria-hidden="true"></i> Register Now!
             </button>
-            <div id="jackpot"></div>
+          
           </td>
           <td>
             <img class="casino"/>
