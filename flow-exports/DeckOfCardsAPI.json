@@ -1,0 +1,204 @@
+{
+  "companyId": "ff4f6c34-2ed5-4210-9ad6-266b4f2412bd",
+  "authTokenExpireIds": [],
+  "createdDate": 1662749050818,
+  "currentVersion": 2,
+  "customerId": "b344736c6a6f378620d74fdfeb845f50",
+  "deployedDate": 1662749052644,
+  "description": "Imported on Fri Sep 09 2022 13:48:26 GMT+0000 (Coordinated Universal Time)",
+  "flowStatus": "enabled",
+  "name": "DeckOfCardsAPI",
+  "publishedVersion": 2,
+  "updatedDate": 1662749052644,
+  "flowId": "6ceecb856e885ac3362913f13138ca18",
+  "versionId": 2,
+  "graphData": {
+    "elements": {
+      "nodes": [
+        {
+          "data": {
+            "id": "4bi3urktbc",
+            "nodeType": "CONNECTION",
+            "connectionId": "867ed4363b2bc21c860085ad2baa817d",
+            "connectorId": "httpConnector",
+            "name": "Http",
+            "label": "httpConnector",
+            "status": "configured",
+            "capabilityName": "makeRestApiCall",
+            "type": "trigger",
+            "properties": {
+              "url": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"https://deckofcardsapi.com/api/deck/new/draw/\"\n      }\n    ]\n  }\n]"
+              },
+              "queryParams": {
+                "value": [
+                  {
+                    "key": "count",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"1\"\n      }\n    ]\n  }\n]"
+                  }
+                ]
+              },
+              "nodeTitle": {
+                "value": "Deck of Cards"
+              },
+              "nodeDescription": {
+                "value": "API Call"
+              },
+              "outputSchema": {
+                "value": "{\n\t\"definitions\": {},\n\t\"$schema\": \"http://json-schema.org/draft-07/schema#\", \n\t\"$id\": \"https://example.com/object1641822797.json\", \n\t\"title\": \"Root\", \n\t\"type\": \"object\",\n\t\"required\": [\n\t\t\"success\",\n\t\t\"deck_id\",\n\t\t\"cards\",\n\t\t\"remaining\"\n\t],\n\t\"properties\": {\n\t\t\"success\": {\n\t\t\t\"$id\": \"#root/success\", \n\t\t\t\"title\": \"Success\", \n\t\t\t\"type\": \"boolean\",\n\t\t\t\"examples\": [\n\t\t\t\ttrue\n\t\t\t],\n\t\t\t\"default\": true\n\t\t},\n\t\t\"deck_id\": {\n\t\t\t\"$id\": \"#root/deck_id\", \n\t\t\t\"title\": \"Deck_id\", \n\t\t\t\"type\": \"string\",\n\t\t\t\"default\": \"\",\n\t\t\t\"examples\": [\n\t\t\t\t\"oww2am0hrzmd\"\n\t\t\t],\n\t\t\t\"pattern\": \"^.*$\"\n\t\t},\n\t\t\"cards\": {\n\t\t\t\"$id\": \"#root/cards\", \n\t\t\t\"title\": \"Cards\", \n\t\t\t\"type\": \"array\",\n\t\t\t\"default\": [],\n\t\t\t\"items\":{\n\t\t\t\t\"$id\": \"#root/cards/items\", \n\t\t\t\t\"title\": \"Items\", \n\t\t\t\t\"type\": \"object\",\n\t\t\t\t\"required\": [\n\t\t\t\t\t\"code\",\n\t\t\t\t\t\"image\",\n\t\t\t\t\t\"images\",\n\t\t\t\t\t\"value\",\n\t\t\t\t\t\"suit\"\n\t\t\t\t],\n\t\t\t\t\"properties\": {\n\t\t\t\t\t\"code\": {\n\t\t\t\t\t\t\"$id\": \"#root/cards/items/code\", \n\t\t\t\t\t\t\"title\": \"Code\", \n\t\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\t\"default\": \"\",\n\t\t\t\t\t\t\"examples\": [\n\t\t\t\t\t\t\t\"8D\"\n\t\t\t\t\t\t],\n\t\t\t\t\t\t\"pattern\": \"^.*$\"\n\t\t\t\t\t},\n\t\t\t\t\t\"image\": {\n\t\t\t\t\t\t\"$id\": \"#root/cards/items/image\", \n\t\t\t\t\t\t\"title\": \"Image\", \n\t\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\t\"default\": \"\",\n\t\t\t\t\t\t\"examples\": [\n\t\t\t\t\t\t\t\"https://deckofcardsapi.com/static/img/8D.png\"\n\t\t\t\t\t\t],\n\t\t\t\t\t\t\"pattern\": \"^.*$\"\n\t\t\t\t\t},\n\t\t\t\t\t\"images\": {\n\t\t\t\t\t\t\"$id\": \"#root/cards/items/images\", \n\t\t\t\t\t\t\"title\": \"Images\", \n\t\t\t\t\t\t\"type\": \"object\",\n\t\t\t\t\t\t\"required\": [\n\t\t\t\t\t\t\t\"svg\",\n\t\t\t\t\t\t\t\"png\"\n\t\t\t\t\t\t],\n\t\t\t\t\t\t\"properties\": {\n\t\t\t\t\t\t\t\"svg\": {\n\t\t\t\t\t\t\t\t\"$id\": \"#root/cards/items/images/svg\", \n\t\t\t\t\t\t\t\t\"title\": \"Svg\", \n\t\t\t\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\t\t\t\"default\": \"\",\n\t\t\t\t\t\t\t\t\"examples\": [\n\t\t\t\t\t\t\t\t\t\"https://deckofcardsapi.com/static/img/8D.svg\"\n\t\t\t\t\t\t\t\t],\n\t\t\t\t\t\t\t\t\"pattern\": \"^.*$\"\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\"png\": {\n\t\t\t\t\t\t\t\t\"$id\": \"#root/cards/items/images/png\", \n\t\t\t\t\t\t\t\t\"title\": \"Png\", \n\t\t\t\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\t\t\t\"default\": \"\",\n\t\t\t\t\t\t\t\t\"examples\": [\n\t\t\t\t\t\t\t\t\t\"https://deckofcardsapi.com/static/img/8D.png\"\n\t\t\t\t\t\t\t\t],\n\t\t\t\t\t\t\t\t\"pattern\": \"^.*$\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n,\n\t\t\t\t\t\"value\": {\n\t\t\t\t\t\t\"$id\": \"#root/cards/items/value\", \n\t\t\t\t\t\t\"title\": \"Value\", \n\t\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\t\"default\": \"\",\n\t\t\t\t\t\t\"examples\": [\n\t\t\t\t\t\t\t\"8\"\n\t\t\t\t\t\t],\n\t\t\t\t\t\t\"pattern\": \"^.*$\"\n\t\t\t\t\t},\n\t\t\t\t\t\"suit\": {\n\t\t\t\t\t\t\"$id\": \"#root/cards/items/suit\", \n\t\t\t\t\t\t\"title\": \"Suit\", \n\t\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\t\"default\": \"\",\n\t\t\t\t\t\t\"examples\": [\n\t\t\t\t\t\t\t\"DIAMONDS\"\n\t\t\t\t\t\t],\n\t\t\t\t\t\t\"pattern\": \"^.*$\"\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\n\t\t},\n\t\t\"remaining\": {\n\t\t\t\"$id\": \"#root/remaining\", \n\t\t\t\"title\": \"Remaining\", \n\t\t\t\"type\": \"integer\",\n\t\t\t\"examples\": [\n\t\t\t\t51\n\t\t\t],\n\t\t\t\"default\": 0\n\t\t}\n\t}\n}\n"
+              }
+            }
+          },
+          "position": {
+            "x": 277,
+            "y": 246
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "2mu9qlc8mm",
+            "nodeType": "EVAL",
+            "label": "Evaluator"
+          },
+          "position": {
+            "x": 435.0010781508948,
+            "y": 245.2705696819636
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "x5bib5lvwe",
+            "nodeType": "CONNECTION",
+            "connectionId": "867ed4363b2bc21c860085ad2baa817d",
+            "connectorId": "httpConnector",
+            "name": "Http",
+            "label": "Http",
+            "status": "configured",
+            "capabilityName": "createSuccessResponse",
+            "type": "action",
+            "properties": {
+              "claimsNameValuePairs": {
+                "value": [
+                  {
+                    "name": "doc_card_url",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"image\",\n        \"data\": \"{{local.4bi3urktbc.payload.output.rawResponse.body.cards[0].image}}\",\n        \"tooltip\": \"{{local.4bi3urktbc.payload.output.rawResponse.body.cards[0].image}}\",\n        \"children\": [\n          {\n            \"text\": \"image\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
+                    "key": 0.44920394720762524,
+                    "label": "doc_card_url (string - flowInstance)",
+                    "type": "string",
+                    "nameDefault": "image"
+                  },
+                  {
+                    "name": "doc_card_value",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"value\",\n        \"data\": \"{{local.4bi3urktbc.payload.output.rawResponse.body.cards[0].value}}\",\n        \"tooltip\": \"{{local.4bi3urktbc.payload.output.rawResponse.body.cards[0].value}}\",\n        \"children\": [\n          {\n            \"text\": \"value\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
+                    "key": 0.35322368165188034,
+                    "label": "doc_card_value (string - flowInstance)",
+                    "type": "string",
+                    "nameDefault": "value"
+                  },
+                  {
+                    "name": "doc_card_suit",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"suit\",\n        \"data\": \"{{local.4bi3urktbc.payload.output.rawResponse.body.cards[0].suit}}\",\n        \"tooltip\": \"{{local.4bi3urktbc.payload.output.rawResponse.body.cards[0].suit}}\",\n        \"children\": [\n          {\n            \"text\": \"suit\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
+                    "key": 0.378319393322031,
+                    "label": "doc_card_suit (string - flowInstance)",
+                    "type": "string",
+                    "nameDefault": "suit"
+                  }
+                ]
+              }
+            }
+          },
+          "position": {
+            "x": 600,
+            "y": 236
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        }
+      ],
+      "edges": [
+        {
+          "data": {
+            "id": "z8c6d9xttg",
+            "source": "4bi3urktbc",
+            "target": "2mu9qlc8mm"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "h9n5zlh6ey",
+            "source": "2mu9qlc8mm",
+            "target": "x5bib5lvwe"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        }
+      ]
+    },
+    "data": {},
+    "zoomingEnabled": true,
+    "userZoomingEnabled": true,
+    "zoom": 1,
+    "minZoom": 1e-50,
+    "maxZoom": 1e+50,
+    "panningEnabled": true,
+    "userPanningEnabled": true,
+    "pan": {
+      "x": 0,
+      "y": 0
+    },
+    "boxSelectionEnabled": true,
+    "renderer": {
+      "name": "null"
+    }
+  },
+  "flowColor": "#AFD5FF",
+  "connectorIds": [
+    "httpConnector"
+  ],
+  "savedDate": 1662749050701,
+  "variables": []
+}

@@ -1,0 +1,774 @@
+{
+  "companyId": "ff4f6c34-2ed5-4210-9ad6-266b4f2412bd",
+  "authTokenExpireIds": [],
+  "createdDate": 1663711554236,
+  "currentVersion": 12,
+  "customerId": "b344736c6a6f378620d74fdfeb845f50",
+  "deployedDate": 1663711555739,
+  "description": "Imported on Fri Sep 09 2022 16:10:34 GMT+0000 (Coordinated Universal Time)",
+  "flowStatus": "enabled",
+  "name": "202-3 Retrive Jackpot Data (API)",
+  "publishedVersion": 12,
+  "settings": {
+    "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
+    "intermediateLoadingScreenCSS": "",
+    "intermediateLoadingScreenHTML": "",
+    "debugMode": true
+  },
+  "updatedDate": 1663711555739,
+  "flowId": "cd337cc65513030a0418de5a15ce6e55",
+  "versionId": 12,
+  "graphData": {
+    "elements": {
+      "nodes": [
+        {
+          "data": {
+            "id": "ek7dw504fs",
+            "nodeType": "CONNECTION",
+            "connectionId": "867ed4363b2bc21c860085ad2baa817d",
+            "connectorId": "httpConnector",
+            "name": "Http",
+            "label": "Http",
+            "status": "configured",
+            "capabilityName": "makeRestApiCall",
+            "type": "trigger",
+            "properties": {
+              "url": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"jackpot_source_file\",\n        \"data\": \"{{global.variables.jackpot_source_file}}\",\n        \"tooltip\": \"{{global.variables.jackpot_source_file}}\",\n        \"children\": [\n          {\n            \"text\": \"jackpot_source_file\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
+              "nodeTitle": {
+                "value": "Retrieve Jackpots File"
+              }
+            }
+          },
+          "position": {
+            "x": 547,
+            "y": 236
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "ha3y3i0jah",
+            "nodeType": "CONNECTION",
+            "connectionId": "eeaf3307ab74e9b375bdaadfc6f7d6bf",
+            "connectorId": "connectorIPregistry",
+            "name": "Connector I [2022-09-09]",
+            "label": "ipregistry",
+            "status": "configured",
+            "capabilityName": "ipLookup",
+            "type": "action",
+            "properties": {
+              "ipAddress": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"ipAddress\",\n        \"data\": \"{{global.variables.ipAddress}}\",\n        \"tooltip\": \"{{global.variables.ipAddress}}\",\n        \"children\": [\n          {\n            \"text\": \"ipAddress\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
+              "nodeTitle": {
+                "value": "IP Registry"
+              }
+            },
+            "idUnique": "pdn1o02jr9"
+          },
+          "position": {
+            "x": 1177,
+            "y": 236
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "led4b0t95j",
+            "nodeType": "EVAL"
+          },
+          "position": {
+            "x": 412,
+            "y": 236
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "p8lfkoq9al",
+            "nodeType": "EVAL"
+          },
+          "position": {
+            "x": 1327,
+            "y": 236
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "042reen1ij",
+            "nodeType": "CONNECTION",
+            "connectionId": "de650ca45593b82c49064ead10b9fe17",
+            "connectorId": "functionsConnector",
+            "name": "Functions",
+            "label": "Functions",
+            "status": "configured",
+            "capabilityName": "customFunction",
+            "type": "trigger",
+            "properties": {
+              "variableInputList": {
+                "value": [
+                  {
+                    "name": "jackpotData",
+                    "preferredDataType": "object",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"body\",\n        \"data\": \"{{local.ek7dw504fs.payload.output.rawResponse.body}}\",\n        \"tooltip\": \"{{local.ek7dw504fs.payload.output.rawResponse.body}}\",\n        \"children\": [\n          {\n            \"text\": \"body\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+                  },
+                  {
+                    "name": "code",
+                    "preferredDataType": "string",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"moustache\",\n        \"data\": \"{{local.ha3y3i0jah.payload.output.location.country.code}}\",\n        \"name\": \"code\",\n        \"children\": [\n          {\n            \"text\": \"\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+                  }
+                ]
+              },
+              "code": {
+                "value": "// Write your code here\n// Supported language: Javascript \nmodule.exports = a = async ({ params }) => {\n\tconst jackpotData = params.jackpotData;\n\tconst countryCode = params.code;\n\tlet retval;\n\t// // iterate over each element in the array\n\tfor (var i = 0; i < jackpotData.jackpots.length; i++) {\n\t\tlet countryItem = jackpotData.jackpots[i]\n\t\t\n\t\tif (countryItem.country.toLowerCase() === countryCode.toLowerCase()) {\n\t\t\treturn { 'jackpot': countryItem.amount, 'currency': countryItem.currency_symbol }\n\t\t}\n\t}\n\treturn { 'jackpot': 0, 'currency': \"unknown\" }\n}"
+              },
+              "outputSchema": {
+                "value": "{\n\t\"output\": {\n\t\t\"type\": \"object\",\n\t\t\"properties\": {\n\t\t\t\"jackpot\": {\n\t\t\t\t\"type\": \"number\"\n\t\t\t},\n\t\t\t\"currency\": {\n\t\t\t\t\"type\": \"string\"\n\t\t\t}\n\t\t}\n\t}\n}"
+              },
+              "nodeTitle": {
+                "value": "Retrieve Country Jackpot "
+              },
+              "nodeDescription": {
+                "value": "Return amount and currency"
+              }
+            }
+          },
+          "position": {
+            "x": 1477,
+            "y": 236
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "c6vxp3kf32",
+            "nodeType": "EVAL",
+            "label": "Evaluator"
+          },
+          "position": {
+            "x": 1627,
+            "y": 236
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "sne85s615z",
+            "nodeType": "CONNECTION",
+            "connectionId": "06922a684039827499bdbdd97f49827b",
+            "connectorId": "variablesConnector",
+            "name": "Variables",
+            "label": "Variables",
+            "status": "configured",
+            "capabilityName": "saveValue",
+            "type": "trigger",
+            "properties": {
+              "saveVariables": {
+                "value": [
+                  {
+                    "name": "ipAddress",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
+                    "key": 0.2177029561471555,
+                    "label": "ipAddress (string - flowInstance)",
+                    "type": "string"
+                  },
+                  {
+                    "name": "jackpot_source_file",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"https://pingone-davinci-202.glitch.me/json/jackpots.json\"\n      }\n    ]\n  }\n]",
+                    "key": 0.882809483340105,
+                    "label": "jackpot_source_file (string - flowInstance)",
+                    "type": "string"
+                  }
+                ]
+              },
+              "nodeTitle": {
+                "value": "Set Flow Variables"
+              },
+              "backgroundColor": {
+                "value": "#bd10e0ff"
+              }
+            }
+          },
+          "position": {
+            "x": 277,
+            "y": 236
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "bo1e6bjadd",
+            "nodeType": "EVAL",
+            "label": "Evaluator"
+          },
+          "position": {
+            "x": 676.5,
+            "y": 237.25
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "kgu90cfgje",
+            "nodeType": "CONNECTION",
+            "connectionId": "de650ca45593b82c49064ead10b9fe17",
+            "connectorId": "functionsConnector",
+            "name": "Functions",
+            "label": "Functions",
+            "status": "configured",
+            "capabilityName": "AIsEmpty",
+            "type": "trigger",
+            "properties": {
+              "leftValueA": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"ipAddress\",\n        \"data\": \"{{global.variables.ipAddress}}\",\n        \"tooltip\": \"{{global.variables.ipAddress}}\",\n        \"children\": [\n          {\n            \"text\": \"ipAddress\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
+              "nodeTitle": {
+                "value": "Is IP Empty"
+              },
+              "backgroundColor": {
+                "value": "#bd10e0ff"
+              },
+              "checkNullORUndefined": {
+                "value": true
+              }
+            }
+          },
+          "position": {
+            "x": 806,
+            "y": 238.5
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "9j8mnizoqw",
+            "nodeType": "CONNECTION",
+            "connectionId": "06922a684039827499bdbdd97f49827b",
+            "connectorId": "variablesConnector",
+            "name": "Variables",
+            "label": "Variables",
+            "status": "configured",
+            "capabilityName": "saveValue",
+            "type": "trigger",
+            "properties": {
+              "nodeTitle": {
+                "value": "Set IP Address"
+              },
+              "backgroundColor": {
+                "value": "#bd10e0ff"
+              },
+              "saveVariables": {
+                "value": [
+                  {
+                    "name": "ipAddress",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"ip\",\n        \"data\": \"{{global.ip}}\",\n        \"tooltip\": \"{{global.ip}}\",\n        \"children\": [\n          {\n            \"text\": \"ip\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
+                    "key": 0.6055728984380142,
+                    "label": "ipAddress (string - flowInstance)",
+                    "type": "string",
+                    "nameDefault": "ip"
+                  }
+                ]
+              }
+            }
+          },
+          "position": {
+            "x": 900,
+            "y": 390
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "7s31l2swp1",
+            "nodeType": "EVAL"
+          },
+          "position": {
+            "x": 1020,
+            "y": 390
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "70n7f3cgoy",
+            "nodeType": "EVAL",
+            "properties": {
+              "ha3y3i0jah": {
+                "value": "anyTriggersFalse"
+              }
+            }
+          },
+          "position": {
+            "x": 946.5,
+            "y": 237.25
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "4zcwff3w4j",
+            "nodeType": "CONNECTION",
+            "connectionId": "867ed4363b2bc21c860085ad2baa817d",
+            "connectorId": "httpConnector",
+            "name": "Http",
+            "label": "Http",
+            "status": "configured",
+            "capabilityName": "createSuccessResponse",
+            "type": "action",
+            "properties": {
+              "claimsNameValuePairs": {
+                "value": [
+                  {
+                    "name": "jackpot_country_code",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"{{local.ha3y3i0jah.payload.output.location.country.code}}\"\n      }\n    ]\n  }\n]",
+                    "key": 0.06406653709369814,
+                    "label": "jackpot_country_code (string - flowInstance)",
+                    "type": "string",
+                    "nameDefault": "country_code"
+                  },
+                  {
+                    "name": "jackpot_currency",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"functions.svg\",\n        \"url\": \"currency\",\n        \"data\": \"{{local.042reen1ij.payload.output.currency}}\",\n        \"tooltip\": \"{{local.042reen1ij.payload.output.currency}}\",\n        \"children\": [\n          {\n            \"text\": \"currency\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
+                    "key": 0.5292271740588406,
+                    "label": "jackpot_currency (string - flowInstance)",
+                    "type": "string",
+                    "nameDefault": "currency"
+                  },
+                  {
+                    "name": "jackpot_amount",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"functions.svg\",\n        \"url\": \"jackpot\",\n        \"data\": \"{{local.042reen1ij.payload.output.jackpot}}\",\n        \"tooltip\": \"{{local.042reen1ij.payload.output.jackpot}}\",\n        \"children\": [\n          {\n            \"text\": \"jackpot\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
+                    "key": 0.5641772252754385,
+                    "label": "jackpot_amount (number - flowInstance)",
+                    "type": "number",
+                    "nameDefault": "jackpot"
+                  },
+                  {
+                    "name": "httpStatusCode",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"200\"\n      }\n    ]\n  }\n]",
+                    "key": 0.10692357504497352,
+                    "label": "httpStatusCode (number - flowInstance)",
+                    "type": "number"
+                  },
+                  {
+                    "name": "jackpotCountryEmoji",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"{{local.ha3y3i0jah.payload.output.location.country.flag.emoji}}\"\n      }\n    ]\n  }\n]",
+                    "key": 0.19251756982562562,
+                    "label": "jackpotCountryEmoji (string - flowInstance)",
+                    "type": "string"
+                  }
+                ]
+              },
+              "nodeTitle": {
+                "value": "Send Jackpot Data"
+              }
+            }
+          },
+          "position": {
+            "x": 1811,
+            "y": 236.5
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        }
+      ],
+      "edges": [
+        {
+          "data": {
+            "id": "4mwzuyzik0",
+            "source": "9j8mnizoqw",
+            "target": "7s31l2swp1"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "5cizk8qsj8",
+            "source": "kgu90cfgje",
+            "target": "70n7f3cgoy"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "7ni4gzb7bs",
+            "source": "sne85s615z",
+            "target": "led4b0t95j"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "il9qxb52c6",
+            "source": "led4b0t95j",
+            "target": "ek7dw504fs"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "hpe6w2gvjx",
+            "source": "042reen1ij",
+            "target": "c6vxp3kf32"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "vjcnroy4xx",
+            "source": "70n7f3cgoy",
+            "target": "ha3y3i0jah"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "7kpeicd3dn",
+            "source": "ha3y3i0jah",
+            "target": "p8lfkoq9al"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "71osaulm31",
+            "source": "p8lfkoq9al",
+            "target": "042reen1ij"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "l2ijlzkrwu",
+            "source": "ek7dw504fs",
+            "target": "bo1e6bjadd"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "pxvskzl86z",
+            "source": "bo1e6bjadd",
+            "target": "kgu90cfgje"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "tk4b0ane8k",
+            "source": "7s31l2swp1",
+            "target": "ha3y3i0jah"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "r3amuuhkh7",
+            "source": "c6vxp3kf32",
+            "target": "4zcwff3w4j"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "f65ijtcu3a",
+            "source": "70n7f3cgoy",
+            "target": "9j8mnizoqw"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        }
+      ]
+    },
+    "data": {},
+    "zoomingEnabled": true,
+    "userZoomingEnabled": true,
+    "zoom": 1,
+    "minZoom": 1e-50,
+    "maxZoom": 1e+50,
+    "panningEnabled": true,
+    "userPanningEnabled": true,
+    "pan": {
+      "x": 0,
+      "y": 0
+    },
+    "boxSelectionEnabled": true,
+    "renderer": {
+      "name": "null"
+    }
+  },
+  "flowColor": "#E3F0FF",
+  "connectorIds": [
+    "httpConnector",
+    "connectorIPregistry",
+    "functionsConnector",
+    "variablesConnector"
+  ],
+  "savedDate": 1663711554093,
+  "variables": [
+    {
+      "context": "flowInstance",
+      "createdDate": 1662739834580,
+      "fields": {
+        "type": "string",
+        "displayName": "",
+        "mutable": true,
+        "min": 0,
+        "max": 2000
+      },
+      "type": "property",
+      "visibility": "private",
+      "name": "ipAddress##SK##flowInstance",
+      "companyId": "ff4f6c34-2ed5-4210-9ad6-266b4f2412bd"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1662739834579,
+      "fields": {
+        "type": "string",
+        "displayName": "",
+        "mutable": true,
+        "min": 0,
+        "max": 2000
+      },
+      "type": "property",
+      "visibility": "private",
+      "name": "jackpot_source_file##SK##flowInstance",
+      "companyId": "ff4f6c34-2ed5-4210-9ad6-266b4f2412bd"
+    }
+  ]
+}

@@ -1,0 +1,441 @@
+{
+  "companyId": "ff4f6c34-2ed5-4210-9ad6-266b4f2412bd",
+  "authTokenExpireIds": [],
+  "createdDate": 1663007105130,
+  "currentVersion": 3,
+  "customerId": "b344736c6a6f378620d74fdfeb845f50",
+  "description": "Imported on Fri Sep 09 2022 18:02:11 GMT+0000 (Coordinated Universal Time)",
+  "flowStatus": "enabled",
+  "inputSchemaCompiled": {
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "countryCode": {
+          "description": "",
+          "preferredDataType": "string",
+          "isExpanded": true,
+          "type": "string",
+          "name": "countryCode"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "countryCode"
+      ]
+    }
+  },
+  "isInputSchemaSaved": true,
+  "name": "202-4 Legal Age Subflow",
+  "publishedVersion": 2,
+  "updatedDate": 1663007105144,
+  "flowId": "1bbfe557ce8b8aa86029d6b0761b9abf",
+  "versionId": 3,
+  "graphData": {
+    "elements": {
+      "nodes": [
+        {
+          "data": {
+            "id": "04aoph0hfl",
+            "nodeType": "CONNECTION",
+            "connectionId": "06922a684039827499bdbdd97f49827b",
+            "connectorId": "variablesConnector",
+            "name": "Variables",
+            "label": "Variables",
+            "status": "configured",
+            "capabilityName": "saveValue",
+            "type": "trigger",
+            "properties": {
+              "saveVariables": {
+                "value": [
+                  {
+                    "name": "country_age_source",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"https://pingone-davinci-202.glitch.me/json/country-legal-age.json\"\n      }\n    ]\n  }\n]",
+                    "key": 0.8301152180314628,
+                    "label": "country_age_source (string - flowInstance)",
+                    "type": "string"
+                  },
+                  {
+                    "name": null,
+                    "value": null,
+                    "key": 0.8978507464968406,
+                    "label": null,
+                    "type": null
+                  }
+                ]
+              }
+            }
+          },
+          "position": {
+            "x": 210,
+            "y": 150
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "rb8ear4s3r",
+            "nodeType": "CONNECTION",
+            "connectionId": "867ed4363b2bc21c860085ad2baa817d",
+            "connectorId": "httpConnector",
+            "name": "Http",
+            "label": "Http",
+            "status": "configured",
+            "capabilityName": "makeRestApiCall",
+            "type": "trigger",
+            "properties": {
+              "url": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"country_age_source\",\n        \"data\": \"{{global.variables.country_age_source}}\",\n        \"tooltip\": \"{{global.variables.country_age_source}}\",\n        \"children\": [\n          {\n            \"text\": \"country_age_source\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
+              "nodeTitle": {
+                "value": "Retrieve Age File "
+              }
+            }
+          },
+          "position": {
+            "x": 540,
+            "y": 180
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "moj8f673f9",
+            "nodeType": "EVAL"
+          },
+          "position": {
+            "x": 390,
+            "y": 180
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "svybj5qw5h",
+            "nodeType": "EVAL",
+            "label": "Evaluator"
+          },
+          "position": {
+            "x": 690,
+            "y": 180
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "rwv5il6di8",
+            "nodeType": "CONNECTION",
+            "connectionId": "de650ca45593b82c49064ead10b9fe17",
+            "connectorId": "functionsConnector",
+            "name": "Functions",
+            "label": "Functions",
+            "status": "configured",
+            "capabilityName": "customFunction",
+            "type": "trigger",
+            "properties": {
+              "variableInputList": {
+                "value": [
+                  {
+                    "name": "ageData",
+                    "preferredDataType": "object",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"body\",\n        \"data\": \"{{local.rb8ear4s3r.payload.output.rawResponse.body}}\",\n        \"tooltip\": \"{{local.rb8ear4s3r.payload.output.rawResponse.body}}\",\n        \"children\": [\n          {\n            \"text\": \"body\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+                  },
+                  {
+                    "name": "countryCode",
+                    "preferredDataType": "string",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"countryCode\",\n        \"data\": \"{{global.parameters.countryCode}}\",\n        \"tooltip\": \"{{global.parameters.countryCode}}\",\n        \"children\": [\n          {\n            \"text\": \"countryCode\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+                  }
+                ]
+              },
+              "code": {
+                "value": "// Write your code here\n// Supported language: Javascript \nmodule.exports = a = async ({ params }) => {\n\tconst ageData = params.ageData;\n\tconst countryCode = params.countryCode;\n\tlet retval;\n\t// // iterate over each element in the array\n\tfor (var i = 0; i < ageData.ages.length; i++) {\n\t\tlet ageItem = ageData.ages[i]\n\t\t\n\t\tif (ageItem.country.toLowerCase() === countryCode.toLowerCase()) {\n\t\t\treturn { 'age': ageItem.age}\n\t\t}\n\t}\n\treturn { 'age': 25 }\n}"
+              },
+              "outputSchema": {
+                "value": "{\n\t\"output\": {\n\t\t\"type\": \"object\",\n\t\t\"properties\": {\n\t\t\t\"age\": {\n\t\t\t\t\"type\": \"number\"\n\t\t\t}\n\t\t}\n\t}\n}"
+              },
+              "nodeTitle": {
+                "value": "Retrieve Country Age "
+              },
+              "nodeDescription": {
+                "value": "Return age for country"
+              }
+            }
+          },
+          "position": {
+            "x": 870,
+            "y": 180
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "ulb8yaml47",
+            "nodeType": "EVAL",
+            "label": "Evaluator"
+          },
+          "position": {
+            "x": 990,
+            "y": 180
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "etlenvcfjb",
+            "nodeType": "CONNECTION",
+            "connectionId": "867ed4363b2bc21c860085ad2baa817d",
+            "connectorId": "httpConnector",
+            "name": "Http",
+            "label": "Http",
+            "status": "configured",
+            "capabilityName": "createSuccessResponse",
+            "type": "action",
+            "properties": {
+              "claimsNameValuePairs": {
+                "value": [
+                  {
+                    "name": "httpStatusCode",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"200\"\n      }\n    ]\n  }\n]",
+                    "key": 0.10692357504497352,
+                    "label": "httpStatusCode (number - flowInstance)",
+                    "type": "number"
+                  },
+                  {
+                    "name": "country_legal_age",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"functions.svg\",\n        \"url\": \"age\",\n        \"data\": \"{{local.rwv5il6di8.payload.output.age}}\",\n        \"tooltip\": \"{{local.rwv5il6di8.payload.output.age}}\",\n        \"children\": [\n          {\n            \"text\": \"age\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
+                    "key": 0.9524523235606652,
+                    "label": "country_legal_age (number - flowInstance)",
+                    "type": "number",
+                    "nameDefault": "age"
+                  }
+                ]
+              },
+              "nodeTitle": {
+                "value": "Send Jackpot Data"
+              }
+            }
+          },
+          "position": {
+            "x": 1170,
+            "y": 180
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        }
+      ],
+      "edges": [
+        {
+          "data": {
+            "id": "sw9i2l7ilm",
+            "source": "svybj5qw5h",
+            "target": "rwv5il6di8"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "tf15gb56ud",
+            "source": "moj8f673f9",
+            "target": "rb8ear4s3r"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "yln2fz8x81",
+            "source": "rwv5il6di8",
+            "target": "ulb8yaml47"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "1du56b1p5e",
+            "source": "rb8ear4s3r",
+            "target": "svybj5qw5h"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "d5efwk0j1z",
+            "source": "04aoph0hfl",
+            "target": "moj8f673f9"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "rh8vp5ewg4",
+            "source": "ulb8yaml47",
+            "target": "etlenvcfjb"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        }
+      ]
+    },
+    "data": {},
+    "zoomingEnabled": true,
+    "userZoomingEnabled": true,
+    "zoom": 1,
+    "minZoom": 1e-50,
+    "maxZoom": 1e+50,
+    "panningEnabled": true,
+    "userPanningEnabled": true,
+    "pan": {
+      "x": 0,
+      "y": 0
+    },
+    "boxSelectionEnabled": true,
+    "renderer": {
+      "name": "null"
+    }
+  },
+  "inputSchema": [
+    {
+      "propertyName": "countryCode",
+      "description": "",
+      "preferredDataType": "string",
+      "preferredControlType": "textField",
+      "isExpanded": true,
+      "required": true
+    }
+  ],
+  "flowColor": "#E3F0FF",
+  "connectorIds": [
+    "variablesConnector",
+    "httpConnector",
+    "functionsConnector"
+  ],
+  "savedDate": 1663007105024,
+  "variables": [
+    {
+      "context": "flowInstance",
+      "createdDate": 1662746531304,
+      "fields": {
+        "type": "string",
+        "displayName": "",
+        "mutable": true,
+        "min": 0,
+        "max": 2000
+      },
+      "type": "property",
+      "visibility": "private",
+      "name": "country_age_source##SK##flowInstance",
+      "companyId": "ff4f6c34-2ed5-4210-9ad6-266b4f2412bd"
+    }
+  ]
+}
