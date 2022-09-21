@@ -55,7 +55,7 @@
         const policyId = "a9566c02d33f8ebb14edd1e23084a2e1"
         const divComponent = "flow-widget"
         let flowInputData = {"countryCode": COUNTRY_CODE}
-        loadwidget(policyId, divComponent)
+        loadwidget(policyId, divComponent, flowInputData)
       }
       
       function loadJackpotData() {
@@ -70,6 +70,7 @@
               <p class="jackpot"><strong>Get in on the action!</strong><br/>
               This week's ${data.jackpotCountryEmoji} jackpot is ${data.jackpot_currency}${data.jackpot_amount.toLocaleString()}</p>`     
         COUNTRY_CODE = data.jackpot_country_code
+        document.getElementById('btn-register').disabled = false 
        }
     </script>
    
@@ -96,7 +97,7 @@
             <h2>Welcome to Beginner's Luck!</h2>
             <p>If this is your first visit, please click the <strong>Register Now</strong> below you create your free account</p>
             <p>Already registered? Great to see you back! Please click the <strong>Sign On</strong> button above</p>  
-            <button id="btn-register" class="margin-top">
+            <button id="btn-register" class="margin-top" disabled>
               <i class="fa fa-user-plus" aria-hidden="true"></i> Register Now!
             </button>
             <div id="jackpot" style="text-align:center"></div>
