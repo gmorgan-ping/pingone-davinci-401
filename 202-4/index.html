@@ -13,6 +13,7 @@
     <script src="../scripts/jackpot-api.js"></script>
     
     <script type="text/javascript">
+      let COUNTRY_CODE = ""
       
       // Initialize click handlers      
       function initialize() {
@@ -52,9 +53,11 @@
       
       // Load DaVinci Registration Flow
       function loadRegistrationFlow() {    
-        const policyId = "6ce5990b898ee53eb49edb53e7c535ac"
+        const policyId = "a9566c02d33f8ebb14edd1e23084a2e1"
         const divComponent = "flow-widget"
-        loadwidget(policyId, divComponent)
+        let flowInputData = {"countryCode": COUNTRY_CODE}
+
+        loadwidget(policyId, divComponent,flowInputData )
       }
       
       function loadJackpotData() {
@@ -68,6 +71,8 @@
         element.innerHTML = `
               <p class="jackpot"><strong>Get in on the action!</strong><br/>
               This week's ${data.jackpotCountryEmoji} jackpot is ${data.jackpot_currency}${data.jackpot_amount.toLocaleString()}</p>`     
+        COUNTRY_CODE = data.jackpot_country_code
+
        }
     </script>
    
