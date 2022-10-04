@@ -20,7 +20,7 @@ async function fetchJackpotData(policyId, callbackHandler) {
     .then((response) => response.text())
     .then((result) => {
       var jsonData = JSON.parse(result);
-      if (jsonData.additionalProperties.httpStatusCode === 200) {
+      if (jsonData.additionalProperties && jsonData.additionalProperties.httpStatusCode === 200) {
         result = jsonData.additionalProperties;
         callbackHandler(result);
       } else {
