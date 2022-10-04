@@ -277,3 +277,10 @@ label.checkbox {
 .buttontest {
   color:red;
 }
+
+.resendCodeBtn {
+  background-color: white;
+  border-width: 0px;
+  color: var(--theme-font-color);
+  text-decoration: underline;
+}
