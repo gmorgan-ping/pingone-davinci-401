@@ -43,15 +43,13 @@ a.start {
   background-color: #ecf1f2;
 }
 
-/* a.complete {
-  background-color: #CDEDFD;
+a.complete {
+
   float:right;
 }
- */
+
 a:hover {
-  background-color: #001728;
-  color: #ecf1f2;
-  
+  background-color: #CDEDFD;  
 }
 .enablement {
   content: url("https://cdn.glitch.global/2ef0ca36-d8d7-4c06-b231-374cc15fda3a/dv-enablement-logo.png?v=1662986206024");
