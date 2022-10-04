@@ -43,11 +43,11 @@ a.start {
   background-color: #ecf1f2;
 }
 
-a.complete {
+/* a.complete {
   background-color: #CDEDFD;
   float:right;
 }
-
+ */
 a:hover {
   background-color: #001728;
   color: #ecf1f2;
