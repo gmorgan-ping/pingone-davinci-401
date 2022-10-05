@@ -28,6 +28,13 @@
           modalPopup.style.display = "block";
           loadRegistrationFlow()
         }
+        
+        var signinBtn = document.getElementById("btn-signin");
+        signinBtn.onclick = function() {
+          // Display the modal popup div
+          modalPopup.style.display = "block";
+          loadSignInFlow()
+        }
 
         // Create the 'Close' 'X' button click handler
         var closeBtn = document.getElementById("closeBtn");
@@ -65,6 +72,12 @@
         const policyId = "d0eeb662d49c4a8a1233b5286f8bcde4"
         fetchJackpotData(policyId, loadJackpotSuccess)
       }
+      
+      function loadSignInFlow() {
+        const policyId = "96f086b72554b025de236b15f95fee77"
+        const divComponent = "flow-widget"
+        loadwidget(policyId, divComponent)
+      }
 
        function loadJackpotSuccess(data) {
         const element = document.getElementById('jackpot')
@@ -86,7 +99,7 @@
             <td><img class="main-site-logo"/></td>
             <td ><h1>Beginner's Luck Online Gaming &amp; Casino</h1> </td>
             <td>
-              <button id="signOnBtn" onclick="alert('Not yet Implement. Come back for our 401 session!')">
+              <button id="btn-signin">
                 <i class="fa fa-sign-in" aria-hidden="true"></i> Sign On
               </button>
             </td>
