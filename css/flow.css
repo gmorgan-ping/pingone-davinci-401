@@ -106,9 +106,17 @@ section select:focus{
   color: white;
 }
 
-.halfWidth {
-  width: 50%;
+.multibuttonbar button {
+  padding: 5px;
+  width: 48%;
+  height: 30px;
+  transition-duration: 0.2s;
+  border: 1px solid var(--theme-font-color);
+  border-radius: 3px;
+  background-color: var(--theme-primary-color);
+  color: white;
 }
+
 
 /***************************************
 * Register Button
