@@ -106,9 +106,9 @@ section select:focus{
   color: white;
 }
 
-.multibuttonbar button {
+.smallbuttonbar button {
   padding: 5px;
-  width: 48%;
+  width: 70%;
   height: 30px;
   transition-duration: 0.2s;
   border: 1px solid var(--theme-font-color);
@@ -130,7 +130,8 @@ section select:focus{
 /***************************************
 * Button Hover within section
 ***************************************/
-.buttonbar button:hover {
+.buttonbar button:hover,
+.smallbuttonbar button:hover{
   background-color: var(--theme-highlight-color);
 }
 
@@ -224,8 +225,14 @@ section:first-of-type {
 /***************************************
 * Button bar div
 ***************************************/
-.buttonbar {
+.buttonbar
+{
   margin-top: 20px;
+}
+
+.smallbuttonbar {
+  margin-top:10px;
+  text-align: center;
 }
 
 /***************************************
