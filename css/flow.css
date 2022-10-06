@@ -106,7 +106,9 @@ section select:focus{
   color: white;
 }
 
-
+.halfWidth {
+  width: 50%;
+}
 
 /***************************************
 * Register Button
