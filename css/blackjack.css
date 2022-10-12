@@ -13,9 +13,10 @@
   left: 274px;
   height: 110px;
   width: 280px;
- // background-color: red;
-  border: 1px solid green;
+/*   background-color: red; */
+/*   border: 1px solid green; */
 }
 .playercard {
-  
+  max-height: 100px;
+  margin-left: -25px;
 }
