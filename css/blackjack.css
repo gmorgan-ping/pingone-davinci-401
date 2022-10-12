@@ -1,0 +1,21 @@
+.blackjack-table {
+  margin-top: 20px;
+  background-image: url("https://cdn.glitch.global/d20de27e-3653-4342-b914-fd709297736c/table.png?v=1665599794644");
+  height: 430px;
+  width: 880px;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.playerhand {
+  position: absolute;
+  top: 230px;
+  left: 274px;
+  height: 110px;
+  width: 280px;
+ // background-color: red;
+  border: 1px solid green;
+}
+.playercard {
+  
+}
