@@ -10,7 +10,7 @@
 .playerhand {
   position: absolute;
   top: 346px;
-  left: 280;
+  left: 288;
   height: 110px;
   width: 280px;
   text-align: center;
@@ -23,17 +23,22 @@
 }
 
 .dealercard {
-  max-height: 80px;
+  max-height: 72px;
   margin-left: -20px;
 }
 
 .dealerhand {
   position: absolute;
-  top: 146px;
-  left: 280;
-  height: 110px;
-  width: 200px;
+  top: 220px;
+  left: 324;
+  height: 80px;
+  width: 190px;
   text-align: center;
 /*   background-color: red; */
 /*   border: 1px solid green; */
+}
+
+.playerbuttonbar {
+  position: absolute;
+  top: 180px;
 }
