@@ -2,9 +2,9 @@
   margin: 0 auto;
   margin-top: 20px;
   margin-bottom: 40px;
-  background-image: url("https://cdn.glitch.global/d20de27e-3653-4342-b914-fd709297736c/table.png?v=1665661843234");
-  height: 430px;
-  width: 880px;
+  background-image: url("https://cdn.glitch.global/d20de27e-3653-4342-b914-fd709297736c/table.png?v=1665662193050");
+  height: 460px;
+  width: 910px;
   background-repeat: no-repeat;
   position: relative;
   
@@ -12,30 +12,30 @@
 
 .playerhand {
   position: absolute;
-  top: 236px;
-  left: 288;
-  height: 110px;
-  width: 280px;
+  top: 286px;
+  left: 230;
+  height: 130px;
+  width: 480px;
   text-align: center;
 /*   background-color: red; */
 /*   border: 1px solid green; */
 }
 .playercard {
-  max-height: 100px;
+  max-height: 120px;
   margin-left: -30px;
 }
 
 .dealercard {
-  max-height: 72px;
+  max-height: 100px;
   margin-left: -20px;
 }
 
 .dealerhand {
   position: absolute;
-  top: 112px;
-  left: 324;
+  top: 52px;
+  left: 220;
   height: 80px;
-  width: 190px;
+  width: 500px;
   text-align: center;
 /*   background-color: red; */
 /*   border: 1px solid green; */
