@@ -2,7 +2,7 @@
   margin: 0 auto;
   margin-top: 20px;
   margin-bottom: 40px;
-  background-image: url("https://cdn.glitch.global/d20de27e-3653-4342-b914-fd709297736c/table.png?v=1665662193050");
+  background-image: url("https://cdn.glitch.global/d20de27e-3653-4342-b914-fd709297736c/table.png?v=1665662761795");
   height: 460px;
   width: 910px;
   background-repeat: no-repeat;
@@ -32,7 +32,7 @@
 
 .dealerhand {
   position: absolute;
-  top: 52px;
+  top: 62px;
   left: 220;
   height: 80px;
   width: 500px;
