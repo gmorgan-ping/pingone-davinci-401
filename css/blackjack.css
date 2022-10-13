@@ -2,7 +2,7 @@
   margin: 0 auto;
   margin-top: 20px;
   margin-bottom: 40px;
-  background-image: url("https://cdn.glitch.global/d20de27e-3653-4342-b914-fd709297736c/table.png?v=1665664783649");
+  background-image: url("https://cdn.glitch.global/d20de27e-3653-4342-b914-fd709297736c/table.png?v=1665665904082");
   height: 460px;
   width: 910px;
   background-repeat: no-repeat;
@@ -54,12 +54,30 @@
   width: 280px;
   text-align: center;
 /*   background-color: red; */
-  border: 1px solid green;
+/*   border: 1px solid green; */
 }
 
 .playerTotalSpan {
   color: white;
   font-weight: bold;
   font-size: larger;
+  text-shadow: 1px 2px #205a27
+}
+
+.dealerTotalDiv {
+  position: absolute;
+  top: 30px;
+  left: 320;
+  height: 40px;
+  width: 280px;
+  text-align: center;
+/*   background-color: red; */
+/*   border: 1px solid green; */
+}
+
+.dealerTotalSpan {
+  color: white;
+  font-weight: bold;
+/*   font-size: larger; */
   text-shadow: 1px 2px #205a27
 }
