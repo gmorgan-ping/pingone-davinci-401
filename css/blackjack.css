@@ -45,3 +45,20 @@
   position: absolute;
   top: 180px;
 }
+
+.playerTotalDiv {
+  position: absolute;
+  top: 250px;
+  left: 320;
+  height: 40px;
+  width: 280px;
+  text-align: center;
+/*   background-color: red; */
+  border: 1px solid green;
+}
+
+.playerTotalSpan {
+  color: white;
+  font-weight: bold;
+  font-size: larger
+}
