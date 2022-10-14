@@ -28,7 +28,8 @@ function loadBlackjackWidget(policyId, renderComponent, successCallbackHandler, 
           apiRoot: flowURL,
           accessToken: responseData.access_token,
           companyId: companyId,
-          policyId: policyId
+          policyId: policyId,
+          parameters: flowParameters,
         },
         useModal: false,
         successCallback,
@@ -42,8 +43,10 @@ function loadBlackjackWidget(policyId, renderComponent, successCallbackHandler, 
     .catch((error) => console.log("error", error));
 
   function successCallback(response) {
-    console.log(response.additionalProperties)
-    successCallbackHandler(response.additionalProperties.action);
+   
+    if (response.additionalProperties) {
+      successCallbackHandler(response.additionalProperties);
+    }
   }
   
   function errorCallback(error) {

@@ -93,20 +93,33 @@
         document.getElementById('btn-register').disabled = false 
        }
       
-      function initializeBlackjack () {
+      function initializeBlackjack (tallies) {
          const policyId = "dfffcf4d54d9e90e069723c1c4d022ab"
         const divComponent = "div-blackjack"
+        
+        if (!=)
         loadBlackjackWidget(policyId, divComponent,blackjackSuccessCallback)
       }
       
-      function blackjackSuccessCallback(action) {
-        if (action === "PLAY_AGAIN") {
+      function blackjackSuccessCallback(response) {
+        
+        let tallies = {}
+        
+        if (response.dealerTally && response.playerTally) {
+          
+          tallies = {"dealerTally": response.dealerTally, "playerTally": response.playerTally }
+          
+        } 
+        
+        
+        
+        if (response.action === "PLAY_AGAIN") {
           let game = document.getElementById("div-blackjack")
           davinci.cleanup(game);   
-           initializeBlackjack();
+           initializeBlackjack(tallies);
 
         }
-        console.log(action)
+        console.log(response)
       }
       
       function showGame() {
