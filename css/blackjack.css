@@ -96,3 +96,15 @@
   text-shadow: 1px 2px #205a27;
   letter-spacing: 2px;
 }
+
+.hitStandBtns {
+  padding: 5px;
+  width: 70px;
+  height: 70px;
+  transition-duration: 0.2s;
+  border: 1px solid var(--theme-font-color);
+  border-radius: 50%;
+  background-color: var(--theme-primary-color);
+  color: white;
+  
+}
