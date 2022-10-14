@@ -42,6 +42,7 @@ function loadBlackjackWidget(policyId, renderComponent, successCallbackHandler) 
     .catch((error) => console.log("error", error));
 
   function successCallback(response) {
+  
     successCallbackHandler(response.additionalProperties.action);
   }
   
