@@ -1,9 +1,9 @@
-function loadwidget(policyId, renderComponent, flowInputVariables) {
+function loadBlackjackWidget(policyId, renderComponent, successCallbackHandler) {
   const tokenURL = "https://orchestrate-api.pingone.com";
   const flowURL = "https://auth.pingone.com/";
-  const companyId = "ff4f6c34-2ed5-4210-9ad6-266b4f2412bd";
+  const companyId = "2c38f340-0f6c-4d21-b690-d3b1cc87392c";
   const skApiKey =
-    "f94829acebaec6f61c33fdf369a25adf6237c7e5f6142a7cbe5ba588ab134a01e30f43402446f1e5c591a90b073dbebe4d230af523cc4b2fc28ec7708a82dab323d4562554c470b4f6cebf0b256f55357ae46f1af27a15f8c9815bec37634644431451a4823c028eadc59390991ffcff7adb84e8f9288fd42ae7237c70e01cb4";
+    "b5be88f104c53db8918ecaeba2379b2860193cc1cdd97a005452f5031cd91a9531cfde34e4de409f092b1f424110c51c6ce732e8b1bd87f99f407245135d36fae6eb56d513a57825de89e1d32f8bb32ead847f1687deebefe25de6762954bcb5b705607134c16523b66da1d1aef04956e348489f3de0e0d21145b70ed676e213";
 
   /*** Build the DaVinci Token URL. ***/
   const skGetTokenUrl = tokenURL + "/v1/company/" + companyId + "/sdktoken";
@@ -28,8 +28,7 @@ function loadwidget(policyId, renderComponent, flowInputVariables) {
           apiRoot: flowURL,
           accessToken: responseData.access_token,
           companyId: companyId,
-          policyId: policyId,
-          parameters: flowInputVariables,
+          policyId: policyId
         },
         useModal: false,
         successCallback,
@@ -43,9 +42,9 @@ function loadwidget(policyId, renderComponent, flowInputVariables) {
     .catch((error) => console.log("error", error));
 
   function successCallback(response) {
-    console.log(response);
+    successCallbackHandler(response.additionalProperties.action);
   }
-
+  
   function errorCallback(error) {
     console.log(error);
   }
