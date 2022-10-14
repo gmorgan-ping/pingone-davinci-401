@@ -107,13 +107,16 @@
   background-color: #303030;
   color: white;
   font-weight: bold;
+  line-height: 20px;
+  padding-top: 4px;
 /*   box-shadow: 1px 1px #a8b13c; */
   
 }
 
 .standBtn {
   background-color: #d40000;
-  float: right
+  float: right;
+    
 }
 
 .hitStandBtns:hover {
