@@ -119,11 +119,15 @@
     
 }
 
+.playAgainBtn {
+  float: right;
+}
+
 .hitStandBtns:hover {
    background-color: #20aaca;
 }
 
-.playerButtonsDiv {
+.playerButtonsDiv, .playAgainDiv{
   width: 600px;
    position: absolute;
   top: 310px;
@@ -134,6 +138,9 @@
   color: #f2d450;
 }
 
-.playAgainDiv {
+/* .playAgainDiv {
   margin: 0 auto;
-}
+  text-align: center;
+  margin-top: -30px;
+  margin-bottom: 40px;
+} */
