@@ -102,12 +102,12 @@
   width: 70px;
   height: 70px;
   transition-duration: 0.2s;
-  border: 1px solid var(--theme-font-color);
+  border: 2px solid #a8b13c;
   border-radius: 50%;
-/*   background-color: #205a27; */
+  background-color: #303030;
   color: white;
   font-weight: bold;
-  box-shadow: 1px 2px #a8b13c;
+/*   box-shadow: 1px 1px #a8b13c; */
   
 }
 
@@ -116,9 +116,13 @@
   float: right
 }
 
+.hitStandBtns:hover {
+   background-color: #20aaca;
+}
+
 .playerButtonsDiv {
   width: 600px;
    position: absolute;
-  top: 280px;
-  left: 120;
+  top: 310px;
+  left: 150px;
 }
