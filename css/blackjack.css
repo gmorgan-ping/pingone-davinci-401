@@ -141,7 +141,30 @@
 .tally {
   display: block;
   color: white;
+  
+  margin: 10px;
+  text-transform: uppercase;
+  font-size: smaller;
 }
+
+.dealerTally, .playerTally {
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.tallyScoreboard {
+   position: absolute;
+  top: 24px;
+  left: 735;
+  height: 120px;
+  width: 100px;
+  text-align: center;
+/*   border: 4px solid #205a27; */
+/*   border-radius: 10px; */
+/*   box-shadow: 1px 1px #a8b13c; */
+}
+
 
 /* .playAgainDiv {
   margin: 0 auto;
