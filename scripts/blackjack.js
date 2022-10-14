@@ -7,6 +7,8 @@ function loadBlackjackWidget(policyId, renderComponent, successCallbackHandler, 
 
   /*** Build the DaVinci Token URL. ***/
   const skGetTokenUrl = tokenURL + "/v1/company/" + companyId + "/sdktoken";
+  
+  console.log(flowParameters);
 
   //*** Add the API Key from your DaVinci Application. ***/
   var headers = new Headers();
