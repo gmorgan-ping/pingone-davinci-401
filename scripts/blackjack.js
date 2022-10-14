@@ -1,4 +1,4 @@
-function loadBlackjackWidget(policyId, renderComponent, successCallbackHandler) {
+function loadBlackjackWidget(policyId, renderComponent, successCallbackHandler, flowParameters) {
   const tokenURL = "https://orchestrate-api.pingone.com";
   const flowURL = "https://auth.pingone.com/";
   const companyId = "2c38f340-0f6c-4d21-b690-d3b1cc87392c";
@@ -42,7 +42,7 @@ function loadBlackjackWidget(policyId, renderComponent, successCallbackHandler) 
     .catch((error) => console.log("error", error));
 
   function successCallback(response) {
-  
+    console.log(response.additionalProperties)
     successCallbackHandler(response.additionalProperties.action);
   }
   
