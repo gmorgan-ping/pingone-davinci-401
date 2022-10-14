@@ -138,6 +138,11 @@
   color: #f2d450;
 }
 
+.tally {
+  display: block;
+  color: white;
+}
+
 /* .playAgainDiv {
   margin: 0 auto;
   text-align: center;
