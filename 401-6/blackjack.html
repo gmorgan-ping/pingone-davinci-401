@@ -102,17 +102,9 @@
       function blackjackSuccessCallback(action) {
         if (action === "PLAY_AGAIN") {
           let game = document.getElementById("div-blackjack")
-          // let placeholder = document.getElementById("table-holder")    
-          // set time delay
-          // blackjackDelay = 2000
-          game.style.visibility = "hidden"
-          placeholder.style.display = "block";
           davinci.cleanup(game);   
            initializeBlackjack();
-          
-          blackjackTimer = setInterval(showGame, 1500);
-          
-         // placeholder.style.display = "none";
+
         }
         console.log(action)
       }
@@ -143,10 +135,10 @@
           </tr>          
         </table>
     </div> 
-    <div id="div-blackjack" >
+    <div id="div-blackjack" class="blackjack-table" >
       
     </div>
-    <div id="table-holder" class="blackjack-table" style="display:none"> </div>
+
     <hr/>
     <div class="pingenablement">&copy; 2022 Ping Identity - DaVinci Enablement Session Material</div>
   
