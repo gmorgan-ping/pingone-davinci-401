@@ -13,7 +13,7 @@
 .playerhand {
   position: absolute;
   top: 286px;
-  left: 230;
+  left: 234px;
   height: 130px;
   width: 480px;
   text-align: center;
@@ -128,4 +128,8 @@
    position: absolute;
   top: 310px;
   left: 150px;
+}
+
+.bannerIcons {
+  color: #f2d450;
 }
