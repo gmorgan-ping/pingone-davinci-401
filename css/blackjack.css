@@ -46,6 +46,7 @@
   top: 180px;
 }
 
+
 .playerTotalDiv {
   position: absolute;
   top: 250px;
@@ -127,7 +128,7 @@
    background-color: #20aaca;
 }
 
-.playerButtonsDiv, .playAgainDiv{
+.playerButtonsDiv, .playAgainDiv, .playerControlsDiv{
   width: 600px;
    position: absolute;
   top: 310px;
