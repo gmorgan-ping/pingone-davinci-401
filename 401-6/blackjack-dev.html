@@ -102,7 +102,7 @@
       
       function blackjackSuccessCallback(response) {
       
-        let  tallies = {"dealerTally": response.dealerTally, "playerTally": response.playerTally }
+        let  tallies = {"dealerTally": response.dealerTally, "playerTally": response.playerTally, "pushTally": response.pushTally }
       
         if (response.action === "PLAY_AGAIN") {
           let game = document.getElementById("div-blackjack")
