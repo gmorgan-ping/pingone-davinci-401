@@ -102,7 +102,7 @@
       
       function blackjackSuccessCallback(response) {
       
-        let  tallies = {"dealerTally": response.dealerTally, "playerTally": response.playerTally }
+       let  tallies = {"dealerTally": response.dealerTally, "playerTally": response.playerTally, "pushTally": response.pushTally }
       
         if (response.action === "PLAY_AGAIN") {
           let game = document.getElementById("div-blackjack")
@@ -161,7 +161,7 @@
       <ul>
        
         <li>- Game should end if dealer has blackjack on first 2 cards (with Ace showing)</li>
-        <li>- A push is registering as a dealer win</li>
+       
       </ul>
       <br/>
       <strong>Enhancment Tracker:</strong>
@@ -174,6 +174,7 @@
       <strong>Fixes In Testing:</strong>
       <ul>
          <li>- Sometimes the dealer will stop drawing cards</li>
+         <li>- A push is registering as a dealer win</li>
       </ul>
       
   </div>

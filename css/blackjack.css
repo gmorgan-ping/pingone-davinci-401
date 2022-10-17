@@ -146,6 +146,7 @@
   margin: 10px;
   text-transform: uppercase;
   font-size: smaller;
+  font-weight: bold;
 }
 
 .dealerTally, .playerTally {
