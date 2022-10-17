@@ -12,7 +12,7 @@
 
 .playerhand {
   position: absolute;
-  top: 286px;
+  top: 300px;
   left: 234px;
   height: 130px;
   width: 480px;
@@ -43,13 +43,13 @@
 
 .playerbuttonbar {
   position: absolute;
-  top: 180px;
+  top: 190px;
 }
 
 
 .playerTotalDiv {
   position: absolute;
-  top: 250px;
+  top: 264px;
   left: 320;
   height: 40px;
   width: 280px;

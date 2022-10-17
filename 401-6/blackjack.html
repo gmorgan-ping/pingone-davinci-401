@@ -112,31 +112,22 @@
         }
       }
       
-      function showGame() {
-        console.log('timer')
-         let game = document.getElementById("div-blackjack")
-          let placeholder = document.getElementById("table-holder");
-        game.style.visibility = "visible"
-          placeholder.style.display = "none";
-        clearInterval(blackjackTimer)
-      }
+      
     </script>
    
   </head>
   
 <body onload="initializeBlackjack()" >    
-    <h3 style="color:red">
-      Under Construction - Expect Issues :) 
-  </h3>
+    
     <div class="top-bar">
         <table class="content-holder">
           <tr>
             <td><img class="main-site-logo"/></td>
-            <td ><h1>Beginner's Luck Online Gaming &amp; Casino</h1> </td>
+            <td ><h1 style="margin-left">Beginner's Luck Online Gaming &amp; Casino</h1> </td>
             <td>
-              <button id="btn-signin" onclick="alert('Coming soon. Implemented but not yet integrated')">
+<!--               <button id="btn-signin" onclick="alert('Coming soon. Implemented but not yet integrated')">
                 <i class="fa fa-sign-in" aria-hidden="true"></i> Sign On
-              </button>
+              </button> -->
             </td>
           </tr>          
         </table>
@@ -155,12 +146,12 @@
         <div id="flow-widget" class="flow-widget"></div>
       </div>
     </div>
-    <div style="width:600px">
+<!--     <div style="width:600px">
       
       <strong>Issue Tracker:</strong>
       <ul>
        
-        <li>- Game should end if dealer has blackjack on first 2 cards (with Ace showing)</li>
+        <li>- Game should end if player has blackjack on first 2 cards (with Ace showing)</li>
        
       </ul>
       <br/>
@@ -175,9 +166,10 @@
       <ul>
          <li>- Sometimes the dealer will stop drawing cards</li>
          <li>- A push is registering as a dealer win</li>
+         <li>- Game should end if dealer has blackjack on first 2 cards (with Ace showing)</li>
       </ul>
       
-  </div>
+  </div> -->
     
   </body>
 </html>
