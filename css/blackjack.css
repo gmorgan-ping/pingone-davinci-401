@@ -154,6 +154,12 @@
   text-decoration: none;
 }
 
+.tallyScore {
+ 
+  
+  color: white;
+}
+
 .tallyScoreboard {
    position: absolute;
   top: 24px;
