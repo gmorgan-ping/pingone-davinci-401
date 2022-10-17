@@ -162,9 +162,10 @@
 .tallyIcon {
   text-align:center;
   font-size: larger;
+  vertical-align: middle;
 }
 .tallyTable {
-  
+  margin-left: 38px;
 }
 
 .tallyScoreboard {
