@@ -155,9 +155,16 @@
 }
 
 .tallyScore {
- 
-  
   color: white;
+  text-align:center;
+  font-weight: bold;
+}
+.tallyIcon {
+  text-align:center;
+  font-size: larger;
+}
+.tallyTable {
+  
 }
 
 .tallyScoreboard {
