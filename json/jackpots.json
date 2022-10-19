@@ -3,42 +3,42 @@
     {
       "country": "CA",
       "currency_symbol": "$",
-      "amount": 136000
+      "amount": 136401
     },
     {
       "country": "GB",
       "currency_symbol": "£",
-      "amount": 88000
+      "amount": 88401
     },
     {
       "country": "US",
       "currency_symbol": "$",
-      "amount": 95000
+      "amount": 95401
     },
     {
       "country": "DE",
       "currency_symbol": "€",
-      "amount": 40000
+      "amount": 40401
     },
     {
       "country": "CN",
       "currency_symbol": "¥",
-      "amount": 500000
+      "amount": 500401
     },
     {
       "country": "AU",
       "currency_symbol": "$",
-      "amount": 110000
+      "amount": 110401
     },
     {
       "country": "IL",
       "currency_symbol": "₪",
-      "amount": 240000
+      "amount": 240401
     },
     {
       "country": "FR",
       "currency_symbol": "€",
-      "amount": 40000
+      "amount": 40401
     }
   ]
 }
