@@ -307,23 +307,3 @@ label.checkbox {
   width: auto;
 }
 
-/***************************************
-* Magic Link Polling Indicators
-***************************************/
-.css-11k6vsm,
-.css-17zi2ag,
-.css-139roxj {
-    width: 20px;
-    height: 20px;
-    animation-duration: 0.75s;
-}
-
-.css-11k6vsm {
-    background-color: #9EC1A3;
-}
-.css-17zi2ag {
-    background-color: #70A9A1;
-}
-.css-139roxj {
-    background-color: #40798C;
-}
