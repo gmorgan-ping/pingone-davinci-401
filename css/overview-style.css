@@ -48,13 +48,14 @@ a.complete {
   float:right;
 }
 
-a.download {
+a.download{
   background-color: #e7f4d3;
 }
 
 a:hover, a.download:hover {
   background-color: #CDEDFD;  
 }
+
 
 
 .enablement {
