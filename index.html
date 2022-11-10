@@ -10,16 +10,19 @@
     
     function toggleFlows(caller, description, flows){
      
-      const callerBtn = document.getElementById(caller)
+      const callerSpan = document.getElementById(caller)
       const descriptionDiv = document.getElementById(description)
       const flowsDiv = document.getElementById(flows)
       
       if(flowsDiv.style.display === 'none'){
         descriptionDiv.style.display = 'none'
         flowsDiv.style.display = 'block'
+        callerSpan.innerHTML = "Hide Flows"
+        
       } else {
          descriptionDiv.style.display = 'block'
         flowsDiv.style.display = 'none'
+        callerSpan.innerHTML = "Show Flows"
       }
       
       
@@ -82,13 +85,16 @@
                
               </div>
               <div class="description-box" id="flows1" style="display:none">
-                asdfasdfasf
+                <p>Download the completed flows for this exercise</p>
+                <ul>
+                  <li>TBD</li>
+                </ul>
               </div>
               <div style="text-align:center">
                 <a href="401-1/index.html" ><i class="fa fa-play" aria-hidden="true"></i> Start</a>
                 <a href="401-1/completed.html" title="Run Completed Excerise" ><i class="fa fa-check-circle" aria-hidden="true"></i> Completed</a>
-                <a href="javascript:toggleFlows('showhide1', 'description1', 'flows1');" title="View Completed Flow" class="download" id="showhide1" >
-                  <i class="fa fa-file-code-o" aria-hidden="true"></i> View Flows
+                <a href="javascript:toggleFlows('showhide1', 'description1', 'flows1');" title="View Completed Flow" class="download" >
+                  <i class="fa fa-file-code-o" aria-hidden="true"></i> <span id="showhide1">View Flows</span>
                 </a>
                
               </div>
