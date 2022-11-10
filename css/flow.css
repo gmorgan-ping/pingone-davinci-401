@@ -166,6 +166,13 @@ section select:focus{
 }
 
 /***************************************
+* Agreement Decline Button 
+***************************************/
+.decline button {
+  background-color: #e7e7e7;
+}
+
+/***************************************
 * Block labels within section
 ***************************************/
 section label {
