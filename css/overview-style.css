@@ -72,7 +72,7 @@ a:hover, a.download:hover {
   padding: 10px;
   margin: 10px 10px 30px;
   border-radius: 5px;
-  height: 340px;
+  height: 360px;
 }
 
 .bordered-box-no-height {
@@ -83,7 +83,7 @@ a:hover, a.download:hover {
 /*   height: 340px; */
 }
 .description-box{
-  height: 240px;
+  height: 260px;
 }
 
 h3 {
