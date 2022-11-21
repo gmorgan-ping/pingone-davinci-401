@@ -28,7 +28,16 @@ h1,h2,h3 {
 .margin-top {
   margin-top: 20px;
 }
-
+a.links, a.links:visited{
+  border: 0;
+  text-decoration: underline;
+  width: inherit;
+  background-color: white;
+}
+a.links:hover {
+  background-color: white;
+  
+}
 a, a:visited {
   border: 1px solid #CECECE;
   padding: 5px 10px;
