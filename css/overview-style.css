@@ -35,7 +35,8 @@ a.links, a.links:visited{
   background-color: white;
 }
 a.links:hover {
-  background-color: white;
+  font-weight: bold;
+  background-color: #FFFFFF
   
 }
 a, a:visited {
