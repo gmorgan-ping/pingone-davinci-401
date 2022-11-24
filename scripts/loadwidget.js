@@ -29,7 +29,7 @@ function loadwidget(policyId, renderComponent, flowInputVariables) {
           accessToken: responseData.access_token,
           companyId: companyId,
           policyId: policyId,
-          parameters: flowInputVariables,
+          parameters: flowInputVariables
         },
         useModal: false,
         successCallback,
