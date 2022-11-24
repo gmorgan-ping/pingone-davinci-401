@@ -69,18 +69,16 @@
         <tr>
           <td style="width: 50%; vertical-align: top">
             <div class="bordered-box">
-              <h3>1 - Registration</h3>
+              <h3>1 - User Registration</h3>
               <div class="description-box" id="description1">
                 <p>In this exercise, we'll wire up the 'Beginner's Luck' registration form with PingOne to store user identities.</p>
                 <ul>
-                  <li>Configure PingOne DaVinci Connector</li>
-                  <li>Create PingOne user population</li>
-                  <li>Create user in PingOne</li>
-                  <li>Perform email address verification</li>
-                  <li>Remove Robot test from Registration flow</li>
+                  <li>Configure PingOne DaVinci connector</li>
                   <li>Verify user is unique</li>
+                  <li>Create PingOne user population</li>
                   <li>Customize PingOne notifications</li>
-                  <li>Send Welcome email</li>
+                  <li>Create user in PingOne</li>
+                  <li>Send Welcome email</li> 
                 </ul>
                
               </div>
@@ -104,15 +102,19 @@
             </div>
 
             <div class="bordered-box">
-              <h3>3 - Forgot Password</h3>
-
+             <h3>3 - Authentication</h3>
               <div class="description-box">
-                <p>Build a workflow that allows users to reset their forgotton password</p>
-                <ul>
-                  <li>Add 'Forgot Password' button</li>
-                  <li>Initiate PingOne reset password process</li>
-                  <li>Validate reset code</li>
-                </ul>
+                <p>Next, we'll create a basic sign in form to authenticate users</p>
+              <ul>
+                <li>Add email &amp; password form validation</li>
+                <li>Lookup user details</li>
+                <li>Ensure account is active</li>
+                <li>Handle unverified accounts</li>
+                <li>Introduction to the DaVinci Teleport connector</li>
+                <li>Password check</li>
+                <li>Sign In Success</li>
+              </ul>
+
               </div>
               <div style="text-align:center">
                 <a href="401-3/index.html" ><i class="fa fa-play" aria-hidden="true"></i> Start</a>
@@ -145,17 +147,15 @@
           </td>
           <td style="vertical-align: top">
             <div class="bordered-box">
-              <h3>2 - Authentication</h3>
+              <h3>2 - Account Verification</h3>
               <div class="description-box">
-                <p>Next, we'll create a basic sign in form to authenticate users</p>
+                <p>Next, we'll integrate email verification to ensure the address provided is valid</p>
               <ul>
-                <li>Add email &amp; password form validation</li>
-                <li>Lookup user details</li>
-                <li>Ensure account is active</li>
-                <li>Handle unverified accounts</li>
-                <li>Introduction to the DaVinci Teleport connector</li>
-                <li>Password check</li>
-                <li>Sign In Success</li>
+                <li>Remove Robot test from Registration flow</li>
+                <li>Customize verification email template</li>
+                <li>Create a verification flow</li>
+                <li>Integrate subflow into registration flow</li>
+                <li>Set verification required on account creation</li> 
               </ul>
               </div>
               <div style="text-align:center">
