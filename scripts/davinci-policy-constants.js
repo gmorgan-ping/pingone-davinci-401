@@ -10,5 +10,5 @@ const BEGINNERS_LUCK_JACKPOT_POLICY_ID = "b9f0c3f813b7440a4bc7e2a53ee0d597"
 * EXERCISE 1 POLICIES
 ************************************************************************************/
 const EX_1_REGISTRATION_START_POLICY_ID = "5c4a3537b1006304ee403744c475ba34"
-const EX_1_REGISTRATION_COMPLETED_POLICY_ID = "33e1505feafee5d3cc4abd6d706e741c"
+const EX_1_REGISTRATION_COMPLETED_POLICY_ID = "b31cabaa459c08398e210ea2e4fe5deb"
 
