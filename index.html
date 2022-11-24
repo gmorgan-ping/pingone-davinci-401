@@ -102,15 +102,14 @@
             </div>
 
             <div class="bordered-box">
-             <h3>3 - Authentication</h3>
+             <h3>3 - Basic Password Authentication</h3>
               <div class="description-box">
-                <p>Next, we'll create a basic sign in form to authenticate users</p>
+                <p>Now that we have users within PingOne, in this lab we'll build a sign in flow</p>
               <ul>
-                <li>Add email &amp; password form validation</li>
+                <li>Add email &amp; password HTML form validation</li>
                 <li>Lookup user details</li>
                 <li>Ensure account is active</li>
                 <li>Handle unverified accounts</li>
-                <li>Introduction to the DaVinci Teleport connector</li>
                 <li>Password check</li>
                 <li>Sign In Success</li>
               </ul>
@@ -124,18 +123,17 @@
 
             </div>
             <div class="bordered-box">
-              <h3>5 - Agreements</h3>
+              <h3>5 - Magic Link Authentication</h3>
 
               <div class="description-box">
-                <p>
-                  Often when registering for a service, users need to review/accept the services terms and conditions.
-                </p> 
+                <p>Sending Magic links is a popular technique for passwordless authentication. In this lab, we'll again extend the authentication flow to support magic links</p>
                 <ul>
-                  <li>Create an Agreement within PingOne</li>
-                  <li>Retrieve and display the agreement</li>
-                  <li>Capture reponse and view record in PingOne</li>
+                  <li>Add magic link button to form</li>
+                  <li>Introduction to DaVinci's Out-of-Band Connector</li>
+                  <li>Send email to user with magic link URL</li>
+                  <li>Poll for accepted challege</li>
+                  <li>Handle polling timeout</li>
                 </ul>
-                
               </div>
               <div style="text-align:center">
                 <a href="401-5/index.html" ><i class="fa fa-play" aria-hidden="true"></i> Start</a>
@@ -166,16 +164,16 @@
 
             </div>
             <div class="bordered-box">
-              <h3>4 - Magic Link</h3>
+              <h3>4 - Forgot Password</h3>
 
               <div class="description-box">
-                <p>In this exercise, we'll add magic link authentication to our sign in flow.</p>
+                <p>Extend the authentication flow to incorporate self-service password reset</p>
                 <ul>
-                  <li>Add magic link button to form</li>
-                  <li>Introduction to DaVinci's Out-of-Band Connector</li>
-                  <li>Send email to user with magic link URL</li>
-                  <li>Poll for accepted challege</li>
+                  <li>Add 'Forgot Password' button</li>
+                  <li>Initiate PingOne reset password process</li>
+                  <li>Validate reset code</li>
                 </ul>
+
               </div>
               <div style="text-align:center">
                 <a href="401-4/index.html" ><i class="fa fa-play" aria-hidden="true"></i> Start</a>
@@ -186,14 +184,16 @@
             </div>
 
             <div class="bordered-box">
-              <h3>6 - Extra Credit</h3>
+                <h3>6 - Agreements</h3>
 
               <div class="description-box">
-                <p>In this module, we'll display Blackjack game once the user has successfully signed in  
-                </p>
+                <p>
+                  Often when registering for a service, users need to review/accept the terms and conditions of the service. In this demostration, we'll update the registration flow to incorporate T&Cs
+                </p> 
                 <ul>
-                  <li>Render Blackjack on successful sign in</li>
-                  <li>Add analytics to track game wins and losses</li>
+                  <li>Create an Agreement within PingOne</li>
+                  <li>Retrieve and display the agreement</li>
+                  <li>Capture response and view record in PingOne</li>
                 </ul>
               </div>
               <div style="text-align:center">
