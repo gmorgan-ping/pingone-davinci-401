@@ -1,0 +1,21 @@
+<section class="register">
+    <form id="frmRegister">
+        <div class="register-content">
+            <div class="logo-wrapper">
+                <img class="logo" />
+            </div>
+            <h3>Beginner's Luck Online Gaming</h3>
+            <h1>Verfication Code</h1>
+            <p>Please enter the 8 character verification code sent to <strong>{{global.variables.userEmailAddress}}</strong></p>
+            <label>Verification Code</label>
+            <input type="text" id="verificationCode" />
+            <div class="buttonbar">
+                <button id="btnRegister" data-skcomponent="skbutton" data-skbuttontype="form-submit"
+                    data-skbuttonvalue="VALIDATE" data-skform="frmRegister">
+                    <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Next
+                </button>
+            </div>
+            <div data-skcomponent="skerror" class="error-message" data-skvisibility="" ></div>
+        </div>
+    </form>
+</section>

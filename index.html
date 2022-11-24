@@ -145,7 +145,7 @@
           <td style="vertical-align: top">
             <div class="bordered-box">
               <h3>2 - Account Verification</h3>
-              <div class="description-box">
+              <div class="description-box" id="description2">
                 <p>Next, we'll integrate email verification to ensure the address provided is valid</p>
               <ul>
                 <li>Customize verification email template</li>
@@ -154,10 +154,18 @@
                 <li>Set verification required on account creation</li> 
               </ul>
               </div>
+              <div class="description-box" id="flows2" style="display:none">
+                <p>Download the completed assets for this exercise</p>
+                <ul>
+                  <li><a href="401-2/assets/verification-template.txt" class="links">Verification Code Template</a></li>
+                </ul>
+              </div>
               <div style="text-align:center">
                 <a href="401-2/index.html" ><i class="fa fa-play" aria-hidden="true"></i> Start</a>
                 <a href="401-2/completed.html" title="Run Completed Excerise" ><i class="fa fa-check-circle" aria-hidden="true"></i> Completed</a>
-                <a href="https://github.com/gmorgan-ping/pingone-davinci-401/raw/master/401-2/401-2_Flows.zip" class="download" title="Download Completed Flow" download><i class="fa fa-download" aria-hidden="true"></i> Download Flows</a>
+                <a href="javascript:toggleFlows('showhide2', 'description2', 'flows2');" title="View Completed Flow" class="download" >
+                  <i class="fa fa-file-code-o" aria-hidden="true"></i> <span id="showhide2">View Flows</span>
+                </a>
               </div>
 
             </div>
