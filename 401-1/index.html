@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../css/flow.css" />
     
     <script type="text/javascript" src="https://assets.pingone.com/davinci/latest/davinci.js" ></script>
-    <!--  Script containing DaVinci API K    -->
+    <!--  Script containing DaVinci API Key and Policy constants    -->
     <script type="text/javascript" src="../scripts/davinci-policy-constants.js"></script>
     <!--  Script containing method to render DaVinci Flow    -->
     <script type="text/javascript" src="../scripts/loadwidget.js" defer></script>
@@ -17,10 +17,8 @@
     <script type="text/javascript">
       
       /********************************************************
-      * DAVINCI POLICY IDS
-      * UPDATE THE 2 POLICIES TO POINT TO YOUR DAVINCI TENANT
+      * DAVINCI POLICY ID
       *********************************************************/
-      const JACKPOT_POLICY_ID = "b9f0c3f813b7440a4bc7e2a53ee0d597"
       const REGISTRATION_POLICY_ID = "5c4a3537b1006304ee403744c475ba34"
       
       
@@ -71,7 +69,7 @@
       }
       
       function loadJackpotData() {
-        fetchJackpotData(JACKPOT_POLICY_ID, loadJackpotSuccess)
+        fetchJackpotData(BEGINNERS_LUCK_JACKPOT_POLICY_ID, loadJackpotSuccess)
       }
 
        function loadJackpotSuccess(data) {
