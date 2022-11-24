@@ -1,0 +1,7 @@
+Hi ${user.name.given} -
+
+<p>Please enter the following verification code to complete your Beginner's Luck account registration.</p>
+
+<p>Verification Code is: </p>
+
+<p style="font-size: larger"><b>${code.value}</b></p>
