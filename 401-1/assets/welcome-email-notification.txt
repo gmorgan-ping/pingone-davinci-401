@@ -1,0 +1,10 @@
+<body>
+Hello ${given}!
+ 
+<p>Congrats on creating your Beginner's Luck Online Gaming and Casino account!</p>
+ 
+<p>May the odds be ever in your favor and please game responsibly!</p>
+ 
+<p>To sign in, click <a href="${url}">here</a></p>
+ 
+</body>
