@@ -1,0 +1,22 @@
+<section class="register">
+    <form id="frmSignIn">
+        <div class="register-content">
+            <div class="logo-wrapper">
+                <img class="logo" />
+            </div>
+            <h3>Beginner's Luck Online Gaming</h3>
+            <h1>Sign In</h1>
+            <label>Email</label>
+            <input type="text" id="email" />
+            <div class="smallbuttonbar">
+                <p >Select sign in method</p>
+                <button id="btnSignin" data-skcomponent="skbutton" data-skbuttontype="form-submit"
+                    data-skbuttonvalue="PASSWORD" data-skform="frmSignIn" >
+                    <i class="fa fa-key" aria-hidden="true"></i> Password 
+                </button>
+            </div>
+            <div data-skcomponent="skerror" class="error-message" data-skvisibility="" ></div>
+            <div data-skcomponent="skerrormessage" class="error-message" data-skerrorid="email"></div>
+        </div>
+    </form>
+</section>

@@ -21,7 +21,7 @@ const EX_2_REGISTRATION_COMPLETED_POLICY_ID = "b31cabaa459c08398e210ea2e4fe5deb"
 /************************************************************************************
 * EXERCISE 3 POLICIES
 ************************************************************************************/
-const EX_3_AUTHENTICATION_START_POLICY_ID = "5c4a3537b1006304ee403744c475ba34"
+const EX_3_AUTHENTICATION_START_POLICY_ID = "f038149538b849425365bb74cc872586"
 const EX_3_AUTHENTICATION_COMPLETED_POLICY_ID = "b31cabaa459c08398e210ea2e4fe5deb"
 
 /************************************************************************************

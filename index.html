@@ -102,7 +102,7 @@
 
             <div class="bordered-box">
              <h3>3 - Basic Password Authentication</h3>
-              <div class="description-box">
+              <div class="description-box" id="description3">
                 <p>Now that we have users within PingOne, in this lab we'll build a sign in flow</p>
               <ul>
                 <li>Add email &amp; password HTML form validation</li>
@@ -114,10 +114,19 @@
               </ul>
 
               </div>
+              <div class="description-box" id="flows3" style="display:none">
+                <p>Download the completed assets for this exercise</p>
+                <ul>
+                  <li><a href="401-3/assets/capture-email-template.txt" class="links">Capture Email HTML Template</a></li>
+                         
+                </ul>
+              </div>
               <div style="text-align:center">
                 <a href="401-3/index.html" ><i class="fa fa-play" aria-hidden="true"></i> Start</a>
                 <a href="401-3/completed.html" title="Run Completed Excerise" ><i class="fa fa-check-circle" aria-hidden="true"></i> Completed</a>
-                <a href="tbd" class="download" title="Download Completed Flow" download><i class="fa fa-download" aria-hidden="true"></i> Download Flow</a>
+                <a href="javascript:toggleFlows('showhide3', 'description3', 'flows3');" title="View Completed Flow" class="download" >
+                  <i class="fa fa-file-code-o" aria-hidden="true"></i> <span id="showhide3">View Flows</span>
+                </a>
               </div>
 
             </div>
@@ -134,10 +143,11 @@
                   <li>Handle polling timeout</li>
                 </ul>
               </div>
+              
               <div style="text-align:center">
                 <a href="401-5/index.html" ><i class="fa fa-play" aria-hidden="true"></i> Start</a>
                 <a href="401-5/completed.html" title="Run Completed Excerise" ><i class="fa fa-check-circle" aria-hidden="true"></i> Completed</a>
-                <a href="tbd" class="download" title="Download Completed Flow" download><i class="fa fa-download" aria-hidden="true"></i> Download Flow</a>
+                
               </div>
 
             </div>
