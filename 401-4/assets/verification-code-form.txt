@@ -1,0 +1,25 @@
+<section class="register">
+    <form id="frmResetPassword">
+        <div class="register-content">
+            <div class="logo-wrapper">
+                <img class="logo" />
+            </div>
+            <h3>Beginner's Luck Online Gaming</h3>
+            <h1>Set New Password</h1>
+            <p>Please enter the 8 character password reset code sent to <strong>[EMAIL]</strong> and create a new password</p>
+            <label>Password Reset Code</label>
+            <input type="text" id="passwordResetCode" />
+            <label>Password</label>
+            <input type="password" id="password" /><i class="fa fa-eye togglepwd" id="togglepwd" aria-hidden="true"></i>
+
+            <div class="buttonbar">
+                <button id="btnRegister" data-skcomponent="skbutton" data-skbuttontype="form-submit"
+                    data-skbuttonvalue="VALIDATE" data-skform="frmResetPassword">
+                    <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Next
+                </button>
+            </div>
+            <div data-skcomponent="skerror" class="error-message" data-skvisibility="" ></div>
+            <div data-skcomponent="skerrormessage" class="error-message" data-skerrorid="password"></div>
+        </div>
+    </form>
+</section>
