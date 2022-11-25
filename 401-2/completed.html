@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="../css/flow.css" />
     
     <script type="text/javascript" src="https://assets.pingone.com/davinci/latest/davinci.js" ></script>
+    <!--  Script containing DaVinci API Key and Policy constants    -->
+    <script type="text/javascript" src="../scripts/davinci-policy-constants.js"></script>
     <!--  Script containing method to render DaVinci Flow    -->
     <script type="text/javascript" src="../scripts/loadwidget.js" defer></script>
     <!-- Script to retrieve jackpot data  -->
@@ -42,13 +44,6 @@
           closeModalPopup();  
         }
 
-        /* Create the Window click handle that will close the popup
-           if the user clicks anywhere outside of it */
-        window.onclick = function(event) {
-          if (event.target === modalPopup) {
-           closeModalPopup();
-          }
-        }
       }
       
       // Close the modal popup
@@ -61,22 +56,17 @@
       
       // Load DaVinci Registration Flow
       function loadRegistrationFlow() {    
-        const policyId = "33e1505feafee5d3cc4abd6d706e741c"
         const divComponent = "flow-widget"
         let flowInputData = {"countryCode": COUNTRY_CODE}
-        loadwidget(policyId, divComponent, flowInputData)
+        loadwidget(EX_2_REGISTRATION_COMPLETED_POLICY_ID, divComponent, flowInputData)
       }
       
       function loadJackpotData() {
-        //load jackpot data
-        const policyId = "b9f0c3f813b7440a4bc7e2a53ee0d597"
-        fetchJackpotData(policyId, loadJackpotSuccess)
+        fetchJackpotData(BEGINNERS_LUCK_JACKPOT_POLICY_ID, loadJackpotSuccess)
       }
       
       function loadSignInFlow() {
-        const policyId = "f038149538b849425365bb74cc872586"
-        const divComponent = "flow-widget"
-        loadwidget(policyId, divComponent)
+        alert("Not yet Implement. Will be implemented in this session!")
       }
 
        function loadJackpotSuccess(data) {
