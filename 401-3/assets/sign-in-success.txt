@@ -1,0 +1,9 @@
+<section class="register">
+    <div class="register-content">
+        <div class="logo-wrapper">
+            <img class="logo" />
+        </div>
+        <h3>Beginner's Luck Online Gaming</h3>
+        <h1>Sign In Successful</h1>
+        <p>Welcome back [NAME]!</p>  
+</section>
