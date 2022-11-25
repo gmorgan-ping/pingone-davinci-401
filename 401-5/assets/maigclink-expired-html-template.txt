@@ -1,0 +1,11 @@
+<section class="register">
+    <div class="register-content">
+        <div class="logo-wrapper">
+            <img class="logo" />
+        </div>
+        <h3>Beginner's Luck Online Gaming</h3>
+        <h1>Magic Link Expiry</h1>
+        <p style="text-align:center">The magic link his expired.</p>
+        <div data-skcomponent="skerror" class="error-message" data-skvisibility=""></div>
+    </div>
+</section>
