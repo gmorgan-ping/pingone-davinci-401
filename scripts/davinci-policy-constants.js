@@ -12,3 +12,33 @@ const BEGINNERS_LUCK_JACKPOT_POLICY_ID = "b9f0c3f813b7440a4bc7e2a53ee0d597"
 const EX_1_REGISTRATION_START_POLICY_ID = "5c4a3537b1006304ee403744c475ba34"
 const EX_1_REGISTRATION_COMPLETED_POLICY_ID = "b31cabaa459c08398e210ea2e4fe5deb"
 
+/************************************************************************************
+* EXERCISE 2 POLICIES
+************************************************************************************/
+const EX_2_REGISTRATION_START_POLICY_ID = "5c4a3537b1006304ee403744c475ba34"
+const EX_2_REGISTRATION_COMPLETED_POLICY_ID = "b31cabaa459c08398e210ea2e4fe5deb"
+
+/************************************************************************************
+* EXERCISE 3 POLICIES
+************************************************************************************/
+const EX_3_AUTHENTICATION_START_POLICY_ID = "5c4a3537b1006304ee403744c475ba34"
+const EX_3_AUTHENTICATION_COMPLETED_POLICY_ID = "b31cabaa459c08398e210ea2e4fe5deb"
+
+/************************************************************************************
+* EXERCISE 4 POLICIES
+************************************************************************************/
+const EX_4_AUTHENTICATION_START_POLICY_ID = "5c4a3537b1006304ee403744c475ba34"
+const EX_4_AUTHENTICATION_START_POLICY_ID = "b31cabaa459c08398e210ea2e4fe5deb"
+
+/************************************************************************************
+* EXERCISE 5 POLICIES
+************************************************************************************/
+const EX_5_AUTHENTICATION_START_POLICY_ID = "5c4a3537b1006304ee403744c475ba34"
+const EX_5_AUTHENTICATION_START_POLICY_ID = "b31cabaa459c08398e210ea2e4fe5deb"
+
+/************************************************************************************
+* EXERCISE 6 POLICIES
+************************************************************************************/
+//const EX_1_REGISTRATION_START_POLICY_ID = "5c4a3537b1006304ee403744c475ba34"
+//const EX_1_REGISTRATION_COMPLETED_POLICY_ID = "b31cabaa459c08398e210ea2e4fe5deb"
+
