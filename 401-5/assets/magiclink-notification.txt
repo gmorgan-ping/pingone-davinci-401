@@ -1,0 +1,6 @@
+<p>Hi -</p>
+
+<p>Please click on the link below to complete your Beginner's Luck sign in request.</p>
+
+<p><a href="${continueLink}">Complete Sign In</a></p>
+
