@@ -33,7 +33,7 @@ const EX_4_AUTHENTICATION_START_POLICY_ID = "f551e342053b44ecd5a523925a00a951"
 /************************************************************************************
 * EXERCISE 5 POLICIES
 ************************************************************************************/
-//const EX_5_AUTHENTICATION_START_POLICY_ID = "5c4a3537b1006304ee403744c475ba34"
+const EX_5_AUTHENTICATION_START_POLICY_ID = "a7d29a04a789b25444afd98f3400a489"
 //const EX_5_AUTHENTICATION_COMPLETED_POLICY_ID = "b31cabaa459c08398e210ea2e4fe5deb"
 
 /************************************************************************************
