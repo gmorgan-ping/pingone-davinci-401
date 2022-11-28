@@ -1,3 +1,8 @@
+NAME: MagicLinkAuthentication
+SUBJECT: Beginner's Luck Magic Link Sign In Request
+
+BODY
+----------------------------------------------------------------------------------------
 <p>Hi -</p>
 
 <p>Please click on the link below to complete your Beginner's Luck sign in request.</p>
