@@ -86,12 +86,12 @@ a:hover, a.download:hover {
   height: 360px;
 }
 
-.bordered-box-no-height {
+.bordered-box-overview {
   border: 1px solid #CECECE;
   padding: 10px;
   margin: 10px 10px 30px;
   border-radius: 5px;
-/*   height: 340px; */
+   height: 240px; 
 }
 .description-box{
   height: 260px;
