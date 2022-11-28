@@ -15,8 +15,8 @@ const EX_1_REGISTRATION_COMPLETED_POLICY_ID = "50a919013fa04846694d5e34c5c84c9c"
 /************************************************************************************
 * EXERCISE 2 POLICIES
 ************************************************************************************/
-const EX_2_REGISTRATION_START_POLICY_ID = "5c4a3537b1006304ee403744c475ba34"
-const EX_2_REGISTRATION_COMPLETED_POLICY_ID = "b31cabaa459c08398e210ea2e4fe5deb"
+const EX_2_REGISTRATION_START_POLICY_ID = "30f09225a387471aafdbe4fdb8fdcc44"
+const EX_2_REGISTRATION_COMPLETED_POLICY_ID = "eb4d7a073b08b24de1349628ad71347b"
 
 /************************************************************************************
 * EXERCISE 3 POLICIES
