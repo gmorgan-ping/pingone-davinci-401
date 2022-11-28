@@ -25,10 +25,10 @@ const EX_3_AUTHENTICATION_START_POLICY_ID = "1e80344a950b5cd5297a8a475563e143"
 const EX_3_AUTHENTICATION_COMPLETED_POLICY_ID = "e1fd9ecf20b1a004f269f0703fadcc9d"
 
 /************************************************************************************
-* EXERCISE 4 POLICIES
+* EXERCISE 4 POLICIES - FORGOT PASSWORD
 ************************************************************************************/
-const EX_4_AUTHENTICATION_START_POLICY_ID = "f551e342053b44ecd5a523925a00a951"
-//const EX_4_AUTHENTICATION_COMPLETED_POLICY_ID = "b31cabaa459c08398e210ea2e4fe5deb"
+const EX_4_AUTHENTICATION_START_POLICY_ID = "7612452db2dadc84647aa37a82320807"
+const EX_4_AUTHENTICATION_COMPLETED_POLICY_ID = "b31cabaa459c08398e210ea2e4fe5deb"
 
 /************************************************************************************
 * EXERCISE 5 POLICIES
