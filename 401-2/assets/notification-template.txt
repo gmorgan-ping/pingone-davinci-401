@@ -1,3 +1,7 @@
+SUBJECT: Beginner's Luck - Verify Email Address
+
+BODY
+
 Hi ${user.name.given} -
 
 <p>Please enter the following verification code to complete your Beginner's Luck account registration.</p>

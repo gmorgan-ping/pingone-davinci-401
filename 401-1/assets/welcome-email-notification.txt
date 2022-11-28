@@ -1,4 +1,8 @@
-<body>
+TITLE: WelcomeNewUser
+SUBJECT: Welcome to Beginner’s Luck
+
+BODY:
+
 Hello ${given}!
  
 <p>Congrats on creating your Beginner's Luck Online Gaming and Casino account!</p>
@@ -7,4 +11,4 @@ Hello ${given}!
  
 <p>To sign in, click <a href="${url}">here</a></p>
  
-</body>
+
