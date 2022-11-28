@@ -7,22 +7,22 @@ const DAVINCI_POLICY_API_KEY = "bbf91858b63266231f9f3268647fccaff632066f83f91432
 const BEGINNERS_LUCK_JACKPOT_POLICY_ID = "34101a0bfc8c0f3cba7a859b930b01cc"
 
 /************************************************************************************
-* EXERCISE 1 POLICIES
+* EXERCISE 1 POLICIES - USER REGISTRATION
 ************************************************************************************/
 const EX_1_REGISTRATION_START_POLICY_ID = "91bd0923853e5281a01e9863fb3013f0"
 const EX_1_REGISTRATION_COMPLETED_POLICY_ID = "50a919013fa04846694d5e34c5c84c9c"
 
 /************************************************************************************
-* EXERCISE 2 POLICIES
+* EXERCISE 2 POLICIES - USER REGISTRATION WITH EMAIL VERIFICATION
 ************************************************************************************/
 const EX_2_REGISTRATION_START_POLICY_ID = "30f09225a387471aafdbe4fdb8fdcc44"
 const EX_2_REGISTRATION_COMPLETED_POLICY_ID = "eb4d7a073b08b24de1349628ad71347b"
 
 /************************************************************************************
-* EXERCISE 3 POLICIES
+* EXERCISE 3 POLICIES - BASIC AUTHENTICATION
 ************************************************************************************/
-const EX_3_AUTHENTICATION_START_POLICY_ID = "f038149538b849425365bb74cc872586"
-const EX_3_AUTHENTICATION_COMPLETED_POLICY_ID = "b31cabaa459c08398e210ea2e4fe5deb"
+const EX_3_AUTHENTICATION_START_POLICY_ID = "1e80344a950b5cd5297a8a475563e143"
+const EX_3_AUTHENTICATION_COMPLETED_POLICY_ID = "e1fd9ecf20b1a004f269f0703fadcc9d"
 
 /************************************************************************************
 * EXERCISE 4 POLICIES
