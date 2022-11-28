@@ -39,6 +39,9 @@ const EX_5_AUTHENTICATION_COMPLETED_POLICY_ID = "d59b68ec4b6f0dd40f9a6d29e613f9f
 /************************************************************************************
 * EXERCISE 6 POLICIES
 ************************************************************************************/
-//const EX_1_REGISTRATION_START_POLICY_ID = "5c4a3537b1006304ee403744c475ba34"
-//const EX_1_REGISTRATION_COMPLETED_POLICY_ID = "b31cabaa459c08398e210ea2e4fe5deb"
+const EX_6_REGISTRATION_START_POLICY_ID = "2caecc40c2cff4a005c90fee46db8e4f"
+const EX_6_AUTHENTICATION_START_POLICY_ID = "ff7737adff7f6212ec06810e13a08ff5"
+const EX_6_REGISTRATION_COMPLETED_POLICY_ID = "f0298b3d131530572ddd91895ae5dd83"
+const EX_6_AUTHENTICATION_COMPLETED_POLICY_ID = "a09a00680d70bde5f96a69358850e630"
+
 
