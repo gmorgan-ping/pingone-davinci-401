@@ -1,15 +1,15 @@
 const DAVINCI_TOKEN_URL = "https://orchestrate-api.pingone.com"
 const DAVINCI_FLOW_URL = "https://auth.pingone.com/";
 
-const DAVINCI_COMPANY_ID = "858682c2-a8eb-4373-925d-55adea99df3c"
-const DAVINCI_POLICY_API_KEY = "6b98aa4daa76381cd2842a56d6d8a6904d875f6a927d8002652a035c62f2a69b8066c9a6690ca69cc2313a6c10f91c75e17ae831ccb837a66181948677993afec59590a16a48d3df4e38bbc9fe2f91591bee275b3037c68986ae919b71d1310691246417abc08487173bff844301bf3cfe34c5936b072939c604bed4ca4f16f2"
+const DAVINCI_COMPANY_ID = "8537ff42-72bc-4142-aef5-e6e6ed96dc26"
+const DAVINCI_POLICY_API_KEY = "bbf91858b63266231f9f3268647fccaff632066f83f9143292932fd6a4fb55898fe940745d1796fc26cef8323713841c09ca45279b46895a6688e3c566971c58509319a95c43eb42199be512a49997e0670d51ffcc77fd8acbd83987bdef1b447533572e9333d7a88bb6d2336451b56b6c60d2877ce688d0a91fd9a3f2534f55"
 
-const BEGINNERS_LUCK_JACKPOT_POLICY_ID = "b9f0c3f813b7440a4bc7e2a53ee0d597"
+const BEGINNERS_LUCK_JACKPOT_POLICY_ID = "34101a0bfc8c0f3cba7a859b930b01cc"
 
 /************************************************************************************
 * EXERCISE 1 POLICIES
 ************************************************************************************/
-const EX_1_REGISTRATION_START_POLICY_ID = "5c4a3537b1006304ee403744c475ba34"
+const EX_1_REGISTRATION_START_POLICY_ID = "91bd0923853e5281a01e9863fb3013f0"
 const EX_1_REGISTRATION_COMPLETED_POLICY_ID = "b31cabaa459c08398e210ea2e4fe5deb"
 
 /************************************************************************************
