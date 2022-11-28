@@ -28,12 +28,12 @@ const EX_3_AUTHENTICATION_COMPLETED_POLICY_ID = "e1fd9ecf20b1a004f269f0703fadcc9
 * EXERCISE 4 POLICIES - FORGOT PASSWORD
 ************************************************************************************/
 const EX_4_AUTHENTICATION_START_POLICY_ID = "7612452db2dadc84647aa37a82320807"
-const EX_4_AUTHENTICATION_COMPLETED_POLICY_ID = "b31cabaa459c08398e210ea2e4fe5deb"
+const EX_4_AUTHENTICATION_COMPLETED_POLICY_ID = "e90274f1fd7d4fa53316929d09a61ed3"
 
 /************************************************************************************
 * EXERCISE 5 POLICIES
 ************************************************************************************/
-const EX_5_AUTHENTICATION_START_POLICY_ID = "a7d29a04a789b25444afd98f3400a489"
+const EX_5_AUTHENTICATION_START_POLICY_ID = "03624fd347d876edd67cc7ff452d3a35"
 //const EX_5_AUTHENTICATION_COMPLETED_POLICY_ID = "b31cabaa459c08398e210ea2e4fe5deb"
 
 /************************************************************************************
