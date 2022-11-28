@@ -1,0 +1,510 @@
+{
+  "companyId": "8537ff42-72bc-4142-aef5-e6e6ed96dc26",
+  "authTokenExpireIds": [],
+  "connectorIds": [
+    "httpConnector",
+    "annotationConnector"
+  ],
+  "createdDate": 1669638193258,
+  "currentVersion": 2,
+  "customerId": "f3e47d945ae971a4b4142ec75012d155",
+  "deployedDate": 1669638194280,
+  "description": "",
+  "flowStatus": "enabled",
+  "inputSchemaCompiled": {
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "numCards": {
+          "description": "Number of cards to return",
+          "preferredDataType": "number",
+          "isExpanded": true,
+          "type": "number",
+          "name": "numCards"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "numCards"
+      ]
+    }
+  },
+  "isInputSchemaSaved": true,
+  "name": "Deck of Cards API [SUBFLOW]",
+  "publishedVersion": 2,
+  "updatedDate": 1669642233158,
+  "flowId": "261868cd9407c7331bdd3c3d3dbad0b0",
+  "versionId": 2,
+  "graphData": {
+    "elements": {
+      "nodes": [
+        {
+          "data": {
+            "id": "4bi3urktbc",
+            "nodeType": "CONNECTION",
+            "connectionId": "867ed4363b2bc21c860085ad2baa817d",
+            "connectorId": "httpConnector",
+            "name": "Http",
+            "label": "httpConnector",
+            "status": "configured",
+            "capabilityName": "makeRestApiCall",
+            "type": "trigger",
+            "properties": {
+              "url": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"https://deckofcardsapi.com/api/deck/new/draw/\"\n      }\n    ]\n  }\n]"
+              },
+              "queryParams": {
+                "value": [
+                  {
+                    "key": "count",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"numCards\",\n        \"data\": \"{{global.parameters.numCards}}\",\n        \"tooltip\": \"{{global.parameters.numCards}}\",\n        \"children\": [\n          {\n            \"text\": \"numCards\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+                  }
+                ]
+              },
+              "nodeTitle": {
+                "value": "Deck of Cards"
+              },
+              "nodeDescription": {
+                "value": "API Call"
+              },
+              "outputSchema": {
+                "value": "{\n\t\"definitions\": {},\n\t\"$schema\": \"http://json-schema.org/draft-07/schema#\", \n\t\"$id\": \"https://example.com/object1641822797.json\", \n\t\"title\": \"Root\", \n\t\"type\": \"object\",\n\t\"required\": [\n\t\t\"success\",\n\t\t\"deck_id\",\n\t\t\"cards\",\n\t\t\"remaining\"\n\t],\n\t\"properties\": {\n\t\t\"success\": {\n\t\t\t\"$id\": \"#root/success\", \n\t\t\t\"title\": \"Success\", \n\t\t\t\"type\": \"boolean\",\n\t\t\t\"examples\": [\n\t\t\t\ttrue\n\t\t\t],\n\t\t\t\"default\": true\n\t\t},\n\t\t\"deck_id\": {\n\t\t\t\"$id\": \"#root/deck_id\", \n\t\t\t\"title\": \"Deck_id\", \n\t\t\t\"type\": \"string\",\n\t\t\t\"default\": \"\",\n\t\t\t\"examples\": [\n\t\t\t\t\"oww2am0hrzmd\"\n\t\t\t],\n\t\t\t\"pattern\": \"^.*$\"\n\t\t},\n\t\t\"cards\": {\n\t\t\t\"$id\": \"#root/cards\", \n\t\t\t\"title\": \"Cards\", \n\t\t\t\"type\": \"array\",\n\t\t\t\"default\": [],\n\t\t\t\"items\":{\n\t\t\t\t\"$id\": \"#root/cards/items\", \n\t\t\t\t\"title\": \"Items\", \n\t\t\t\t\"type\": \"object\",\n\t\t\t\t\"required\": [\n\t\t\t\t\t\"code\",\n\t\t\t\t\t\"image\",\n\t\t\t\t\t\"images\",\n\t\t\t\t\t\"value\",\n\t\t\t\t\t\"suit\"\n\t\t\t\t],\n\t\t\t\t\"properties\": {\n\t\t\t\t\t\"code\": {\n\t\t\t\t\t\t\"$id\": \"#root/cards/items/code\", \n\t\t\t\t\t\t\"title\": \"Code\", \n\t\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\t\"default\": \"\",\n\t\t\t\t\t\t\"examples\": [\n\t\t\t\t\t\t\t\"8D\"\n\t\t\t\t\t\t],\n\t\t\t\t\t\t\"pattern\": \"^.*$\"\n\t\t\t\t\t},\n\t\t\t\t\t\"image\": {\n\t\t\t\t\t\t\"$id\": \"#root/cards/items/image\", \n\t\t\t\t\t\t\"title\": \"Image\", \n\t\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\t\"default\": \"\",\n\t\t\t\t\t\t\"examples\": [\n\t\t\t\t\t\t\t\"https://deckofcardsapi.com/static/img/8D.png\"\n\t\t\t\t\t\t],\n\t\t\t\t\t\t\"pattern\": \"^.*$\"\n\t\t\t\t\t},\n\t\t\t\t\t\"images\": {\n\t\t\t\t\t\t\"$id\": \"#root/cards/items/images\", \n\t\t\t\t\t\t\"title\": \"Images\", \n\t\t\t\t\t\t\"type\": \"object\",\n\t\t\t\t\t\t\"required\": [\n\t\t\t\t\t\t\t\"svg\",\n\t\t\t\t\t\t\t\"png\"\n\t\t\t\t\t\t],\n\t\t\t\t\t\t\"properties\": {\n\t\t\t\t\t\t\t\"svg\": {\n\t\t\t\t\t\t\t\t\"$id\": \"#root/cards/items/images/svg\", \n\t\t\t\t\t\t\t\t\"title\": \"Svg\", \n\t\t\t\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\t\t\t\"default\": \"\",\n\t\t\t\t\t\t\t\t\"examples\": [\n\t\t\t\t\t\t\t\t\t\"https://deckofcardsapi.com/static/img/8D.svg\"\n\t\t\t\t\t\t\t\t],\n\t\t\t\t\t\t\t\t\"pattern\": \"^.*$\"\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\"png\": {\n\t\t\t\t\t\t\t\t\"$id\": \"#root/cards/items/images/png\", \n\t\t\t\t\t\t\t\t\"title\": \"Png\", \n\t\t\t\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\t\t\t\"default\": \"\",\n\t\t\t\t\t\t\t\t\"examples\": [\n\t\t\t\t\t\t\t\t\t\"https://deckofcardsapi.com/static/img/8D.png\"\n\t\t\t\t\t\t\t\t],\n\t\t\t\t\t\t\t\t\"pattern\": \"^.*$\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n,\n\t\t\t\t\t\"value\": {\n\t\t\t\t\t\t\"$id\": \"#root/cards/items/value\", \n\t\t\t\t\t\t\"title\": \"Value\", \n\t\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\t\"default\": \"\",\n\t\t\t\t\t\t\"examples\": [\n\t\t\t\t\t\t\t\"8\"\n\t\t\t\t\t\t],\n\t\t\t\t\t\t\"pattern\": \"^.*$\"\n\t\t\t\t\t},\n\t\t\t\t\t\"suit\": {\n\t\t\t\t\t\t\"$id\": \"#root/cards/items/suit\", \n\t\t\t\t\t\t\"title\": \"Suit\", \n\t\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\t\"default\": \"\",\n\t\t\t\t\t\t\"examples\": [\n\t\t\t\t\t\t\t\"DIAMONDS\"\n\t\t\t\t\t\t],\n\t\t\t\t\t\t\"pattern\": \"^.*$\"\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\n\t\t},\n\t\t\"remaining\": {\n\t\t\t\"$id\": \"#root/remaining\", \n\t\t\t\"title\": \"Remaining\", \n\t\t\t\"type\": \"integer\",\n\t\t\t\"examples\": [\n\t\t\t\t51\n\t\t\t],\n\t\t\t\"default\": 0\n\t\t}\n\t}\n}\n"
+              }
+            }
+          },
+          "position": {
+            "x": 314,
+            "y": 444
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "2mu9qlc8mm",
+            "nodeType": "EVAL",
+            "label": "Evaluator",
+            "properties": {
+              "nkke4bo7k5": {
+                "value": "anyTriggersFalse"
+              }
+            }
+          },
+          "position": {
+            "x": 429,
+            "y": 444
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "x5bib5lvwe",
+            "nodeType": "CONNECTION",
+            "connectionId": "867ed4363b2bc21c860085ad2baa817d",
+            "connectorId": "httpConnector",
+            "name": "Http",
+            "label": "Http",
+            "status": "configured",
+            "capabilityName": "createSuccessResponse",
+            "type": "action",
+            "properties": {
+              "claimsNameValuePairs": {
+                "value": [
+                  {
+                    "name": "doc_card_url",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"image\",\n        \"data\": \"{{local.4bi3urktbc.payload.output.rawResponse.body.cards[0].image}}\",\n        \"tooltip\": \"{{local.4bi3urktbc.payload.output.rawResponse.body.cards[0].image}}\",\n        \"children\": [\n          {\n            \"text\": \"image\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
+                    "key": 0.44920394720762524,
+                    "label": "doc_card_url (string - flowInstance)",
+                    "type": "string",
+                    "nameDefault": "image"
+                  },
+                  {
+                    "name": "doc_card_value",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"value\",\n        \"data\": \"{{local.4bi3urktbc.payload.output.rawResponse.body.cards[0].value}}\",\n        \"tooltip\": \"{{local.4bi3urktbc.payload.output.rawResponse.body.cards[0].value}}\",\n        \"children\": [\n          {\n            \"text\": \"value\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
+                    "key": 0.35322368165188034,
+                    "label": "doc_card_value (string - flowInstance)",
+                    "type": "string",
+                    "nameDefault": "value"
+                  },
+                  {
+                    "name": "doc_card_suit",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"suit\",\n        \"data\": \"{{local.4bi3urktbc.payload.output.rawResponse.body.cards[0].suit}}\",\n        \"tooltip\": \"{{local.4bi3urktbc.payload.output.rawResponse.body.cards[0].suit}}\",\n        \"children\": [\n          {\n            \"text\": \"suit\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
+                    "key": 0.378319393322031,
+                    "label": "doc_card_suit (string - flowInstance)",
+                    "type": "string",
+                    "nameDefault": "suit"
+                  },
+                  {
+                    "name": "cards",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"cards\",\n        \"data\": \"{{local.4bi3urktbc.payload.output.rawResponse.body.cards}}\",\n        \"tooltip\": \"{{local.4bi3urktbc.payload.output.rawResponse.body.cards}}\",\n        \"children\": [\n          {\n            \"text\": \"cards\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
+                    "key": 0.8099179919757937,
+                    "label": "cards (object - flowInstance)",
+                    "type": "object",
+                    "nameDefault": "cards"
+                  }
+                ]
+              },
+              "nodeTitle": {
+                "value": "Return Cards Success"
+              },
+              "backgroundColor": {
+                "value": "#9dc967ff"
+              }
+            }
+          },
+          "position": {
+            "x": 589,
+            "y": 444
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "5vr8ionwly",
+            "nodeType": "ANNOTATION",
+            "name": "Annotation",
+            "connectionId": "921bfae85c38ed45045e07be703d86b8",
+            "connectorId": "annotationConnector",
+            "capabilityName": "updateAnnotationProperties",
+            "type": "action",
+            "properties": {
+              "backgroundColor": {
+                "value": "#4a90e2ff"
+              },
+              "annotationTextColor": {
+                "value": "#ffffffff"
+              },
+              "annotation": {
+                "value": "Deck of Cards API"
+              },
+              "width": {
+                "value": 1000
+              },
+              "fontStyle": {
+                "value": "bold"
+              },
+              "fontFamily": {
+                "value": "Verdana"
+              }
+            },
+            "status": "configured"
+          },
+          "position": {
+            "x": 214,
+            "y": 214
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "nkke4bo7k5",
+            "nodeType": "CONNECTION",
+            "connectionId": "867ed4363b2bc21c860085ad2baa817d",
+            "connectorId": "httpConnector",
+            "name": "Http",
+            "label": "Http",
+            "status": "configured",
+            "capabilityName": "createErrorResponse",
+            "type": "action",
+            "properties": {
+              "backgroundColor": {
+                "value": "#ffc8c1ff"
+              },
+              "nodeTitle": {
+                "value": "API Call Failure"
+              }
+            }
+          },
+          "position": {
+            "x": 589,
+            "y": 674
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "y8gnstgrkk",
+            "nodeType": "ANNOTATION",
+            "name": "Annotation",
+            "connectionId": "921bfae85c38ed45045e07be703d86b8",
+            "connectorId": "annotationConnector",
+            "capabilityName": "updateAnnotationProperties",
+            "type": "action",
+            "properties": {
+              "backgroundColor": {
+                "value": "#e7e7e7ff"
+              },
+              "annotationTextColor": {
+                "value": "#000000"
+              },
+              "annotation": {
+                "value": "DoC API Call "
+              },
+              "strokeEnabled": {
+                "value": true
+              },
+              "strokeWidth": {
+                "value": 2
+              },
+              "strokeColor": {
+                "value": "#000000ff"
+              },
+              "fontStyle": {
+                "value": "bold"
+              },
+              "fontSize": {
+                "value": 13
+              },
+              "fontFamily": {
+                "value": "Verdana"
+              }
+            },
+            "status": "configured"
+          },
+          "position": {
+            "x": 224,
+            "y": 334
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "2axvwim3x2",
+            "nodeType": "ANNOTATION",
+            "name": "Annotation",
+            "connectionId": "921bfae85c38ed45045e07be703d86b8",
+            "connectorId": "annotationConnector",
+            "capabilityName": "updateAnnotationProperties",
+            "type": "action",
+            "properties": {
+              "backgroundColor": {
+                "value": "#e7e7e7ff"
+              },
+              "annotationTextColor": {
+                "value": "#000000"
+              },
+              "annotation": {
+                "value": "Return Result"
+              },
+              "strokeEnabled": {
+                "value": true
+              },
+              "strokeWidth": {
+                "value": 2
+              },
+              "strokeColor": {
+                "value": "#000000ff"
+              },
+              "fontStyle": {
+                "value": "bold"
+              },
+              "fontSize": {
+                "value": 13
+              },
+              "fontFamily": {
+                "value": "Verdana"
+              }
+            },
+            "status": "configured",
+            "idUnique": "6y4otyq4yn"
+          },
+          "position": {
+            "x": 499,
+            "y": 334
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "ra1kbpapg3",
+            "nodeType": "ANNOTATION",
+            "name": "Annotation",
+            "connectionId": "921bfae85c38ed45045e07be703d86b8",
+            "connectorId": "annotationConnector",
+            "capabilityName": "updateAnnotationProperties",
+            "type": "action",
+            "properties": {
+              "backgroundColor": {
+                "value": "#e7e7e7ff"
+              },
+              "annotationTextColor": {
+                "value": "#000000"
+              },
+              "annotation": {
+                "value": "API Error"
+              },
+              "strokeEnabled": {
+                "value": true
+              },
+              "strokeWidth": {
+                "value": 2
+              },
+              "strokeColor": {
+                "value": "#000000ff"
+              },
+              "fontStyle": {
+                "value": "bold"
+              },
+              "fontSize": {
+                "value": 13
+              },
+              "fontFamily": {
+                "value": "Verdana"
+              }
+            },
+            "status": "configured",
+            "idUnique": "zym9iq9w2p"
+          },
+          "position": {
+            "x": 499,
+            "y": 560
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        }
+      ],
+      "edges": [
+        {
+          "data": {
+            "id": "z8c6d9xttg",
+            "source": "4bi3urktbc",
+            "target": "2mu9qlc8mm"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "h9n5zlh6ey",
+            "source": "2mu9qlc8mm",
+            "target": "x5bib5lvwe"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "ctgjxxn12z",
+            "source": "2mu9qlc8mm",
+            "target": "nkke4bo7k5"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        }
+      ]
+    },
+    "data": {},
+    "zoomingEnabled": true,
+    "userZoomingEnabled": true,
+    "zoom": 1,
+    "minZoom": 1e-50,
+    "maxZoom": 1e+50,
+    "panningEnabled": true,
+    "userPanningEnabled": true,
+    "pan": {
+      "x": 0,
+      "y": 0
+    },
+    "boxSelectionEnabled": true,
+    "renderer": {
+      "name": "null"
+    }
+  },
+  "inputSchema": [
+    {
+      "propertyName": "numCards",
+      "description": "Number of cards to return",
+      "preferredDataType": "number",
+      "preferredControlType": "textField",
+      "isExpanded": true,
+      "required": true
+    }
+  ],
+  "flowColor": "#AFD5FF",
+  "savedDate": 1669638193229,
+  "variables": []
+}

@@ -1,33 +1,31 @@
 <html>
   <head>
     <title>DaVinci Enablement: 401 - Identity Use Cases</title>
-    <link rel="icon" type="image/x-icon" href="https://cdn.glitch.global/80158f8b-f522-449c-bbbd-acd20103ceea/favicon.ico?v=1666113469848">
-    
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://cdn.glitch.global/80158f8b-f522-449c-bbbd-acd20103ceea/favicon.ico?v=1666113469848"
+    />
+
     <link rel="stylesheet" href="css/overview-style.css" />
     <link rel="stylesheet" href="css/glitch.css" />
-    
+
     <script>
-    
-    function toggleFlows(caller, description, flows){
-     
-      const callerSpan = document.getElementById(caller)
-      const descriptionDiv = document.getElementById(description)
-      const flowsDiv = document.getElementById(flows)
-      
-      if(flowsDiv.style.display === 'none'){
-        descriptionDiv.style.display = 'none'
-        flowsDiv.style.display = 'block'
-        callerSpan.innerHTML = "Hide Assets"
-        
-      } else {
-         descriptionDiv.style.display = 'block'
-        flowsDiv.style.display = 'none'
-        callerSpan.innerHTML = "Show Assets"
+      function toggleFlows(caller, description, flows) {
+        const callerSpan = document.getElementById(caller);
+        const descriptionDiv = document.getElementById(description);
+        const flowsDiv = document.getElementById(flows);
+
+        if (flowsDiv.style.display === "none") {
+          descriptionDiv.style.display = "none";
+          flowsDiv.style.display = "block";
+          callerSpan.innerHTML = "Hide Assets";
+        } else {
+          descriptionDiv.style.display = "block";
+          flowsDiv.style.display = "none";
+          callerSpan.innerHTML = "Show Assets";
+        }
       }
-      
-      
-    }
-    
     </script>
   </head>
   <body>
@@ -36,114 +34,229 @@
       <h1>PingOne DaVinci Enablement</h1>
       <h2>401 - Identity Use Cases</h2>
       <div class="glitch">
-        <a class="remix" target="_top" href="https://glitch.com/edit/#!/remix/pingone-davinci-401" >
+        <a
+          class="remix"
+          target="_top"
+          href="https://glitch.com/edit/#!/remix/pingone-davinci-401"
+        >
           <img
             src="https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2FLogo_Color.svg?v=1618199565140"
           />
           Remix on Glitch
         </a>
       </div>
-      <p style="color:red">Note: This enablement session is in active development. Come back soon!</p>
-      
-       <table style="width: 100%; margin-top: 40px">
+      <p style="color: red">
+        Note: This enablement session is in active development. Come back soon!
+      </p>
+
+      <table style="width: 100%; margin-top: 40px">
         <tr>
           <td style="width: 50%; vertical-align: top">
             <div class="bordered-box-overview">
               <h3>Overview</h3>
-              <p>In this enablement session, we'll integrate our existing registration flow (and build a new authentication flow) with PingOne to create and authenticate users. To get started,
-                you'll need to have access to a <strong>PingOne</strong> environment with <strong>DaVinci</strong> and import/deploy the initial flows. 
+              <p>
+                In this enablement session, we'll integrate our existing
+                registration flow (and build a new authentication flow) with
+                PingOne to create and authenticate users. To get started, you'll
+                need to have access to a <strong>PingOne</strong> environment
+                with <strong>DaVinci</strong> and import/deploy the initial
+                flows.
               </p>
-            <div style="text-align:center">
-              <table>
-                <tr></tr>
-              </table>
-              <a href="https://github.com/gmorgan-ping/pingone-davinci-401/raw/master/401-0/401-0_Exported_Flows.zip" class="download"  title="Download Initial Flows" style="width:200px" download ><i class="fa fa-download" aria-hidden="true"></i> Download Initial Flows</a>
+              <div style="text-align: center">
+                <table style="width: 100%">
+                  <tr>
+                    <td width="25%">
+                      <li>
+                        <a
+                          href="flow-exports/401_0_Jackpot_Lookup.json"
+                          class="links"
+                          download
+                          >Jackpot Lookup Flow</a
+                        >
+                      </li>
+                    </td>
+                    <td width="25%">
+                      <li>
+                        <a
+                          href="flow-exports/401_0_Legal_Age_By_Country.json"
+                          class="links"
+                          download
+                          >Legal Age by Country Flow</a
+                        >
+                      </li>
+                    </td>
+                    <td width="25%">
+                      <li>
+                        <a
+                          href="flow-exports/401_0_Deck_Of_Cards.json"
+                          class="links"
+                          download
+                          >Deck of Cards Flow</a
+                        >
+                      </li>
+                    </td>
+                    <td width="25%">
+                      <li>
+                        <a
+                          href="flow-exports/401_1_Registration_Start.json"
+                          class="links"
+                          download
+                          >Registration Flow (Start)</a
+                        >
+                      </li>
+                    </td>
+                  </tr>
+                </table>
+              </div>
             </div>
-              
-           
-            </div>
-            
           </td>
-         </tr>
+        </tr>
       </table>
-        
 
-      <table style="width: 100%;">
+      <table style="width: 100%">
         <tr>
           <td style="width: 50%; vertical-align: top">
             <div class="bordered-box">
               <h3>1 - User Registration</h3>
               <div class="description-box" id="description1">
-                <p>In this exercise, we'll wire up the 'Beginner's Luck' registration form with PingOne to store user identities.</p>
+                <p>
+                  In this exercise, we'll wire up the 'Beginner's Luck'
+                  registration form with PingOne to store user identities.
+                </p>
                 <ul>
                   <li>Create PingOne User Population</li>
                   <li>Configure PingOne DaVinci Connector</li>
                   <li>Create PingOne User</li>
                   <li>User Creation Error Handler</li>
-                  <li>Add Check For Existing User </li>
+                  <li>Add Check For Existing User</li>
                   <li>Email and Password Validation</li>
                   <li>Send Welcome Email</li>
                 </ul>
-               
               </div>
-              <div class="description-box" id="flows1" style="display:none">
+              <div class="description-box" id="flows1" style="display: none">
                 <p>Download the completed flows for this exercise</p>
                 <ul>
-                  <li><a href="401-1/assets/error-html.txt" class="links">SKError HTML Code</a></li>
-                  <li><a href="401-1/assets/email_password_validation.txt" class="links">Email and Password Validation</a></li>
-                  <li><a href="401-1/assets/welcome-email-notification.txt" class="links">Welcome Email Notification</a></li>
-                  <li><a href="flow-exports/401_1_Registration_Complete.json" class="links" download>401-1 Registration Flow Completed</a></li>
+                  <li>
+                    <a href="401-1/assets/error-html.txt" class="links"
+                      >SKError HTML Code</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="401-1/assets/email_password_validation.txt"
+                      class="links"
+                      >Email and Password Validation</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="401-1/assets/welcome-email-notification.txt"
+                      class="links"
+                      >Welcome Email Notification</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="flow-exports/401_1_Registration_Complete.json"
+                      class="links"
+                      download
+                      >401-1 Registration Flow Completed</a
+                    >
+                  </li>
                 </ul>
               </div>
-              <div style="text-align:center">
-                <a href="401-1/index.html" ><i class="fa fa-play" aria-hidden="true"></i> Start</a>
-                <a href="401-1/completed.html" title="Run Completed Excerise" ><i class="fa fa-check-circle" aria-hidden="true"></i> Completed</a>
-                <a href="javascript:toggleFlows('showhide1', 'description1', 'flows1');" title="View Completed Flow" class="download" >
-                  <i class="fa fa-file-code-o" aria-hidden="true"></i> <span id="showhide1">Show Assets</span>
+              <div style="text-align: center">
+                <a href="401-1/index.html"
+                  ><i class="fa fa-play" aria-hidden="true"></i> Start</a
+                >
+                <a href="401-1/completed.html" title="Run Completed Excerise"
+                  ><i class="fa fa-check-circle" aria-hidden="true"></i>
+                  Completed</a
+                >
+                <a
+                  href="javascript:toggleFlows('showhide1', 'description1', 'flows1');"
+                  title="View Completed Flow"
+                  class="download"
+                >
+                  <i class="fa fa-file-code-o" aria-hidden="true"></i>
+                  <span id="showhide1">Show Assets</span>
                 </a>
-               
               </div>
-
             </div>
 
             <div class="bordered-box">
-             <h3>3 - Basic Password Authentication</h3>
+              <h3>3 - Basic Password Authentication</h3>
               <div class="description-box" id="description3">
-                <p>Now that we have users within PingOne, in this lab we'll build a sign in flow</p>
-              <ul>
-                <li>Add email &amp; password HTML form validation</li>
-                <li>Lookup user details</li>
-                <li>Password check</li>
-                <li>Sign In Success</li>
-                <li>Ensure account is active</li>
-                <li>Handle unverified accounts</li>
-              </ul>
-
-              </div>
-              <div class="description-box" id="flows3" style="display:none">
-                <p>Download the completed assets for this exercise</p>
+                <p>
+                  Now that we have users within PingOne, in this lab we'll build
+                  a sign in flow
+                </p>
                 <ul>
-                  <li><a href="401-3/assets/capture-email-template.txt" class="links">Collect Email HTML Template</a></li>
-                  <li><a href="401-3/assets/sign-in-success.txt" class="links">Sign In Success HTML Template</a></li>
-                  <li><a href="401-3/assets/password-form.txt" class="links">Password HTML Template</a></li>
-                  <li><a href="flow-exports/401_3_Beginners_Luck_Basic_Authentication.json" class="links" download>401-3: Basic Authentication Flow Completed</a></li>
-                         
+                  <li>Add email &amp; password HTML form validation</li>
+                  <li>Lookup user details</li>
+                  <li>Password check</li>
+                  <li>Sign In Success</li>
+                  <li>Ensure account is active</li>
+                  <li>Handle unverified accounts</li>
                 </ul>
               </div>
-              <div style="text-align:center">
-                <a href="401-3/index.html" ><i class="fa fa-play" aria-hidden="true"></i> Start</a>
-                <a href="401-3/completed.html" title="Run Completed Excerise" ><i class="fa fa-check-circle" aria-hidden="true"></i> Completed</a>
-                <a href="javascript:toggleFlows('showhide3', 'description3', 'flows3');" title="View Completed Flow" class="download" >
-                  <i class="fa fa-file-code-o" aria-hidden="true"></i> <span id="showhide3">Show Assets</span>
+              <div class="description-box" id="flows3" style="display: none">
+                <p>Download the completed assets for this exercise</p>
+                <ul>
+                  <li>
+                    <a
+                      href="401-3/assets/capture-email-template.txt"
+                      class="links"
+                      >Collect Email HTML Template</a
+                    >
+                  </li>
+                  <li>
+                    <a href="401-3/assets/sign-in-success.txt" class="links"
+                      >Sign In Success HTML Template</a
+                    >
+                  </li>
+                  <li>
+                    <a href="401-3/assets/password-form.txt" class="links"
+                      >Password HTML Template</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="flow-exports/401_3_Beginners_Luck_Basic_Authentication.json"
+                      class="links"
+                      download
+                      >401-3: Basic Authentication Flow Completed</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div style="text-align: center">
+                <a href="401-3/index.html"
+                  ><i class="fa fa-play" aria-hidden="true"></i> Start</a
+                >
+                <a href="401-3/completed.html" title="Run Completed Excerise"
+                  ><i class="fa fa-check-circle" aria-hidden="true"></i>
+                  Completed</a
+                >
+                <a
+                  href="javascript:toggleFlows('showhide3', 'description3', 'flows3');"
+                  title="View Completed Flow"
+                  class="download"
+                >
+                  <i class="fa fa-file-code-o" aria-hidden="true"></i>
+                  <span id="showhide3">Show Assets</span>
                 </a>
               </div>
-
             </div>
             <div class="bordered-box">
               <h3>5 - Magic Link Authentication</h3>
 
               <div class="description-box" id="description5">
-                <p>Sending Magic links is a popular technique for passwordless authentication. In this lab, we'll again extend the authentication flow to support magic links</p>
+                <p>
+                  Sending Magic links is a popular technique for passwordless
+                  authentication. In this lab, we'll again extend the
+                  authentication flow to support magic links
+                </p>
                 <ul>
                   <li>Add magic link button to form</li>
                   <li>Introduction to DaVinci's Out-of-Band Connector</li>
@@ -152,91 +265,219 @@
                   <li>Handle polling timeout</li>
                 </ul>
               </div>
-               <div class="description-box" id="flows5" style="display:none">
+              <div class="description-box" id="flows5" style="display: none">
                 <p>Download the completed assets for this exercise</p>
                 <ul>
-                  <li><a href="401-5/assets/collect-email-template.txt" class="links">Updated Collect Email HTML Template</a></li>
-                  <li><a href="401-5/assets/magic-link-prompt-template.txt" class="links">Magic Link Prompt HTML Template</a></li>
-                  <li><a href="401-5/assets/magiclink-notification.txt" class="links">Magic Link Notification</a></li>
-                  <li><a href="401-5/assets/magic-link-clicked-template.txt" class="links">Magic Link Clicked HTML Template</a></li>
-                  <li><a href="401-5/assets/maigclink-expired-html-template.txt" class="links">Magic Link Expired HTML Template</a></li>
-                  <li><a href="flow-exports/401_5_Sign_In_With_Magic_Link.json" class="links" download>401-5: Sign In With Magic Link Flow Completed</a></li>
-                 
+                  <li>
+                    <a
+                      href="401-5/assets/collect-email-template.txt"
+                      class="links"
+                      >Updated Collect Email HTML Template</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="401-5/assets/magic-link-prompt-template.txt"
+                      class="links"
+                      >Magic Link Prompt HTML Template</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="401-5/assets/magiclink-notification.txt"
+                      class="links"
+                      >Magic Link Notification</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="401-5/assets/magic-link-clicked-template.txt"
+                      class="links"
+                      >Magic Link Clicked HTML Template</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="401-5/assets/maigclink-expired-html-template.txt"
+                      class="links"
+                      >Magic Link Expired HTML Template</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="flow-exports/401_5_Sign_In_With_Magic_Link.json"
+                      class="links"
+                      download
+                      >401-5: Sign In With Magic Link Flow Completed</a
+                    >
+                  </li>
                 </ul>
               </div>
-              
-              <div style="text-align:center">
-                <a href="401-5/index.html" ><i class="fa fa-play" aria-hidden="true"></i> Start</a>
-                <a href="401-5/completed.html" title="Run Completed Excerise" ><i class="fa fa-check-circle" aria-hidden="true"></i> Completed</a>
-                 <a href="javascript:toggleFlows('showhide5', 'description5', 'flows5');" title="View Completed Flow" class="download" >
-                  <i class="fa fa-file-code-o" aria-hidden="true"></i> <span id="showhide5">Show Assets</span>
+
+              <div style="text-align: center">
+                <a href="401-5/index.html"
+                  ><i class="fa fa-play" aria-hidden="true"></i> Start</a
+                >
+                <a href="401-5/completed.html" title="Run Completed Excerise"
+                  ><i class="fa fa-check-circle" aria-hidden="true"></i>
+                  Completed</a
+                >
+                <a
+                  href="javascript:toggleFlows('showhide5', 'description5', 'flows5');"
+                  title="View Completed Flow"
+                  class="download"
+                >
+                  <i class="fa fa-file-code-o" aria-hidden="true"></i>
+                  <span id="showhide5">Show Assets</span>
                 </a>
               </div>
-
             </div>
           </td>
           <td style="vertical-align: top">
             <div class="bordered-box">
               <h3>2 - Account Verification</h3>
               <div class="description-box" id="description2">
-                <p>Next, we'll integrate email verification to ensure the address provided is valid</p>
-              <ul>
-                <li>Customize verification email template</li>  
-                <li>Integrate subflow into registration flow</li>
-                <li>Create a verification subflow</li>
-                <li>Set verification required on account creation</li> 
-              </ul>
-              </div>
-              <div class="description-box" id="flows2" style="display:none">
-                <p>Download the completed assets for this exercise</p>
+                <p>
+                  Next, we'll integrate email verification to ensure the address
+                  provided is valid
+                </p>
                 <ul>
-                  <li><a href="401-2/assets/verification-template.txt" class="links">Verification HTML Template</a></li>
-                  <li><a href="401-2/assets/notification-template.txt" class="links">Notification Template</a></li>
-                  <li><a href="flow-exports/401_2_Registration_with_Verification.json" class="links" download>401-2: Registration with Verification Completed Flow</a></li>
-                  <li><a href="flow-exports/401_2_Verify_Account_Subflow.json" class="links" download>401-2: Verify Account Subflow Completed</a></li>
-                  
+                  <li>Customize verification email template</li>
+                  <li>Integrate subflow into registration flow</li>
+                  <li>Create a verification subflow</li>
+                  <li>Set verification required on account creation</li>
                 </ul>
               </div>
-              <div style="text-align:center">
-                <a href="401-2/index.html" ><i class="fa fa-play" aria-hidden="true"></i> Start</a>
-                <a href="401-2/completed.html" title="Run Completed Excerise" ><i class="fa fa-check-circle" aria-hidden="true"></i> Completed</a>
-                <a href="javascript:toggleFlows('showhide2', 'description2', 'flows2');" title="View Completed Flow" class="download" >
-                  <i class="fa fa-file-code-o" aria-hidden="true"></i> <span id="showhide2">Show Assets</span>
+              <div class="description-box" id="flows2" style="display: none">
+                <p>Download the completed assets for this exercise</p>
+                <ul>
+                  <li>
+                    <a
+                      href="401-2/assets/verification-template.txt"
+                      class="links"
+                      >Verification HTML Template</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="401-2/assets/notification-template.txt"
+                      class="links"
+                      >Notification Template</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="flow-exports/401_2_Registration_with_Verification.json"
+                      class="links"
+                      download
+                      >401-2: Registration with Verification Completed Flow</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="flow-exports/401_2_Verify_Account_Subflow.json"
+                      class="links"
+                      download
+                      >401-2: Verify Account Subflow Completed</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div style="text-align: center">
+                <a href="401-2/index.html"
+                  ><i class="fa fa-play" aria-hidden="true"></i> Start</a
+                >
+                <a href="401-2/completed.html" title="Run Completed Excerise"
+                  ><i class="fa fa-check-circle" aria-hidden="true"></i>
+                  Completed</a
+                >
+                <a
+                  href="javascript:toggleFlows('showhide2', 'description2', 'flows2');"
+                  title="View Completed Flow"
+                  class="download"
+                >
+                  <i class="fa fa-file-code-o" aria-hidden="true"></i>
+                  <span id="showhide2">Show Assets</span>
                 </a>
               </div>
-
             </div>
             <div class="bordered-box">
               <h3>4 - Forgot Password</h3>
 
               <div class="description-box" id="description4">
-                <p>Extend the authentication flow to incorporate self-service password reset</p>
+                <p>
+                  Extend the authentication flow to incorporate self-service
+                  password reset
+                </p>
                 <ul>
                   <li>Add 'Forgot Password' button</li>
                   <li>Initiate PingOne reset password process</li>
                   <li>Validate reset code</li>
                 </ul>
-
               </div>
-              <div class="description-box" id="flows4" style="display:none">
+              <div class="description-box" id="flows4" style="display: none">
                 <p>Download the completed assets for this exercise</p>
                 <ul>
-                  <li><a href="401-4/assets/forgot-password-form.txt" class="links">Password Form Template</a></li>
-                  <li><a href="401-4/assets/password-recovery-email-template.txt" class="links">Password Recovery Email Template</a></li>
-                  <li><a href="401-4/assets/verification-code-form.txt" class="links">Verification Code Form</a></li>
-                   <li><a href="401-4/assets/password-regex.txt" class="links">Password Regex</a></li>
-                  <li><a href="401-4/assets/password-reset-success.txt" class="links">Password Reset Success Template</a></li>
-                  <li><a href="flow-exports/401_4_Sign_In_With_Forgot_Password.json" class="links" download>401-4: Sign In with Forgot Password Completed Flow</a></li>
+                  <li>
+                    <a
+                      href="401-4/assets/forgot-password-form.txt"
+                      class="links"
+                      >Password Form Template</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="401-4/assets/password-recovery-email-template.txt"
+                      class="links"
+                      >Password Recovery Email Template</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="401-4/assets/verification-code-form.txt"
+                      class="links"
+                      >Verification Code Form</a
+                    >
+                  </li>
+                  <li>
+                    <a href="401-4/assets/password-regex.txt" class="links"
+                      >Password Regex</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="401-4/assets/password-reset-success.txt"
+                      class="links"
+                      >Password Reset Success Template</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="flow-exports/401_4_Sign_In_With_Forgot_Password.json"
+                      class="links"
+                      download
+                      >401-4: Sign In with Forgot Password Completed Flow</a
+                    >
+                  </li>
                 </ul>
               </div>
-              <div style="text-align:center">
-                <a href="401-4/index.html" ><i class="fa fa-play" aria-hidden="true"></i> Start</a>
-                <a href="401-4/completed.html" title="Run Completed Excerise" ><i class="fa fa-check-circle" aria-hidden="true"></i> Completed</a>
-               <a href="javascript:toggleFlows('showhide4', 'description4', 'flows4');" title="View Completed Flow" class="download" >
-                  <i class="fa fa-file-code-o" aria-hidden="true"></i> <span id="showhide4">Show Assets</span>
+              <div style="text-align: center">
+                <a href="401-4/index.html"
+                  ><i class="fa fa-play" aria-hidden="true"></i> Start</a
+                >
+                <a href="401-4/completed.html" title="Run Completed Excerise"
+                  ><i class="fa fa-check-circle" aria-hidden="true"></i>
+                  Completed</a
+                >
+                <a
+                  href="javascript:toggleFlows('showhide4', 'description4', 'flows4');"
+                  title="View Completed Flow"
+                  class="download"
+                >
+                  <i class="fa fa-file-code-o" aria-hidden="true"></i>
+                  <span id="showhide4">Show Assets</span>
                 </a>
               </div>
-
             </div>
             <div class="bordered-box">
               <h3>6 - Flow Analytics</h3>
@@ -248,27 +489,39 @@
                   <li>Initiate PingOne reset password process</li>
                   <li>Validate reset code</li>
                 </ul>
-
               </div>
-              <div class="description-box" id="flows6" style="display:none">
+              <div class="description-box" id="flows6" style="display: none">
                 <p>Download the completed assets for this exercise</p>
                 <ul>
-                  <li><a href="401-4/assets/forgot-password-form.txt" class="links">TBD</a></li>
-                 
+                  <li>
+                    <a
+                      href="401-4/assets/forgot-password-form.txt"
+                      class="links"
+                      >TBD</a
+                    >
+                  </li>
                 </ul>
               </div>
-              <div style="text-align:center">
-                <a href="401-6/index.html" ><i class="fa fa-play" aria-hidden="true"></i> Start</a>
-                <a href="401-6/completed.html" title="Run Completed Excerise" ><i class="fa fa-check-circle" aria-hidden="true"></i> Completed</a>
-               <a href="javascript:toggleFlows('showhide6', 'description6', 'flows6');" title="View Completed Flow" class="download" >
-                  <i class="fa fa-file-code-o" aria-hidden="true"></i> <span id="showhide6">Show Assets</span>
+              <div style="text-align: center">
+                <a href="401-6/index.html"
+                  ><i class="fa fa-play" aria-hidden="true"></i> Start</a
+                >
+                <a href="401-6/completed.html" title="Run Completed Excerise"
+                  ><i class="fa fa-check-circle" aria-hidden="true"></i>
+                  Completed</a
+                >
+                <a
+                  href="javascript:toggleFlows('showhide6', 'description6', 'flows6');"
+                  title="View Completed Flow"
+                  class="download"
+                >
+                  <i class="fa fa-file-code-o" aria-hidden="true"></i>
+                  <span id="showhide6">Show Assets</span>
                 </a>
               </div>
-
             </div>
           </td>
         </tr>
-        
       </table>
     </div>
   </body>
