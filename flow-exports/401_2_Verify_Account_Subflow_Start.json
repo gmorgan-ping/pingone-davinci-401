@@ -1,0 +1,186 @@
+{
+  "companyId": "8537ff42-72bc-4142-aef5-e6e6ed96dc26",
+  "authTokenExpireIds": [],
+  "connectorIds": [
+    "httpConnector",
+    "annotationConnector"
+  ],
+  "createdDate": 1670260256029,
+  "currentVersion": 6,
+  "customerId": "f3e47d945ae971a4b4142ec75012d155",
+  "deployedDate": 1670260256829,
+  "description": "\n",
+  "flowStatus": "enabled",
+  "inputSchemaCompiled": {
+    "parameters": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "isInputSchemaSaved": false,
+  "name": "START Verify Account [SUBFLOW]",
+  "orx": "{\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"2327a02c51b3e021d84a4b04d1b79b97\",\"flowVersionId\":6,\"version\":\"4.0.0\",\"states\":[\"initialize\"],\"currentState\":[\"initialize\"],\"transitions\":[{\"from\":[\"initialize\"],\"to\":\"start_0\",\"conditions\":{\"$and\":[{\"initializeFlow\":true}]},\"signals\":[{\"name\":\"Http\",\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"2327a02c51b3e021d84a4b04d1b79b97\",\"flowVersionId\":6,\"id\":\"n35xpv7iv6\",\"connectionId\":\"867ed4363b2bc21c860085ad2baa817d\",\"connectorId\":\"httpConnector\",\"capabilityName\":\"customHtmlMessage\",\"properties\":{\"messageTitle\":{\"value\":\"Verify Subflow Start\"}},\"debugMode\":false,\"logLevel\":null,\"isDisabled\":false,\"inputs\":[\"global.error\"],\"respondToUser\":true,\"transitionId\":0,\"signalId\":0}],\"transitionId\":0}],\"history\":[],\"outputs\":{},\"outputParameters\":[],\"global\":{},\"local\":{},\"idMapping\":{},\"nodeMappingForTids\":{\"n35xpv7iv6\":\"initialize\",\"n35xpv7iv6_customHtmlMessage\":\"initialize\"},\"tids\":{},\"delayedConditionalStateChangeMappings\":{},\"delayedConditionalStateChangeMappingsReverse\":{},\"delayedConditionalStatesList\":[],\"lbsTransitionIdsToIgnore\":[],\"lbsTransitionIdsMapping\":{},\"outputParametersDefault\":{},\"outputParametersDefaultBlacklist\":[],\"historyThreshold\":70,\"errorRewindBlackListIds\":[],\"nodeMappingForTidsNew\":{\"n35xpv7iv6\":\"initialize\"},\"nodeStates\":{\"n35xpv7iv6\":\"start_0\"}}",
+  "publishedVersion": 6,
+  "updatedDate": 1670260256829,
+  "flowId": "2327a02c51b3e021d84a4b04d1b79b97",
+  "versionId": 6,
+  "graphData": {
+    "elements": {
+      "nodes": [
+        {
+          "data": {
+            "id": "n35xpv7iv6",
+            "nodeType": "CONNECTION",
+            "connectionId": "867ed4363b2bc21c860085ad2baa817d",
+            "connectorId": "httpConnector",
+            "name": "Http",
+            "label": "Http",
+            "status": "configured",
+            "capabilityName": "customHtmlMessage",
+            "type": "trigger",
+            "properties": {
+              "messageTitle": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Verify Subflow Start\"\n      }\n    ]\n  }\n]"
+              }
+            },
+            "idUnique": "bmwul47nir"
+          },
+          "position": {
+            "x": 304,
+            "y": 390
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "xxtgsb6tbx",
+            "nodeType": "ANNOTATION",
+            "name": "Annotation",
+            "connectionId": "921bfae85c38ed45045e07be703d86b8",
+            "connectorId": "annotationConnector",
+            "capabilityName": "updateAnnotationProperties",
+            "type": "action",
+            "properties": {
+              "backgroundColor": {
+                "value": "#4a90e2ff"
+              },
+              "annotationTextColor": {
+                "value": "#ffffffff"
+              },
+              "width": {
+                "value": 1000
+              },
+              "annotation": {
+                "value": "Verify Account [SUBFLOW]"
+              },
+              "fontFamily": {
+                "value": "Verdana"
+              },
+              "fontStyle": {
+                "value": "bold"
+              },
+              "fontSize": {
+                "value": 16
+              }
+            },
+            "status": "configured"
+          },
+          "position": {
+            "x": 218,
+            "y": 214
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "ddlhfqbns5",
+            "nodeType": "ANNOTATION",
+            "name": "Annotation",
+            "connectionId": "921bfae85c38ed45045e07be703d86b8",
+            "connectorId": "annotationConnector",
+            "capabilityName": "updateAnnotationProperties",
+            "type": "action",
+            "properties": {
+              "backgroundColor": {
+                "value": "#e7e7e7ff"
+              },
+              "annotationTextColor": {
+                "value": "#000000"
+              },
+              "annotation": {
+                "value": "Set Instance Variables"
+              },
+              "fontSize": {
+                "value": 13
+              },
+              "strokeColor": {
+                "value": "#000000ff"
+              },
+              "strokeWidth": {
+                "value": 2
+              },
+              "fontFamily": {
+                "value": "Verdana"
+              },
+              "strokeEnabled": {
+                "value": true
+              },
+              "fontStyle": {
+                "value": "bold"
+              }
+            },
+            "status": "configured"
+          },
+          "position": {
+            "x": 214,
+            "y": 270
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        }
+      ]
+    },
+    "data": {},
+    "zoomingEnabled": true,
+    "userZoomingEnabled": true,
+    "zoom": 1,
+    "minZoom": 1e-50,
+    "maxZoom": 1e+50,
+    "panningEnabled": true,
+    "userPanningEnabled": true,
+    "pan": {
+      "x": 0,
+      "y": 0
+    },
+    "boxSelectionEnabled": true,
+    "renderer": {
+      "name": "null"
+    }
+  },
+  "inputSchema": [],
+  "flowColor": "#AFD5FF",
+  "savedDate": 1670260256008,
+  "variables": []
+}
