@@ -1,5 +1,5 @@
 {
-  "companyId": "8537ff42-72bc-4142-aef5-e6e6ed96dc26",
+  "companyId": "9cc7ffd8-3971-4a1a-87b3-5cd16ce3c3d6",
   "authTokenExpireIds": [],
   "connectorIds": [
     "httpConnector",
@@ -8,11 +8,10 @@
     "variablesConnector",
     "annotationConnector"
   ],
-  "createdDate": 1669653391828,
-  "currentVersion": 5,
+  "createdDate": 1670277276906,
+  "currentVersion": 32,
   "customerId": "f3e47d945ae971a4b4142ec75012d155",
-  "deployedDate": 1669653393382,
-  "description": "",
+  "description": "Imported on Mon Dec 05 2022 17:23:04 GMT+0000 (Coordinated Universal Time)",
   "flowStatus": "enabled",
   "inputSchemaCompiled": {
     "parameters": {
@@ -24,8 +23,8 @@
   },
   "isInputSchemaSaved": false,
   "name": "Jackpot Lookup (API/Non-UI)",
-  "orx": "{\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"023d4de732cb4a4621f2e60faedfbd4e\",\"flowVersionId\":5,\"version\":\"4.0.0\",\"states\":[\"initialize\",\"start_0\",\"inside_0\",\"inside_1\",\"inside_2\",\"end_0_1_allTriggersTrue\",\"end_1_2_anyTriggersFalse\"],\"currentState\":[\"initialize\"],\"transitions\":[{\"from\":[\"initialize\"],\"to\":\"start_0\",\"conditions\":{\"$and\":[{\"initializeFlow\":true}]},\"signals\":[{\"name\":\"Variables\",\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"023d4de732cb4a4621f2e60faedfbd4e\",\"flowVersionId\":5,\"id\":\"sne85s615z\",\"connectionId\":\"06922a684039827499bdbdd97f49827b\",\"connectorId\":\"variablesConnector\",\"capabilityName\":\"saveValue\",\"properties\":{\"saveVariables\":{\"value\":[{\"name\":\"jackpot_source_file\",\"value\":\"https://pingone-davinci-401.glitch.me/json/jackpots.json\",\"key\":0.882809483340105,\"label\":\"jackpot_source_file (string - flowInstance)\",\"type\":\"string\"}]},\"nodeTitle\":{\"value\":\"Set Jackpot JSON URL\"},\"backgroundColor\":{\"value\":\"#e3f1ffff\"}},\"debugMode\":true,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"transitionId\":0,\"signalId\":0}],\"transitionId\":0},{\"from\":[\"start_0\"],\"to\":\"inside_0\",\"conditions\":{\"$and\":[{\"id\":\"sne85s615z\",\"connectionId\":\"06922a684039827499bdbdd97f49827b\",\"connectorId\":\"variablesConnector\",\"capabilityName\":\"saveValue\",\"success\":true}]},\"signals\":[{\"name\":\"Http\",\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"023d4de732cb4a4621f2e60faedfbd4e\",\"flowVersionId\":5,\"id\":\"ek7dw504fs\",\"connectionId\":\"867ed4363b2bc21c860085ad2baa817d\",\"connectorId\":\"httpConnector\",\"capabilityName\":\"makeRestApiCall\",\"properties\":{\"url\":{\"value\":\"{{global.variables.jackpot_source_file}}\"},\"nodeTitle\":{\"value\":\"Retrieve Jackpots File\"}},\"debugMode\":true,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[\"global.error\"],\"transitionId\":1,\"signalId\":0}],\"evalNodeId\":\"led4b0t95j\",\"transitionId\":1},{\"from\":[\"inside_0\"],\"to\":\"inside_1\",\"conditions\":{\"$and\":[{\"id\":\"ek7dw504fs\",\"connectionId\":\"867ed4363b2bc21c860085ad2baa817d\",\"connectorId\":\"httpConnector\",\"capabilityName\":\"makeRestApiCall\",\"success\":true}]},\"signals\":[{\"name\":\"Connector I [2022-11-28]\",\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"023d4de732cb4a4621f2e60faedfbd4e\",\"flowVersionId\":5,\"id\":\"ha3y3i0jah\",\"connectionId\":\"67ee3a61a87347d4f7eaf1297690ed65\",\"connectorId\":\"connectorIPregistry\",\"capabilityName\":\"ipLookup\",\"properties\":{\"ipAddress\":{\"value\":\"{{global.ip}}\"},\"nodeTitle\":{\"value\":\"IP Registry\"}},\"debugMode\":true,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"respondToUser\":true,\"transitionId\":2,\"signalId\":0}],\"evalNodeId\":\"bo1e6bjadd\",\"transitionId\":2},{\"from\":[\"inside_1\"],\"to\":\"inside_2\",\"conditions\":{\"$and\":[{\"id\":\"ha3y3i0jah\",\"connectionId\":\"67ee3a61a87347d4f7eaf1297690ed65\",\"connectorId\":\"connectorIPregistry\",\"capabilityName\":\"ipLookup\",\"success\":true}]},\"signals\":[{\"name\":\"Functions\",\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"023d4de732cb4a4621f2e60faedfbd4e\",\"flowVersionId\":5,\"id\":\"042reen1ij\",\"connectionId\":\"de650ca45593b82c49064ead10b9fe17\",\"connectorId\":\"functionsConnector\",\"capabilityName\":\"customFunction\",\"properties\":{\"variableInputList\":{\"value\":[{\"name\":\"jackpotData\",\"preferredDataType\":\"object\",\"value\":\"{{local.ek7dw504fs.payload.output.rawResponse.body}}\"},{\"name\":\"code\",\"preferredDataType\":\"string\",\"value\":\"{{local.ha3y3i0jah.payload.output.location.country.code}}\"}]},\"code\":{\"value\":\"// Write your code here\\n// Supported language: Javascript \\nmodule.exports = a = async ({ params }) => {\\n\\tconst jackpotData = params.jackpotData;\\n\\tconst countryCode = params.code;\\n\\tlet retval;\\n\\t// // iterate over each element in the array\\n\\tfor (var i = 0; i < jackpotData.jackpots.length; i++) {\\n\\t\\tlet countryItem = jackpotData.jackpots[i]\\n\\t\\t\\n\\t\\tif (countryItem.country.toLowerCase() === countryCode.toLowerCase()) {\\n\\t\\t\\treturn { 'jackpot': countryItem.amount, 'currency': countryItem.currency_symbol }\\n\\t\\t}\\n\\t}\\n\\treturn { 'jackpot': 0, 'currency': \\\"unknown\\\" }\\n}\"},\"outputSchema\":{\"value\":{\"output\":{\"type\":\"object\",\"properties\":{\"jackpot\":{\"type\":\"number\"},\"currency\":{\"type\":\"string\"}}}}},\"nodeTitle\":{\"value\":\"Parse Jackpot for Country\"},\"nodeDescription\":{\"value\":\"Return amount and currency\"}},\"debugMode\":true,\"logLevel\":3,\"isDisabled\":false,\"transitionId\":3,\"signalId\":0}],\"evalNodeId\":\"p8lfkoq9al\",\"transitionId\":3},{\"from\":[\"inside_2\"],\"to\":\"end_0_1_allTriggersTrue\",\"conditions\":{\"$and\":[{\"id\":\"042reen1ij\",\"connectionId\":\"de650ca45593b82c49064ead10b9fe17\",\"connectorId\":\"functionsConnector\",\"capabilityName\":\"customFunction\",\"success\":true}]},\"signals\":[{\"name\":\"Http\",\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"023d4de732cb4a4621f2e60faedfbd4e\",\"flowVersionId\":5,\"id\":\"4zcwff3w4j\",\"connectionId\":\"867ed4363b2bc21c860085ad2baa817d\",\"connectorId\":\"httpConnector\",\"capabilityName\":\"createSuccessResponse\",\"properties\":{\"claimsNameValuePairs\":{\"value\":[{\"name\":\"jackpot_country_code\",\"value\":\"{{local.ha3y3i0jah.payload.output.location.country.code}}\",\"key\":0.06406653709369814,\"label\":\"jackpot_country_code (string - flowInstance)\",\"type\":\"string\",\"nameDefault\":\"country_code\"},{\"name\":\"jackpot_currency\",\"value\":\"{{local.042reen1ij.payload.output.currency}}\",\"key\":0.5292271740588406,\"label\":\"jackpot_currency (string - flowInstance)\",\"type\":\"string\",\"nameDefault\":\"currency\"},{\"name\":\"jackpot_amount\",\"value\":\"{{local.042reen1ij.payload.output.jackpot}}\",\"key\":0.5641772252754385,\"label\":\"jackpot_amount (number - flowInstance)\",\"type\":\"number\",\"nameDefault\":\"jackpot\"},{\"name\":\"httpStatusCode\",\"value\":\"200\",\"key\":0.10692357504497352,\"label\":\"httpStatusCode (number - flowInstance)\",\"type\":\"number\"},{\"name\":\"jackpotCountryEmoji\",\"value\":\"{{local.ha3y3i0jah.payload.output.location.country.flag.emoji}}\",\"key\":0.19251756982562562,\"label\":\"jackpotCountryEmoji (string - flowInstance)\",\"type\":\"string\"}]},\"nodeTitle\":{\"value\":\"Send Success Jackpot Data\"},\"backgroundColor\":{\"value\":\"#9dc967ff\"}},\"debugMode\":true,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[\"*\"],\"respondToUser\":true,\"transitionId\":4,\"signalId\":0}],\"evalNodeId\":\"c6vxp3kf32\",\"transitionId\":4},{\"from\":[\"inside_2\"],\"to\":\"end_1_2_anyTriggersFalse\",\"conditions\":{\"$or\":[{\"id\":\"042reen1ij\",\"connectionId\":\"de650ca45593b82c49064ead10b9fe17\",\"connectorId\":\"functionsConnector\",\"capabilityName\":\"customFunction\",\"success\":false}]},\"signals\":[{\"name\":\"Http\",\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"023d4de732cb4a4621f2e60faedfbd4e\",\"flowVersionId\":5,\"id\":\"kgxin9qp58\",\"connectionId\":\"867ed4363b2bc21c860085ad2baa817d\",\"connectorId\":\"httpConnector\",\"capabilityName\":\"createErrorResponse\",\"properties\":{\"nodeTitle\":{\"value\":\"Jackpot Failure Reponse\"},\"backgroundColor\":{\"value\":\"#ffc8c1ff\"}},\"debugMode\":true,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[\"*\"],\"respondToUser\":true,\"errorConnectionInstances\":[\"local.042reen1ij.payload.error\"],\"transitionId\":5,\"signalId\":0}],\"evalNodeId\":\"c6vxp3kf32\",\"transitionId\":5}],\"history\":[],\"outputs\":{\"variablesConnector_saveValue\":{\"localOutputs\":[\"output\"]},\"httpConnector_makeRestApiCall\":{\"localOutputs\":[\"output\"]},\"connectorIPregistry_ipLookup\":{\"localOutputs\":[\"output\"]},\"functionsConnector_customFunction\":{\"localOutputs\":[\"output\"]}},\"outputParameters\":[\"global.variables.jackpot_source_file\",\"global.ip\",\"local.ek7dw504fs.payload.output.rawResponse.body\",\"local.ha3y3i0jah.payload.output.location.country.code\",\"local.042reen1ij.payload.output.currency\",\"local.042reen1ij.payload.output.jackpot\",\"local.ha3y3i0jah.payload.output.location.country.flag.emoji\"],\"global\":{},\"local\":{},\"idMapping\":{},\"nodeMappingForTids\":{\"ha3y3i0jah\":\"initialize\",\"ha3y3i0jah_ipLookup\":\"initialize\",\"4zcwff3w4j\":\"ha3y3i0jah\",\"4zcwff3w4j_createSuccessResponse\":\"ha3y3i0jah_ipLookup\",\"kgxin9qp58\":\"ha3y3i0jah\",\"kgxin9qp58_createErrorResponse\":\"ha3y3i0jah_ipLookup\"},\"tids\":{},\"delayedConditionalStateChangeMappings\":{},\"delayedConditionalStateChangeMappingsReverse\":{},\"delayedConditionalStatesList\":[],\"lbsTransitionIdsToIgnore\":[],\"lbsTransitionIdsMapping\":{},\"outputParametersDefault\":{\"global.variables.jackpot_source_file\":\"\",\"global.ip\":\"\",\"local.ek7dw504fs.payload.output.rawResponse.body\":\"\",\"local.ha3y3i0jah.payload.output.location.country.code\":\"\",\"local.042reen1ij.payload.output.currency\":\"\",\"local.042reen1ij.payload.output.jackpot\":\"\",\"local.ha3y3i0jah.payload.output.location.country.flag.emoji\":\"\"},\"outputParametersDefaultBlacklist\":[],\"historyThreshold\":70,\"errorRewindBlackListIds\":[],\"nodeMappingForTidsNew\":{\"ha3y3i0jah\":\"initialize\",\"4zcwff3w4j\":[\"initialize\",\"ha3y3i0jah\"],\"kgxin9qp58\":[\"initialize\",\"ha3y3i0jah\"]},\"nodeStates\":{\"sne85s615z\":\"start_0\",\"ek7dw504fs\":\"inside_0\",\"ha3y3i0jah\":\"inside_1\",\"042reen1ij\":\"inside_2\",\"4zcwff3w4j\":\"end_0_1_allTriggersTrue\",\"kgxin9qp58\":\"end_1_2_anyTriggersFalse\"}}",
-  "publishedVersion": 5,
+  "orx": "{\"companyId\":\"9cc7ffd8-3971-4a1a-87b3-5cd16ce3c3d6\",\"flowId\":\"c70c2e89dbd2f5576364ed1307ca675f\",\"flowVersionId\":30,\"version\":\"4.0.0\",\"states\":[\"initialize\",\"start_0\",\"inside_0\",\"inside_1_1_allTriggersTrue\",\"end_0_2_anyTriggersFalse\",\"inside_2\",\"inside_3\",\"inside_4\",\"end_1_1_allTriggersTrue\",\"end_2_2_anyTriggersFalse\"],\"currentState\":[\"initialize\"],\"transitions\":[{\"from\":[\"initialize\"],\"to\":\"start_0\",\"conditions\":{\"$and\":[{\"initializeFlow\":true}]},\"signals\":[{\"name\":\"Variables\",\"companyId\":\"9cc7ffd8-3971-4a1a-87b3-5cd16ce3c3d6\",\"flowId\":\"c70c2e89dbd2f5576364ed1307ca675f\",\"flowVersionId\":30,\"id\":\"izct3efjli\",\"connectionId\":\"06922a684039827499bdbdd97f49827b\",\"connectorId\":\"variablesConnector\",\"capabilityName\":\"saveValue\",\"properties\":{\"saveVariables\":{\"value\":[{\"name\":\"useExternalService\",\"value\":\"true\",\"key\":0.6736786612801797,\"label\":\"useExternalService (boolean - flowInstance)\",\"type\":\"boolean\"}]},\"nodeTitle\":{\"value\":\"Set Use External Service\"}},\"debugMode\":true,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"transitionId\":0,\"signalId\":0}],\"transitionId\":0},{\"from\":[\"start_0\"],\"to\":\"inside_0\",\"conditions\":{\"$and\":[{\"id\":\"izct3efjli\",\"connectionId\":\"06922a684039827499bdbdd97f49827b\",\"connectorId\":\"variablesConnector\",\"capabilityName\":\"saveValue\",\"success\":true}]},\"signals\":[{\"name\":\"Functions\",\"companyId\":\"9cc7ffd8-3971-4a1a-87b3-5cd16ce3c3d6\",\"flowId\":\"c70c2e89dbd2f5576364ed1307ca675f\",\"flowVersionId\":30,\"id\":\"d2v1gea8zj\",\"connectionId\":\"de650ca45593b82c49064ead10b9fe17\",\"connectorId\":\"functionsConnector\",\"capabilityName\":\"AEqualsB\",\"properties\":{\"leftValueA\":{\"value\":\"{{global.variables.useExternalService}}\"},\"rightValueB\":{\"value\":\"true\"},\"type\":{\"value\":\"boolean\"},\"nodeTitle\":{\"value\":\"Use External IP Service?\"}},\"debugMode\":true,\"logLevel\":3,\"isDisabled\":false,\"to\":\"oe\",\"transitionId\":1,\"signalId\":0}],\"evalNodeId\":\"picm3jgc3g\",\"transitionId\":1},{\"from\":[\"inside_0\"],\"to\":\"inside_1_1_allTriggersTrue\",\"conditions\":{\"$and\":[{\"id\":\"d2v1gea8zj\",\"connectionId\":\"de650ca45593b82c49064ead10b9fe17\",\"connectorId\":\"functionsConnector\",\"capabilityName\":\"AEqualsB\",\"logic\":{\"type\":\"where\",\"expr\":\"{{global.variables.useExternalService}} == true\"}}]},\"signals\":[{\"name\":\"Variables\",\"companyId\":\"9cc7ffd8-3971-4a1a-87b3-5cd16ce3c3d6\",\"flowId\":\"c70c2e89dbd2f5576364ed1307ca675f\",\"flowVersionId\":30,\"id\":\"sne85s615z\",\"connectionId\":\"06922a684039827499bdbdd97f49827b\",\"connectorId\":\"variablesConnector\",\"capabilityName\":\"saveValue\",\"properties\":{\"saveVariables\":{\"value\":[{\"name\":\"jackpot_source_file\",\"value\":\"https://pingone-davinci-401.glitch.me/json/jackpots.json\",\"key\":0.882809483340105,\"label\":\"jackpot_source_file (string - flowInstance)\",\"type\":\"string\"}]},\"nodeTitle\":{\"value\":\"Set Jackpot JSON URL\"},\"backgroundColor\":{\"value\":\"#e3f1ffff\"}},\"debugMode\":true,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"transitionId\":2,\"signalId\":0}],\"evalNodeId\":\"mhih6426db\",\"transitionId\":2},{\"from\":[\"inside_0\"],\"to\":\"end_0_2_anyTriggersFalse\",\"conditions\":{\"$or\":[{\"id\":\"d2v1gea8zj\",\"connectionId\":\"de650ca45593b82c49064ead10b9fe17\",\"connectorId\":\"functionsConnector\",\"capabilityName\":\"AEqualsB\",\"logic\":{\"type\":\"whereNot\",\"expr\":\"{{global.variables.useExternalService}} == true\"}}]},\"signals\":[{\"name\":\"Http\",\"companyId\":\"9cc7ffd8-3971-4a1a-87b3-5cd16ce3c3d6\",\"flowId\":\"c70c2e89dbd2f5576364ed1307ca675f\",\"flowVersionId\":30,\"id\":\"gbhswf5sj5\",\"connectionId\":\"867ed4363b2bc21c860085ad2baa817d\",\"connectorId\":\"httpConnector\",\"capabilityName\":\"createSuccessResponse\",\"properties\":{\"claimsNameValuePairs\":{\"value\":[{\"name\":\"jackpot_country_code\",\"value\":\"CA\",\"key\":0.06406653709369814,\"label\":\"jackpot_country_code (string - flowInstance)\",\"type\":\"string\",\"nameDefault\":\"country_code\"},{\"name\":\"jackpot_currency\",\"value\":\"$\",\"key\":0.5292271740588406,\"label\":\"jackpot_currency (string - flowInstance)\",\"type\":\"string\",\"nameDefault\":\"currency\"},{\"name\":\"jackpot_amount\",\"value\":\"177,776\",\"key\":0.5641772252754385,\"label\":\"jackpot_amount (number - flowInstance)\",\"type\":\"string\",\"nameDefault\":\"jackpot\"},{\"name\":\"httpStatusCode\",\"value\":\"200\",\"key\":0.10692357504497352,\"label\":\"httpStatusCode (number - flowInstance)\",\"type\":\"number\"},{\"name\":\"jackpotCountryEmoji\",\"value\":\"🇨🇦\",\"key\":0.19251756982562562,\"label\":\"jackpotCountryEmoji (string - flowInstance)\",\"type\":\"string\"}]},\"nodeTitle\":{\"value\":\"Send Mock Jackpot Data\"},\"backgroundColor\":{\"value\":\"#9dc967ff\"}},\"debugMode\":true,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[\"*\"],\"respondToUser\":true,\"errorConnectionInstances\":[\"local.d2v1gea8zj.payload.error\"],\"transitionId\":3,\"signalId\":0}],\"evalNodeId\":\"mhih6426db\",\"transitionId\":3},{\"from\":[\"inside_1_1_allTriggersTrue\"],\"to\":\"inside_2\",\"conditions\":{\"$and\":[{\"id\":\"sne85s615z\",\"connectionId\":\"06922a684039827499bdbdd97f49827b\",\"connectorId\":\"variablesConnector\",\"capabilityName\":\"saveValue\",\"success\":true}]},\"signals\":[{\"name\":\"Http\",\"companyId\":\"9cc7ffd8-3971-4a1a-87b3-5cd16ce3c3d6\",\"flowId\":\"c70c2e89dbd2f5576364ed1307ca675f\",\"flowVersionId\":30,\"id\":\"ek7dw504fs\",\"connectionId\":\"867ed4363b2bc21c860085ad2baa817d\",\"connectorId\":\"httpConnector\",\"capabilityName\":\"makeRestApiCall\",\"properties\":{\"url\":{\"value\":\"{{global.variables.jackpot_source_file}}\"},\"nodeTitle\":{\"value\":\"Retrieve Jackpots File\"}},\"debugMode\":true,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[\"global.error\"],\"transitionId\":4,\"signalId\":0}],\"evalNodeId\":\"led4b0t95j\",\"transitionId\":4},{\"from\":[\"inside_2\"],\"to\":\"inside_3\",\"conditions\":{\"$and\":[{\"id\":\"ek7dw504fs\",\"connectionId\":\"867ed4363b2bc21c860085ad2baa817d\",\"connectorId\":\"httpConnector\",\"capabilityName\":\"makeRestApiCall\",\"success\":true}]},\"signals\":[{\"name\":\"Connector I [2022-12-05]\",\"companyId\":\"9cc7ffd8-3971-4a1a-87b3-5cd16ce3c3d6\",\"flowId\":\"c70c2e89dbd2f5576364ed1307ca675f\",\"flowVersionId\":30,\"id\":\"ha3y3i0jah\",\"connectionId\":\"6e8e2982d50856eb56ca9fb98d3138cc\",\"connectorId\":\"connectorIPregistry\",\"capabilityName\":\"ipLookup\",\"properties\":{\"ipAddress\":{\"value\":\"{{global.ip}}\"},\"nodeTitle\":{\"value\":\"IP Registry\"}},\"debugMode\":true,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"respondToUser\":true,\"transitionId\":5,\"signalId\":0}],\"evalNodeId\":\"bo1e6bjadd\",\"transitionId\":5},{\"from\":[\"inside_3\"],\"to\":\"inside_4\",\"conditions\":{\"$and\":[{\"id\":\"ha3y3i0jah\",\"connectionId\":\"6e8e2982d50856eb56ca9fb98d3138cc\",\"connectorId\":\"connectorIPregistry\",\"capabilityName\":\"ipLookup\",\"success\":true}]},\"signals\":[{\"name\":\"Functions\",\"companyId\":\"9cc7ffd8-3971-4a1a-87b3-5cd16ce3c3d6\",\"flowId\":\"c70c2e89dbd2f5576364ed1307ca675f\",\"flowVersionId\":30,\"id\":\"042reen1ij\",\"connectionId\":\"de650ca45593b82c49064ead10b9fe17\",\"connectorId\":\"functionsConnector\",\"capabilityName\":\"customFunction\",\"properties\":{\"variableInputList\":{\"value\":[{\"name\":\"jackpotData\",\"preferredDataType\":\"object\",\"value\":\"{{local.ek7dw504fs.payload.output.rawResponse.body}}\"},{\"name\":\"code\",\"preferredDataType\":\"string\",\"value\":\"{{local.ha3y3i0jah.payload.output.location.country.code}}\"}]},\"code\":{\"value\":\"// Write your code here\\n// Supported language: Javascript \\nmodule.exports = a = async ({ params }) => {\\n\\tconst jackpotData = params.jackpotData;\\n\\tconst countryCode = params.code;\\n\\tlet retval;\\n\\t// // iterate over each element in the array\\n\\tfor (var i = 0; i < jackpotData.jackpots.length; i++) {\\n\\t\\tlet countryItem = jackpotData.jackpots[i]\\n\\t\\t\\n\\t\\tif (countryItem.country.toLowerCase() === countryCode.toLowerCase()) {\\n\\t\\t\\treturn { 'jackpot': countryItem.amount, 'currency': countryItem.currency_symbol }\\n\\t\\t}\\n\\t}\\n\\treturn { 'jackpot': 0, 'currency': \\\"unknown\\\" }\\n}\"},\"outputSchema\":{\"value\":{\"output\":{\"type\":\"object\",\"properties\":{\"jackpot\":{\"type\":\"number\"},\"currency\":{\"type\":\"string\"}}}}},\"nodeTitle\":{\"value\":\"Parse Jackpot for Country\"},\"nodeDescription\":{\"value\":\"Return amount and currency\"}},\"debugMode\":true,\"logLevel\":3,\"isDisabled\":false,\"transitionId\":6,\"signalId\":0}],\"evalNodeId\":\"p8lfkoq9al\",\"transitionId\":6},{\"from\":[\"inside_4\"],\"to\":\"end_1_1_allTriggersTrue\",\"conditions\":{\"$and\":[{\"id\":\"042reen1ij\",\"connectionId\":\"de650ca45593b82c49064ead10b9fe17\",\"connectorId\":\"functionsConnector\",\"capabilityName\":\"customFunction\",\"success\":true}]},\"signals\":[{\"name\":\"Http\",\"companyId\":\"9cc7ffd8-3971-4a1a-87b3-5cd16ce3c3d6\",\"flowId\":\"c70c2e89dbd2f5576364ed1307ca675f\",\"flowVersionId\":30,\"id\":\"4zcwff3w4j\",\"connectionId\":\"867ed4363b2bc21c860085ad2baa817d\",\"connectorId\":\"httpConnector\",\"capabilityName\":\"createSuccessResponse\",\"properties\":{\"claimsNameValuePairs\":{\"value\":[{\"name\":\"jackpot_country_code\",\"value\":\"{{local.ha3y3i0jah.payload.output.location.country.code}}\",\"key\":0.06406653709369814,\"label\":\"jackpot_country_code (string - flowInstance)\",\"type\":\"string\",\"nameDefault\":\"country_code\"},{\"name\":\"jackpot_currency\",\"value\":\"{{local.042reen1ij.payload.output.currency}}\",\"key\":0.5292271740588406,\"label\":\"jackpot_currency (string - flowInstance)\",\"type\":\"string\",\"nameDefault\":\"currency\"},{\"name\":\"jackpot_amount\",\"value\":\"{{local.042reen1ij.payload.output.jackpot}}\",\"key\":0.5641772252754385,\"label\":\"jackpot_amount (number - flowInstance)\",\"type\":\"number\",\"nameDefault\":\"jackpot\"},{\"name\":\"httpStatusCode\",\"value\":\"200\",\"key\":0.10692357504497352,\"label\":\"httpStatusCode (number - flowInstance)\",\"type\":\"number\"},{\"name\":\"jackpotCountryEmoji\",\"value\":\"{{local.ha3y3i0jah.payload.output.location.country.flag.emoji}}\",\"key\":0.19251756982562562,\"label\":\"jackpotCountryEmoji (string - flowInstance)\",\"type\":\"string\"}]},\"nodeTitle\":{\"value\":\"Send Success Jackpot Data\"},\"backgroundColor\":{\"value\":\"#9dc967ff\"}},\"debugMode\":true,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[\"*\"],\"respondToUser\":true,\"transitionId\":7,\"signalId\":0}],\"evalNodeId\":\"c6vxp3kf32\",\"transitionId\":7},{\"from\":[\"inside_4\"],\"to\":\"end_2_2_anyTriggersFalse\",\"conditions\":{\"$or\":[{\"id\":\"042reen1ij\",\"connectionId\":\"de650ca45593b82c49064ead10b9fe17\",\"connectorId\":\"functionsConnector\",\"capabilityName\":\"customFunction\",\"success\":false}]},\"signals\":[{\"name\":\"Http\",\"companyId\":\"9cc7ffd8-3971-4a1a-87b3-5cd16ce3c3d6\",\"flowId\":\"c70c2e89dbd2f5576364ed1307ca675f\",\"flowVersionId\":30,\"id\":\"kgxin9qp58\",\"connectionId\":\"867ed4363b2bc21c860085ad2baa817d\",\"connectorId\":\"httpConnector\",\"capabilityName\":\"createErrorResponse\",\"properties\":{\"nodeTitle\":{\"value\":\"Jackpot Failure Reponse\"},\"backgroundColor\":{\"value\":\"#ffc8c1ff\"}},\"debugMode\":true,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[\"*\"],\"respondToUser\":true,\"errorConnectionInstances\":[\"local.042reen1ij.payload.error\"],\"transitionId\":8,\"signalId\":0}],\"evalNodeId\":\"c6vxp3kf32\",\"transitionId\":8}],\"history\":[],\"outputs\":{\"variablesConnector_saveValue\":{\"localOutputs\":[\"output\"]},\"httpConnector_makeRestApiCall\":{\"localOutputs\":[\"output\"]},\"connectorIPregistry_ipLookup\":{\"localOutputs\":[\"output\"]},\"functionsConnector_customFunction\":{\"localOutputs\":[\"output\"]}},\"outputParameters\":[\"global.variables.jackpot_source_file\",\"global.ip\",\"local.ek7dw504fs.payload.output.rawResponse.body\",\"local.ha3y3i0jah.payload.output.location.country.code\",\"local.042reen1ij.payload.output.currency\",\"local.042reen1ij.payload.output.jackpot\",\"local.ha3y3i0jah.payload.output.location.country.flag.emoji\",\"global.variables.useExternalService\"],\"global\":{},\"local\":{},\"idMapping\":{},\"nodeMappingForTids\":{\"gbhswf5sj5\":\"initialize\",\"gbhswf5sj5_createSuccessResponse\":\"initialize\",\"ha3y3i0jah\":\"initialize\",\"ha3y3i0jah_ipLookup\":\"initialize\",\"4zcwff3w4j\":\"ha3y3i0jah\",\"4zcwff3w4j_createSuccessResponse\":\"ha3y3i0jah_ipLookup\",\"kgxin9qp58\":\"ha3y3i0jah\",\"kgxin9qp58_createErrorResponse\":\"ha3y3i0jah_ipLookup\"},\"tids\":{},\"delayedConditionalStateChangeMappings\":{},\"delayedConditionalStateChangeMappingsReverse\":{},\"delayedConditionalStatesList\":[],\"lbsTransitionIdsToIgnore\":[],\"lbsTransitionIdsMapping\":{},\"outputParametersDefault\":{\"global.variables.jackpot_source_file\":\"\",\"global.ip\":\"\",\"local.ek7dw504fs.payload.output.rawResponse.body\":\"\",\"local.ha3y3i0jah.payload.output.location.country.code\":\"\",\"local.042reen1ij.payload.output.currency\":\"\",\"local.042reen1ij.payload.output.jackpot\":\"\",\"local.ha3y3i0jah.payload.output.location.country.flag.emoji\":\"\",\"global.variables.useExternalService\":\"\"},\"outputParametersDefaultBlacklist\":[],\"historyThreshold\":70,\"errorRewindBlackListIds\":[],\"nodeMappingForTidsNew\":{\"gbhswf5sj5\":\"initialize\",\"ha3y3i0jah\":\"initialize\",\"4zcwff3w4j\":[\"initialize\",\"ha3y3i0jah\"],\"kgxin9qp58\":[\"initialize\",\"ha3y3i0jah\"]},\"nodeStates\":{\"izct3efjli\":\"start_0\",\"d2v1gea8zj\":\"inside_0\",\"sne85s615z\":\"inside_1_1_allTriggersTrue\",\"gbhswf5sj5\":\"end_0_2_anyTriggersFalse\",\"ek7dw504fs\":\"inside_2\",\"ha3y3i0jah\":\"inside_3\",\"042reen1ij\":\"inside_4\",\"4zcwff3w4j\":\"end_1_1_allTriggersTrue\",\"kgxin9qp58\":\"end_2_2_anyTriggersFalse\"}}",
+  "publishedVersion": 30,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
     "intermediateLoadingScreenCSS": "",
@@ -33,9 +32,9 @@
     "debugMode": true,
     "logLevel": 3
   },
-  "updatedDate": 1669653393383,
-  "flowId": "023d4de732cb4a4621f2e60faedfbd4e",
-  "versionId": 5,
+  "updatedDate": 1670277276920,
+  "flowId": "c70c2e89dbd2f5576364ed1307ca675f",
+  "versionId": 32,
   "graphData": {
     "elements": {
       "nodes": [
@@ -60,8 +59,8 @@
             }
           },
           "position": {
-            "x": 589,
-            "y": 444
+            "x": 1080,
+            "y": 450
           },
           "group": "nodes",
           "removed": false,
@@ -76,9 +75,9 @@
           "data": {
             "id": "ha3y3i0jah",
             "nodeType": "CONNECTION",
-            "connectionId": "67ee3a61a87347d4f7eaf1297690ed65",
+            "connectionId": "6e8e2982d50856eb56ca9fb98d3138cc",
             "connectorId": "connectorIPregistry",
-            "name": "Connector I [2022-11-28]",
+            "name": "Connector I [2022-12-05]",
             "label": "ipregistry",
             "status": "configured",
             "capabilityName": "ipLookup",
@@ -94,8 +93,8 @@
             "idUnique": "pdn1o02jr9"
           },
           "position": {
-            "x": 864,
-            "y": 444
+            "x": 1350,
+            "y": 450
           },
           "group": "nodes",
           "removed": false,
@@ -112,8 +111,8 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 429,
-            "y": 444
+            "x": 900,
+            "y": 450
           },
           "group": "nodes",
           "removed": false,
@@ -130,8 +129,8 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 979,
-            "y": 444
+            "x": 1470,
+            "y": 450
           },
           "group": "nodes",
           "removed": false,
@@ -183,8 +182,8 @@
             }
           },
           "position": {
-            "x": 1139,
-            "y": 444
+            "x": 1620,
+            "y": 450
           },
           "group": "nodes",
           "removed": false,
@@ -207,8 +206,8 @@
             }
           },
           "position": {
-            "x": 1254,
-            "y": 444
+            "x": 1740,
+            "y": 450
           },
           "group": "nodes",
           "removed": false,
@@ -251,8 +250,8 @@
             }
           },
           "position": {
-            "x": 314,
-            "y": 444
+            "x": 810,
+            "y": 450
           },
           "group": "nodes",
           "removed": false,
@@ -270,8 +269,8 @@
             "label": "Evaluator"
           },
           "position": {
-            "x": 704,
-            "y": 444
+            "x": 1200,
+            "y": 450
           },
           "group": "nodes",
           "removed": false,
@@ -345,8 +344,8 @@
             }
           },
           "position": {
-            "x": 1414,
-            "y": 444
+            "x": 1890,
+            "y": 450
           },
           "group": "nodes",
           "removed": false,
@@ -378,8 +377,8 @@
             }
           },
           "position": {
-            "x": 1414,
-            "y": 674
+            "x": 1890,
+            "y": 660
           },
           "group": "nodes",
           "removed": false,
@@ -475,8 +474,8 @@
             "status": "configured"
           },
           "position": {
-            "x": 214,
-            "y": 334
+            "x": 720,
+            "y": 330
           },
           "group": "nodes",
           "removed": false,
@@ -526,8 +525,8 @@
             "idUnique": "bhzbtfb7g6"
           },
           "position": {
-            "x": 489,
-            "y": 334
+            "x": 990,
+            "y": 330
           },
           "group": "nodes",
           "removed": false,
@@ -577,8 +576,8 @@
             "idUnique": "s35xk6knkw"
           },
           "position": {
-            "x": 764,
-            "y": 334
+            "x": 1260,
+            "y": 330
           },
           "group": "nodes",
           "removed": false,
@@ -628,8 +627,8 @@
             "idUnique": "8ro7j3o8ue"
           },
           "position": {
-            "x": 1039,
-            "y": 334
+            "x": 1530,
+            "y": 330
           },
           "group": "nodes",
           "removed": false,
@@ -679,8 +678,8 @@
             "idUnique": "wow5q41avt"
           },
           "position": {
-            "x": 1314,
-            "y": 334
+            "x": 1800,
+            "y": 330
           },
           "group": "nodes",
           "removed": false,
@@ -730,8 +729,259 @@
             "idUnique": "gc57htse4q"
           },
           "position": {
-            "x": 1314,
-            "y": 564
+            "x": 1800,
+            "y": 570
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "d2v1gea8zj",
+            "nodeType": "CONNECTION",
+            "connectionId": "de650ca45593b82c49064ead10b9fe17",
+            "connectorId": "functionsConnector",
+            "name": "Functions",
+            "label": "Functions",
+            "status": "configured",
+            "capabilityName": "AEqualsB",
+            "type": "trigger",
+            "properties": {
+              "leftValueA": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"useExternalService\",\n        \"data\": \"{{global.variables.useExternalService}}\",\n        \"tooltip\": \"{{global.variables.useExternalService}}\",\n        \"children\": [\n          {\n            \"text\": \"useExternalService\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
+              "rightValueB": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"true\"\n      }\n    ]\n  }\n]"
+              },
+              "type": {
+                "value": "boolean"
+              },
+              "nodeTitle": {
+                "value": "Use External IP Service?"
+              }
+            }
+          },
+          "position": {
+            "x": 540,
+            "y": 450
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "mhih6426db",
+            "nodeType": "EVAL",
+            "properties": {
+              "gbhswf5sj5": {
+                "value": "anyTriggersFalse"
+              }
+            }
+          },
+          "position": {
+            "x": 660,
+            "y": 450
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "gbhswf5sj5",
+            "nodeType": "CONNECTION",
+            "connectionId": "867ed4363b2bc21c860085ad2baa817d",
+            "connectorId": "httpConnector",
+            "name": "Http",
+            "label": "Http",
+            "status": "configured",
+            "capabilityName": "createSuccessResponse",
+            "type": "action",
+            "properties": {
+              "claimsNameValuePairs": {
+                "value": [
+                  {
+                    "name": "jackpot_country_code",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"CA\"\n      }\n    ]\n  }\n]",
+                    "key": 0.06406653709369814,
+                    "label": "jackpot_country_code (string - flowInstance)",
+                    "type": "string",
+                    "nameDefault": "country_code"
+                  },
+                  {
+                    "name": "jackpot_currency",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"$\"\n      }\n    ]\n  }\n]",
+                    "key": 0.5292271740588406,
+                    "label": "jackpot_currency (string - flowInstance)",
+                    "type": "string",
+                    "nameDefault": "currency"
+                  },
+                  {
+                    "name": "jackpot_amount",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"177,776\"\n      }\n    ]\n  }\n]",
+                    "key": 0.5641772252754385,
+                    "label": "jackpot_amount (number - flowInstance)",
+                    "type": "string",
+                    "nameDefault": "jackpot"
+                  },
+                  {
+                    "name": "httpStatusCode",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"200\"\n      }\n    ]\n  }\n]",
+                    "key": 0.10692357504497352,
+                    "label": "httpStatusCode (number - flowInstance)",
+                    "type": "number"
+                  },
+                  {
+                    "name": "jackpotCountryEmoji",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"🇨🇦\"\n      }\n    ]\n  }\n]",
+                    "key": 0.19251756982562562,
+                    "label": "jackpotCountryEmoji (string - flowInstance)",
+                    "type": "string"
+                  }
+                ]
+              },
+              "nodeTitle": {
+                "value": "Send Mock Jackpot Data"
+              },
+              "backgroundColor": {
+                "value": "#9dc967ff"
+              }
+            },
+            "idUnique": "zavscmlbmp"
+          },
+          "position": {
+            "x": 810,
+            "y": 660
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "izct3efjli",
+            "nodeType": "CONNECTION",
+            "connectionId": "06922a684039827499bdbdd97f49827b",
+            "connectorId": "variablesConnector",
+            "name": "Variables",
+            "label": "Variables",
+            "status": "configured",
+            "capabilityName": "saveValue",
+            "type": "trigger",
+            "properties": {
+              "saveVariables": {
+                "value": [
+                  {
+                    "name": "useExternalService",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"true\"\n      }\n    ]\n  }\n]",
+                    "key": 0.6736786612801797,
+                    "label": "useExternalService (boolean - flowInstance)",
+                    "type": "boolean"
+                  }
+                ]
+              },
+              "nodeTitle": {
+                "value": "Set Use External Service"
+              }
+            }
+          },
+          "position": {
+            "x": 270,
+            "y": 450
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "picm3jgc3g",
+            "nodeType": "EVAL"
+          },
+          "position": {
+            "x": 390,
+            "y": 450
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "7cc691o5ry",
+            "nodeType": "ANNOTATION",
+            "name": "Annotation",
+            "connectionId": "921bfae85c38ed45045e07be703d86b8",
+            "connectorId": "annotationConnector",
+            "capabilityName": "updateAnnotationProperties",
+            "type": "action",
+            "properties": {
+              "backgroundColor": {
+                "value": "#fefcc4ff"
+              },
+              "annotationTextColor": {
+                "value": "#000000"
+              },
+              "annotation": {
+                "value": "Toggle to use External Service"
+              },
+              "strokeEnabled": {
+                "value": true
+              },
+              "strokeWidth": {
+                "value": 2
+              },
+              "fontSize": {
+                "value": 13
+              },
+              "fontStyle": {
+                "value": "bold"
+              },
+              "fontFamily": {
+                "value": "Verdana"
+              },
+              "width": {
+                "value": 400
+              }
+            },
+            "status": "configured",
+            "idUnique": "e3hnnj1bqd"
+          },
+          "position": {
+            "x": 210,
+            "y": 330
           },
           "group": "nodes",
           "removed": false,
@@ -914,6 +1164,101 @@
           "grabbable": true,
           "pannable": true,
           "classes": ""
+        },
+        {
+          "data": {
+            "id": "2tpf0zcp3y",
+            "source": "d2v1gea8zj",
+            "target": "mhih6426db"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "pscctzjo3e",
+            "source": "mhih6426db",
+            "target": "sne85s615z"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "qt236ch2u7",
+            "source": "mhih6426db",
+            "target": "gbhswf5sj5"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "iiehai85lu",
+            "source": "izct3efjli",
+            "target": "picm3jgc3g"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "ihnejhymd7",
+            "source": "picm3jgc3g",
+            "target": "d2v1gea8zj"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
         }
       ]
     },
@@ -935,12 +1280,12 @@
     }
   },
   "inputSchema": [],
-  "flowColor": "#E3F0FF",
-  "savedDate": 1669653391784,
+  "flowColor": "#ff661c",
+  "savedDate": 1670277276811,
   "variables": [
     {
       "context": "flowInstance",
-      "createdDate": 1669637967747,
+      "createdDate": 1670260984767,
       "fields": {
         "type": "string",
         "displayName": "",
@@ -951,7 +1296,23 @@
       "type": "property",
       "visibility": "private",
       "name": "jackpot_source_file##SK##flowInstance",
-      "companyId": "8537ff42-72bc-4142-aef5-e6e6ed96dc26"
+      "companyId": "9cc7ffd8-3971-4a1a-87b3-5cd16ce3c3d6"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1670276094009,
+      "customerId": "f3e47d945ae971a4b4142ec75012d155",
+      "fields": {
+        "type": "boolean",
+        "displayName": "",
+        "mutable": true,
+        "min": 0,
+        "max": 2000
+      },
+      "type": "property",
+      "visibility": "private",
+      "name": "useExternalService##SK##flowInstance",
+      "companyId": "9cc7ffd8-3971-4a1a-87b3-5cd16ce3c3d6"
     }
   ]
 }
