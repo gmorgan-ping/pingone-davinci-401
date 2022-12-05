@@ -1,0 +1,315 @@
+{
+  "companyId": "8537ff42-72bc-4142-aef5-e6e6ed96dc26",
+  "authTokenExpireIds": [],
+  "connectorIds": [
+    "annotationConnector",
+    "httpConnector"
+  ],
+  "createdDate": 1669660661897,
+  "currentVersion": 51,
+  "customerId": "f3e47d945ae971a4b4142ec75012d155",
+  "deployedDate": 1669660662833,
+  "description": "\n",
+  "flowStatus": "enabled",
+  "name": "401-3 START Basic Authentication",
+  "orx": "{\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"16753ade5e38a923ba32103e2487b357\",\"flowVersionId\":51,\"version\":\"4.0.0\",\"states\":[\"initialize\"],\"currentState\":[\"initialize\"],\"transitions\":[{\"from\":[\"initialize\"],\"to\":\"start_0\",\"conditions\":{\"$and\":[{\"initializeFlow\":true}]},\"signals\":[{\"name\":\"Http\",\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"16753ade5e38a923ba32103e2487b357\",\"flowVersionId\":51,\"id\":\"wmgvju7btv\",\"connectionId\":\"867ed4363b2bc21c860085ad2baa817d\",\"connectorId\":\"httpConnector\",\"capabilityName\":\"customHtmlMessage\",\"properties\":{\"messageTitle\":{\"value\":\"Basic Auth Start\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[\"global.error\"],\"respondToUser\":true,\"transitionId\":0,\"signalId\":0}],\"transitionId\":0}],\"history\":[],\"outputs\":{},\"outputParameters\":[],\"global\":{},\"local\":{},\"idMapping\":{},\"nodeMappingForTids\":{\"wmgvju7btv\":\"initialize\",\"wmgvju7btv_customHtmlMessage\":\"initialize\"},\"tids\":{},\"delayedConditionalStateChangeMappings\":{},\"delayedConditionalStateChangeMappingsReverse\":{},\"delayedConditionalStatesList\":[],\"lbsTransitionIdsToIgnore\":[],\"lbsTransitionIdsMapping\":{},\"outputParametersDefault\":{},\"outputParametersDefaultBlacklist\":[],\"historyThreshold\":70,\"errorRewindBlackListIds\":[],\"nodeMappingForTidsNew\":{\"wmgvju7btv\":\"initialize\"},\"nodeStates\":{\"wmgvju7btv\":\"start_0\"}}",
+  "publishedVersion": 51,
+  "settings": {
+    "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
+    "intermediateLoadingScreenCSS": "",
+    "intermediateLoadingScreenHTML": "",
+    "logLevel": 3,
+    "useBetaAlgorithm": true
+  },
+  "updatedDate": 1669660662833,
+  "flowId": "16753ade5e38a923ba32103e2487b357",
+  "versionId": 51,
+  "graphData": {
+    "elements": {
+      "nodes": [
+        {
+          "data": {
+            "id": "ahkk577ztz",
+            "nodeType": "ANNOTATION",
+            "name": "Annotation",
+            "connectionId": "921bfae85c38ed45045e07be703d86b8",
+            "connectorId": "annotationConnector",
+            "capabilityName": "updateAnnotationProperties",
+            "type": "action",
+            "properties": {
+              "backgroundColor": {
+                "value": "#fefcc4ff"
+              },
+              "annotationTextColor": {
+                "value": "#000000"
+              },
+              "strokeEnabled": {
+                "value": true
+              },
+              "strokeWidth": {
+                "value": 2
+              },
+              "strokeColor": {
+                "value": "#000000ff"
+              },
+              "fontSize": {
+                "value": 13
+              },
+              "fontStyle": {
+                "value": "bold"
+              },
+              "fontFamily": {
+                "value": "Verdana"
+              },
+              "annotation": {
+                "value": "Password Authentication"
+              },
+              "width": {
+                "value": 1020
+              }
+            },
+            "status": "configured",
+            "idUnique": "zl6dizb2kh"
+          },
+          "position": {
+            "x": 445.3641866349534,
+            "y": 723.7168032817992
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "rygcq5p74x",
+            "nodeType": "ANNOTATION",
+            "name": "Annotation",
+            "connectionId": "921bfae85c38ed45045e07be703d86b8",
+            "connectorId": "annotationConnector",
+            "capabilityName": "updateAnnotationProperties",
+            "type": "action",
+            "properties": {
+              "backgroundColor": {
+                "value": "#4a90e2ff"
+              },
+              "annotationTextColor": {
+                "value": "#ffffffff"
+              },
+              "annotation": {
+                "value": "Beginner's Luck - Sign In"
+              },
+              "width": {
+                "value": 1000
+              },
+              "fontFamily": {
+                "value": "Verdana"
+              },
+              "fontSize": {
+                "value": 16
+              },
+              "fontStyle": {
+                "value": "bold"
+              },
+              "strokeEnabled": {
+                "value": true
+              },
+              "strokeWidth": {
+                "value": 2
+              },
+              "strokeColor": {
+                "value": "#000000ff"
+              }
+            },
+            "status": "configured"
+          },
+          "position": {
+            "x": 457,
+            "y": 214
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "ap524cc0c2",
+            "nodeType": "ANNOTATION",
+            "name": "Annotation",
+            "connectionId": "921bfae85c38ed45045e07be703d86b8",
+            "connectorId": "annotationConnector",
+            "capabilityName": "updateAnnotationProperties",
+            "type": "action",
+            "properties": {
+              "backgroundColor": {
+                "value": "#e7e7e7ff"
+              },
+              "annotation": {
+                "value": "Verify Password"
+              },
+              "strokeEnabled": {
+                "value": true
+              },
+              "width": {
+                "value": 0
+              },
+              "height": {
+                "value": 0
+              },
+              "strokeWidth": {
+                "value": 2
+              },
+              "strokeColor": {
+                "value": "#0c0101ff"
+              },
+              "annotationTextColor": {
+                "value": "#000000ff"
+              },
+              "fontFamily": {
+                "value": "verdana"
+              },
+              "fontSize": {
+                "value": 13
+              },
+              "fontStyle": {
+                "value": "bold"
+              }
+            },
+            "status": "configured",
+            "idUnique": "06be4mt3qz"
+          },
+          "position": {
+            "x": 445.3641866349534,
+            "y": 1057.7399432580144
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "drmitteqlt",
+            "nodeType": "ANNOTATION",
+            "name": "Annotation",
+            "connectionId": "921bfae85c38ed45045e07be703d86b8",
+            "connectorId": "annotationConnector",
+            "capabilityName": "updateAnnotationProperties",
+            "type": "action",
+            "properties": {
+              "backgroundColor": {
+                "value": "#e7e7e7ff"
+              },
+              "annotation": {
+                "value": "Collect Password"
+              },
+              "strokeEnabled": {
+                "value": true
+              },
+              "width": {
+                "value": 0
+              },
+              "height": {
+                "value": 0
+              },
+              "strokeWidth": {
+                "value": 2
+              },
+              "strokeColor": {
+                "value": "#0c0101ff"
+              },
+              "annotationTextColor": {
+                "value": "#000000ff"
+              },
+              "fontFamily": {
+                "value": "verdana"
+              },
+              "fontSize": {
+                "value": 13
+              },
+              "fontStyle": {
+                "value": "bold"
+              }
+            },
+            "status": "configured",
+            "idUnique": "kfkcijy3yx"
+          },
+          "position": {
+            "x": 445.3641866349534,
+            "y": 974.2341582639606
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "wmgvju7btv",
+            "nodeType": "CONNECTION",
+            "connectionId": "867ed4363b2bc21c860085ad2baa817d",
+            "connectorId": "httpConnector",
+            "name": "Http",
+            "label": "Http",
+            "status": "configured",
+            "capabilityName": "customHtmlMessage",
+            "type": "trigger",
+            "properties": {
+              "messageTitle": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Basic Auth Start\"\n      }\n    ]\n  }\n]"
+              }
+            }
+          },
+          "position": {
+            "x": 556.7052332936918,
+            "y": 361.8584016408996
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        }
+      ]
+    },
+    "data": {},
+    "zoomingEnabled": true,
+    "userZoomingEnabled": true,
+    "zoom": 1,
+    "minZoom": 1e-50,
+    "maxZoom": 1e+50,
+    "panningEnabled": true,
+    "userPanningEnabled": true,
+    "pan": {
+      "x": 0,
+      "y": 0
+    },
+    "boxSelectionEnabled": true,
+    "renderer": {
+      "name": "null"
+    }
+  },
+  "flowColor": "#ff661c",
+  "savedDate": 1669660661881,
+  "variables": []
+}
