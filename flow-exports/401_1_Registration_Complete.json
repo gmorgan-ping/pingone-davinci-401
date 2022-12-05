@@ -36,7 +36,7 @@
     }
   },
   "isInputSchemaSaved": true,
-  "name": "401:1 Registration - Create User",
+  "name": "401-1: COMPLETED Registration Flow",
   "publishedVersion": 38,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
