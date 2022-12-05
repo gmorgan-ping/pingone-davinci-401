@@ -33,6 +33,7 @@ a.links, a.links:visited{
   text-decoration: underline;
   width: inherit;
   background-color: white;
+  line-height: 12pt;
 }
 a.links:hover {
   font-weight: bold;
@@ -116,4 +117,5 @@ p {
 .center {
   text-align: center;
 }
+
 
