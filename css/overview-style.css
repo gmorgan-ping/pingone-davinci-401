@@ -92,7 +92,7 @@ a:hover, a.download:hover {
   padding: 10px;
   margin: 10px 10px 30px;
   border-radius: 5px;
-   height: 180px; 
+   height: 160px; 
 }
 .description-box{
   height: 260px;
@@ -118,4 +118,7 @@ p {
   text-align: center;
 }
 
+.glitchIcon {
+  content: url("https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2FLogo_Color.svg?v=1618199565140");
+}
 
