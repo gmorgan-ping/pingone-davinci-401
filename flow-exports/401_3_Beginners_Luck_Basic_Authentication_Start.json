@@ -11,7 +11,7 @@
   "deployedDate": 1669660662833,
   "description": "\n",
   "flowStatus": "enabled",
-  "name": "401-3: START Basic Authentication",
+  "name": "401-3: START Basic Auth",
   "orx": "{\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"16753ade5e38a923ba32103e2487b357\",\"flowVersionId\":51,\"version\":\"4.0.0\",\"states\":[\"initialize\"],\"currentState\":[\"initialize\"],\"transitions\":[{\"from\":[\"initialize\"],\"to\":\"start_0\",\"conditions\":{\"$and\":[{\"initializeFlow\":true}]},\"signals\":[{\"name\":\"Http\",\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"16753ade5e38a923ba32103e2487b357\",\"flowVersionId\":51,\"id\":\"wmgvju7btv\",\"connectionId\":\"867ed4363b2bc21c860085ad2baa817d\",\"connectorId\":\"httpConnector\",\"capabilityName\":\"customHtmlMessage\",\"properties\":{\"messageTitle\":{\"value\":\"Basic Auth Start\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[\"global.error\"],\"respondToUser\":true,\"transitionId\":0,\"signalId\":0}],\"transitionId\":0}],\"history\":[],\"outputs\":{},\"outputParameters\":[],\"global\":{},\"local\":{},\"idMapping\":{},\"nodeMappingForTids\":{\"wmgvju7btv\":\"initialize\",\"wmgvju7btv_customHtmlMessage\":\"initialize\"},\"tids\":{},\"delayedConditionalStateChangeMappings\":{},\"delayedConditionalStateChangeMappingsReverse\":{},\"delayedConditionalStatesList\":[],\"lbsTransitionIdsToIgnore\":[],\"lbsTransitionIdsMapping\":{},\"outputParametersDefault\":{},\"outputParametersDefaultBlacklist\":[],\"historyThreshold\":70,\"errorRewindBlackListIds\":[],\"nodeMappingForTidsNew\":{\"wmgvju7btv\":\"initialize\"},\"nodeStates\":{\"wmgvju7btv\":\"start_0\"}}",
   "publishedVersion": 51,
   "settings": {
