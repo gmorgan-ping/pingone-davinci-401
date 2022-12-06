@@ -1,5 +1,5 @@
 {
-  "companyId": "8537ff42-72bc-4142-aef5-e6e6ed96dc26",
+  "companyId": "39ae544d-db07-4576-9ef5-6a2413ff990e",
   "authTokenExpireIds": [],
   "connectorIds": [
     "annotationConnector",
@@ -13,15 +13,15 @@
     "challengeConnector",
     "analyticsConnector"
   ],
-  "createdDate": 1670246424639,
-  "currentVersion": 69,
+  "createdDate": 1670327784009,
+  "currentVersion": 6,
   "customerId": "f3e47d945ae971a4b4142ec75012d155",
-  "deployedDate": 1670246427531,
-  "description": "\n",
+  "deployedDate": 1670327784952,
+  "description": "Imported on Tue Dec 06 2022 11:50:00 GMT+0000 (Coordinated Universal Time)",
   "flowStatus": "enabled",
-  "name": "401-6 COMPLETED Basic Auth with Analytics",
-  "orx": "{\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"34cedcffd17e2be6ffb56a7556683b09\",\"flowVersionId\":69,\"version\":\"4.0.0\",\"states\":[\"initialize\",\"start_0\",\"inside_0\",\"inside_1\",\"end_0_1_anyTriggersFalse\",\"inside_2_2_allTriggersTrue\",\"end_1_1_anyTriggersFalse\",\"inside_3_2_allTriggersTrue\",\"inside_4_1_anyTriggersFalse\",\"inside_5_2_allTriggersTrue\",\"inside_6\",\"inside_7\",\"inside_8\",\"end_2\",\"start_1\",\"inside_9\",\"inside_10\",\"inside_11\",\"end_3\",\"inside_12_1_allTriggersTrue\",\"inside_13_2_anyTriggersFalse\",\"end_4\",\"end_5\",\"start_2\",\"inside_14\",\"inside_15\",\"inside_16\",\"inside_17_1_allTriggersTrue\",\"inside_18_2_anyTriggersFalse\",\"inside_19\",\"end_6\",\"end_7\",\"start_3\",\"inside_20\",\"inside_22\",\"inside_21\",\"inside_23\",\"inside_24\",\"end_8\",\"inside_25\",\"inside_26\",\"inside_27_1_allTriggersTrue\",\"end_9_2_anyTriggersFalse\",\"end_10\"],\"currentState\":[\"initialize\"],\"transitions\":[{\"from\":[\"initialize\"],\"to\":\"start_0\",\"conditions\":{\"$and\":[{\"initializeFlow\":true}]},\"signals\":[{\"name\":\"Http\",\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"34cedcffd17e2be6ffb56a7556683b09\",\"flowVersionId\":69,\"id\":\"1gptrqcdje\",\"connectionId\":\"867ed4363b2bc21c860085ad2baa817d\",\"connectorId\":\"httpConnector\",\"capabilityName\":\"customHTMLTemplate\",\"properties\":{\"customHTML\":{\"value\":\"<section class=\\\"register\\\">\\n    <form id=\\\"frmSignIn\\\">\\n        <div class=\\\"register-content\\\">\\n            <div class=\\\"logo-wrapper\\\">\\n                <img class=\\\"logo\\\" />\\n            </div>\\n            <h3>Beginner's Luck Online Gaming</h3>\\n            <h1>Sign In</h1>\\n            <label>Email</label>\\n            <input type=\\\"text\\\" id=\\\"email\\\" />\\n            <div class=\\\"smallbuttonbar\\\">\\n                <p>Select sign in method</p>\\n                <button id=\\\"btnSignin\\\" data-skcomponent=\\\"skbutton\\\" data-skbuttontype=\\\"form-submit\\\"\\n                    data-skbuttonvalue=\\\"PASSWORD\\\" data-skform=\\\"frmSignIn\\\" >\\n                    <i class=\\\"fa fa-key\\\" aria-hidden=\\\"true\\\"></i> Password \\n                </button>\\n            </div>\\n\\n            <div class=\\\"smallbuttonbar\\\">\\n                <button id=\\\"btnSignin\\\" data-skcomponent=\\\"skbutton\\\" data-skbuttontype=\\\"form-submit\\\"\\n                    data-skbuttonvalue=\\\"MAGICLINK\\\" data-skform=\\\"frmSignIn\\\" >\\n                    <i class=\\\"fa fa-magic\\\" aria-hidden=\\\"true\\\"></i> Magic Link \\n                </button>\\n            </div>\\n            <div data-skcomponent=\\\"skerror\\\" class=\\\"error-message\\\" data-skvisibility=\\\"\\\"></div>\\n            <div data-skcomponent=\\\"skerrormessage\\\" class=\\\"error-message\\\" data-skerrorid=\\\"email\\\"></div>\\n        </div>\\n    </form>\\n</section>\"},\"validationRules\":{\"value\":[{\"propertyName\":\"email\",\"rules\":[{\"ruleName\":\"email\",\"message\":\"Please enter a valid email address\"}]}]},\"nodeTitle\":{\"value\":\"Collect Email\"},\"formFieldsList\":{\"value\":[{\"preferredControlType\":\"textField\",\"preferredDataType\":\"string\",\"propertyName\":\"buttonValue\"},{\"propertyName\":\"email\",\"preferredControlType\":\"textField\",\"preferredDataType\":\"string\",\"value\":\"\",\"hashedVisibility\":false}]},\"customScript\":{\"value\":\"document.getElementById(\\\"email\\\").focus()\\n\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"respondToUser\":true,\"transitionId\":0,\"signalId\":0,\"largePayload\":[\"customHTML\"]}],\"transitionId\":0},{\"from\":[\"start_0\"],\"to\":\"inside_0\",\"conditions\":{\"$and\":[{\"id\":\"1gptrqcdje\",\"connectionId\":\"867ed4363b2bc21c860085ad2baa817d\",\"connectorId\":\"httpConnector\",\"capabilityName\":\"customHTMLTemplate\",\"success\":true}]},\"signals\":[{\"name\":\"Flow Analytics\",\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"34cedcffd17e2be6ffb56a7556683b09\",\"flowVersionId\":69,\"id\":\"5d8juu8kbc\",\"connectionId\":\"c4b2032a1b63d370c5fbdd205522f1c5\",\"connectorId\":\"analyticsConnector\",\"capabilityName\":\"logOutcome\",\"properties\":{\"outcomeType\":{\"value\":\"LOGIN_START\"},\"outcomeStatus\":{\"value\":\"LOGIN_START_SUCCESS\"},\"shouldContinueOnError\":{\"value\":true},\"nodeTitle\":{\"value\":\"Login Starts\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"transitionId\":1,\"signalId\":0}],\"evalNodeId\":\"49tgg5rp1b\",\"transitionId\":1},{\"from\":[\"inside_0\"],\"to\":\"inside_1\",\"conditions\":{\"$and\":[{\"id\":\"5d8juu8kbc\",\"connectionId\":\"c4b2032a1b63d370c5fbdd205522f1c5\",\"connectorId\":\"analyticsConnector\",\"capabilityName\":\"logOutcome\",\"success\":true}]},\"signals\":[{\"name\":\"PingOne\",\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"34cedcffd17e2be6ffb56a7556683b09\",\"flowVersionId\":69,\"id\":\"lx7ukcf574\",\"connectionId\":\"94141bf2f1b9b59a5f5365ff135e02bb\",\"connectorId\":\"pingOneSSOConnector\",\"capabilityName\":\"userLookup\",\"properties\":{\"matchAttributes\":{\"value\":[\"email\"]},\"userIdentifierForFindUser\":{\"value\":\"{{local.1gptrqcdje.payload.output.email}}\"},\"nodeTitle\":{\"value\":\"Find User\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"transitionId\":2,\"signalId\":0}],\"evalNodeId\":\"qdl2d2s7bu\",\"transitionId\":2},{\"from\":[\"inside_1\"],\"to\":\"end_0_1_anyTriggersFalse\",\"conditions\":{\"$or\":[{\"id\":\"lx7ukcf574\",\"connectionId\":\"94141bf2f1b9b59a5f5365ff135e02bb\",\"connectorId\":\"pingOneSSOConnector\",\"capabilityName\":\"userLookup\",\"success\":false}]},\"signals\":[{\"name\":\"Error Customize\",\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"34cedcffd17e2be6ffb56a7556683b09\",\"flowVersionId\":69,\"id\":\"fd8b3aviy9\",\"connectionId\":\"6d8f6f706c45fd459a86b3f092602544\",\"connectorId\":\"errorConnector\",\"capabilityName\":\"customErrorMessage\",\"properties\":{\"errorMessage\":{\"value\":\"Unknown email address\"},\"nodeTitle\":{\"value\":\"Unknown User\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"respondToUser\":true,\"errorConnectionInstances\":[\"local.lx7ukcf574.payload.error\"],\"transitionId\":3,\"signalId\":0}],\"evalNodeId\":\"2vtq362458\",\"transitionId\":3},{\"from\":[\"inside_1\"],\"to\":\"inside_2_2_allTriggersTrue\",\"conditions\":{\"$and\":[{\"id\":\"lx7ukcf574\",\"connectionId\":\"94141bf2f1b9b59a5f5365ff135e02bb\",\"connectorId\":\"pingOneSSOConnector\",\"capabilityName\":\"userLookup\",\"success\":true}]},\"signals\":[{\"name\":\"Functions\",\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"34cedcffd17e2be6ffb56a7556683b09\",\"flowVersionId\":69,\"id\":\"4lt6cvevnv\",\"connectionId\":\"de650ca45593b82c49064ead10b9fe17\",\"connectorId\":\"functionsConnector\",\"capabilityName\":\"AEqualsB\",\"properties\":{\"leftValueA\":{\"value\":\"{{local.lx7ukcf574.payload.output.matchedUser.enabled}}\"},\"rightValueB\":{\"value\":\"true\"},\"type\":{\"value\":\"boolean\"},\"nodeTitle\":{\"value\":\"Is User Enabled?\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"to\":\"oe\",\"transitionId\":4,\"signalId\":0}],\"evalNodeId\":\"2vtq362458\",\"transitionId\":4},{\"from\":[\"inside_2_2_allTriggersTrue\"],\"to\":\"end_1_1_anyTriggersFalse\",\"conditions\":{\"$or\":[{\"id\":\"4lt6cvevnv\",\"connectionId\":\"de650ca45593b82c49064ead10b9fe17\",\"connectorId\":\"functionsConnector\",\"capabilityName\":\"AEqualsB\",\"logic\":{\"type\":\"whereNot\",\"expr\":\"{{local.lx7ukcf574.payload.output.matchedUser.enabled}} == true\"}}]},\"signals\":[{\"name\":\"Error Customize\",\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"34cedcffd17e2be6ffb56a7556683b09\",\"flowVersionId\":69,\"id\":\"d7a4lhsc27\",\"connectionId\":\"6d8f6f706c45fd459a86b3f092602544\",\"connectorId\":\"errorConnector\",\"capabilityName\":\"customErrorMessage\",\"properties\":{\"errorMessage\":{\"value\":\"Your account has been disabled\"},\"nodeTitle\":{\"value\":\"Disabled Account Message\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"respondToUser\":true,\"errorConnectionInstances\":[\"local.4lt6cvevnv.payload.error\"],\"transitionId\":5,\"signalId\":0}],\"evalNodeId\":\"6dmstg13g4\",\"transitionId\":5},{\"from\":[\"inside_2_2_allTriggersTrue\"],\"to\":\"inside_3_2_allTriggersTrue\",\"conditions\":{\"$and\":[{\"id\":\"4lt6cvevnv\",\"connectionId\":\"de650ca45593b82c49064ead10b9fe17\",\"connectorId\":\"functionsConnector\",\"capabilityName\":\"AEqualsB\",\"logic\":{\"type\":\"where\",\"expr\":\"{{local.lx7ukcf574.payload.output.matchedUser.enabled}} == true\"}}]},\"signals\":[{\"name\":\"Functions\",\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"34cedcffd17e2be6ffb56a7556683b09\",\"flowVersionId\":69,\"id\":\"7erwbkrksx\",\"connectionId\":\"de650ca45593b82c49064ead10b9fe17\",\"connectorId\":\"functionsConnector\",\"capabilityName\":\"AEqualsB\",\"properties\":{\"leftValueA\":{\"value\":\"{{local.lx7ukcf574.payload.output.matchedUser.lifecycle.status}}\"},\"rightValueB\":{\"value\":\"ACCOUNT_OK\"},\"nodeTitle\":{\"value\":\"Is Account Verified?\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"to\":\"oe\",\"transitionId\":6,\"signalId\":0}],\"evalNodeId\":\"6dmstg13g4\",\"transitionId\":6},{\"from\":[\"inside_3_2_allTriggersTrue\"],\"to\":\"inside_4_1_anyTriggersFalse\",\"conditions\":{\"$or\":[{\"id\":\"7erwbkrksx\",\"connectionId\":\"de650ca45593b82c49064ead10b9fe17\",\"connectorId\":\"functionsConnector\",\"capabilityName\":\"AEqualsB\",\"logic\":{\"type\":\"whereNot\",\"expr\":\"'{{local.lx7ukcf574.payload.output.matchedUser.lifecycle.status}}' == 'ACCOUNT_OK'\"}}]},\"signals\":[{\"name\":\"Flow [2022-11-28]\",\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"34cedcffd17e2be6ffb56a7556683b09\",\"flowVersionId\":69,\"id\":\"2ynj4jjbml\",\"connectionId\":\"fc4aa8d2a2b83ef4d595d962d6ba8458\",\"connectorId\":\"flowConnector\",\"capabilityName\":\"startUiSubFlow\",\"properties\":{\"subFlowId\":{\"value\":{\"label\":\"COMPLETE Verify Account [SUBFLOW]\",\"value\":\"2ff65d92f95fc60d17ec5de96ac596f4\"}},\"subFlowVersionId\":{\"value\":-1},\"emailAddress\":{\"value\":\"{{local.lx7ukcf574.payload.output.matchedUser.email}}\"},\"sendVerificationCode\":{\"value\":\"true\"},\"nodeTitle\":{\"value\":\"Verify Account\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[\"global.cookies\",\"global.ip\",\"global.userAgent\",\"global.skOpenId\",\"global.origin\",\"global.originCookies\"],\"respondToUser\":true,\"errorConnectionInstances\":[\"local.7erwbkrksx.payload.error\"],\"transitionId\":7,\"signalId\":0}],\"evalNodeId\":\"to3kbai5uk\",\"transitionId\":7},{\"from\":[\"inside_3_2_allTriggersTrue\"],\"to\":\"inside_5_2_allTriggersTrue\",\"conditions\":{\"$and\":[{\"id\":\"7erwbkrksx\",\"connectionId\":\"de650ca45593b82c49064ead10b9fe17\",\"connectorId\":\"functionsConnector\",\"capabilityName\":\"AEqualsB\",\"logic\":{\"type\":\"where\",\"expr\":\"'{{local.lx7ukcf574.payload.output.matchedUser.lifecycle.status}}' == 'ACCOUNT_OK'\"}}]},\"signals\":[{\"name\":\"Functions\",\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"34cedcffd17e2be6ffb56a7556683b09\",\"flowVersionId\":69,\"id\":\"5eq01z85x3\",\"connectionId\":\"de650ca45593b82c49064ead10b9fe17\",\"connectorId\":\"functionsConnector\",\"capabilityName\":\"AEqualsMultipleB\",\"properties\":{\"leftValueA\":{\"value\":\"{{local.1gptrqcdje.payload.output.buttonValue}}\"},\"rightValueMultiple\":{\"value\":[{\"value\":\"PASSWORD\",\"id\":\"0zb5tdng0f\"},{\"value\":\"MAGICLINK\",\"id\":\"qn2ycha6cu\"}]},\"nodeTitle\":{\"value\":\"Authentication Type\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"to\":\"oe\",\"transitionId\":8,\"signalId\":0}],\"evalNodeId\":\"to3kbai5uk\",\"transitionId\":8},{\"from\":[\"inside_4_1_anyTriggersFalse\"],\"to\":\"inside_5_2_allTriggersTrue\",\"conditions\":{\"$and\":[{\"id\":\"2ynj4jjbml\",\"connectionId\":\"fc4aa8d2a2b83ef4d595d962d6ba8458\",\"connectorId\":\"flowConnector\",\"capabilityName\":\"startUiSubFlow\",\"success\":true}]},\"signals\":[{\"name\":\"Functions\",\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"34cedcffd17e2be6ffb56a7556683b09\",\"flowVersionId\":69,\"id\":\"5eq01z85x3\",\"connectionId\":\"de650ca45593b82c49064ead10b9fe17\",\"connectorId\":\"functionsConnector\",\"capabilityName\":\"AEqualsMultipleB\",\"properties\":{\"leftValueA\":{\"value\":\"{{local.1gptrqcdje.payload.output.buttonValue}}\"},\"rightValueMultiple\":{\"value\":[{\"value\":\"PASSWORD\",\"id\":\"0zb5tdng0f\"},{\"value\":\"MAGICLINK\",\"id\":\"qn2ycha6cu\"}]},\"nodeTitle\":{\"value\":\"Authentication Type\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"to\":\"oe\",\"transitionId\":9,\"signalId\":0}],\"evalNodeId\":\"vdsmsbe0ac\",\"transitionId\":9},{\"from\":[\"inside_5_2_allTriggersTrue\"],\"to\":[\"inside_6\"],\"conditions\":{\"$and\":[{\"id\":\"5eq01z85x3\",\"connectionId\":\"de650ca45593b82c49064ead10b9fe17\",\"connectorId\":\"functionsConnector\",\"capabilityName\":\"AEqualsMultipleB\",\"logic\":{\"useEval\":false,\"customEval\":true,\"type\":\"where\",\"leftSide\":\"'{{local.1gptrqcdje.payload.output.buttonValue}}'\",\"rightSide\":\"'PASSWORD'\",\"operator\":\"equal\",\"expr\":\"'{{local.1gptrqcdje.payload.output.buttonValue}}' == 'PASSWORD'\"}}]},\"signals\":[{\"name\":\"Node [2022-11-28]\",\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"34cedcffd17e2be6ffb56a7556683b09\",\"flowVersionId\":69,\"id\":\"rrve3sgrw6\",\"connectionId\":\"f0c55efe299c81d34c0013fe8736c495\",\"connectorId\":\"nodeConnector\",\"capabilityName\":\"goToNode\",\"properties\":{\"nodeInstanceId\":{\"value\":\"qlst5lqoxg\"},\"email\":{\"value\":\"{{local.lx7ukcf574.payload.output.matchedUser.email}}\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"to\":\"oe\",\"inputs\":[],\"transitionId\":10,\"signalId\":0}],\"evalNodeId\":\"d1110516i6\",\"transitionId\":10},{\"from\":[\"inside_5_2_allTriggersTrue\"],\"to\":[\"inside_7\"],\"conditions\":{\"$and\":[{\"id\":\"5eq01z85x3\",\"connectionId\":\"de650ca45593b82c49064ead10b9fe17\",\"connectorId\":\"functionsConnector\",\"capabilityName\":\"AEqualsMultipleB\",\"logic\":{\"useEval\":false,\"customEval\":true,\"type\":\"where\",\"leftSide\":\"'{{local.1gptrqcdje.payload.output.buttonValue}}'\",\"rightSide\":\"'MAGICLINK'\",\"operator\":\"equal\",\"expr\":\"'{{local.1gptrqcdje.payload.output.buttonValue}}' == 'MAGICLINK'\"}}]},\"signals\":[{\"name\":\"Node [2022-11-28]\",\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"34cedcffd17e2be6ffb56a7556683b09\",\"flowVersionId\":69,\"id\":\"g7o1an1wvu\",\"connectionId\":\"f0c55efe299c81d34c0013fe8736c495\",\"connectorId\":\"nodeConnector\",\"capabilityName\":\"goToNode\",\"properties\":{\"nodeInstanceId\":{\"value\":\"r5krr9rgo0\"},\"email\":{\"value\":\"{{local.lx7ukcf574.payload.output.matchedUser.email}}\"},\"userid\":{\"value\":\"{{local.lx7ukcf574.payload.output.matchedUser.id}}\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"to\":\"oe\",\"inputs\":[],\"transitionId\":11,\"signalId\":0}],\"evalNodeId\":\"unonzr7eqi\",\"transitionId\":11},{\"from\":[\"inside_8\"],\"to\":\"end_2\",\"conditions\":{\"$and\":[{\"id\":\"s9egwsr57x\",\"connectionId\":\"c4b2032a1b63d370c5fbdd205522f1c5\",\"connectorId\":\"analyticsConnector\",\"capabilityName\":\"logOutcome\",\"success\":true}]},\"signals\":[{\"name\":\"Http\",\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"34cedcffd17e2be6ffb56a7556683b09\",\"flowVersionId\":69,\"id\":\"93iq8d0t5l\",\"connectionId\":\"867ed4363b2bc21c860085ad2baa817d\",\"connectorId\":\"httpConnector\",\"capabilityName\":\"customHTMLTemplate\",\"properties\":{\"customHTML\":{\"value\":\"<section class=\\\"register\\\">\\n    <div class=\\\"register-content\\\">\\n        <div class=\\\"logo-wrapper\\\">\\n            <img class=\\\"logo\\\" />\\n        </div>\\n        <h3>Beginner's Luck Online Gaming</h3>\\n        <h1>Sign In Successful</h1>\\n        <p>Welcome back {{local.lx7ukcf574.payload.output.matchedUser.name.given}}!</p>  \\n</section>\"},\"nodeTitle\":{\"value\":\"Sign In Success\"},\"backgroundColor\":{\"value\":\"#9dc967ff\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"respondToUser\":true,\"transitionId\":12,\"signalId\":0,\"largePayload\":[\"customHTML\"]}],\"evalNodeId\":\"d1gi0r7agd\",\"transitionId\":12},{\"from\":[\"start_1\"],\"to\":\"inside_9\",\"conditions\":{\"$and\":[{\"id\":\"qlst5lqoxg\",\"connectionId\":\"f0c55efe299c81d34c0013fe8736c495\",\"connectorId\":\"nodeConnector\",\"capabilityName\":\"startNode\",\"to\":\"oe\",\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"34cedcffd17e2be6ffb56a7556683b09\",\"flowVersionId\":69,\"transitionId\":45,\"signalId\":0}]},\"signals\":[{\"name\":\"Http\",\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"34cedcffd17e2be6ffb56a7556683b09\",\"flowVersionId\":69,\"id\":\"8v1alxo1ex\",\"connectionId\":\"867ed4363b2bc21c860085ad2baa817d\",\"connectorId\":\"httpConnector\",\"capabilityName\":\"customHTMLTemplate\",\"properties\":{\"customHTML\":{\"value\":\"<section class=\\\"register\\\">\\n    <form id=\\\"frmSignIn\\\">\\n        <div class=\\\"register-content\\\">\\n            <div class=\\\"logo-wrapper\\\">\\n                <img class=\\\"logo\\\" />\\n            </div>\\n            <h3>Beginner's Luck Online Gaming</h3>\\n            <h1>Sign In</h1>\\n            <p>Enter your password</p>           \\n            <label>Password</label>\\n            <input type=\\\"password\\\" id=\\\"password\\\" /><i class=\\\"fa fa-eye togglepwd\\\" id=\\\"togglepwd\\\" aria-hidden=\\\"true\\\"></i>\\n            <div class=\\\"buttonbar\\\">\\n                <button id=\\\"btnSignin\\\" data-skcomponent=\\\"skbutton\\\" data-skbuttontype=\\\"form-submit\\\"\\n                    data-skbuttonvalue=\\\"SIGN_IN\\\" data-skform=\\\"frmSignIn\\\">\\n                    <i class=\\\"fa fa-sign-in\\\" aria-hidden=\\\"true\\\"></i> Sign In\\n                </button>\\n            </div>\\n            <div style=\\\"text-align:center; margin-top:10px;\\\">\\n                <button id=\\\"btnResend\\\" class=\\\"buttonLink\\\" data-skcomponent=\\\"skbutton\\\" data-skbuttontype=\\\"next-event\\\" data-skbuttonvalue=\\\"FORGOT_PASSWORD\\\" data-skform=\\\"frmSignIn\\\">Forgot Password</button>  \\n            </div>\\n            <div data-skcomponent=\\\"skerror\\\" class=\\\"error-message\\\" data-skvisibility=\\\"\\\" ></div>\\n            <div data-skcomponent=\\\"skerrormessage\\\" class=\\\"error-message\\\" data-skerrorid=\\\"password\\\"></div>\\n        </div>\\n    </form>\\n</section>\"},\"formFieldsList\":{\"value\":[{\"preferredControlType\":\"textField\",\"preferredDataType\":\"string\",\"propertyName\":\"buttonValue\"},{\"propertyName\":\"password\",\"preferredControlType\":\"textField\",\"preferredDataType\":\"string\",\"value\":\"\",\"hashedVisibility\":false}]},\"nodeTitle\":{\"value\":\"Collect Password\"},\"customScript\":{\"value\":\"document.getElementById(\\\"password\\\").focus()\\n\\n// Toggle password field visibility\\ndocument.getElementById(\\\"togglepwd\\\").addEventListener('click', function (e) {\\n    let pwdField = document.getElementById(\\\"password\\\");\\n\\n    if (pwdField.type === 'password') {\\n        pwdField.type = 'text'\\n        e.currentTarget.classList.remove(\\\"fa-eye\\\");\\n        e.currentTarget.classList.add(\\\"fa-eye-slash\\\");\\n    } else {\\n        pwdField.type = 'password'\\n        e.currentTarget.classList.remove(\\\"fa-eye-slash\\\");\\n        e.currentTarget.classList.add(\\\"fa-eye\\\");\\n    }\\n});\"},\"validationRules\":{\"value\":[{\"propertyName\":\"password\",\"rules\":[{\"ruleName\":\"presence\",\"message\":\"Please enter your password\"}]}]}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"respondToUser\":true,\"transitionId\":13,\"signalId\":0,\"largePayload\":[\"customHTML\"]}],\"evalNodeId\":\"dhujvy1ads\",\"transitionId\":13},{\"from\":[\"inside_9\"],\"to\":\"inside_10\",\"conditions\":{\"$and\":[{\"id\":\"8v1alxo1ex\",\"connectionId\":\"867ed4363b2bc21c860085ad2baa817d\",\"connectorId\":\"httpConnector\",\"capabilityName\":\"customHTMLTemplate\",\"success\":true}]},\"signals\":[{\"name\":\"Functions\",\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"34cedcffd17e2be6ffb56a7556683b09\",\"flowVersionId\":69,\"id\":\"2y3w6ax7i6\",\"connectionId\":\"de650ca45593b82c49064ead10b9fe17\",\"connectorId\":\"functionsConnector\",\"capabilityName\":\"AEqualsMultipleB\",\"properties\":{\"leftValueA\":{\"value\":\"{{local.8v1alxo1ex.payload.output.buttonValue}}\"},\"rightValueMultiple\":{\"value\":[{\"value\":\"SIGN_IN\",\"id\":\"vlayrzup5p\"},{\"value\":\"FORGOT_PASSWORD\",\"id\":\"wdp1ru4e6p\"}]},\"nodeTitle\":{\"value\":\"Form Buttons\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"to\":\"oe\",\"transitionId\":14,\"signalId\":0}],\"evalNodeId\":\"odkbszhtg9\",\"transitionId\":14},{\"from\":[\"inside_10\"],\"to\":\"inside_11\",\"conditions\":{\"$and\":[{\"id\":\"2y3w6ax7i6\",\"connectionId\":\"de650ca45593b82c49064ead10b9fe17\",\"connectorId\":\"functionsConnector\",\"capabilityName\":\"AEqualsMultipleB\",\"logic\":{\"useEval\":false,\"customEval\":true,\"type\":\"where\",\"leftSide\":\"'{{local.8v1alxo1ex.payload.output.buttonValue}}'\",\"rightSide\":\"'SIGN_IN'\",\"operator\":\"equal\",\"expr\":\"'{{local.8v1alxo1ex.payload.output.buttonValue}}' == 'SIGN_IN'\"}}]},\"signals\":[{\"name\":\"PingOne\",\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"34cedcffd17e2be6ffb56a7556683b09\",\"flowVersionId\":69,\"id\":\"iz3mrjuw37\",\"connectionId\":\"94141bf2f1b9b59a5f5365ff135e02bb\",\"connectorId\":\"pingOneSSOConnector\",\"capabilityName\":\"checkPassword\",\"properties\":{\"matchAttribute\":{\"value\":\"email\"},\"identifier\":{\"value\":\"{{local.qlst5lqoxg.payload.output.email}}\"},\"password\":{\"value\":\"{{local.8v1alxo1ex.payload.output.password}}\"},\"nodeTitle\":{\"value\":\"Validate Password\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"transitionId\":15,\"signalId\":0}],\"evalNodeId\":\"qflemhjn1b\",\"transitionId\":15},{\"from\":[\"inside_10\"],\"to\":[\"end_3\"],\"conditions\":{\"$and\":[{\"id\":\"2y3w6ax7i6\",\"connectionId\":\"de650ca45593b82c49064ead10b9fe17\",\"connectorId\":\"functionsConnector\",\"capabilityName\":\"AEqualsMultipleB\",\"logic\":{\"useEval\":false,\"customEval\":true,\"type\":\"where\",\"leftSide\":\"'{{local.8v1alxo1ex.payload.output.buttonValue}}'\",\"rightSide\":\"'FORGOT_PASSWORD'\",\"operator\":\"equal\",\"expr\":\"'{{local.8v1alxo1ex.payload.output.buttonValue}}' == 'FORGOT_PASSWORD'\"}}]},\"signals\":[{\"name\":\"Node [2022-11-28]\",\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"34cedcffd17e2be6ffb56a7556683b09\",\"flowVersionId\":69,\"id\":\"k0pbf9qed\",\"connectionId\":\"f0c55efe299c81d34c0013fe8736c495\",\"connectorId\":\"nodeConnector\",\"capabilityName\":\"goToNode\",\"properties\":{\"nodeInstanceId\":{\"value\":\"wcoqvba1g7\"},\"email\":{\"value\":\"{{local.qlst5lqoxg.payload.output.email}}\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"to\":\"oe\",\"inputs\":[],\"transitionId\":16,\"signalId\":0}],\"evalNodeId\":\"px7nu02gml\",\"transitionId\":16},{\"from\":[\"inside_11\"],\"to\":\"inside_12_1_allTriggersTrue\",\"conditions\":{\"$and\":[{\"id\":\"iz3mrjuw37\",\"connectionId\":\"94141bf2f1b9b59a5f5365ff135e02bb\",\"connectorId\":\"pingOneSSOConnector\",\"capabilityName\":\"checkPassword\",\"success\":true}]},\"signals\":[{\"name\":\"Flow Analytics\",\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"34cedcffd17e2be6ffb56a7556683b09\",\"flowVersionId\":69,\"id\":\"5gvsn86mfc\",\"connectionId\":\"c4b2032a1b63d370c5fbdd205522f1c5\",\"connectorId\":\"analyticsConnector\",\"capabilityName\":\"logOutcome\",\"properties\":{\"outcomeType\":{\"value\":\"PASSWORD_LOGIN\"},\"outcomeStatus\":{\"value\":\"PASSWORD_LOGIN_SUCCESS\"},\"shouldContinueOnError\":{\"value\":true},\"nodeTitle\":{\"value\":\"Log Password Auth Success\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"transitionId\":17,\"signalId\":0}],\"evalNodeId\":\"wzrseiwhb8\",\"transitionId\":17},{\"from\":[\"inside_11\"],\"to\":\"inside_13_2_anyTriggersFalse\",\"conditions\":{\"$or\":[{\"id\":\"iz3mrjuw37\",\"connectionId\":\"94141bf2f1b9b59a5f5365ff135e02bb\",\"connectorId\":\"pingOneSSOConnector\",\"capabilityName\":\"checkPassword\",\"success\":false}]},\"signals\":[{\"name\":\"Flow Analytics\",\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"34cedcffd17e2be6ffb56a7556683b09\",\"flowVersionId\":69,\"id\":\"jwucq83maf\",\"connectionId\":\"c4b2032a1b63d370c5fbdd205522f1c5\",\"connectorId\":\"analyticsConnector\",\"capabilityName\":\"logOutcome\",\"properties\":{\"outcomeType\":{\"value\":\"PASSWORD_LOGIN\"},\"outcomeStatus\":{\"value\":\"error\"},\"shouldContinueOnError\":{\"value\":true},\"nodeTitle\":{\"value\":\"Log Password Auth Error\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"errorConnectionInstances\":[\"local.iz3mrjuw37.payload.error\"],\"transitionId\":18,\"signalId\":0}],\"evalNodeId\":\"wzrseiwhb8\",\"transitionId\":18},{\"from\":[\"inside_12_1_allTriggersTrue\"],\"to\":\"end_4\",\"conditions\":{\"$and\":[{\"id\":\"5gvsn86mfc\",\"connectionId\":\"c4b2032a1b63d370c5fbdd205522f1c5\",\"connectorId\":\"analyticsConnector\",\"capabilityName\":\"logOutcome\",\"success\":true}]},\"signals\":[{\"name\":\"Node [2022-11-28]\",\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"34cedcffd17e2be6ffb56a7556683b09\",\"flowVersionId\":69,\"id\":\"ipf475575r\",\"connectionId\":\"f0c55efe299c81d34c0013fe8736c495\",\"connectorId\":\"nodeConnector\",\"capabilityName\":\"returnBackToCallingNode\",\"properties\":{\"outputSchema\":{\"value\":{\"type\":\"object\",\"properties\":{\"success\":{\"type\":\"boolean\",\"displayName\":\"success\",\"preferredControlType\":\"textField\",\"enableParameters\":true,\"propertyName\":\"success\"}}}}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"to\":\"oe\",\"inputs\":[],\"startNodeId\":\"qlst5lqoxg\",\"transitionId\":19,\"signalId\":0}],\"evalNodeId\":\"tbfc2duu56\",\"transitionId\":19},{\"from\":[\"inside_13_2_anyTriggersFalse\"],\"to\":\"end_5\",\"conditions\":{\"$and\":[{\"id\":\"jwucq83maf\",\"connectionId\":\"c4b2032a1b63d370c5fbdd205522f1c5\",\"connectorId\":\"analyticsConnector\",\"capabilityName\":\"logOutcome\",\"success\":true}]},\"signals\":[{\"name\":\"Error Customize\",\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"34cedcffd17e2be6ffb56a7556683b09\",\"flowVersionId\":69,\"id\":\"l4s47gvu3f\",\"connectionId\":\"6d8f6f706c45fd459a86b3f092602544\",\"connectorId\":\"errorConnector\",\"capabilityName\":\"customErrorMessage\",\"properties\":{\"errorMessage\":{\"value\":\"Incorrect email/password combination\"},\"nodeTitle\":{\"value\":\"Invalid User/Password\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"respondToUser\":true,\"transitionId\":20,\"signalId\":0}],\"evalNodeId\":\"wnfynjn8qr\",\"transitionId\":20},{\"from\":[\"start_2\"],\"to\":\"inside_14\",\"conditions\":{\"$and\":[{\"id\":\"wcoqvba1g7\",\"connectionId\":\"f0c55efe299c81d34c0013fe8736c495\",\"connectorId\":\"nodeConnector\",\"capabilityName\":\"startNode\",\"to\":\"oe\",\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"34cedcffd17e2be6ffb56a7556683b09\",\"flowVersionId\":69,\"transitionId\":42,\"signalId\":0}]},\"signals\":[{\"name\":\"PingOne\",\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"34cedcffd17e2be6ffb56a7556683b09\",\"flowVersionId\":69,\"id\":\"fpfhyrcykl\",\"connectionId\":\"94141bf2f1b9b59a5f5365ff135e02bb\",\"connectorId\":\"pingOneSSOConnector\",\"capabilityName\":\"sendRecoveryCode\",\"properties\":{\"matchAttribute\":{\"value\":\"email\"},\"identifier\":{\"value\":\"{{local.wcoqvba1g7.payload.output.email}}\"},\"nodeTitle\":{\"value\":\"Send Recovery Code\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"transitionId\":21,\"signalId\":0}],\"evalNodeId\":\"yaqb3mdxby\",\"transitionId\":21},{\"from\":[\"inside_14\"],\"to\":\"inside_15\",\"conditions\":{\"$and\":[{\"id\":\"fpfhyrcykl\",\"connectionId\":\"94141bf2f1b9b59a5f5365ff135e02bb\",\"connectorId\":\"pingOneSSOConnector\",\"capabilityName\":\"sendRecoveryCode\",\"success\":true}]},\"signals\":[{\"name\":\"Http\",\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"34cedcffd17e2be6ffb56a7556683b09\",\"flowVersionId\":69,\"id\":\"24yhwgngyt\",\"connectionId\":\"867ed4363b2bc21c860085ad2baa817d\",\"connectorId\":\"httpConnector\",\"capabilityName\":\"customHTMLTemplate\",\"properties\":{\"customHTML\":{\"value\":\"<section class=\\\"register\\\">\\n    <form id=\\\"frmResetPassword\\\">\\n        <div class=\\\"register-content\\\">\\n            <div class=\\\"logo-wrapper\\\">\\n                <img class=\\\"logo\\\" />\\n            </div>\\n            <h3>Beginner's Luck Online Gaming</h3>\\n            <h1>Set New Password</h1>\\n            <p>Please enter the 8 character password reset code sent to <strong>{{local.wcoqvba1g7.payload.output.email}}</strong> and create a new password</p>\\n            <label>Password Reset Code</label>\\n            <input type=\\\"text\\\" id=\\\"passwordResetCode\\\" />\\n            <label>Password</label>\\n            <input type=\\\"password\\\" id=\\\"password\\\" /><i class=\\\"fa fa-eye togglepwd\\\" id=\\\"togglepwd\\\" aria-hidden=\\\"true\\\"></i>\\n\\n            <div class=\\\"buttonbar\\\">\\n                <button id=\\\"btnRegister\\\" data-skcomponent=\\\"skbutton\\\" data-skbuttontype=\\\"form-submit\\\"\\n                    data-skbuttonvalue=\\\"VALIDATE\\\" data-skform=\\\"frmResetPassword\\\">\\n                    <i class=\\\"fa fa-arrow-circle-right\\\" aria-hidden=\\\"true\\\"></i> Next\\n                </button>\\n            </div>\\n            <div data-skcomponent=\\\"skerror\\\" class=\\\"error-message\\\" data-skvisibility=\\\"\\\" ></div>\\n            <div data-skcomponent=\\\"skerrormessage\\\" class=\\\"error-message\\\" data-skerrorid=\\\"password\\\"></div>\\n        </div>\\n    </form>\\n</section>\"},\"formFieldsList\":{\"value\":[{\"propertyName\":\"passwordResetCode\",\"preferredControlType\":\"textField\",\"preferredDataType\":\"string\",\"value\":\"\",\"hashedVisibility\":false},{\"propertyName\":\"password\",\"preferredControlType\":\"textField\",\"preferredDataType\":\"string\",\"value\":\"\",\"hashedVisibility\":false},{\"preferredControlType\":\"textField\",\"preferredDataType\":\"string\",\"propertyName\":\"buttonValue\"}]},\"validationRules\":{\"value\":[{\"propertyName\":\"passwordResetCode\",\"rules\":[{\"ruleName\":\"presence\"}]},{\"propertyName\":\"password\",\"rules\":[{\"ruleName\":\"format\",\"pattern\":\"^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,24}$\",\"message\":\"Password must contain at least one numeric digit and a special character\"}]}]},\"nodeTitle\":{\"value\":\"Enter Reset Code / New Password\"},\"customScript\":{\"value\":\"document.getElementById(\\\"passwordResetCode\\\").focus()\\n\\n// Toggle password field visibility\\ndocument.getElementById(\\\"togglepwd\\\").addEventListener('click', function (e) {\\n    let pwdField = document.getElementById(\\\"password\\\");\\n\\n    if (pwdField.type === 'password') {\\n        pwdField.type = 'text'\\n        e.currentTarget.classList.remove(\\\"fa-eye\\\");\\n        e.currentTarget.classList.add(\\\"fa-eye-slash\\\");\\n    } else {\\n        pwdField.type = 'password'\\n        e.currentTarget.classList.remove(\\\"fa-eye-slash\\\");\\n        e.currentTarget.classList.add(\\\"fa-eye\\\");\\n    }\\n});\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"respondToUser\":true,\"transitionId\":22,\"signalId\":0,\"largePayload\":[\"customHTML\"]}],\"evalNodeId\":\"ml0rcerv4j\",\"transitionId\":22},{\"from\":[\"inside_15\"],\"to\":\"inside_16\",\"conditions\":{\"$and\":[{\"id\":\"24yhwgngyt\",\"connectionId\":\"867ed4363b2bc21c860085ad2baa817d\",\"connectorId\":\"httpConnector\",\"capabilityName\":\"customHTMLTemplate\",\"success\":true}]},\"signals\":[{\"name\":\"PingOne\",\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"34cedcffd17e2be6ffb56a7556683b09\",\"flowVersionId\":69,\"id\":\"gc3ijy736k\",\"connectionId\":\"94141bf2f1b9b59a5f5365ff135e02bb\",\"connectorId\":\"pingOneSSOConnector\",\"capabilityName\":\"recoverPassword\",\"properties\":{\"matchAttribute\":{\"value\":\"email\"},\"identifier\":{\"value\":\"{{local.wcoqvba1g7.payload.output.email}}\"},\"recoveryCode\":{\"value\":\"{{local.24yhwgngyt.payload.output.passwordResetCode}}\"},\"newPassword\":{\"value\":\"{{local.24yhwgngyt.payload.output.password}}\"},\"nodeTitle\":{\"value\":\"Validate and Set Password\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"transitionId\":23,\"signalId\":0}],\"evalNodeId\":\"uok77djuyf\",\"transitionId\":23},{\"from\":[\"inside_16\"],\"to\":\"inside_17_1_allTriggersTrue\",\"conditions\":{\"$and\":[{\"id\":\"gc3ijy736k\",\"connectionId\":\"94141bf2f1b9b59a5f5365ff135e02bb\",\"connectorId\":\"pingOneSSOConnector\",\"capabilityName\":\"recoverPassword\",\"success\":true}]},\"signals\":[{\"name\":\"Flow Analytics\",\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"34cedcffd17e2be6ffb56a7556683b09\",\"flowVersionId\":69,\"id\":\"rcee6wfs0i\",\"connectionId\":\"c4b2032a1b63d370c5fbdd205522f1c5\",\"connectorId\":\"analyticsConnector\",\"capabilityName\":\"logOutcome\",\"properties\":{\"outcomeType\":{\"value\":\"PASSWORD_RESET\"},\"outcomeStatus\":{\"value\":\"PASSWORD_RESET_SUCCESS\"},\"shouldContinueOnError\":{\"value\":true},\"nodeTitle\":{\"value\":\"Log Password Reset Success\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"transitionId\":24,\"signalId\":0}],\"evalNodeId\":\"c7gs0r7pxb\",\"transitionId\":24},{\"from\":[\"inside_16\"],\"to\":\"inside_18_2_anyTriggersFalse\",\"conditions\":{\"$or\":[{\"id\":\"gc3ijy736k\",\"connectionId\":\"94141bf2f1b9b59a5f5365ff135e02bb\",\"connectorId\":\"pingOneSSOConnector\",\"capabilityName\":\"recoverPassword\",\"success\":false}]},\"signals\":[{\"name\":\"Flow Analytics\",\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"34cedcffd17e2be6ffb56a7556683b09\",\"flowVersionId\":69,\"id\":\"vupdbsre3n\",\"connectionId\":\"c4b2032a1b63d370c5fbdd205522f1c5\",\"connectorId\":\"analyticsConnector\",\"capabilityName\":\"logOutcome\",\"properties\":{\"outcomeType\":{\"value\":\"PASSWORD_RESET\"},\"outcomeStatus\":{\"value\":\"PASSWORD_RESET_ERROR\"},\"shouldContinueOnError\":{\"value\":true},\"nodeTitle\":{\"value\":\"Log Password Reset Error\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"errorConnectionInstances\":[\"local.gc3ijy736k.payload.error\"],\"transitionId\":25,\"signalId\":0}],\"evalNodeId\":\"c7gs0r7pxb\",\"transitionId\":25},{\"from\":[\"inside_17_1_allTriggersTrue\"],\"to\":\"inside_19\",\"conditions\":{\"$and\":[{\"id\":\"rcee6wfs0i\",\"connectionId\":\"c4b2032a1b63d370c5fbdd205522f1c5\",\"connectorId\":\"analyticsConnector\",\"capabilityName\":\"logOutcome\",\"success\":true}]},\"signals\":[{\"name\":\"Http\",\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"34cedcffd17e2be6ffb56a7556683b09\",\"flowVersionId\":69,\"id\":\"r335yayoi9\",\"connectionId\":\"867ed4363b2bc21c860085ad2baa817d\",\"connectorId\":\"httpConnector\",\"capabilityName\":\"customHTMLTemplate\",\"properties\":{\"customHTML\":{\"value\":\"<section class=\\\"register\\\">\\n    <form id=\\\"frmResetSuccess\\\">\\n        <div class=\\\"register-content\\\">\\n            <div class=\\\"logo-wrapper\\\">\\n                <img class=\\\"logo\\\" />\\n            </div>\\n            <h3>Beginner's Luck Online Gaming</h3>\\n            <h1>Password Reset Successful</h1>\\n            <p>Click the button below to complete sign in</p>\\n            <div class=\\\"buttonbar\\\">\\n                <button id=\\\"btnSignIn\\\" data-skcomponent=\\\"skbutton\\\" data-skbuttontype=\\\"form-submit\\\"\\n                    data-skbuttonvalue=\\\"register\\\" data-skform=\\\"frmResetSuccess\\\">\\n                    <i class=\\\"fa fa-arrow-circle-right\\\" aria-hidden=\\\"true\\\"></i> Sign In\\n                </button>\\n            </div>\\n            <div data-skcomponent=\\\"skerror\\\" class=\\\"error-message\\\" data-skvisibility=\\\"\\\" ></div>\\n        </div>\\n    </form>\\n</section>\"},\"nodeTitle\":{\"value\":\"Reset Success\"},\"formFieldsList\":{\"value\":[{\"preferredControlType\":\"textField\",\"preferredDataType\":\"string\",\"propertyName\":\"buttonValue\"}]}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"respondToUser\":true,\"transitionId\":26,\"signalId\":0,\"largePayload\":[\"customHTML\"]}],\"evalNodeId\":\"caw0gixltl\",\"transitionId\":26},{\"from\":[\"inside_18_2_anyTriggersFalse\"],\"to\":\"end_6\",\"conditions\":{\"$and\":[{\"id\":\"vupdbsre3n\",\"connectionId\":\"c4b2032a1b63d370c5fbdd205522f1c5\",\"connectorId\":\"analyticsConnector\",\"capabilityName\":\"logOutcome\",\"success\":true}]},\"signals\":[{\"name\":\"Error Customize\",\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"34cedcffd17e2be6ffb56a7556683b09\",\"flowVersionId\":69,\"id\":\"3mp85v4tsa\",\"connectionId\":\"6d8f6f706c45fd459a86b3f092602544\",\"connectorId\":\"errorConnector\",\"capabilityName\":\"customErrorMessage\",\"properties\":{\"errorMessage\":{\"value\":\"{{local.gc3ijy736k.payload.error.message}}\"},\"nodeTitle\":{\"value\":\"Password Reset Error\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"respondToUser\":true,\"transitionId\":27,\"signalId\":0}],\"evalNodeId\":\"nx8f35bh6v\",\"transitionId\":27},{\"from\":[\"inside_19\"],\"to\":[\"end_7\"],\"conditions\":{\"$and\":[{\"id\":\"r335yayoi9\",\"connectionId\":\"867ed4363b2bc21c860085ad2baa817d\",\"connectorId\":\"httpConnector\",\"capabilityName\":\"customHTMLTemplate\",\"success\":true}]},\"signals\":[{\"name\":\"Node [2022-11-28]\",\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"34cedcffd17e2be6ffb56a7556683b09\",\"flowVersionId\":69,\"id\":\"vyxhvpr7kc\",\"connectionId\":\"f0c55efe299c81d34c0013fe8736c495\",\"connectorId\":\"nodeConnector\",\"capabilityName\":\"goToNode\",\"properties\":{\"nodeInstanceId\":{\"value\":\"qlst5lqoxg\"},\"email\":{\"value\":\"{{local.wcoqvba1g7.payload.output.email}}\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"to\":\"oe\",\"inputs\":[],\"transitionId\":28,\"signalId\":0}],\"evalNodeId\":\"rdc9r4iyd5\",\"transitionId\":28},{\"from\":[\"start_3\"],\"to\":\"inside_20\",\"conditions\":{\"$and\":[{\"id\":\"r5krr9rgo0\",\"connectionId\":\"f0c55efe299c81d34c0013fe8736c495\",\"connectorId\":\"nodeConnector\",\"capabilityName\":\"startNode\",\"to\":\"oe\",\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"34cedcffd17e2be6ffb56a7556683b09\",\"flowVersionId\":69,\"transitionId\":40,\"signalId\":0}]},\"signals\":[{\"name\":\"Flow [2022-11-28]\",\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"34cedcffd17e2be6ffb56a7556683b09\",\"flowVersionId\":69,\"id\":\"9bg1r148fo\",\"connectionId\":\"fc4aa8d2a2b83ef4d595d962d6ba8458\",\"connectorId\":\"flowConnector\",\"capabilityName\":\"oobStart\",\"properties\":{\"nodeTitle\":{\"value\":\" Out-of-Band Start\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"transitionId\":29,\"signalId\":0}],\"evalNodeId\":\"h74x039850\",\"transitionId\":29},{\"from\":[\"start_3\"],\"to\":\"inside_21\",\"conditions\":{\"$and\":[{\"id\":\"r5krr9rgo0\",\"connectionId\":\"f0c55efe299c81d34c0013fe8736c495\",\"connectorId\":\"nodeConnector\",\"capabilityName\":\"startNode\",\"to\":\"oe\",\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"34cedcffd17e2be6ffb56a7556683b09\",\"flowVersionId\":69,\"transitionId\":40,\"signalId\":0}]},\"signals\":[{\"name\":\"Flow [2022-11-28]\",\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"34cedcffd17e2be6ffb56a7556683b09\",\"flowVersionId\":69,\"id\":\"6mamd05dwt\",\"connectionId\":\"fc4aa8d2a2b83ef4d595d962d6ba8458\",\"connectorId\":\"flowConnector\",\"capabilityName\":\"oobContinue\",\"properties\":{\"nodeTitle\":{\"value\":\"Out-of-Band Continue\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"oeNoOp\":true,\"delayedConditionalStateChange\":true,\"inputs\":[],\"respondToUser\":true,\"transitionId\":30,\"signalId\":0}],\"evalNodeId\":\"h74x039850\",\"transitionId\":30},{\"from\":[\"inside_20\"],\"to\":\"inside_22\",\"conditions\":{\"$and\":[{\"id\":\"9bg1r148fo\",\"connectionId\":\"fc4aa8d2a2b83ef4d595d962d6ba8458\",\"connectorId\":\"flowConnector\",\"capabilityName\":\"oobStart\",\"success\":true}]},\"signals\":[{\"name\":\"PingOne Notifications\",\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"34cedcffd17e2be6ffb56a7556683b09\",\"flowVersionId\":69,\"id\":\"2a5y6spudn\",\"connectionId\":\"15039e55bff47df02ad7a461d91878b1\",\"connectorId\":\"notificationsConnector\",\"capabilityName\":\"sendEmail\",\"properties\":{\"userId\":{\"value\":\"{{local.r5krr9rgo0.payload.output.userid}}\"},\"email\":{\"value\":\"{{local.r5krr9rgo0.payload.output.email}}\"},\"templateVariant\":{\"value\":\"MagicLinkAuthentication\"},\"templateVariables\":{\"value\":[{\"name\":\"continueLink\",\"preferredDataType\":\"string\",\"value\":\"{{local.9bg1r148fo.payload.output.continueLink}}\"}]}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"transitionId\":31,\"signalId\":0}],\"evalNodeId\":\"hgqttnpstj\",\"transitionId\":31},{\"from\":[\"inside_21\"],\"to\":\"inside_23\",\"conditions\":{\"$and\":[{\"id\":\"6mamd05dwt\",\"connectionId\":\"fc4aa8d2a2b83ef4d595d962d6ba8458\",\"connectorId\":\"flowConnector\",\"capabilityName\":\"oobContinue\",\"success\":true}]},\"signals\":[{\"name\":\"Challenge [2022-11-28]\",\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"34cedcffd17e2be6ffb56a7556683b09\",\"flowVersionId\":69,\"id\":\"5bxqq6j1j0\",\"connectionId\":\"546c96db11cbec884d32ef79a7bbdef4\",\"connectorId\":\"challengeConnector\",\"capabilityName\":\"updateChallenge\",\"properties\":{\"challenge\":{\"value\":\"{{local.9bg1r148fo.payload.output.challenge}}\"},\"challengeStatus\":{\"value\":\"approved\"},\"nodeTitle\":{\"value\":\"Approve Challenge\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"transitionId\":32,\"signalId\":0}],\"evalNodeId\":\"8r967btmu0\",\"transitionId\":32},{\"from\":[\"inside_22\"],\"to\":\"inside_24\",\"conditions\":{\"$and\":[{\"id\":\"2a5y6spudn\",\"connectionId\":\"15039e55bff47df02ad7a461d91878b1\",\"connectorId\":\"notificationsConnector\",\"capabilityName\":\"sendEmail\",\"success\":true}]},\"signals\":[{\"name\":\"Http\",\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"34cedcffd17e2be6ffb56a7556683b09\",\"flowVersionId\":69,\"id\":\"rqw9pqlavf\",\"connectionId\":\"867ed4363b2bc21c860085ad2baa817d\",\"connectorId\":\"httpConnector\",\"capabilityName\":\"customHTMLTemplate\",\"properties\":{\"customHTML\":{\"value\":\"<section class=\\\"register\\\">\\n        <div class=\\\"register-content\\\">\\n            <div class=\\\"logo-wrapper\\\">\\n                <img class=\\\"logo\\\" />\\n            </div>\\n            <h3>Beginner's Luck Online Gaming</h3>\\n            <h1>Magic Link</h1>\\n            <div style=\\\"text-align:center\\\">\\n                <p> Click the magic link sent to <strong>{{local.r5krr9rgo0.payload.output.email}}</strong></p>\\n                [[[skcomponent###c2tjb21wb25lbnQgInNrcG9sbGluZyIgIGNsYXNzPSIiIHBvbGxJbnRlcnZhbD0iMjAwMCIgcG9sbFJldHJpZXM9IjYwIiBwb2xsQ2hhbGxlbmdlU3RhdHVzPSJ0cnVlIg==###eyJuYW1lIjoic2twb2xsaW5nIiwib3B0aW9ucyI6eyJjbGFzcyI6IiIsInBvbGxJbnRlcnZhbCI6MjAwMCwicG9sbFJldHJpZXMiOjYwLCJwb2xsQ2hhbGxlbmdlU3RhdHVzIjoidHJ1ZSJ9LCJjb21wb25lbnRQcm9wcyI6eyJjbGFzcyI6eyJuYW1lIjoiY2xhc3MiLCJkaXNwbGF5TmFtZSI6IkNTUyBDbGFzcyJ9LCJwb2xsSW50ZXJ2YWwiOnsibmFtZSI6InBvbGxJbnRlcnZhbCIsImRpc3BsYXlOYW1lIjoiUG9sbCBJbnRlcnZhbCIsInZhbHVlIjoyMDAwfSwicG9sbFJldHJpZXMiOnsibmFtZSI6InBvbGxSZXRyaWVzIiwiZGlzcGxheU5hbWUiOiJQb2xsIFJldHJpZXMiLCJ2YWx1ZSI6NjB9LCJwb2xsQ2hhbGxlbmdlU3RhdHVzIjp7Im5hbWUiOiJwb2xsQ2hhbGxlbmdlU3RhdHVzIiwiZGlzcGxheU5hbWUiOiJQb2xsIENoYWxsZW5nZSBTdGF0dXMiLCJ0eXBlIjoic2VsZWN0IiwidmFsdWUiOiJ0cnVlIiwib3B0aW9ucyI6W3sibmFtZSI6IlRydWUiLCJ2YWx1ZSI6InRydWUifSx7Im5hbWUiOiJGYWxzZSIsInZhbHVlIjoiZmFsc2UifV19fX0=]]]\\n            </div>\\n            <div data-skcomponent=\\\"skerror\\\" class=\\\"error-message\\\" data-skvisibility=\\\"\\\" ></div>\\n        </div>\\n</section>\"},\"nodeTitle\":{\"value\":\"Magic Link Prompt\"},\"challenge\":{\"value\":\"{{local.9bg1r148fo.payload.output.challenge}}\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"respondToUser\":true,\"transitionId\":33,\"signalId\":0,\"largePayload\":[\"customHTML\"]}],\"evalNodeId\":\"w1l1fl8qlu\",\"transitionId\":33},{\"from\":[\"inside_23\"],\"to\":\"end_8\",\"conditions\":{\"$and\":[{\"id\":\"5bxqq6j1j0\",\"connectionId\":\"546c96db11cbec884d32ef79a7bbdef4\",\"connectorId\":\"challengeConnector\",\"capabilityName\":\"updateChallenge\",\"success\":true}]},\"signals\":[{\"name\":\"Http\",\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"34cedcffd17e2be6ffb56a7556683b09\",\"flowVersionId\":69,\"id\":\"zmvc6k019c\",\"connectionId\":\"867ed4363b2bc21c860085ad2baa817d\",\"connectorId\":\"httpConnector\",\"capabilityName\":\"customHTMLTemplate\",\"properties\":{\"customHTML\":{\"value\":\"<div class=\\\"success\\\">\\n<h1>Sign In Complete!</h1>\\n<p class=\\\"message\\\">This window will close momentarily.</p>\\n</div>\"},\"customCSS\":{\"value\":\".success {\\n    text-align: center;\\n    height: 200px;\\n    width: 360px;\\n    border-style: solid;\\n    border-width: 1px;\\n    border-color: #000000;\\n    margin: 0 auto;\\n    padding-top: 50px;\\n    margin-top: 40px;\\n}\\n.message{\\n    padding-top:20px;\\n}\"},\"customScript\":{\"value\":\"// Close the window after 3 seconds\\nsetTimeout(function(){\\n    window.close()\\n}, 3000)\"},\"nodeTitle\":{\"value\":\"Magic Link Complete\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"respondToUser\":true,\"transitionId\":34,\"signalId\":0,\"largePayload\":[\"customHTML\",\"customCSS\"]}],\"evalNodeId\":\"4t76yjzoqr\",\"transitionId\":34},{\"from\":[\"inside_24\"],\"to\":\"inside_25\",\"conditions\":{\"$and\":[{\"id\":\"rqw9pqlavf\",\"connectionId\":\"867ed4363b2bc21c860085ad2baa817d\",\"connectorId\":\"httpConnector\",\"capabilityName\":\"customHTMLTemplate\",\"success\":true}]},\"signals\":[{\"name\":\"Challenge [2022-11-28]\",\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"34cedcffd17e2be6ffb56a7556683b09\",\"flowVersionId\":69,\"id\":\"n4x0ncm1x1\",\"connectionId\":\"546c96db11cbec884d32ef79a7bbdef4\",\"connectorId\":\"challengeConnector\",\"capabilityName\":\"getChallenge\",\"properties\":{\"challenge\":{\"value\":\"{{local.9bg1r148fo.payload.output.challenge}}\"},\"nodeTitle\":{\"value\":\"Get Challenge Status\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"transitionId\":35,\"signalId\":0}],\"evalNodeId\":\"1zmh8v56w3\",\"transitionId\":35},{\"from\":[\"inside_25\"],\"to\":\"inside_26\",\"conditions\":{\"$and\":[{\"id\":\"n4x0ncm1x1\",\"connectionId\":\"546c96db11cbec884d32ef79a7bbdef4\",\"connectorId\":\"challengeConnector\",\"capabilityName\":\"getChallenge\",\"success\":true}]},\"signals\":[{\"name\":\"Functions\",\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"34cedcffd17e2be6ffb56a7556683b09\",\"flowVersionId\":69,\"id\":\"yjykcubup5\",\"connectionId\":\"de650ca45593b82c49064ead10b9fe17\",\"connectorId\":\"functionsConnector\",\"capabilityName\":\"AEqualsB\",\"properties\":{\"leftValueA\":{\"value\":\"{{local.n4x0ncm1x1.payload.output.challengeStatus}}\"},\"rightValueB\":{\"value\":\"approved\"},\"nodeTitle\":{\"value\":\"Is Challenge Approved?\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"to\":\"oe\",\"transitionId\":36,\"signalId\":0}],\"evalNodeId\":\"v50ljdm4ru\",\"transitionId\":36},{\"from\":[\"inside_26\"],\"to\":\"inside_27_1_allTriggersTrue\",\"conditions\":{\"$and\":[{\"id\":\"yjykcubup5\",\"connectionId\":\"de650ca45593b82c49064ead10b9fe17\",\"connectorId\":\"functionsConnector\",\"capabilityName\":\"AEqualsB\",\"logic\":{\"type\":\"where\",\"expr\":\"'{{local.n4x0ncm1x1.payload.output.challengeStatus}}' == 'approved'\"}}]},\"signals\":[{\"name\":\"Flow Analytics\",\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"34cedcffd17e2be6ffb56a7556683b09\",\"flowVersionId\":69,\"id\":\"33qanxdlri\",\"connectionId\":\"c4b2032a1b63d370c5fbdd205522f1c5\",\"connectorId\":\"analyticsConnector\",\"capabilityName\":\"logOutcome\",\"properties\":{\"outcomeType\":{\"value\":\"MAGIC_LINK_LOGIN\"},\"outcomeStatus\":{\"value\":\"MAGIC_LINK_SUCCESS\"},\"shouldContinueOnError\":{\"value\":true},\"nodeTitle\":{\"value\":\"Magic Link Success\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"transitionId\":37,\"signalId\":0}],\"evalNodeId\":\"uetmmz3wz9\",\"transitionId\":37},{\"from\":[\"inside_26\"],\"to\":\"end_9_2_anyTriggersFalse\",\"conditions\":{\"$or\":[{\"id\":\"yjykcubup5\",\"connectionId\":\"de650ca45593b82c49064ead10b9fe17\",\"connectorId\":\"functionsConnector\",\"capabilityName\":\"AEqualsB\",\"logic\":{\"type\":\"whereNot\",\"expr\":\"'{{local.n4x0ncm1x1.payload.output.challengeStatus}}' == 'approved'\"}}]},\"signals\":[{\"name\":\"Http\",\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"34cedcffd17e2be6ffb56a7556683b09\",\"flowVersionId\":69,\"id\":\"vd9odf5b0w\",\"connectionId\":\"867ed4363b2bc21c860085ad2baa817d\",\"connectorId\":\"httpConnector\",\"capabilityName\":\"customHTMLTemplate\",\"properties\":{\"customHTML\":{\"value\":\"<section class=\\\"register\\\">\\n    <div class=\\\"register-content\\\">\\n        <div class=\\\"logo-wrapper\\\">\\n            <img class=\\\"logo\\\" />\\n        </div>\\n        <h3>Beginner's Luck Online Gaming</h3>\\n        <h1>Magic Link Expiry</h1>\\n        <p style=\\\"text-align:center\\\">The magic link his expired.</p>\\n        <div data-skcomponent=\\\"skerror\\\" class=\\\"error-message\\\" data-skvisibility=\\\"\\\"></div>\\n    </div>\\n</section>\"},\"nodeTitle\":{\"value\":\"Magic Link Expired\"},\"backgroundColor\":{\"value\":\"#ffc8c1ff\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"respondToUser\":true,\"errorConnectionInstances\":[\"local.yjykcubup5.payload.error\"],\"transitionId\":38,\"signalId\":0,\"largePayload\":[\"customHTML\"]}],\"evalNodeId\":\"uetmmz3wz9\",\"transitionId\":38},{\"from\":[\"inside_27_1_allTriggersTrue\"],\"to\":\"end_10\",\"conditions\":{\"$and\":[{\"id\":\"33qanxdlri\",\"connectionId\":\"c4b2032a1b63d370c5fbdd205522f1c5\",\"connectorId\":\"analyticsConnector\",\"capabilityName\":\"logOutcome\",\"success\":true}]},\"signals\":[{\"name\":\"Node [2022-11-28]\",\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"34cedcffd17e2be6ffb56a7556683b09\",\"flowVersionId\":69,\"id\":\"k284u1rxut\",\"connectionId\":\"f0c55efe299c81d34c0013fe8736c495\",\"connectorId\":\"nodeConnector\",\"capabilityName\":\"returnBackToCallingNode\",\"properties\":{\"outputSchema\":{\"value\":{\"type\":\"object\",\"properties\":{\"success\":{\"type\":\"boolean\",\"displayName\":\"success\",\"preferredControlType\":\"textField\",\"enableParameters\":true,\"propertyName\":\"success\"}}}}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"to\":\"oe\",\"inputs\":[],\"startNodeId\":\"r5krr9rgo0\",\"transitionId\":39,\"signalId\":0}],\"evalNodeId\":\"ndnnqqmz31\",\"transitionId\":39},{\"from\":[\"inside_7\"],\"to\":[\"start_3\"],\"conditions\":{\"$and\":[{\"id\":\"g7o1an1wvu\",\"connectionId\":\"f0c55efe299c81d34c0013fe8736c495\",\"connectorId\":\"nodeConnector\",\"capabilityName\":\"goToNode\"}]},\"signals\":[{\"id\":\"r5krr9rgo0\",\"connectionId\":\"f0c55efe299c81d34c0013fe8736c495\",\"connectorId\":\"nodeConnector\",\"capabilityName\":\"startNode\",\"to\":\"oe\",\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"34cedcffd17e2be6ffb56a7556683b09\",\"flowVersionId\":69,\"transitionId\":40,\"signalId\":0}],\"evalNodeId\":\"tef7roa7lq\",\"transitionId\":40},{\"from\":\"end_10\",\"to\":\"inside_8\",\"conditions\":{\"$and\":[{\"id\":\"k284u1rxut\",\"connectionId\":\"f0c55efe299c81d34c0013fe8736c495\",\"connectorId\":\"nodeConnector\",\"capabilityName\":\"returnBackToCallingNode\"}]},\"signals\":[{\"name\":\"Flow Analytics\",\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"34cedcffd17e2be6ffb56a7556683b09\",\"flowVersionId\":69,\"id\":\"s9egwsr57x\",\"connectionId\":\"c4b2032a1b63d370c5fbdd205522f1c5\",\"connectorId\":\"analyticsConnector\",\"capabilityName\":\"logOutcome\",\"properties\":{\"outcomeType\":{\"value\":\"LOGIN_COMPLETION\"},\"outcomeStatus\":{\"value\":\"LOGIN_COMPLETION_SUCCESS\"},\"shouldContinueOnError\":{\"value\":true},\"nodeTitle\":{\"value\":\"Login Completions\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"transitionId\":41,\"signalId\":0}],\"evalNodeId\":\"tef7roa7lq\",\"teleportFromState\":[\"inside_7\"],\"callingNodeId\":\"g7o1an1wvu\",\"transitionId\":41},{\"from\":[\"end_3\"],\"to\":[\"start_2\"],\"conditions\":{\"$and\":[{\"id\":\"k0pbf9qed\",\"connectionId\":\"f0c55efe299c81d34c0013fe8736c495\",\"connectorId\":\"nodeConnector\",\"capabilityName\":\"goToNode\"}]},\"signals\":[{\"id\":\"wcoqvba1g7\",\"connectionId\":\"f0c55efe299c81d34c0013fe8736c495\",\"connectorId\":\"nodeConnector\",\"capabilityName\":\"startNode\",\"to\":\"oe\",\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"34cedcffd17e2be6ffb56a7556683b09\",\"flowVersionId\":69,\"transitionId\":42,\"signalId\":0}],\"transitionId\":42},{\"from\":[\"inside_6\"],\"to\":[\"start_1\"],\"conditions\":{\"$and\":[{\"id\":\"rrve3sgrw6\",\"connectionId\":\"f0c55efe299c81d34c0013fe8736c495\",\"connectorId\":\"nodeConnector\",\"capabilityName\":\"goToNode\"}]},\"signals\":[{\"id\":\"qlst5lqoxg\",\"connectionId\":\"f0c55efe299c81d34c0013fe8736c495\",\"connectorId\":\"nodeConnector\",\"capabilityName\":\"startNode\",\"to\":\"oe\",\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"34cedcffd17e2be6ffb56a7556683b09\",\"flowVersionId\":69,\"transitionId\":45,\"signalId\":0}],\"evalNodeId\":\"qckhrla0iv\",\"transitionId\":43},{\"from\":\"end_4\",\"to\":\"inside_8\",\"conditions\":{\"$and\":[{\"id\":\"ipf475575r\",\"connectionId\":\"f0c55efe299c81d34c0013fe8736c495\",\"connectorId\":\"nodeConnector\",\"capabilityName\":\"returnBackToCallingNode\"}]},\"signals\":[{\"name\":\"Flow Analytics\",\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"34cedcffd17e2be6ffb56a7556683b09\",\"flowVersionId\":69,\"id\":\"s9egwsr57x\",\"connectionId\":\"c4b2032a1b63d370c5fbdd205522f1c5\",\"connectorId\":\"analyticsConnector\",\"capabilityName\":\"logOutcome\",\"properties\":{\"outcomeType\":{\"value\":\"LOGIN_COMPLETION\"},\"outcomeStatus\":{\"value\":\"LOGIN_COMPLETION_SUCCESS\"},\"shouldContinueOnError\":{\"value\":true},\"nodeTitle\":{\"value\":\"Login Completions\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"transitionId\":44,\"signalId\":0}],\"evalNodeId\":\"qckhrla0iv\",\"teleportFromState\":[\"inside_6\"],\"callingNodeId\":\"rrve3sgrw6\",\"transitionId\":44},{\"from\":[\"end_7\"],\"to\":[\"start_1\"],\"conditions\":{\"$and\":[{\"id\":\"vyxhvpr7kc\",\"connectionId\":\"f0c55efe299c81d34c0013fe8736c495\",\"connectorId\":\"nodeConnector\",\"capabilityName\":\"goToNode\"}]},\"signals\":[{\"id\":\"qlst5lqoxg\",\"connectionId\":\"f0c55efe299c81d34c0013fe8736c495\",\"connectorId\":\"nodeConnector\",\"capabilityName\":\"startNode\",\"to\":\"oe\",\"companyId\":\"8537ff42-72bc-4142-aef5-e6e6ed96dc26\",\"flowId\":\"34cedcffd17e2be6ffb56a7556683b09\",\"flowVersionId\":69,\"transitionId\":45,\"signalId\":0}],\"transitionId\":45}],\"history\":[],\"outputs\":{\"httpConnector_customHTMLTemplate\":{\"localOutputs\":[\"output\"]},\"analyticsConnector_logOutcome\":{\"localOutputs\":[]},\"pingOneSSOConnector_userLookup\":{\"localOutputs\":[\"output\"]},\"flowConnector_startUiSubFlow\":{\"localOutputs\":[\"output\"]},\"pingOneSSOConnector_checkPassword\":{\"localOutputs\":[\"output\"]},\"pingOneSSOConnector_sendRecoveryCode\":{\"localOutputs\":[\"output\"]},\"pingOneSSOConnector_recoverPassword\":{\"localOutputs\":[\"output\"]},\"flowConnector_oobStart\":{\"localOutputs\":[\"output\"]},\"flowConnector_oobContinue\":{\"localOutputs\":[\"output\"]},\"notificationsConnector_sendEmail\":{\"localOutputs\":[\"output\"]},\"challengeConnector_updateChallenge\":{\"localOutputs\":[\"output\"]},\"challengeConnector_getChallenge\":{\"localOutputs\":[\"output\"]}},\"outputParameters\":[\"local.1gptrqcdje.payload.output.email\",\"local.lx7ukcf574.payload.output.matchedUser.name.given\",\"local.1gptrqcdje.payload.output.buttonValue\",\"local.lx7ukcf574.payload.output.matchedUser.email\",\"local.qlst5lqoxg.payload.output.email\",\"local.8v1alxo1ex.payload.output.password\",\"local.lx7ukcf574.payload.output.matchedUser.enabled\",\"local.lx7ukcf574.payload.output.matchedUser.lifecycle.status\",\"local.8v1alxo1ex.payload.output.buttonValue\",\"local.wcoqvba1g7.payload.output.email\",\"local.24yhwgngyt.payload.output.passwordResetCode\",\"local.24yhwgngyt.payload.output.password\",\"local.gc3ijy736k.payload.error.message\",\"local.r5krr9rgo0.payload.output.email\",\"component.skpolling\",\"local.9bg1r148fo.payload.output.challenge\",\"local.lx7ukcf574.payload.output.matchedUser.id\",\"local.r5krr9rgo0.payload.output.userid\",\"local.9bg1r148fo.payload.output.continueLink\",\"local.n4x0ncm1x1.payload.output.challengeStatus\"],\"global\":{},\"local\":{},\"idMapping\":{},\"nodeMappingForTids\":{\"1gptrqcdje\":\"initialize\",\"1gptrqcdje_customHTMLTemplate\":\"initialize\",\"fd8b3aviy9\":\"1gptrqcdje\",\"fd8b3aviy9_customErrorMessage\":\"1gptrqcdje_customHTMLTemplate\",\"d7a4lhsc27\":\"1gptrqcdje\",\"d7a4lhsc27_customErrorMessage\":\"1gptrqcdje_customHTMLTemplate\",\"2ynj4jjbml\":\"1gptrqcdje\",\"2ynj4jjbml_startUiSubFlow\":\"1gptrqcdje_customHTMLTemplate\",\"93iq8d0t5l\":\"8v1alxo1ex\",\"93iq8d0t5l_customHTMLTemplate\":\"2ynj4jjbml_startUiSubFlow\",\"8v1alxo1ex\":\"r335yayoi9\",\"8v1alxo1ex_customHTMLTemplate\":\"initialize\",\"l4s47gvu3f\":\"8v1alxo1ex\",\"l4s47gvu3f_customErrorMessage\":\"8v1alxo1ex_customHTMLTemplate\",\"24yhwgngyt\":\"8v1alxo1ex\",\"24yhwgngyt_customHTMLTemplate\":\"initialize\",\"r335yayoi9\":\"24yhwgngyt\",\"r335yayoi9_customHTMLTemplate\":\"24yhwgngyt_customHTMLTemplate\",\"3mp85v4tsa\":\"24yhwgngyt\",\"3mp85v4tsa_customErrorMessage\":\"24yhwgngyt_customHTMLTemplate\",\"6mamd05dwt\":\"2ynj4jjbml\",\"6mamd05dwt_oobContinue\":\"initialize\",\"rqw9pqlavf\":\"2ynj4jjbml\",\"rqw9pqlavf_customHTMLTemplate\":\"initialize\",\"zmvc6k019c\":\"6mamd05dwt\",\"zmvc6k019c_customHTMLTemplate\":\"6mamd05dwt_oobContinue\",\"vd9odf5b0w\":\"rqw9pqlavf\",\"vd9odf5b0w_customHTMLTemplate\":\"rqw9pqlavf_customHTMLTemplate\"},\"tids\":{},\"delayedConditionalStateChangeMappings\":{},\"delayedConditionalStateChangeMappingsReverse\":{},\"delayedConditionalStatesList\":[],\"lbsTransitionIdsToIgnore\":[],\"lbsTransitionIdsMapping\":{},\"outputParametersDefault\":{\"local.1gptrqcdje.payload.output.email\":\"\",\"local.lx7ukcf574.payload.output.matchedUser.name.given\":\"\",\"local.1gptrqcdje.payload.output.buttonValue\":\"\",\"local.lx7ukcf574.payload.output.matchedUser.email\":\"\",\"local.qlst5lqoxg.payload.output.email\":\"\",\"local.8v1alxo1ex.payload.output.password\":\"\",\"local.lx7ukcf574.payload.output.matchedUser.enabled\":\"\",\"local.lx7ukcf574.payload.output.matchedUser.lifecycle.status\":\"\",\"local.8v1alxo1ex.payload.output.buttonValue\":\"\",\"local.wcoqvba1g7.payload.output.email\":\"\",\"local.24yhwgngyt.payload.output.passwordResetCode\":\"\",\"local.24yhwgngyt.payload.output.password\":\"\",\"local.gc3ijy736k.payload.error.message\":\"\",\"local.r5krr9rgo0.payload.output.email\":\"\",\"component.skpolling\":\"\",\"local.9bg1r148fo.payload.output.challenge\":\"\",\"local.lx7ukcf574.payload.output.matchedUser.id\":\"\",\"local.r5krr9rgo0.payload.output.userid\":\"\",\"local.9bg1r148fo.payload.output.continueLink\":\"\",\"local.n4x0ncm1x1.payload.output.challengeStatus\":\"\"},\"outputParametersDefaultBlacklist\":[],\"historyThreshold\":208,\"errorRewindBlackListIds\":[],\"nodeMappingForTidsNew\":{\"1gptrqcdje\":\"initialize\",\"fd8b3aviy9\":[\"1gptrqcdje\"],\"d7a4lhsc27\":[\"1gptrqcdje\"],\"2ynj4jjbml\":[\"1gptrqcdje\"],\"93iq8d0t5l\":[\"1gptrqcdje\",\"24yhwgngyt\",\"2ynj4jjbml\",\"r335yayoi9\",\"rqw9pqlavf\",\"8v1alxo1ex\"],\"8v1alxo1ex\":[\"8v1alxo1ex\",\"1gptrqcdje\",\"24yhwgngyt\",\"2ynj4jjbml\",\"r335yayoi9\"],\"l4s47gvu3f\":[\"1gptrqcdje\",\"24yhwgngyt\",\"2ynj4jjbml\",\"r335yayoi9\",\"8v1alxo1ex\"],\"24yhwgngyt\":[\"1gptrqcdje\",\"24yhwgngyt\",\"2ynj4jjbml\",\"r335yayoi9\",\"8v1alxo1ex\"],\"r335yayoi9\":[\"1gptrqcdje\",\"2ynj4jjbml\",\"r335yayoi9\",\"8v1alxo1ex\",\"24yhwgngyt\"],\"3mp85v4tsa\":[\"1gptrqcdje\",\"2ynj4jjbml\",\"r335yayoi9\",\"8v1alxo1ex\",\"24yhwgngyt\"],\"6mamd05dwt\":[\"1gptrqcdje\",\"2ynj4jjbml\"],\"rqw9pqlavf\":[\"1gptrqcdje\",\"2ynj4jjbml\"],\"zmvc6k019c\":[\"1gptrqcdje\",\"2ynj4jjbml\",\"6mamd05dwt\"],\"vd9odf5b0w\":[\"1gptrqcdje\",\"2ynj4jjbml\",\"rqw9pqlavf\"]},\"nodeStates\":{\"1gptrqcdje\":\"start_0\",\"qlst5lqoxg\":\"start_1\",\"wcoqvba1g7\":\"start_2\",\"r5krr9rgo0\":\"start_3\",\"5d8juu8kbc\":\"inside_0\",\"lx7ukcf574\":\"inside_1\",\"fd8b3aviy9\":\"end_0_1_anyTriggersFalse\",\"4lt6cvevnv\":\"inside_2_2_allTriggersTrue\",\"d7a4lhsc27\":\"end_1_1_anyTriggersFalse\",\"7erwbkrksx\":\"inside_3_2_allTriggersTrue\",\"2ynj4jjbml\":\"inside_4_1_anyTriggersFalse\",\"5eq01z85x3\":\"inside_5_2_allTriggersTrue\",\"rrve3sgrw6\":\"inside_6\",\"g7o1an1wvu\":\"inside_7\",\"s9egwsr57x\":\"inside_8\",\"93iq8d0t5l\":\"end_2\",\"8v1alxo1ex\":\"inside_9\",\"2y3w6ax7i6\":\"inside_10\",\"iz3mrjuw37\":\"inside_11\",\"k0pbf9qed\":\"end_3\",\"5gvsn86mfc\":\"inside_12_1_allTriggersTrue\",\"jwucq83maf\":\"inside_13_2_anyTriggersFalse\",\"ipf475575r\":\"end_4\",\"l4s47gvu3f\":\"end_5\",\"fpfhyrcykl\":\"inside_14\",\"24yhwgngyt\":\"inside_15\",\"gc3ijy736k\":\"inside_16\",\"rcee6wfs0i\":\"inside_17_1_allTriggersTrue\",\"vupdbsre3n\":\"inside_18_2_anyTriggersFalse\",\"r335yayoi9\":\"inside_19\",\"3mp85v4tsa\":\"end_6\",\"vyxhvpr7kc\":\"end_7\",\"9bg1r148fo\":\"inside_20\",\"6mamd05dwt\":\"inside_21\",\"2a5y6spudn\":\"inside_22\",\"5bxqq6j1j0\":\"inside_23\",\"rqw9pqlavf\":\"inside_24\",\"zmvc6k019c\":\"end_8\",\"n4x0ncm1x1\":\"inside_25\",\"yjykcubup5\":\"inside_26\",\"33qanxdlri\":\"inside_27_1_allTriggersTrue\",\"vd9odf5b0w\":\"end_9_2_anyTriggersFalse\",\"k284u1rxut\":\"end_10\"}}",
-  "publishedVersion": 69,
+  "name": "401-6: COMPLETED Basic Auth with Analytics",
+  "orx": "{\"companyId\":\"39ae544d-db07-4576-9ef5-6a2413ff990e\",\"flowId\":\"beb9f179c6786a0e75ef0e77f2cbe7e7\",\"flowVersionId\":6,\"version\":\"4.0.0\",\"states\":[\"initialize\",\"start_0\",\"inside_0\",\"inside_1\",\"end_0_1_anyTriggersFalse\",\"inside_2_2_allTriggersTrue\",\"end_1_1_anyTriggersFalse\",\"inside_3_2_allTriggersTrue\",\"inside_4_1_anyTriggersFalse\",\"inside_5_2_allTriggersTrue\",\"inside_6\",\"inside_7\",\"inside_8\",\"end_2\",\"start_1\",\"inside_9\",\"inside_10\",\"inside_11\",\"end_3\",\"inside_12_1_allTriggersTrue\",\"inside_13_2_anyTriggersFalse\",\"end_4\",\"end_5\",\"start_2\",\"inside_14\",\"inside_15\",\"inside_16\",\"inside_17_1_allTriggersTrue\",\"inside_18_2_anyTriggersFalse\",\"inside_19\",\"end_6\",\"end_7\",\"start_3\",\"inside_20\",\"inside_22\",\"inside_21\",\"inside_23\",\"inside_24\",\"end_8\",\"inside_25\",\"inside_26\",\"inside_27_1_allTriggersTrue\",\"end_9_2_anyTriggersFalse\",\"end_10\"],\"currentState\":[\"initialize\"],\"transitions\":[{\"from\":[\"initialize\"],\"to\":\"start_0\",\"conditions\":{\"$and\":[{\"initializeFlow\":true}]},\"signals\":[{\"name\":\"Http\",\"companyId\":\"39ae544d-db07-4576-9ef5-6a2413ff990e\",\"flowId\":\"beb9f179c6786a0e75ef0e77f2cbe7e7\",\"flowVersionId\":6,\"id\":\"1gptrqcdje\",\"connectionId\":\"867ed4363b2bc21c860085ad2baa817d\",\"connectorId\":\"httpConnector\",\"capabilityName\":\"customHTMLTemplate\",\"properties\":{\"customHTML\":{\"value\":\"<section class=\\\"register\\\">\\n    <form id=\\\"frmSignIn\\\">\\n        <div class=\\\"register-content\\\">\\n            <div class=\\\"logo-wrapper\\\">\\n                <img class=\\\"logo\\\" />\\n            </div>\\n            <h3>Beginner's Luck Online Gaming</h3>\\n            <h1>Sign In</h1>\\n            <label>Email</label>\\n            <input type=\\\"text\\\" id=\\\"email\\\" />\\n            <div class=\\\"smallbuttonbar\\\">\\n                <p>Select sign in method</p>\\n                <button id=\\\"btnSignin\\\" data-skcomponent=\\\"skbutton\\\" data-skbuttontype=\\\"form-submit\\\"\\n                    data-skbuttonvalue=\\\"PASSWORD\\\" data-skform=\\\"frmSignIn\\\" >\\n                    <i class=\\\"fa fa-key\\\" aria-hidden=\\\"true\\\"></i> Password \\n                </button>\\n            </div>\\n\\n            <div class=\\\"smallbuttonbar\\\">\\n                <button id=\\\"btnSignin\\\" data-skcomponent=\\\"skbutton\\\" data-skbuttontype=\\\"form-submit\\\"\\n                    data-skbuttonvalue=\\\"MAGICLINK\\\" data-skform=\\\"frmSignIn\\\" >\\n                    <i class=\\\"fa fa-magic\\\" aria-hidden=\\\"true\\\"></i> Magic Link \\n                </button>\\n            </div>\\n            <div data-skcomponent=\\\"skerror\\\" class=\\\"error-message\\\" data-skvisibility=\\\"\\\"></div>\\n            <div data-skcomponent=\\\"skerrormessage\\\" class=\\\"error-message\\\" data-skerrorid=\\\"email\\\"></div>\\n        </div>\\n    </form>\\n</section>\"},\"validationRules\":{\"value\":[{\"propertyName\":\"email\",\"rules\":[{\"ruleName\":\"email\",\"message\":\"Please enter a valid email address\"}]}]},\"nodeTitle\":{\"value\":\"Collect Email\"},\"formFieldsList\":{\"value\":[{\"preferredControlType\":\"textField\",\"preferredDataType\":\"string\",\"propertyName\":\"buttonValue\"},{\"propertyName\":\"email\",\"preferredControlType\":\"textField\",\"preferredDataType\":\"string\",\"value\":\"\",\"hashedVisibility\":false}]},\"customScript\":{\"value\":\"document.getElementById(\\\"email\\\").focus()\\n\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"respondToUser\":true,\"transitionId\":0,\"signalId\":0,\"largePayload\":[\"customHTML\"]}],\"transitionId\":0},{\"from\":[\"start_0\"],\"to\":\"inside_0\",\"conditions\":{\"$and\":[{\"id\":\"1gptrqcdje\",\"connectionId\":\"867ed4363b2bc21c860085ad2baa817d\",\"connectorId\":\"httpConnector\",\"capabilityName\":\"customHTMLTemplate\",\"success\":true}]},\"signals\":[{\"name\":\"Analytics [2022-12-06]\",\"companyId\":\"39ae544d-db07-4576-9ef5-6a2413ff990e\",\"flowId\":\"beb9f179c6786a0e75ef0e77f2cbe7e7\",\"flowVersionId\":6,\"id\":\"5d8juu8kbc\",\"connectionId\":\"9e8263f598b2d25e7780a76e0dfa5140\",\"connectorId\":\"analyticsConnector\",\"capabilityName\":\"logOutcome\",\"properties\":{\"outcomeType\":{\"value\":\"LOGIN_START\"},\"outcomeStatus\":{\"value\":\"LOGIN_START_SUCCESS\"},\"shouldContinueOnError\":{\"value\":true},\"nodeTitle\":{\"value\":\"Login Starts\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"transitionId\":1,\"signalId\":0}],\"evalNodeId\":\"49tgg5rp1b\",\"transitionId\":1},{\"from\":[\"inside_0\"],\"to\":\"inside_1\",\"conditions\":{\"$and\":[{\"id\":\"5d8juu8kbc\",\"connectionId\":\"9e8263f598b2d25e7780a76e0dfa5140\",\"connectorId\":\"analyticsConnector\",\"capabilityName\":\"logOutcome\",\"success\":true}]},\"signals\":[{\"name\":\"PingOne\",\"companyId\":\"39ae544d-db07-4576-9ef5-6a2413ff990e\",\"flowId\":\"beb9f179c6786a0e75ef0e77f2cbe7e7\",\"flowVersionId\":6,\"id\":\"lx7ukcf574\",\"connectionId\":\"94141bf2f1b9b59a5f5365ff135e02bb\",\"connectorId\":\"pingOneSSOConnector\",\"capabilityName\":\"userLookup\",\"properties\":{\"matchAttributes\":{\"value\":[\"email\"]},\"userIdentifierForFindUser\":{\"value\":\"{{local.1gptrqcdje.payload.output.email}}\"},\"nodeTitle\":{\"value\":\"Find User\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"transitionId\":2,\"signalId\":0}],\"evalNodeId\":\"qdl2d2s7bu\",\"transitionId\":2},{\"from\":[\"inside_1\"],\"to\":\"end_0_1_anyTriggersFalse\",\"conditions\":{\"$or\":[{\"id\":\"lx7ukcf574\",\"connectionId\":\"94141bf2f1b9b59a5f5365ff135e02bb\",\"connectorId\":\"pingOneSSOConnector\",\"capabilityName\":\"userLookup\",\"success\":false}]},\"signals\":[{\"name\":\"Error Customize\",\"companyId\":\"39ae544d-db07-4576-9ef5-6a2413ff990e\",\"flowId\":\"beb9f179c6786a0e75ef0e77f2cbe7e7\",\"flowVersionId\":6,\"id\":\"fd8b3aviy9\",\"connectionId\":\"6d8f6f706c45fd459a86b3f092602544\",\"connectorId\":\"errorConnector\",\"capabilityName\":\"customErrorMessage\",\"properties\":{\"errorMessage\":{\"value\":\"Unknown email address\"},\"nodeTitle\":{\"value\":\"Unknown User\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"respondToUser\":true,\"errorConnectionInstances\":[\"local.lx7ukcf574.payload.error\"],\"transitionId\":3,\"signalId\":0}],\"evalNodeId\":\"2vtq362458\",\"transitionId\":3},{\"from\":[\"inside_1\"],\"to\":\"inside_2_2_allTriggersTrue\",\"conditions\":{\"$and\":[{\"id\":\"lx7ukcf574\",\"connectionId\":\"94141bf2f1b9b59a5f5365ff135e02bb\",\"connectorId\":\"pingOneSSOConnector\",\"capabilityName\":\"userLookup\",\"success\":true}]},\"signals\":[{\"name\":\"Functions\",\"companyId\":\"39ae544d-db07-4576-9ef5-6a2413ff990e\",\"flowId\":\"beb9f179c6786a0e75ef0e77f2cbe7e7\",\"flowVersionId\":6,\"id\":\"4lt6cvevnv\",\"connectionId\":\"de650ca45593b82c49064ead10b9fe17\",\"connectorId\":\"functionsConnector\",\"capabilityName\":\"AEqualsB\",\"properties\":{\"leftValueA\":{\"value\":\"{{local.lx7ukcf574.payload.output.matchedUser.enabled}}\"},\"rightValueB\":{\"value\":\"true\"},\"type\":{\"value\":\"boolean\"},\"nodeTitle\":{\"value\":\"Is User Enabled?\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"to\":\"oe\",\"transitionId\":4,\"signalId\":0}],\"evalNodeId\":\"2vtq362458\",\"transitionId\":4},{\"from\":[\"inside_2_2_allTriggersTrue\"],\"to\":\"end_1_1_anyTriggersFalse\",\"conditions\":{\"$or\":[{\"id\":\"4lt6cvevnv\",\"connectionId\":\"de650ca45593b82c49064ead10b9fe17\",\"connectorId\":\"functionsConnector\",\"capabilityName\":\"AEqualsB\",\"logic\":{\"type\":\"whereNot\",\"expr\":\"{{local.lx7ukcf574.payload.output.matchedUser.enabled}} == true\"}}]},\"signals\":[{\"name\":\"Error Customize\",\"companyId\":\"39ae544d-db07-4576-9ef5-6a2413ff990e\",\"flowId\":\"beb9f179c6786a0e75ef0e77f2cbe7e7\",\"flowVersionId\":6,\"id\":\"d7a4lhsc27\",\"connectionId\":\"6d8f6f706c45fd459a86b3f092602544\",\"connectorId\":\"errorConnector\",\"capabilityName\":\"customErrorMessage\",\"properties\":{\"errorMessage\":{\"value\":\"Your account has been disabled\"},\"nodeTitle\":{\"value\":\"Disabled Account Message\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"respondToUser\":true,\"errorConnectionInstances\":[\"local.4lt6cvevnv.payload.error\"],\"transitionId\":5,\"signalId\":0}],\"evalNodeId\":\"6dmstg13g4\",\"transitionId\":5},{\"from\":[\"inside_2_2_allTriggersTrue\"],\"to\":\"inside_3_2_allTriggersTrue\",\"conditions\":{\"$and\":[{\"id\":\"4lt6cvevnv\",\"connectionId\":\"de650ca45593b82c49064ead10b9fe17\",\"connectorId\":\"functionsConnector\",\"capabilityName\":\"AEqualsB\",\"logic\":{\"type\":\"where\",\"expr\":\"{{local.lx7ukcf574.payload.output.matchedUser.enabled}} == true\"}}]},\"signals\":[{\"name\":\"Functions\",\"companyId\":\"39ae544d-db07-4576-9ef5-6a2413ff990e\",\"flowId\":\"beb9f179c6786a0e75ef0e77f2cbe7e7\",\"flowVersionId\":6,\"id\":\"7erwbkrksx\",\"connectionId\":\"de650ca45593b82c49064ead10b9fe17\",\"connectorId\":\"functionsConnector\",\"capabilityName\":\"AEqualsB\",\"properties\":{\"leftValueA\":{\"value\":\"{{local.lx7ukcf574.payload.output.matchedUser.lifecycle.status}}\"},\"rightValueB\":{\"value\":\"ACCOUNT_OK\"},\"nodeTitle\":{\"value\":\"Is Account Verified?\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"to\":\"oe\",\"transitionId\":6,\"signalId\":0}],\"evalNodeId\":\"6dmstg13g4\",\"transitionId\":6},{\"from\":[\"inside_3_2_allTriggersTrue\"],\"to\":\"inside_4_1_anyTriggersFalse\",\"conditions\":{\"$or\":[{\"id\":\"7erwbkrksx\",\"connectionId\":\"de650ca45593b82c49064ead10b9fe17\",\"connectorId\":\"functionsConnector\",\"capabilityName\":\"AEqualsB\",\"logic\":{\"type\":\"whereNot\",\"expr\":\"'{{local.lx7ukcf574.payload.output.matchedUser.lifecycle.status}}' == 'ACCOUNT_OK'\"}}]},\"signals\":[{\"name\":\"Flow [2022-12-06]\",\"companyId\":\"39ae544d-db07-4576-9ef5-6a2413ff990e\",\"flowId\":\"beb9f179c6786a0e75ef0e77f2cbe7e7\",\"flowVersionId\":6,\"id\":\"2ynj4jjbml\",\"connectionId\":\"303fd8c46a2b1aa07349a7dbf25ae84b\",\"connectorId\":\"flowConnector\",\"capabilityName\":\"startUiSubFlow\",\"properties\":{\"subFlowId\":{\"value\":{\"label\":\"COMPLETED Verify Account [SUBFLOW]\",\"value\":\"fd79d069ccf4f4cf45e5f97a2ddf3dd6\"}},\"subFlowVersionId\":{\"value\":-1},\"emailAddress\":{\"value\":\"{{local.lx7ukcf574.payload.output.matchedUser.email}}\"},\"sendVerificationCode\":{\"value\":\"true\"},\"nodeTitle\":{\"value\":\"Verify Account\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[\"global.cookies\",\"global.ip\",\"global.userAgent\",\"global.skOpenId\",\"global.origin\",\"global.originCookies\"],\"respondToUser\":true,\"errorConnectionInstances\":[\"local.7erwbkrksx.payload.error\"],\"transitionId\":7,\"signalId\":0}],\"evalNodeId\":\"to3kbai5uk\",\"transitionId\":7},{\"from\":[\"inside_3_2_allTriggersTrue\"],\"to\":\"inside_5_2_allTriggersTrue\",\"conditions\":{\"$and\":[{\"id\":\"7erwbkrksx\",\"connectionId\":\"de650ca45593b82c49064ead10b9fe17\",\"connectorId\":\"functionsConnector\",\"capabilityName\":\"AEqualsB\",\"logic\":{\"type\":\"where\",\"expr\":\"'{{local.lx7ukcf574.payload.output.matchedUser.lifecycle.status}}' == 'ACCOUNT_OK'\"}}]},\"signals\":[{\"name\":\"Functions\",\"companyId\":\"39ae544d-db07-4576-9ef5-6a2413ff990e\",\"flowId\":\"beb9f179c6786a0e75ef0e77f2cbe7e7\",\"flowVersionId\":6,\"id\":\"5eq01z85x3\",\"connectionId\":\"de650ca45593b82c49064ead10b9fe17\",\"connectorId\":\"functionsConnector\",\"capabilityName\":\"AEqualsMultipleB\",\"properties\":{\"leftValueA\":{\"value\":\"{{local.1gptrqcdje.payload.output.buttonValue}}\"},\"rightValueMultiple\":{\"value\":[{\"value\":\"PASSWORD\",\"id\":\"0zb5tdng0f\"},{\"value\":\"MAGICLINK\",\"id\":\"qn2ycha6cu\"}]},\"nodeTitle\":{\"value\":\"Authentication Type\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"to\":\"oe\",\"transitionId\":8,\"signalId\":0}],\"evalNodeId\":\"to3kbai5uk\",\"transitionId\":8},{\"from\":[\"inside_4_1_anyTriggersFalse\"],\"to\":\"inside_5_2_allTriggersTrue\",\"conditions\":{\"$and\":[{\"id\":\"2ynj4jjbml\",\"connectionId\":\"303fd8c46a2b1aa07349a7dbf25ae84b\",\"connectorId\":\"flowConnector\",\"capabilityName\":\"startUiSubFlow\",\"success\":true}]},\"signals\":[{\"name\":\"Functions\",\"companyId\":\"39ae544d-db07-4576-9ef5-6a2413ff990e\",\"flowId\":\"beb9f179c6786a0e75ef0e77f2cbe7e7\",\"flowVersionId\":6,\"id\":\"5eq01z85x3\",\"connectionId\":\"de650ca45593b82c49064ead10b9fe17\",\"connectorId\":\"functionsConnector\",\"capabilityName\":\"AEqualsMultipleB\",\"properties\":{\"leftValueA\":{\"value\":\"{{local.1gptrqcdje.payload.output.buttonValue}}\"},\"rightValueMultiple\":{\"value\":[{\"value\":\"PASSWORD\",\"id\":\"0zb5tdng0f\"},{\"value\":\"MAGICLINK\",\"id\":\"qn2ycha6cu\"}]},\"nodeTitle\":{\"value\":\"Authentication Type\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"to\":\"oe\",\"transitionId\":9,\"signalId\":0}],\"evalNodeId\":\"vdsmsbe0ac\",\"transitionId\":9},{\"from\":[\"inside_5_2_allTriggersTrue\"],\"to\":[\"inside_6\"],\"conditions\":{\"$and\":[{\"id\":\"5eq01z85x3\",\"connectionId\":\"de650ca45593b82c49064ead10b9fe17\",\"connectorId\":\"functionsConnector\",\"capabilityName\":\"AEqualsMultipleB\",\"logic\":{\"useEval\":false,\"customEval\":true,\"type\":\"where\",\"leftSide\":\"'{{local.1gptrqcdje.payload.output.buttonValue}}'\",\"rightSide\":\"'PASSWORD'\",\"operator\":\"equal\",\"expr\":\"'{{local.1gptrqcdje.payload.output.buttonValue}}' == 'PASSWORD'\"}}]},\"signals\":[{\"name\":\"Node [2022-12-06]\",\"companyId\":\"39ae544d-db07-4576-9ef5-6a2413ff990e\",\"flowId\":\"beb9f179c6786a0e75ef0e77f2cbe7e7\",\"flowVersionId\":6,\"id\":\"rrve3sgrw6\",\"connectionId\":\"36f92d1faf2818b5fb7345e8b8d4d43f\",\"connectorId\":\"nodeConnector\",\"capabilityName\":\"goToNode\",\"properties\":{\"nodeInstanceId\":{\"value\":\"qlst5lqoxg\"},\"email\":{\"value\":\"{{local.lx7ukcf574.payload.output.matchedUser.email}}\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"to\":\"oe\",\"inputs\":[],\"transitionId\":10,\"signalId\":0}],\"evalNodeId\":\"d1110516i6\",\"transitionId\":10},{\"from\":[\"inside_5_2_allTriggersTrue\"],\"to\":[\"inside_7\"],\"conditions\":{\"$and\":[{\"id\":\"5eq01z85x3\",\"connectionId\":\"de650ca45593b82c49064ead10b9fe17\",\"connectorId\":\"functionsConnector\",\"capabilityName\":\"AEqualsMultipleB\",\"logic\":{\"useEval\":false,\"customEval\":true,\"type\":\"where\",\"leftSide\":\"'{{local.1gptrqcdje.payload.output.buttonValue}}'\",\"rightSide\":\"'MAGICLINK'\",\"operator\":\"equal\",\"expr\":\"'{{local.1gptrqcdje.payload.output.buttonValue}}' == 'MAGICLINK'\"}}]},\"signals\":[{\"name\":\"Node [2022-12-06]\",\"companyId\":\"39ae544d-db07-4576-9ef5-6a2413ff990e\",\"flowId\":\"beb9f179c6786a0e75ef0e77f2cbe7e7\",\"flowVersionId\":6,\"id\":\"g7o1an1wvu\",\"connectionId\":\"36f92d1faf2818b5fb7345e8b8d4d43f\",\"connectorId\":\"nodeConnector\",\"capabilityName\":\"goToNode\",\"properties\":{\"nodeInstanceId\":{\"value\":\"r5krr9rgo0\"},\"email\":{\"value\":\"{{local.lx7ukcf574.payload.output.matchedUser.email}}\"},\"userid\":{\"value\":\"{{local.lx7ukcf574.payload.output.matchedUser.id}}\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"to\":\"oe\",\"inputs\":[],\"transitionId\":11,\"signalId\":0}],\"evalNodeId\":\"unonzr7eqi\",\"transitionId\":11},{\"from\":[\"inside_8\"],\"to\":\"end_2\",\"conditions\":{\"$and\":[{\"id\":\"s9egwsr57x\",\"connectionId\":\"9e8263f598b2d25e7780a76e0dfa5140\",\"connectorId\":\"analyticsConnector\",\"capabilityName\":\"logOutcome\",\"success\":true}]},\"signals\":[{\"name\":\"Http\",\"companyId\":\"39ae544d-db07-4576-9ef5-6a2413ff990e\",\"flowId\":\"beb9f179c6786a0e75ef0e77f2cbe7e7\",\"flowVersionId\":6,\"id\":\"93iq8d0t5l\",\"connectionId\":\"867ed4363b2bc21c860085ad2baa817d\",\"connectorId\":\"httpConnector\",\"capabilityName\":\"customHTMLTemplate\",\"properties\":{\"customHTML\":{\"value\":\"<section class=\\\"register\\\">\\n    <div class=\\\"register-content\\\">\\n        <div class=\\\"logo-wrapper\\\">\\n            <img class=\\\"logo\\\" />\\n        </div>\\n        <h3>Beginner's Luck Online Gaming</h3>\\n        <h1>Sign In Successful</h1>\\n        <p>Welcome back {{local.lx7ukcf574.payload.output.matchedUser.name.given}}!</p>  \\n</section>\"},\"nodeTitle\":{\"value\":\"Sign In Success\"},\"backgroundColor\":{\"value\":\"#9dc967ff\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"respondToUser\":true,\"transitionId\":12,\"signalId\":0,\"largePayload\":[\"customHTML\"]}],\"evalNodeId\":\"d1gi0r7agd\",\"transitionId\":12},{\"from\":[\"start_1\"],\"to\":\"inside_9\",\"conditions\":{\"$and\":[{\"id\":\"qlst5lqoxg\",\"connectionId\":\"36f92d1faf2818b5fb7345e8b8d4d43f\",\"connectorId\":\"nodeConnector\",\"capabilityName\":\"startNode\",\"to\":\"oe\",\"companyId\":\"39ae544d-db07-4576-9ef5-6a2413ff990e\",\"flowId\":\"beb9f179c6786a0e75ef0e77f2cbe7e7\",\"flowVersionId\":6,\"transitionId\":45,\"signalId\":0}]},\"signals\":[{\"name\":\"Http\",\"companyId\":\"39ae544d-db07-4576-9ef5-6a2413ff990e\",\"flowId\":\"beb9f179c6786a0e75ef0e77f2cbe7e7\",\"flowVersionId\":6,\"id\":\"8v1alxo1ex\",\"connectionId\":\"867ed4363b2bc21c860085ad2baa817d\",\"connectorId\":\"httpConnector\",\"capabilityName\":\"customHTMLTemplate\",\"properties\":{\"customHTML\":{\"value\":\"<section class=\\\"register\\\">\\n    <form id=\\\"frmSignIn\\\">\\n        <div class=\\\"register-content\\\">\\n            <div class=\\\"logo-wrapper\\\">\\n                <img class=\\\"logo\\\" />\\n            </div>\\n            <h3>Beginner's Luck Online Gaming</h3>\\n            <h1>Sign In</h1>\\n            <p>Enter your password</p>           \\n            <label>Password</label>\\n            <input type=\\\"password\\\" id=\\\"password\\\" /><i class=\\\"fa fa-eye togglepwd\\\" id=\\\"togglepwd\\\" aria-hidden=\\\"true\\\"></i>\\n            <div class=\\\"buttonbar\\\">\\n                <button id=\\\"btnSignin\\\" data-skcomponent=\\\"skbutton\\\" data-skbuttontype=\\\"form-submit\\\"\\n                    data-skbuttonvalue=\\\"SIGN_IN\\\" data-skform=\\\"frmSignIn\\\">\\n                    <i class=\\\"fa fa-sign-in\\\" aria-hidden=\\\"true\\\"></i> Sign In\\n                </button>\\n            </div>\\n            <div style=\\\"text-align:center; margin-top:10px;\\\">\\n                <button id=\\\"btnResend\\\" class=\\\"buttonLink\\\" data-skcomponent=\\\"skbutton\\\" data-skbuttontype=\\\"next-event\\\" data-skbuttonvalue=\\\"FORGOT_PASSWORD\\\" data-skform=\\\"frmSignIn\\\">Forgot Password</button>  \\n            </div>\\n            <div data-skcomponent=\\\"skerror\\\" class=\\\"error-message\\\" data-skvisibility=\\\"\\\" ></div>\\n            <div data-skcomponent=\\\"skerrormessage\\\" class=\\\"error-message\\\" data-skerrorid=\\\"password\\\"></div>\\n        </div>\\n    </form>\\n</section>\"},\"formFieldsList\":{\"value\":[{\"preferredControlType\":\"textField\",\"preferredDataType\":\"string\",\"propertyName\":\"buttonValue\"},{\"propertyName\":\"password\",\"preferredControlType\":\"textField\",\"preferredDataType\":\"string\",\"value\":\"\",\"hashedVisibility\":false}]},\"nodeTitle\":{\"value\":\"Collect Password\"},\"customScript\":{\"value\":\"document.getElementById(\\\"password\\\").focus()\\n\\n// Toggle password field visibility\\ndocument.getElementById(\\\"togglepwd\\\").addEventListener('click', function (e) {\\n    let pwdField = document.getElementById(\\\"password\\\");\\n\\n    if (pwdField.type === 'password') {\\n        pwdField.type = 'text'\\n        e.currentTarget.classList.remove(\\\"fa-eye\\\");\\n        e.currentTarget.classList.add(\\\"fa-eye-slash\\\");\\n    } else {\\n        pwdField.type = 'password'\\n        e.currentTarget.classList.remove(\\\"fa-eye-slash\\\");\\n        e.currentTarget.classList.add(\\\"fa-eye\\\");\\n    }\\n});\"},\"validationRules\":{\"value\":[{\"propertyName\":\"password\",\"rules\":[{\"ruleName\":\"presence\",\"message\":\"Please enter your password\"}]}]}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"respondToUser\":true,\"transitionId\":13,\"signalId\":0,\"largePayload\":[\"customHTML\"]}],\"evalNodeId\":\"dhujvy1ads\",\"transitionId\":13},{\"from\":[\"inside_9\"],\"to\":\"inside_10\",\"conditions\":{\"$and\":[{\"id\":\"8v1alxo1ex\",\"connectionId\":\"867ed4363b2bc21c860085ad2baa817d\",\"connectorId\":\"httpConnector\",\"capabilityName\":\"customHTMLTemplate\",\"success\":true}]},\"signals\":[{\"name\":\"Functions\",\"companyId\":\"39ae544d-db07-4576-9ef5-6a2413ff990e\",\"flowId\":\"beb9f179c6786a0e75ef0e77f2cbe7e7\",\"flowVersionId\":6,\"id\":\"2y3w6ax7i6\",\"connectionId\":\"de650ca45593b82c49064ead10b9fe17\",\"connectorId\":\"functionsConnector\",\"capabilityName\":\"AEqualsMultipleB\",\"properties\":{\"leftValueA\":{\"value\":\"{{local.8v1alxo1ex.payload.output.buttonValue}}\"},\"rightValueMultiple\":{\"value\":[{\"value\":\"SIGN_IN\",\"id\":\"vlayrzup5p\"},{\"value\":\"FORGOT_PASSWORD\",\"id\":\"wdp1ru4e6p\"}]},\"nodeTitle\":{\"value\":\"Form Buttons\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"to\":\"oe\",\"transitionId\":14,\"signalId\":0}],\"evalNodeId\":\"odkbszhtg9\",\"transitionId\":14},{\"from\":[\"inside_10\"],\"to\":\"inside_11\",\"conditions\":{\"$and\":[{\"id\":\"2y3w6ax7i6\",\"connectionId\":\"de650ca45593b82c49064ead10b9fe17\",\"connectorId\":\"functionsConnector\",\"capabilityName\":\"AEqualsMultipleB\",\"logic\":{\"useEval\":false,\"customEval\":true,\"type\":\"where\",\"leftSide\":\"'{{local.8v1alxo1ex.payload.output.buttonValue}}'\",\"rightSide\":\"'SIGN_IN'\",\"operator\":\"equal\",\"expr\":\"'{{local.8v1alxo1ex.payload.output.buttonValue}}' == 'SIGN_IN'\"}}]},\"signals\":[{\"name\":\"PingOne\",\"companyId\":\"39ae544d-db07-4576-9ef5-6a2413ff990e\",\"flowId\":\"beb9f179c6786a0e75ef0e77f2cbe7e7\",\"flowVersionId\":6,\"id\":\"iz3mrjuw37\",\"connectionId\":\"94141bf2f1b9b59a5f5365ff135e02bb\",\"connectorId\":\"pingOneSSOConnector\",\"capabilityName\":\"checkPassword\",\"properties\":{\"matchAttribute\":{\"value\":\"email\"},\"identifier\":{\"value\":\"{{local.qlst5lqoxg.payload.output.email}}\"},\"password\":{\"value\":\"{{local.8v1alxo1ex.payload.output.password}}\"},\"nodeTitle\":{\"value\":\"Validate Password\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"transitionId\":15,\"signalId\":0}],\"evalNodeId\":\"qflemhjn1b\",\"transitionId\":15},{\"from\":[\"inside_10\"],\"to\":[\"end_3\"],\"conditions\":{\"$and\":[{\"id\":\"2y3w6ax7i6\",\"connectionId\":\"de650ca45593b82c49064ead10b9fe17\",\"connectorId\":\"functionsConnector\",\"capabilityName\":\"AEqualsMultipleB\",\"logic\":{\"useEval\":false,\"customEval\":true,\"type\":\"where\",\"leftSide\":\"'{{local.8v1alxo1ex.payload.output.buttonValue}}'\",\"rightSide\":\"'FORGOT_PASSWORD'\",\"operator\":\"equal\",\"expr\":\"'{{local.8v1alxo1ex.payload.output.buttonValue}}' == 'FORGOT_PASSWORD'\"}}]},\"signals\":[{\"name\":\"Node [2022-12-06]\",\"companyId\":\"39ae544d-db07-4576-9ef5-6a2413ff990e\",\"flowId\":\"beb9f179c6786a0e75ef0e77f2cbe7e7\",\"flowVersionId\":6,\"id\":\"k0pbf9qed\",\"connectionId\":\"36f92d1faf2818b5fb7345e8b8d4d43f\",\"connectorId\":\"nodeConnector\",\"capabilityName\":\"goToNode\",\"properties\":{\"nodeInstanceId\":{\"value\":\"wcoqvba1g7\"},\"email\":{\"value\":\"{{local.qlst5lqoxg.payload.output.email}}\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"to\":\"oe\",\"inputs\":[],\"transitionId\":16,\"signalId\":0}],\"evalNodeId\":\"px7nu02gml\",\"transitionId\":16},{\"from\":[\"inside_11\"],\"to\":\"inside_12_1_allTriggersTrue\",\"conditions\":{\"$and\":[{\"id\":\"iz3mrjuw37\",\"connectionId\":\"94141bf2f1b9b59a5f5365ff135e02bb\",\"connectorId\":\"pingOneSSOConnector\",\"capabilityName\":\"checkPassword\",\"success\":true}]},\"signals\":[{\"name\":\"Analytics [2022-12-06]\",\"companyId\":\"39ae544d-db07-4576-9ef5-6a2413ff990e\",\"flowId\":\"beb9f179c6786a0e75ef0e77f2cbe7e7\",\"flowVersionId\":6,\"id\":\"5gvsn86mfc\",\"connectionId\":\"9e8263f598b2d25e7780a76e0dfa5140\",\"connectorId\":\"analyticsConnector\",\"capabilityName\":\"logOutcome\",\"properties\":{\"outcomeType\":{\"value\":\"PASSWORD_LOGIN\"},\"outcomeStatus\":{\"value\":\"PASSWORD_LOGIN_SUCCESS\"},\"shouldContinueOnError\":{\"value\":true},\"nodeTitle\":{\"value\":\"Log Password Auth Success\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"transitionId\":17,\"signalId\":0}],\"evalNodeId\":\"wzrseiwhb8\",\"transitionId\":17},{\"from\":[\"inside_11\"],\"to\":\"inside_13_2_anyTriggersFalse\",\"conditions\":{\"$or\":[{\"id\":\"iz3mrjuw37\",\"connectionId\":\"94141bf2f1b9b59a5f5365ff135e02bb\",\"connectorId\":\"pingOneSSOConnector\",\"capabilityName\":\"checkPassword\",\"success\":false}]},\"signals\":[{\"name\":\"Analytics [2022-12-06]\",\"companyId\":\"39ae544d-db07-4576-9ef5-6a2413ff990e\",\"flowId\":\"beb9f179c6786a0e75ef0e77f2cbe7e7\",\"flowVersionId\":6,\"id\":\"jwucq83maf\",\"connectionId\":\"9e8263f598b2d25e7780a76e0dfa5140\",\"connectorId\":\"analyticsConnector\",\"capabilityName\":\"logOutcome\",\"properties\":{\"outcomeType\":{\"value\":\"PASSWORD_LOGIN\"},\"outcomeStatus\":{\"value\":\"PASSWORD_LOGIN_ERROR\"},\"shouldContinueOnError\":{\"value\":true},\"nodeTitle\":{\"value\":\"Log Password Auth Error\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"errorConnectionInstances\":[\"local.iz3mrjuw37.payload.error\"],\"transitionId\":18,\"signalId\":0}],\"evalNodeId\":\"wzrseiwhb8\",\"transitionId\":18},{\"from\":[\"inside_12_1_allTriggersTrue\"],\"to\":\"end_4\",\"conditions\":{\"$and\":[{\"id\":\"5gvsn86mfc\",\"connectionId\":\"9e8263f598b2d25e7780a76e0dfa5140\",\"connectorId\":\"analyticsConnector\",\"capabilityName\":\"logOutcome\",\"success\":true}]},\"signals\":[{\"name\":\"Node [2022-12-06]\",\"companyId\":\"39ae544d-db07-4576-9ef5-6a2413ff990e\",\"flowId\":\"beb9f179c6786a0e75ef0e77f2cbe7e7\",\"flowVersionId\":6,\"id\":\"ipf475575r\",\"connectionId\":\"36f92d1faf2818b5fb7345e8b8d4d43f\",\"connectorId\":\"nodeConnector\",\"capabilityName\":\"returnBackToCallingNode\",\"properties\":{\"outputSchema\":{\"value\":{\"type\":\"object\",\"properties\":{\"success\":{\"type\":\"boolean\",\"displayName\":\"success\",\"preferredControlType\":\"textField\",\"enableParameters\":true,\"propertyName\":\"success\"}}}}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"to\":\"oe\",\"inputs\":[],\"startNodeId\":\"qlst5lqoxg\",\"transitionId\":19,\"signalId\":0}],\"evalNodeId\":\"tbfc2duu56\",\"transitionId\":19},{\"from\":[\"inside_13_2_anyTriggersFalse\"],\"to\":\"end_5\",\"conditions\":{\"$and\":[{\"id\":\"jwucq83maf\",\"connectionId\":\"9e8263f598b2d25e7780a76e0dfa5140\",\"connectorId\":\"analyticsConnector\",\"capabilityName\":\"logOutcome\",\"success\":true}]},\"signals\":[{\"name\":\"Error Customize\",\"companyId\":\"39ae544d-db07-4576-9ef5-6a2413ff990e\",\"flowId\":\"beb9f179c6786a0e75ef0e77f2cbe7e7\",\"flowVersionId\":6,\"id\":\"l4s47gvu3f\",\"connectionId\":\"6d8f6f706c45fd459a86b3f092602544\",\"connectorId\":\"errorConnector\",\"capabilityName\":\"customErrorMessage\",\"properties\":{\"errorMessage\":{\"value\":\"Incorrect email/password combination\"},\"nodeTitle\":{\"value\":\"Invalid User/Password\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"respondToUser\":true,\"transitionId\":20,\"signalId\":0}],\"evalNodeId\":\"wnfynjn8qr\",\"transitionId\":20},{\"from\":[\"start_2\"],\"to\":\"inside_14\",\"conditions\":{\"$and\":[{\"id\":\"wcoqvba1g7\",\"connectionId\":\"36f92d1faf2818b5fb7345e8b8d4d43f\",\"connectorId\":\"nodeConnector\",\"capabilityName\":\"startNode\",\"to\":\"oe\",\"companyId\":\"39ae544d-db07-4576-9ef5-6a2413ff990e\",\"flowId\":\"beb9f179c6786a0e75ef0e77f2cbe7e7\",\"flowVersionId\":6,\"transitionId\":42,\"signalId\":0}]},\"signals\":[{\"name\":\"PingOne\",\"companyId\":\"39ae544d-db07-4576-9ef5-6a2413ff990e\",\"flowId\":\"beb9f179c6786a0e75ef0e77f2cbe7e7\",\"flowVersionId\":6,\"id\":\"fpfhyrcykl\",\"connectionId\":\"94141bf2f1b9b59a5f5365ff135e02bb\",\"connectorId\":\"pingOneSSOConnector\",\"capabilityName\":\"sendRecoveryCode\",\"properties\":{\"matchAttribute\":{\"value\":\"email\"},\"identifier\":{\"value\":\"{{local.wcoqvba1g7.payload.output.email}}\"},\"nodeTitle\":{\"value\":\"Send Recovery Code\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"transitionId\":21,\"signalId\":0}],\"evalNodeId\":\"yaqb3mdxby\",\"transitionId\":21},{\"from\":[\"inside_14\"],\"to\":\"inside_15\",\"conditions\":{\"$and\":[{\"id\":\"fpfhyrcykl\",\"connectionId\":\"94141bf2f1b9b59a5f5365ff135e02bb\",\"connectorId\":\"pingOneSSOConnector\",\"capabilityName\":\"sendRecoveryCode\",\"success\":true}]},\"signals\":[{\"name\":\"Http\",\"companyId\":\"39ae544d-db07-4576-9ef5-6a2413ff990e\",\"flowId\":\"beb9f179c6786a0e75ef0e77f2cbe7e7\",\"flowVersionId\":6,\"id\":\"24yhwgngyt\",\"connectionId\":\"867ed4363b2bc21c860085ad2baa817d\",\"connectorId\":\"httpConnector\",\"capabilityName\":\"customHTMLTemplate\",\"properties\":{\"customHTML\":{\"value\":\"<section class=\\\"register\\\">\\n    <form id=\\\"frmResetPassword\\\">\\n        <div class=\\\"register-content\\\">\\n            <div class=\\\"logo-wrapper\\\">\\n                <img class=\\\"logo\\\" />\\n            </div>\\n            <h3>Beginner's Luck Online Gaming</h3>\\n            <h1>Set New Password</h1>\\n            <p>Please enter the 8 character password reset code sent to <strong>{{local.wcoqvba1g7.payload.output.email}}</strong> and create a new password</p>\\n            <label>Password Reset Code</label>\\n            <input type=\\\"text\\\" id=\\\"passwordResetCode\\\" />\\n            <label>Password</label>\\n            <input type=\\\"password\\\" id=\\\"password\\\" /><i class=\\\"fa fa-eye togglepwd\\\" id=\\\"togglepwd\\\" aria-hidden=\\\"true\\\"></i>\\n\\n            <div class=\\\"buttonbar\\\">\\n                <button id=\\\"btnRegister\\\" data-skcomponent=\\\"skbutton\\\" data-skbuttontype=\\\"form-submit\\\"\\n                    data-skbuttonvalue=\\\"VALIDATE\\\" data-skform=\\\"frmResetPassword\\\">\\n                    <i class=\\\"fa fa-arrow-circle-right\\\" aria-hidden=\\\"true\\\"></i> Next\\n                </button>\\n            </div>\\n            <div data-skcomponent=\\\"skerror\\\" class=\\\"error-message\\\" data-skvisibility=\\\"\\\" ></div>\\n            <div data-skcomponent=\\\"skerrormessage\\\" class=\\\"error-message\\\" data-skerrorid=\\\"password\\\"></div>\\n        </div>\\n    </form>\\n</section>\"},\"formFieldsList\":{\"value\":[{\"propertyName\":\"passwordResetCode\",\"preferredControlType\":\"textField\",\"preferredDataType\":\"string\",\"value\":\"\",\"hashedVisibility\":false},{\"propertyName\":\"password\",\"preferredControlType\":\"textField\",\"preferredDataType\":\"string\",\"value\":\"\",\"hashedVisibility\":false},{\"preferredControlType\":\"textField\",\"preferredDataType\":\"string\",\"propertyName\":\"buttonValue\"}]},\"validationRules\":{\"value\":[{\"propertyName\":\"passwordResetCode\",\"rules\":[{\"ruleName\":\"presence\"}]},{\"propertyName\":\"password\",\"rules\":[{\"ruleName\":\"format\",\"pattern\":\"^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,24}$\",\"message\":\"Password must contain at least one numeric digit and a special character\"}]}]},\"nodeTitle\":{\"value\":\"Enter Reset Code / New Password\"},\"customScript\":{\"value\":\"document.getElementById(\\\"passwordResetCode\\\").focus()\\n\\n// Toggle password field visibility\\ndocument.getElementById(\\\"togglepwd\\\").addEventListener('click', function (e) {\\n    let pwdField = document.getElementById(\\\"password\\\");\\n\\n    if (pwdField.type === 'password') {\\n        pwdField.type = 'text'\\n        e.currentTarget.classList.remove(\\\"fa-eye\\\");\\n        e.currentTarget.classList.add(\\\"fa-eye-slash\\\");\\n    } else {\\n        pwdField.type = 'password'\\n        e.currentTarget.classList.remove(\\\"fa-eye-slash\\\");\\n        e.currentTarget.classList.add(\\\"fa-eye\\\");\\n    }\\n});\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"respondToUser\":true,\"transitionId\":22,\"signalId\":0,\"largePayload\":[\"customHTML\"]}],\"evalNodeId\":\"ml0rcerv4j\",\"transitionId\":22},{\"from\":[\"inside_15\"],\"to\":\"inside_16\",\"conditions\":{\"$and\":[{\"id\":\"24yhwgngyt\",\"connectionId\":\"867ed4363b2bc21c860085ad2baa817d\",\"connectorId\":\"httpConnector\",\"capabilityName\":\"customHTMLTemplate\",\"success\":true}]},\"signals\":[{\"name\":\"PingOne\",\"companyId\":\"39ae544d-db07-4576-9ef5-6a2413ff990e\",\"flowId\":\"beb9f179c6786a0e75ef0e77f2cbe7e7\",\"flowVersionId\":6,\"id\":\"gc3ijy736k\",\"connectionId\":\"94141bf2f1b9b59a5f5365ff135e02bb\",\"connectorId\":\"pingOneSSOConnector\",\"capabilityName\":\"recoverPassword\",\"properties\":{\"matchAttribute\":{\"value\":\"email\"},\"identifier\":{\"value\":\"{{local.wcoqvba1g7.payload.output.email}}\"},\"recoveryCode\":{\"value\":\"{{local.24yhwgngyt.payload.output.passwordResetCode}}\"},\"newPassword\":{\"value\":\"{{local.24yhwgngyt.payload.output.password}}\"},\"nodeTitle\":{\"value\":\"Validate and Set Password\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"transitionId\":23,\"signalId\":0}],\"evalNodeId\":\"uok77djuyf\",\"transitionId\":23},{\"from\":[\"inside_16\"],\"to\":\"inside_17_1_allTriggersTrue\",\"conditions\":{\"$and\":[{\"id\":\"gc3ijy736k\",\"connectionId\":\"94141bf2f1b9b59a5f5365ff135e02bb\",\"connectorId\":\"pingOneSSOConnector\",\"capabilityName\":\"recoverPassword\",\"success\":true}]},\"signals\":[{\"name\":\"Analytics [2022-12-06]\",\"companyId\":\"39ae544d-db07-4576-9ef5-6a2413ff990e\",\"flowId\":\"beb9f179c6786a0e75ef0e77f2cbe7e7\",\"flowVersionId\":6,\"id\":\"rcee6wfs0i\",\"connectionId\":\"9e8263f598b2d25e7780a76e0dfa5140\",\"connectorId\":\"analyticsConnector\",\"capabilityName\":\"logOutcome\",\"properties\":{\"outcomeType\":{\"value\":\"PASSWORD_RESET\"},\"outcomeStatus\":{\"value\":\"PASSWORD_RESET_SUCCESS\"},\"shouldContinueOnError\":{\"value\":true},\"nodeTitle\":{\"value\":\"Log Password Reset Success\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"transitionId\":24,\"signalId\":0}],\"evalNodeId\":\"c7gs0r7pxb\",\"transitionId\":24},{\"from\":[\"inside_16\"],\"to\":\"inside_18_2_anyTriggersFalse\",\"conditions\":{\"$or\":[{\"id\":\"gc3ijy736k\",\"connectionId\":\"94141bf2f1b9b59a5f5365ff135e02bb\",\"connectorId\":\"pingOneSSOConnector\",\"capabilityName\":\"recoverPassword\",\"success\":false}]},\"signals\":[{\"name\":\"Analytics [2022-12-06]\",\"companyId\":\"39ae544d-db07-4576-9ef5-6a2413ff990e\",\"flowId\":\"beb9f179c6786a0e75ef0e77f2cbe7e7\",\"flowVersionId\":6,\"id\":\"vupdbsre3n\",\"connectionId\":\"9e8263f598b2d25e7780a76e0dfa5140\",\"connectorId\":\"analyticsConnector\",\"capabilityName\":\"logOutcome\",\"properties\":{\"outcomeType\":{\"value\":\"PASSWORD_RESET\"},\"outcomeStatus\":{\"value\":\"PASSWORD_RESET_ERROR\"},\"shouldContinueOnError\":{\"value\":true},\"nodeTitle\":{\"value\":\"Log Password Reset Error\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"errorConnectionInstances\":[\"local.gc3ijy736k.payload.error\"],\"transitionId\":25,\"signalId\":0}],\"evalNodeId\":\"c7gs0r7pxb\",\"transitionId\":25},{\"from\":[\"inside_17_1_allTriggersTrue\"],\"to\":\"inside_19\",\"conditions\":{\"$and\":[{\"id\":\"rcee6wfs0i\",\"connectionId\":\"9e8263f598b2d25e7780a76e0dfa5140\",\"connectorId\":\"analyticsConnector\",\"capabilityName\":\"logOutcome\",\"success\":true}]},\"signals\":[{\"name\":\"Http\",\"companyId\":\"39ae544d-db07-4576-9ef5-6a2413ff990e\",\"flowId\":\"beb9f179c6786a0e75ef0e77f2cbe7e7\",\"flowVersionId\":6,\"id\":\"r335yayoi9\",\"connectionId\":\"867ed4363b2bc21c860085ad2baa817d\",\"connectorId\":\"httpConnector\",\"capabilityName\":\"customHTMLTemplate\",\"properties\":{\"customHTML\":{\"value\":\"<section class=\\\"register\\\">\\n    <form id=\\\"frmResetSuccess\\\">\\n        <div class=\\\"register-content\\\">\\n            <div class=\\\"logo-wrapper\\\">\\n                <img class=\\\"logo\\\" />\\n            </div>\\n            <h3>Beginner's Luck Online Gaming</h3>\\n            <h1>Password Reset Successful</h1>\\n            <p>Click the button below to complete sign in</p>\\n            <div class=\\\"buttonbar\\\">\\n                <button id=\\\"btnSignIn\\\" data-skcomponent=\\\"skbutton\\\" data-skbuttontype=\\\"form-submit\\\"\\n                    data-skbuttonvalue=\\\"register\\\" data-skform=\\\"frmResetSuccess\\\">\\n                    <i class=\\\"fa fa-arrow-circle-right\\\" aria-hidden=\\\"true\\\"></i> Sign In\\n                </button>\\n            </div>\\n            <div data-skcomponent=\\\"skerror\\\" class=\\\"error-message\\\" data-skvisibility=\\\"\\\" ></div>\\n        </div>\\n    </form>\\n</section>\"},\"nodeTitle\":{\"value\":\"Reset Success\"},\"formFieldsList\":{\"value\":[{\"preferredControlType\":\"textField\",\"preferredDataType\":\"string\",\"propertyName\":\"buttonValue\"}]}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"respondToUser\":true,\"transitionId\":26,\"signalId\":0,\"largePayload\":[\"customHTML\"]}],\"evalNodeId\":\"caw0gixltl\",\"transitionId\":26},{\"from\":[\"inside_18_2_anyTriggersFalse\"],\"to\":\"end_6\",\"conditions\":{\"$and\":[{\"id\":\"vupdbsre3n\",\"connectionId\":\"9e8263f598b2d25e7780a76e0dfa5140\",\"connectorId\":\"analyticsConnector\",\"capabilityName\":\"logOutcome\",\"success\":true}]},\"signals\":[{\"name\":\"Error Customize\",\"companyId\":\"39ae544d-db07-4576-9ef5-6a2413ff990e\",\"flowId\":\"beb9f179c6786a0e75ef0e77f2cbe7e7\",\"flowVersionId\":6,\"id\":\"3mp85v4tsa\",\"connectionId\":\"6d8f6f706c45fd459a86b3f092602544\",\"connectorId\":\"errorConnector\",\"capabilityName\":\"customErrorMessage\",\"properties\":{\"errorMessage\":{\"value\":\"{{local.gc3ijy736k.payload.error.message}}\"},\"nodeTitle\":{\"value\":\"Password Reset Error\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"respondToUser\":true,\"transitionId\":27,\"signalId\":0}],\"evalNodeId\":\"nx8f35bh6v\",\"transitionId\":27},{\"from\":[\"inside_19\"],\"to\":[\"end_7\"],\"conditions\":{\"$and\":[{\"id\":\"r335yayoi9\",\"connectionId\":\"867ed4363b2bc21c860085ad2baa817d\",\"connectorId\":\"httpConnector\",\"capabilityName\":\"customHTMLTemplate\",\"success\":true}]},\"signals\":[{\"name\":\"Node [2022-12-06]\",\"companyId\":\"39ae544d-db07-4576-9ef5-6a2413ff990e\",\"flowId\":\"beb9f179c6786a0e75ef0e77f2cbe7e7\",\"flowVersionId\":6,\"id\":\"vyxhvpr7kc\",\"connectionId\":\"36f92d1faf2818b5fb7345e8b8d4d43f\",\"connectorId\":\"nodeConnector\",\"capabilityName\":\"goToNode\",\"properties\":{\"nodeInstanceId\":{\"value\":\"qlst5lqoxg\"},\"email\":{\"value\":\"{{local.wcoqvba1g7.payload.output.email}}\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"to\":\"oe\",\"inputs\":[],\"transitionId\":28,\"signalId\":0}],\"evalNodeId\":\"rdc9r4iyd5\",\"transitionId\":28},{\"from\":[\"start_3\"],\"to\":\"inside_20\",\"conditions\":{\"$and\":[{\"id\":\"r5krr9rgo0\",\"connectionId\":\"36f92d1faf2818b5fb7345e8b8d4d43f\",\"connectorId\":\"nodeConnector\",\"capabilityName\":\"startNode\",\"to\":\"oe\",\"companyId\":\"39ae544d-db07-4576-9ef5-6a2413ff990e\",\"flowId\":\"beb9f179c6786a0e75ef0e77f2cbe7e7\",\"flowVersionId\":6,\"transitionId\":40,\"signalId\":0}]},\"signals\":[{\"name\":\"Flow [2022-12-06]\",\"companyId\":\"39ae544d-db07-4576-9ef5-6a2413ff990e\",\"flowId\":\"beb9f179c6786a0e75ef0e77f2cbe7e7\",\"flowVersionId\":6,\"id\":\"9bg1r148fo\",\"connectionId\":\"303fd8c46a2b1aa07349a7dbf25ae84b\",\"connectorId\":\"flowConnector\",\"capabilityName\":\"oobStart\",\"properties\":{\"nodeTitle\":{\"value\":\" Out-of-Band Start\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"transitionId\":29,\"signalId\":0}],\"evalNodeId\":\"h74x039850\",\"transitionId\":29},{\"from\":[\"start_3\"],\"to\":\"inside_21\",\"conditions\":{\"$and\":[{\"id\":\"r5krr9rgo0\",\"connectionId\":\"36f92d1faf2818b5fb7345e8b8d4d43f\",\"connectorId\":\"nodeConnector\",\"capabilityName\":\"startNode\",\"to\":\"oe\",\"companyId\":\"39ae544d-db07-4576-9ef5-6a2413ff990e\",\"flowId\":\"beb9f179c6786a0e75ef0e77f2cbe7e7\",\"flowVersionId\":6,\"transitionId\":40,\"signalId\":0}]},\"signals\":[{\"name\":\"Flow [2022-12-06]\",\"companyId\":\"39ae544d-db07-4576-9ef5-6a2413ff990e\",\"flowId\":\"beb9f179c6786a0e75ef0e77f2cbe7e7\",\"flowVersionId\":6,\"id\":\"6mamd05dwt\",\"connectionId\":\"303fd8c46a2b1aa07349a7dbf25ae84b\",\"connectorId\":\"flowConnector\",\"capabilityName\":\"oobContinue\",\"properties\":{\"nodeTitle\":{\"value\":\"Out-of-Band Continue\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"oeNoOp\":true,\"delayedConditionalStateChange\":true,\"inputs\":[],\"respondToUser\":true,\"transitionId\":30,\"signalId\":0}],\"evalNodeId\":\"h74x039850\",\"transitionId\":30},{\"from\":[\"inside_20\"],\"to\":\"inside_22\",\"conditions\":{\"$and\":[{\"id\":\"9bg1r148fo\",\"connectionId\":\"303fd8c46a2b1aa07349a7dbf25ae84b\",\"connectorId\":\"flowConnector\",\"capabilityName\":\"oobStart\",\"success\":true}]},\"signals\":[{\"name\":\"PingOne Notifications\",\"companyId\":\"39ae544d-db07-4576-9ef5-6a2413ff990e\",\"flowId\":\"beb9f179c6786a0e75ef0e77f2cbe7e7\",\"flowVersionId\":6,\"id\":\"2a5y6spudn\",\"connectionId\":\"8feedc8be98f17cecaf9544acce6205f\",\"connectorId\":\"notificationsConnector\",\"capabilityName\":\"sendEmail\",\"properties\":{\"userId\":{\"value\":\"{{local.r5krr9rgo0.payload.output.userid}}\"},\"email\":{\"value\":\"{{local.r5krr9rgo0.payload.output.email}}\"},\"templateVariant\":{\"value\":\"MagicLinkAuthentication\"},\"templateVariables\":{\"value\":[{\"name\":\"continueLink\",\"preferredDataType\":\"string\",\"value\":\"{{local.9bg1r148fo.payload.output.continueLink}}\"}]}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"transitionId\":31,\"signalId\":0}],\"evalNodeId\":\"hgqttnpstj\",\"transitionId\":31},{\"from\":[\"inside_21\"],\"to\":\"inside_23\",\"conditions\":{\"$and\":[{\"id\":\"6mamd05dwt\",\"connectionId\":\"303fd8c46a2b1aa07349a7dbf25ae84b\",\"connectorId\":\"flowConnector\",\"capabilityName\":\"oobContinue\",\"success\":true}]},\"signals\":[{\"name\":\"Challenge [2022-12-06]\",\"companyId\":\"39ae544d-db07-4576-9ef5-6a2413ff990e\",\"flowId\":\"beb9f179c6786a0e75ef0e77f2cbe7e7\",\"flowVersionId\":6,\"id\":\"5bxqq6j1j0\",\"connectionId\":\"b985c8cc816b55240fe7038a7e41a4b7\",\"connectorId\":\"challengeConnector\",\"capabilityName\":\"updateChallenge\",\"properties\":{\"challenge\":{\"value\":\"{{local.9bg1r148fo.payload.output.challenge}}\"},\"challengeStatus\":{\"value\":\"approved\"},\"nodeTitle\":{\"value\":\"Approve Challenge\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"transitionId\":32,\"signalId\":0}],\"evalNodeId\":\"8r967btmu0\",\"transitionId\":32},{\"from\":[\"inside_22\"],\"to\":\"inside_24\",\"conditions\":{\"$and\":[{\"id\":\"2a5y6spudn\",\"connectionId\":\"8feedc8be98f17cecaf9544acce6205f\",\"connectorId\":\"notificationsConnector\",\"capabilityName\":\"sendEmail\",\"success\":true}]},\"signals\":[{\"name\":\"Http\",\"companyId\":\"39ae544d-db07-4576-9ef5-6a2413ff990e\",\"flowId\":\"beb9f179c6786a0e75ef0e77f2cbe7e7\",\"flowVersionId\":6,\"id\":\"rqw9pqlavf\",\"connectionId\":\"867ed4363b2bc21c860085ad2baa817d\",\"connectorId\":\"httpConnector\",\"capabilityName\":\"customHTMLTemplate\",\"properties\":{\"customHTML\":{\"value\":\"<section class=\\\"register\\\">\\n        <div class=\\\"register-content\\\">\\n            <div class=\\\"logo-wrapper\\\">\\n                <img class=\\\"logo\\\" />\\n            </div>\\n            <h3>Beginner's Luck Online Gaming</h3>\\n            <h1>Magic Link</h1>\\n            <div style=\\\"text-align:center\\\">\\n                <p> Click the magic link sent to <strong>{{local.r5krr9rgo0.payload.output.email}}</strong></p>\\n                [[[skcomponent###c2tjb21wb25lbnQgInNrcG9sbGluZyIgIGNsYXNzPSIiIHBvbGxJbnRlcnZhbD0iMjAwMCIgcG9sbFJldHJpZXM9IjYwIiBwb2xsQ2hhbGxlbmdlU3RhdHVzPSJ0cnVlIg==###eyJuYW1lIjoic2twb2xsaW5nIiwib3B0aW9ucyI6eyJjbGFzcyI6IiIsInBvbGxJbnRlcnZhbCI6MjAwMCwicG9sbFJldHJpZXMiOjYwLCJwb2xsQ2hhbGxlbmdlU3RhdHVzIjoidHJ1ZSJ9LCJjb21wb25lbnRQcm9wcyI6eyJjbGFzcyI6eyJuYW1lIjoiY2xhc3MiLCJkaXNwbGF5TmFtZSI6IkNTUyBDbGFzcyJ9LCJwb2xsSW50ZXJ2YWwiOnsibmFtZSI6InBvbGxJbnRlcnZhbCIsImRpc3BsYXlOYW1lIjoiUG9sbCBJbnRlcnZhbCIsInZhbHVlIjoyMDAwfSwicG9sbFJldHJpZXMiOnsibmFtZSI6InBvbGxSZXRyaWVzIiwiZGlzcGxheU5hbWUiOiJQb2xsIFJldHJpZXMiLCJ2YWx1ZSI6NjB9LCJwb2xsQ2hhbGxlbmdlU3RhdHVzIjp7Im5hbWUiOiJwb2xsQ2hhbGxlbmdlU3RhdHVzIiwiZGlzcGxheU5hbWUiOiJQb2xsIENoYWxsZW5nZSBTdGF0dXMiLCJ0eXBlIjoic2VsZWN0IiwidmFsdWUiOiJ0cnVlIiwib3B0aW9ucyI6W3sibmFtZSI6IlRydWUiLCJ2YWx1ZSI6InRydWUifSx7Im5hbWUiOiJGYWxzZSIsInZhbHVlIjoiZmFsc2UifV19fX0=]]]\\n            </div>\\n            <div data-skcomponent=\\\"skerror\\\" class=\\\"error-message\\\" data-skvisibility=\\\"\\\" ></div>\\n        </div>\\n</section>\"},\"nodeTitle\":{\"value\":\"Magic Link Prompt\"},\"challenge\":{\"value\":\"{{local.9bg1r148fo.payload.output.challenge}}\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"respondToUser\":true,\"transitionId\":33,\"signalId\":0,\"largePayload\":[\"customHTML\"]}],\"evalNodeId\":\"w1l1fl8qlu\",\"transitionId\":33},{\"from\":[\"inside_23\"],\"to\":\"end_8\",\"conditions\":{\"$and\":[{\"id\":\"5bxqq6j1j0\",\"connectionId\":\"b985c8cc816b55240fe7038a7e41a4b7\",\"connectorId\":\"challengeConnector\",\"capabilityName\":\"updateChallenge\",\"success\":true}]},\"signals\":[{\"name\":\"Http\",\"companyId\":\"39ae544d-db07-4576-9ef5-6a2413ff990e\",\"flowId\":\"beb9f179c6786a0e75ef0e77f2cbe7e7\",\"flowVersionId\":6,\"id\":\"zmvc6k019c\",\"connectionId\":\"867ed4363b2bc21c860085ad2baa817d\",\"connectorId\":\"httpConnector\",\"capabilityName\":\"customHTMLTemplate\",\"properties\":{\"customHTML\":{\"value\":\"<div class=\\\"success\\\">\\n<h1>Sign In Complete!</h1>\\n<p class=\\\"message\\\">This window will close momentarily.</p>\\n</div>\"},\"customCSS\":{\"value\":\".success {\\n    text-align: center;\\n    height: 200px;\\n    width: 360px;\\n    border-style: solid;\\n    border-width: 1px;\\n    border-color: #000000;\\n    margin: 0 auto;\\n    padding-top: 50px;\\n    margin-top: 40px;\\n}\\n.message{\\n    padding-top:20px;\\n}\"},\"customScript\":{\"value\":\"// Close the window after 3 seconds\\nsetTimeout(function(){\\n    window.close()\\n}, 3000)\"},\"nodeTitle\":{\"value\":\"Magic Link Complete\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"respondToUser\":true,\"transitionId\":34,\"signalId\":0,\"largePayload\":[\"customHTML\",\"customCSS\"]}],\"evalNodeId\":\"4t76yjzoqr\",\"transitionId\":34},{\"from\":[\"inside_24\"],\"to\":\"inside_25\",\"conditions\":{\"$and\":[{\"id\":\"rqw9pqlavf\",\"connectionId\":\"867ed4363b2bc21c860085ad2baa817d\",\"connectorId\":\"httpConnector\",\"capabilityName\":\"customHTMLTemplate\",\"success\":true}]},\"signals\":[{\"name\":\"Challenge [2022-12-06]\",\"companyId\":\"39ae544d-db07-4576-9ef5-6a2413ff990e\",\"flowId\":\"beb9f179c6786a0e75ef0e77f2cbe7e7\",\"flowVersionId\":6,\"id\":\"n4x0ncm1x1\",\"connectionId\":\"b985c8cc816b55240fe7038a7e41a4b7\",\"connectorId\":\"challengeConnector\",\"capabilityName\":\"getChallenge\",\"properties\":{\"challenge\":{\"value\":\"{{local.9bg1r148fo.payload.output.challenge}}\"},\"nodeTitle\":{\"value\":\"Get Challenge Status\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"transitionId\":35,\"signalId\":0}],\"evalNodeId\":\"1zmh8v56w3\",\"transitionId\":35},{\"from\":[\"inside_25\"],\"to\":\"inside_26\",\"conditions\":{\"$and\":[{\"id\":\"n4x0ncm1x1\",\"connectionId\":\"b985c8cc816b55240fe7038a7e41a4b7\",\"connectorId\":\"challengeConnector\",\"capabilityName\":\"getChallenge\",\"success\":true}]},\"signals\":[{\"name\":\"Functions\",\"companyId\":\"39ae544d-db07-4576-9ef5-6a2413ff990e\",\"flowId\":\"beb9f179c6786a0e75ef0e77f2cbe7e7\",\"flowVersionId\":6,\"id\":\"yjykcubup5\",\"connectionId\":\"de650ca45593b82c49064ead10b9fe17\",\"connectorId\":\"functionsConnector\",\"capabilityName\":\"AEqualsB\",\"properties\":{\"leftValueA\":{\"value\":\"{{local.n4x0ncm1x1.payload.output.challengeStatus}}\"},\"rightValueB\":{\"value\":\"approved\"},\"nodeTitle\":{\"value\":\"Is Challenge Approved?\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"to\":\"oe\",\"transitionId\":36,\"signalId\":0}],\"evalNodeId\":\"v50ljdm4ru\",\"transitionId\":36},{\"from\":[\"inside_26\"],\"to\":\"inside_27_1_allTriggersTrue\",\"conditions\":{\"$and\":[{\"id\":\"yjykcubup5\",\"connectionId\":\"de650ca45593b82c49064ead10b9fe17\",\"connectorId\":\"functionsConnector\",\"capabilityName\":\"AEqualsB\",\"logic\":{\"type\":\"where\",\"expr\":\"'{{local.n4x0ncm1x1.payload.output.challengeStatus}}' == 'approved'\"}}]},\"signals\":[{\"name\":\"Analytics [2022-12-06]\",\"companyId\":\"39ae544d-db07-4576-9ef5-6a2413ff990e\",\"flowId\":\"beb9f179c6786a0e75ef0e77f2cbe7e7\",\"flowVersionId\":6,\"id\":\"33qanxdlri\",\"connectionId\":\"9e8263f598b2d25e7780a76e0dfa5140\",\"connectorId\":\"analyticsConnector\",\"capabilityName\":\"logOutcome\",\"properties\":{\"outcomeType\":{\"value\":\"MAGIC_LINK_LOGIN\"},\"outcomeStatus\":{\"value\":\"MAGIC_LINK_SUCCESS\"},\"shouldContinueOnError\":{\"value\":true},\"nodeTitle\":{\"value\":\"Magic Link Success\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"transitionId\":37,\"signalId\":0}],\"evalNodeId\":\"uetmmz3wz9\",\"transitionId\":37},{\"from\":[\"inside_26\"],\"to\":\"end_9_2_anyTriggersFalse\",\"conditions\":{\"$or\":[{\"id\":\"yjykcubup5\",\"connectionId\":\"de650ca45593b82c49064ead10b9fe17\",\"connectorId\":\"functionsConnector\",\"capabilityName\":\"AEqualsB\",\"logic\":{\"type\":\"whereNot\",\"expr\":\"'{{local.n4x0ncm1x1.payload.output.challengeStatus}}' == 'approved'\"}}]},\"signals\":[{\"name\":\"Http\",\"companyId\":\"39ae544d-db07-4576-9ef5-6a2413ff990e\",\"flowId\":\"beb9f179c6786a0e75ef0e77f2cbe7e7\",\"flowVersionId\":6,\"id\":\"vd9odf5b0w\",\"connectionId\":\"867ed4363b2bc21c860085ad2baa817d\",\"connectorId\":\"httpConnector\",\"capabilityName\":\"customHTMLTemplate\",\"properties\":{\"customHTML\":{\"value\":\"<section class=\\\"register\\\">\\n    <div class=\\\"register-content\\\">\\n        <div class=\\\"logo-wrapper\\\">\\n            <img class=\\\"logo\\\" />\\n        </div>\\n        <h3>Beginner's Luck Online Gaming</h3>\\n        <h1>Magic Link Expiry</h1>\\n        <p style=\\\"text-align:center\\\">The magic link his expired.</p>\\n        <div data-skcomponent=\\\"skerror\\\" class=\\\"error-message\\\" data-skvisibility=\\\"\\\"></div>\\n    </div>\\n</section>\"},\"nodeTitle\":{\"value\":\"Magic Link Expired\"},\"backgroundColor\":{\"value\":\"#ffc8c1ff\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"respondToUser\":true,\"errorConnectionInstances\":[\"local.yjykcubup5.payload.error\"],\"transitionId\":38,\"signalId\":0,\"largePayload\":[\"customHTML\"]}],\"evalNodeId\":\"uetmmz3wz9\",\"transitionId\":38},{\"from\":[\"inside_27_1_allTriggersTrue\"],\"to\":\"end_10\",\"conditions\":{\"$and\":[{\"id\":\"33qanxdlri\",\"connectionId\":\"9e8263f598b2d25e7780a76e0dfa5140\",\"connectorId\":\"analyticsConnector\",\"capabilityName\":\"logOutcome\",\"success\":true}]},\"signals\":[{\"name\":\"Node [2022-12-06]\",\"companyId\":\"39ae544d-db07-4576-9ef5-6a2413ff990e\",\"flowId\":\"beb9f179c6786a0e75ef0e77f2cbe7e7\",\"flowVersionId\":6,\"id\":\"k284u1rxut\",\"connectionId\":\"36f92d1faf2818b5fb7345e8b8d4d43f\",\"connectorId\":\"nodeConnector\",\"capabilityName\":\"returnBackToCallingNode\",\"properties\":{\"outputSchema\":{\"value\":{\"type\":\"object\",\"properties\":{\"success\":{\"type\":\"boolean\",\"displayName\":\"success\",\"preferredControlType\":\"textField\",\"enableParameters\":true,\"propertyName\":\"success\"}}}}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"to\":\"oe\",\"inputs\":[],\"startNodeId\":\"r5krr9rgo0\",\"transitionId\":39,\"signalId\":0}],\"evalNodeId\":\"ndnnqqmz31\",\"transitionId\":39},{\"from\":[\"inside_7\"],\"to\":[\"start_3\"],\"conditions\":{\"$and\":[{\"id\":\"g7o1an1wvu\",\"connectionId\":\"36f92d1faf2818b5fb7345e8b8d4d43f\",\"connectorId\":\"nodeConnector\",\"capabilityName\":\"goToNode\"}]},\"signals\":[{\"id\":\"r5krr9rgo0\",\"connectionId\":\"36f92d1faf2818b5fb7345e8b8d4d43f\",\"connectorId\":\"nodeConnector\",\"capabilityName\":\"startNode\",\"to\":\"oe\",\"companyId\":\"39ae544d-db07-4576-9ef5-6a2413ff990e\",\"flowId\":\"beb9f179c6786a0e75ef0e77f2cbe7e7\",\"flowVersionId\":6,\"transitionId\":40,\"signalId\":0}],\"evalNodeId\":\"tef7roa7lq\",\"transitionId\":40},{\"from\":\"end_10\",\"to\":\"inside_8\",\"conditions\":{\"$and\":[{\"id\":\"k284u1rxut\",\"connectionId\":\"36f92d1faf2818b5fb7345e8b8d4d43f\",\"connectorId\":\"nodeConnector\",\"capabilityName\":\"returnBackToCallingNode\"}]},\"signals\":[{\"name\":\"Analytics [2022-12-06]\",\"companyId\":\"39ae544d-db07-4576-9ef5-6a2413ff990e\",\"flowId\":\"beb9f179c6786a0e75ef0e77f2cbe7e7\",\"flowVersionId\":6,\"id\":\"s9egwsr57x\",\"connectionId\":\"9e8263f598b2d25e7780a76e0dfa5140\",\"connectorId\":\"analyticsConnector\",\"capabilityName\":\"logOutcome\",\"properties\":{\"outcomeType\":{\"value\":\"LOGIN_COMPLETION\"},\"outcomeStatus\":{\"value\":\"LOGIN_COMPLETION_SUCCESS\"},\"shouldContinueOnError\":{\"value\":true},\"nodeTitle\":{\"value\":\"Login Completions\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"transitionId\":41,\"signalId\":0}],\"evalNodeId\":\"tef7roa7lq\",\"teleportFromState\":[\"inside_7\"],\"callingNodeId\":\"g7o1an1wvu\",\"transitionId\":41},{\"from\":[\"end_3\"],\"to\":[\"start_2\"],\"conditions\":{\"$and\":[{\"id\":\"k0pbf9qed\",\"connectionId\":\"36f92d1faf2818b5fb7345e8b8d4d43f\",\"connectorId\":\"nodeConnector\",\"capabilityName\":\"goToNode\"}]},\"signals\":[{\"id\":\"wcoqvba1g7\",\"connectionId\":\"36f92d1faf2818b5fb7345e8b8d4d43f\",\"connectorId\":\"nodeConnector\",\"capabilityName\":\"startNode\",\"to\":\"oe\",\"companyId\":\"39ae544d-db07-4576-9ef5-6a2413ff990e\",\"flowId\":\"beb9f179c6786a0e75ef0e77f2cbe7e7\",\"flowVersionId\":6,\"transitionId\":42,\"signalId\":0}],\"transitionId\":42},{\"from\":[\"inside_6\"],\"to\":[\"start_1\"],\"conditions\":{\"$and\":[{\"id\":\"rrve3sgrw6\",\"connectionId\":\"36f92d1faf2818b5fb7345e8b8d4d43f\",\"connectorId\":\"nodeConnector\",\"capabilityName\":\"goToNode\"}]},\"signals\":[{\"id\":\"qlst5lqoxg\",\"connectionId\":\"36f92d1faf2818b5fb7345e8b8d4d43f\",\"connectorId\":\"nodeConnector\",\"capabilityName\":\"startNode\",\"to\":\"oe\",\"companyId\":\"39ae544d-db07-4576-9ef5-6a2413ff990e\",\"flowId\":\"beb9f179c6786a0e75ef0e77f2cbe7e7\",\"flowVersionId\":6,\"transitionId\":45,\"signalId\":0}],\"evalNodeId\":\"qckhrla0iv\",\"transitionId\":43},{\"from\":\"end_4\",\"to\":\"inside_8\",\"conditions\":{\"$and\":[{\"id\":\"ipf475575r\",\"connectionId\":\"36f92d1faf2818b5fb7345e8b8d4d43f\",\"connectorId\":\"nodeConnector\",\"capabilityName\":\"returnBackToCallingNode\"}]},\"signals\":[{\"name\":\"Analytics [2022-12-06]\",\"companyId\":\"39ae544d-db07-4576-9ef5-6a2413ff990e\",\"flowId\":\"beb9f179c6786a0e75ef0e77f2cbe7e7\",\"flowVersionId\":6,\"id\":\"s9egwsr57x\",\"connectionId\":\"9e8263f598b2d25e7780a76e0dfa5140\",\"connectorId\":\"analyticsConnector\",\"capabilityName\":\"logOutcome\",\"properties\":{\"outcomeType\":{\"value\":\"LOGIN_COMPLETION\"},\"outcomeStatus\":{\"value\":\"LOGIN_COMPLETION_SUCCESS\"},\"shouldContinueOnError\":{\"value\":true},\"nodeTitle\":{\"value\":\"Login Completions\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"transitionId\":44,\"signalId\":0}],\"evalNodeId\":\"qckhrla0iv\",\"teleportFromState\":[\"inside_6\"],\"callingNodeId\":\"rrve3sgrw6\",\"transitionId\":44},{\"from\":[\"end_7\"],\"to\":[\"start_1\"],\"conditions\":{\"$and\":[{\"id\":\"vyxhvpr7kc\",\"connectionId\":\"36f92d1faf2818b5fb7345e8b8d4d43f\",\"connectorId\":\"nodeConnector\",\"capabilityName\":\"goToNode\"}]},\"signals\":[{\"id\":\"qlst5lqoxg\",\"connectionId\":\"36f92d1faf2818b5fb7345e8b8d4d43f\",\"connectorId\":\"nodeConnector\",\"capabilityName\":\"startNode\",\"to\":\"oe\",\"companyId\":\"39ae544d-db07-4576-9ef5-6a2413ff990e\",\"flowId\":\"beb9f179c6786a0e75ef0e77f2cbe7e7\",\"flowVersionId\":6,\"transitionId\":45,\"signalId\":0}],\"transitionId\":45}],\"history\":[],\"outputs\":{\"httpConnector_customHTMLTemplate\":{\"localOutputs\":[\"output\"]},\"analyticsConnector_logOutcome\":{\"localOutputs\":[]},\"pingOneSSOConnector_userLookup\":{\"localOutputs\":[\"output\"]},\"flowConnector_startUiSubFlow\":{\"localOutputs\":[\"output\"]},\"pingOneSSOConnector_checkPassword\":{\"localOutputs\":[\"output\"]},\"pingOneSSOConnector_sendRecoveryCode\":{\"localOutputs\":[\"output\"]},\"pingOneSSOConnector_recoverPassword\":{\"localOutputs\":[\"output\"]},\"flowConnector_oobStart\":{\"localOutputs\":[\"output\"]},\"flowConnector_oobContinue\":{\"localOutputs\":[\"output\"]},\"notificationsConnector_sendEmail\":{\"localOutputs\":[\"output\"]},\"challengeConnector_updateChallenge\":{\"localOutputs\":[\"output\"]},\"challengeConnector_getChallenge\":{\"localOutputs\":[\"output\"]}},\"outputParameters\":[\"local.1gptrqcdje.payload.output.email\",\"local.lx7ukcf574.payload.output.matchedUser.name.given\",\"local.1gptrqcdje.payload.output.buttonValue\",\"local.lx7ukcf574.payload.output.matchedUser.email\",\"local.qlst5lqoxg.payload.output.email\",\"local.8v1alxo1ex.payload.output.password\",\"local.lx7ukcf574.payload.output.matchedUser.enabled\",\"local.lx7ukcf574.payload.output.matchedUser.lifecycle.status\",\"local.8v1alxo1ex.payload.output.buttonValue\",\"local.wcoqvba1g7.payload.output.email\",\"local.24yhwgngyt.payload.output.passwordResetCode\",\"local.24yhwgngyt.payload.output.password\",\"local.gc3ijy736k.payload.error.message\",\"local.r5krr9rgo0.payload.output.email\",\"component.skpolling\",\"local.9bg1r148fo.payload.output.challenge\",\"local.lx7ukcf574.payload.output.matchedUser.id\",\"local.r5krr9rgo0.payload.output.userid\",\"local.9bg1r148fo.payload.output.continueLink\",\"local.n4x0ncm1x1.payload.output.challengeStatus\"],\"global\":{},\"local\":{},\"idMapping\":{},\"nodeMappingForTids\":{\"1gptrqcdje\":\"initialize\",\"1gptrqcdje_customHTMLTemplate\":\"initialize\",\"fd8b3aviy9\":\"1gptrqcdje\",\"fd8b3aviy9_customErrorMessage\":\"1gptrqcdje_customHTMLTemplate\",\"d7a4lhsc27\":\"1gptrqcdje\",\"d7a4lhsc27_customErrorMessage\":\"1gptrqcdje_customHTMLTemplate\",\"2ynj4jjbml\":\"1gptrqcdje\",\"2ynj4jjbml_startUiSubFlow\":\"1gptrqcdje_customHTMLTemplate\",\"93iq8d0t5l\":\"8v1alxo1ex\",\"93iq8d0t5l_customHTMLTemplate\":\"2ynj4jjbml_startUiSubFlow\",\"8v1alxo1ex\":\"r335yayoi9\",\"8v1alxo1ex_customHTMLTemplate\":\"initialize\",\"l4s47gvu3f\":\"8v1alxo1ex\",\"l4s47gvu3f_customErrorMessage\":\"8v1alxo1ex_customHTMLTemplate\",\"24yhwgngyt\":\"8v1alxo1ex\",\"24yhwgngyt_customHTMLTemplate\":\"initialize\",\"r335yayoi9\":\"24yhwgngyt\",\"r335yayoi9_customHTMLTemplate\":\"24yhwgngyt_customHTMLTemplate\",\"3mp85v4tsa\":\"24yhwgngyt\",\"3mp85v4tsa_customErrorMessage\":\"24yhwgngyt_customHTMLTemplate\",\"6mamd05dwt\":\"2ynj4jjbml\",\"6mamd05dwt_oobContinue\":\"initialize\",\"rqw9pqlavf\":\"2ynj4jjbml\",\"rqw9pqlavf_customHTMLTemplate\":\"initialize\",\"zmvc6k019c\":\"6mamd05dwt\",\"zmvc6k019c_customHTMLTemplate\":\"6mamd05dwt_oobContinue\",\"vd9odf5b0w\":\"rqw9pqlavf\",\"vd9odf5b0w_customHTMLTemplate\":\"rqw9pqlavf_customHTMLTemplate\"},\"tids\":{},\"delayedConditionalStateChangeMappings\":{},\"delayedConditionalStateChangeMappingsReverse\":{},\"delayedConditionalStatesList\":[],\"lbsTransitionIdsToIgnore\":[],\"lbsTransitionIdsMapping\":{},\"outputParametersDefault\":{\"local.1gptrqcdje.payload.output.email\":\"\",\"local.lx7ukcf574.payload.output.matchedUser.name.given\":\"\",\"local.1gptrqcdje.payload.output.buttonValue\":\"\",\"local.lx7ukcf574.payload.output.matchedUser.email\":\"\",\"local.qlst5lqoxg.payload.output.email\":\"\",\"local.8v1alxo1ex.payload.output.password\":\"\",\"local.lx7ukcf574.payload.output.matchedUser.enabled\":\"\",\"local.lx7ukcf574.payload.output.matchedUser.lifecycle.status\":\"\",\"local.8v1alxo1ex.payload.output.buttonValue\":\"\",\"local.wcoqvba1g7.payload.output.email\":\"\",\"local.24yhwgngyt.payload.output.passwordResetCode\":\"\",\"local.24yhwgngyt.payload.output.password\":\"\",\"local.gc3ijy736k.payload.error.message\":\"\",\"local.r5krr9rgo0.payload.output.email\":\"\",\"component.skpolling\":\"\",\"local.9bg1r148fo.payload.output.challenge\":\"\",\"local.lx7ukcf574.payload.output.matchedUser.id\":\"\",\"local.r5krr9rgo0.payload.output.userid\":\"\",\"local.9bg1r148fo.payload.output.continueLink\":\"\",\"local.n4x0ncm1x1.payload.output.challengeStatus\":\"\"},\"outputParametersDefaultBlacklist\":[],\"historyThreshold\":208,\"errorRewindBlackListIds\":[],\"nodeMappingForTidsNew\":{\"1gptrqcdje\":\"initialize\",\"fd8b3aviy9\":[\"1gptrqcdje\"],\"d7a4lhsc27\":[\"1gptrqcdje\"],\"2ynj4jjbml\":[\"1gptrqcdje\"],\"93iq8d0t5l\":[\"1gptrqcdje\",\"24yhwgngyt\",\"2ynj4jjbml\",\"r335yayoi9\",\"rqw9pqlavf\",\"8v1alxo1ex\"],\"8v1alxo1ex\":[\"8v1alxo1ex\",\"1gptrqcdje\",\"24yhwgngyt\",\"2ynj4jjbml\",\"r335yayoi9\"],\"l4s47gvu3f\":[\"1gptrqcdje\",\"24yhwgngyt\",\"2ynj4jjbml\",\"r335yayoi9\",\"8v1alxo1ex\"],\"24yhwgngyt\":[\"1gptrqcdje\",\"24yhwgngyt\",\"2ynj4jjbml\",\"r335yayoi9\",\"8v1alxo1ex\"],\"r335yayoi9\":[\"1gptrqcdje\",\"2ynj4jjbml\",\"r335yayoi9\",\"8v1alxo1ex\",\"24yhwgngyt\"],\"3mp85v4tsa\":[\"1gptrqcdje\",\"2ynj4jjbml\",\"r335yayoi9\",\"8v1alxo1ex\",\"24yhwgngyt\"],\"6mamd05dwt\":[\"1gptrqcdje\",\"2ynj4jjbml\"],\"rqw9pqlavf\":[\"1gptrqcdje\",\"2ynj4jjbml\"],\"zmvc6k019c\":[\"1gptrqcdje\",\"2ynj4jjbml\",\"6mamd05dwt\"],\"vd9odf5b0w\":[\"1gptrqcdje\",\"2ynj4jjbml\",\"rqw9pqlavf\"]},\"nodeStates\":{\"1gptrqcdje\":\"start_0\",\"qlst5lqoxg\":\"start_1\",\"wcoqvba1g7\":\"start_2\",\"r5krr9rgo0\":\"start_3\",\"5d8juu8kbc\":\"inside_0\",\"lx7ukcf574\":\"inside_1\",\"fd8b3aviy9\":\"end_0_1_anyTriggersFalse\",\"4lt6cvevnv\":\"inside_2_2_allTriggersTrue\",\"d7a4lhsc27\":\"end_1_1_anyTriggersFalse\",\"7erwbkrksx\":\"inside_3_2_allTriggersTrue\",\"2ynj4jjbml\":\"inside_4_1_anyTriggersFalse\",\"5eq01z85x3\":\"inside_5_2_allTriggersTrue\",\"rrve3sgrw6\":\"inside_6\",\"g7o1an1wvu\":\"inside_7\",\"s9egwsr57x\":\"inside_8\",\"93iq8d0t5l\":\"end_2\",\"8v1alxo1ex\":\"inside_9\",\"2y3w6ax7i6\":\"inside_10\",\"iz3mrjuw37\":\"inside_11\",\"k0pbf9qed\":\"end_3\",\"5gvsn86mfc\":\"inside_12_1_allTriggersTrue\",\"jwucq83maf\":\"inside_13_2_anyTriggersFalse\",\"ipf475575r\":\"end_4\",\"l4s47gvu3f\":\"end_5\",\"fpfhyrcykl\":\"inside_14\",\"24yhwgngyt\":\"inside_15\",\"gc3ijy736k\":\"inside_16\",\"rcee6wfs0i\":\"inside_17_1_allTriggersTrue\",\"vupdbsre3n\":\"inside_18_2_anyTriggersFalse\",\"r335yayoi9\":\"inside_19\",\"3mp85v4tsa\":\"end_6\",\"vyxhvpr7kc\":\"end_7\",\"9bg1r148fo\":\"inside_20\",\"6mamd05dwt\":\"inside_21\",\"2a5y6spudn\":\"inside_22\",\"5bxqq6j1j0\":\"inside_23\",\"rqw9pqlavf\":\"inside_24\",\"zmvc6k019c\":\"end_8\",\"n4x0ncm1x1\":\"inside_25\",\"yjykcubup5\":\"inside_26\",\"33qanxdlri\":\"inside_27_1_allTriggersTrue\",\"vd9odf5b0w\":\"end_9_2_anyTriggersFalse\",\"k284u1rxut\":\"end_10\"}}",
+  "publishedVersion": 6,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
     "intermediateLoadingScreenCSS": "",
@@ -29,9 +29,9 @@
     "logLevel": 3,
     "useBetaAlgorithm": true
   },
-  "updatedDate": 1670246427533,
-  "flowId": "34cedcffd17e2be6ffb56a7556683b09",
-  "versionId": 69,
+  "updatedDate": 1670327784953,
+  "flowId": "beb9f179c6786a0e75ef0e77f2cbe7e7",
+  "versionId": 6,
   "graphData": {
     "elements": {
       "nodes": [
@@ -80,7 +80,7 @@
             "idUnique": "zl6dizb2kh"
           },
           "position": {
-            "x": 496.31606379713133,
+            "x": 503.31606379713133,
             "y": 720
           },
           "group": "nodes",
@@ -136,7 +136,7 @@
             "status": "configured"
           },
           "position": {
-            "x": 480.31606379713133,
+            "x": 487.31606379713133,
             "y": 214
           },
           "group": "nodes",
@@ -190,7 +190,7 @@
             "idUnique": "7x5e4bgprq"
           },
           "position": {
-            "x": 1615.4196810143435,
+            "x": 1622.4196810143435,
             "y": 294.45232982315554
           },
           "group": "nodes",
@@ -250,7 +250,7 @@
             "idUnique": "kfkcijy3yx"
           },
           "position": {
-            "x": 491.147148962295,
+            "x": 498.147148962295,
             "y": 776.2834149883192
           },
           "group": "nodes",
@@ -304,7 +304,7 @@
             "idUnique": "87k2auydfi"
           },
           "position": {
-            "x": 1963.4087980780728,
+            "x": 1970.4087980780728,
             "y": 481.83108516516364
           },
           "group": "nodes",
@@ -369,7 +369,7 @@
             }
           },
           "position": {
-            "x": 571.4523298231557,
+            "x": 578.4523298231557,
             "y": 401.525904304303
           },
           "group": "nodes",
@@ -407,7 +407,7 @@
             }
           },
           "position": {
-            "x": 1106.820202228893,
+            "x": 1113.820202228893,
             "y": 401.525904304303
           },
           "group": "nodes",
@@ -431,7 +431,7 @@
             }
           },
           "position": {
-            "x": 1240.6621703303274,
+            "x": 1247.6621703303274,
             "y": 401.525904304303
           },
           "group": "nodes",
@@ -467,7 +467,7 @@
             }
           },
           "position": {
-            "x": 3087.6813301301213,
+            "x": 3094.6813301301213,
             "y": 401.525904304303
           },
           "group": "nodes",
@@ -500,7 +500,7 @@
             }
           },
           "position": {
-            "x": 1401.2725320520485,
+            "x": 1408.2725320520485,
             "y": 562.1362660260243
           },
           "group": "nodes",
@@ -545,7 +545,7 @@
             }
           },
           "position": {
-            "x": 2311.397915141802,
+            "x": 2318.397915141802,
             "y": 401.525904304303
           },
           "group": "nodes",
@@ -561,9 +561,9 @@
           "data": {
             "id": "qlst5lqoxg",
             "nodeType": "CONNECTION",
-            "connectionId": "f0c55efe299c81d34c0013fe8736c495",
+            "connectionId": "36f92d1faf2818b5fb7345e8b8d4d43f",
             "connectorId": "nodeConnector",
-            "name": "Node [2022-11-28]",
+            "name": "Node [2022-12-06]",
             "label": "Node [2022-10-20]",
             "status": "configured",
             "capabilityName": "startNode",
@@ -578,7 +578,7 @@
             }
           },
           "position": {
-            "x": 277,
+            "x": 284,
             "y": 883.3569894694666
           },
           "group": "nodes",
@@ -597,7 +597,7 @@
             "label": "Evaluator"
           },
           "position": {
-            "x": 357.3051808608606,
+            "x": 364.3051808608606,
             "y": 883.3569894694666
           },
           "group": "nodes",
@@ -662,7 +662,7 @@
             }
           },
           "position": {
-            "x": 571.4523298231557,
+            "x": 578.4523298231557,
             "y": 883.3569894694666
           },
           "group": "nodes",
@@ -678,9 +678,9 @@
           "data": {
             "id": "ipf475575r",
             "nodeType": "CONNECTION",
-            "connectionId": "f0c55efe299c81d34c0013fe8736c495",
+            "connectionId": "36f92d1faf2818b5fb7345e8b8d4d43f",
             "connectorId": "nodeConnector",
-            "name": "Node [2022-11-28]",
+            "name": "Node [2022-12-06]",
             "label": "Node [2022-10-20]",
             "status": "configured",
             "capabilityName": "returnBackToCallingNode",
@@ -692,7 +692,7 @@
             }
           },
           "position": {
-            "x": 1615.4196810143435,
+            "x": 1622.4196810143435,
             "y": 883.3569894694666
           },
           "group": "nodes",
@@ -711,7 +711,7 @@
             "label": "Evaluator"
           },
           "position": {
-            "x": 2418.47148962295,
+            "x": 2425.47148962295,
             "y": 455.06269154487677
           },
           "group": "nodes",
@@ -727,9 +727,9 @@
           "data": {
             "id": "rrve3sgrw6",
             "nodeType": "CONNECTION",
-            "connectionId": "f0c55efe299c81d34c0013fe8736c495",
+            "connectionId": "36f92d1faf2818b5fb7345e8b8d4d43f",
             "connectorId": "nodeConnector",
-            "name": "Node [2022-11-28]",
+            "name": "Node [2022-12-06]",
             "label": "Node [2022-10-20]",
             "status": "configured",
             "capabilityName": "goToNode",
@@ -744,7 +744,7 @@
             }
           },
           "position": {
-            "x": 2552.313457724384,
+            "x": 2559.313457724384,
             "y": 455.06269154487677
           },
           "group": "nodes",
@@ -763,7 +763,7 @@
             "label": "Evaluator"
           },
           "position": {
-            "x": 678.5259043043031,
+            "x": 685.5259043043031,
             "y": 883.3569894694666
           },
           "group": "nodes",
@@ -802,7 +802,7 @@
             }
           },
           "position": {
-            "x": 1133.58859584918,
+            "x": 1140.58859584918,
             "y": 883.3569894694666
           },
           "group": "nodes",
@@ -831,7 +831,7 @@
             }
           },
           "position": {
-            "x": 1240.6621703303274,
+            "x": 1247.6621703303274,
             "y": 883.3569894694666
           },
           "group": "nodes",
@@ -864,7 +864,7 @@
             }
           },
           "position": {
-            "x": 1642.1880746346303,
+            "x": 1649.1880746346303,
             "y": 1043.9673511911878
           },
           "group": "nodes",
@@ -903,7 +903,7 @@
             }
           },
           "position": {
-            "x": 1401.2725320520485,
+            "x": 1408.2725320520485,
             "y": 401.525904304303
           },
           "group": "nodes",
@@ -926,7 +926,7 @@
             }
           },
           "position": {
-            "x": 1535.1145001534828,
+            "x": 1542.1145001534828,
             "y": 401.525904304303
           },
           "group": "nodes",
@@ -960,7 +960,7 @@
             "idUnique": "a6ae1y8htt"
           },
           "position": {
-            "x": 1722.493255495491,
+            "x": 1729.493255495491,
             "y": 562.1362660260243
           },
           "group": "nodes",
@@ -997,7 +997,7 @@
             "idUnique": "dz9bh2ckb9"
           },
           "position": {
-            "x": 1722.493255495491,
+            "x": 1729.493255495491,
             "y": 401.525904304303
           },
           "group": "nodes",
@@ -1020,7 +1020,7 @@
             }
           },
           "position": {
-            "x": 1829.5668299766385,
+            "x": 1836.5668299766385,
             "y": 401.525904304303
           },
           "group": "nodes",
@@ -1036,9 +1036,9 @@
           "data": {
             "id": "2ynj4jjbml",
             "nodeType": "CONNECTION",
-            "connectionId": "fc4aa8d2a2b83ef4d595d962d6ba8458",
+            "connectionId": "303fd8c46a2b1aa07349a7dbf25ae84b",
             "connectorId": "flowConnector",
-            "name": "Flow [2022-11-28]",
+            "name": "Flow [2022-12-06]",
             "label": "Flow [2022-10-18]",
             "status": "configured",
             "capabilityName": "startUiSubFlow",
@@ -1046,8 +1046,8 @@
             "properties": {
               "subFlowId": {
                 "value": {
-                  "label": "COMPLETE Verify Account [SUBFLOW]",
-                  "value": "2ff65d92f95fc60d17ec5de96ac596f4"
+                  "label": "COMPLETED Verify Account [SUBFLOW]",
+                  "value": "fd79d069ccf4f4cf45e5f97a2ddf3dd6"
                 }
               },
               "subFlowVersionId": {
@@ -1065,7 +1065,7 @@
             }
           },
           "position": {
-            "x": 2043.7139789389335,
+            "x": 2050.7139789389335,
             "y": 562.1362660260243
           },
           "group": "nodes",
@@ -1083,7 +1083,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2150.7875534200807,
+            "x": 2157.7875534200807,
             "y": 562.1362660260243
           },
           "group": "nodes",
@@ -1143,7 +1143,7 @@
             "idUnique": "06be4mt3qz"
           },
           "position": {
-            "x": 1026.5150213680324,
+            "x": 1033.5150213680324,
             "y": 776.2834149883192
           },
           "group": "nodes",
@@ -1197,7 +1197,7 @@
             "idUnique": "uhojinqgck"
           },
           "position": {
-            "x": 1561.8828937737699,
+            "x": 1568.8828937737699,
             "y": 963.6621703303273
           },
           "group": "nodes",
@@ -1251,7 +1251,7 @@
             "idUnique": "xxm57pujuy"
           },
           "position": {
-            "x": 1320.9673511911878,
+            "x": 1327.9673511911878,
             "y": 294.45232982315554
           },
           "group": "nodes",
@@ -1305,7 +1305,7 @@
             "idUnique": "kg4hgwsuda"
           },
           "position": {
-            "x": 999.7466277477454,
+            "x": 1006.7466277477454,
             "y": 294.45232982315554
           },
           "group": "nodes",
@@ -1359,7 +1359,7 @@
             "idUnique": "hna3fdvtsb"
           },
           "position": {
-            "x": 491.147148962295,
+            "x": 498.147148962295,
             "y": 294.45232982315554
           },
           "group": "nodes",
@@ -1413,7 +1413,7 @@
             "idUnique": "rl6jbhyrke"
           },
           "position": {
-            "x": 2231.0927342809414,
+            "x": 2238.0927342809414,
             "y": 294.45232982315554
           },
           "group": "nodes",
@@ -1467,7 +1467,7 @@
             "idUnique": "fltoy8yojw"
           },
           "position": {
-            "x": 1320.9673511911878,
+            "x": 1327.9673511911878,
             "y": 481.83108516516364
           },
           "group": "nodes",
@@ -1521,7 +1521,7 @@
             "idUnique": "g2d4yfru1y"
           },
           "position": {
-            "x": 2980.607755648974,
+            "x": 2987.607755648974,
             "y": 294.45232982315554
           },
           "group": "nodes",
@@ -1575,7 +1575,7 @@
             "idUnique": "v89abnvrkw"
           },
           "position": {
-            "x": 1615.4196810143435,
+            "x": 1622.4196810143435,
             "y": 481.83108516516364
           },
           "group": "nodes",
@@ -1620,7 +1620,7 @@
             }
           },
           "position": {
-            "x": 839.1362660260243,
+            "x": 846.1362660260243,
             "y": 883.3569894694666
           },
           "group": "nodes",
@@ -1638,7 +1638,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 946.2098405071717,
+            "x": 953.2098405071717,
             "y": 883.3569894694666
           },
           "group": "nodes",
@@ -1695,7 +1695,7 @@
             "idUnique": "vny20idfmb"
           },
           "position": {
-            "x": 473.31606379713133,
+            "x": 480.31606379713133,
             "y": 1200
           },
           "group": "nodes",
@@ -1711,9 +1711,9 @@
           "data": {
             "id": "wcoqvba1g7",
             "nodeType": "CONNECTION",
-            "connectionId": "f0c55efe299c81d34c0013fe8736c495",
+            "connectionId": "36f92d1faf2818b5fb7345e8b8d4d43f",
             "connectorId": "nodeConnector",
-            "name": "Node [2022-11-28]",
+            "name": "Node [2022-12-06]",
             "label": "Node [2022-10-20]",
             "status": "configured",
             "capabilityName": "startNode",
@@ -1728,7 +1728,7 @@
             }
           },
           "position": {
-            "x": 270,
+            "x": 277,
             "y": 1380
           },
           "group": "nodes",
@@ -1747,7 +1747,7 @@
             "label": "Evaluator"
           },
           "position": {
-            "x": 390,
+            "x": 397,
             "y": 1380
           },
           "group": "nodes",
@@ -1783,7 +1783,7 @@
             }
           },
           "position": {
-            "x": 570,
+            "x": 577,
             "y": 1380
           },
           "group": "nodes",
@@ -1799,9 +1799,9 @@
           "data": {
             "id": "vyxhvpr7kc",
             "nodeType": "CONNECTION",
-            "connectionId": "f0c55efe299c81d34c0013fe8736c495",
+            "connectionId": "36f92d1faf2818b5fb7345e8b8d4d43f",
             "connectorId": "nodeConnector",
-            "name": "Node [2022-11-28]",
+            "name": "Node [2022-12-06]",
             "label": "Node [2022-10-20]",
             "status": "configured",
             "capabilityName": "goToNode",
@@ -1816,7 +1816,7 @@
             }
           },
           "position": {
-            "x": 1950,
+            "x": 1957,
             "y": 1380
           },
           "group": "nodes",
@@ -1835,7 +1835,7 @@
             "label": "Evaluator"
           },
           "position": {
-            "x": 946.2098405071717,
+            "x": 953.2098405071717,
             "y": 990.4305639506141
           },
           "group": "nodes",
@@ -1851,9 +1851,9 @@
           "data": {
             "id": "k0pbf9qed",
             "nodeType": "CONNECTION",
-            "connectionId": "f0c55efe299c81d34c0013fe8736c495",
+            "connectionId": "36f92d1faf2818b5fb7345e8b8d4d43f",
             "connectorId": "nodeConnector",
-            "name": "Node [2022-11-28]",
+            "name": "Node [2022-12-06]",
             "label": "Node [2022-10-20]",
             "status": "configured",
             "capabilityName": "goToNode",
@@ -1868,7 +1868,7 @@
             }
           },
           "position": {
-            "x": 1133.58859584918,
+            "x": 1140.58859584918,
             "y": 990.4305639506141
           },
           "group": "nodes",
@@ -1887,7 +1887,7 @@
             "label": "Evaluator"
           },
           "position": {
-            "x": 660,
+            "x": 667,
             "y": 1380
           },
           "group": "nodes",
@@ -1968,7 +1968,7 @@
             }
           },
           "position": {
-            "x": 840,
+            "x": 847,
             "y": 1380
           },
           "group": "nodes",
@@ -1987,7 +1987,7 @@
             "label": "Evaluator"
           },
           "position": {
-            "x": 930,
+            "x": 937,
             "y": 1380
           },
           "group": "nodes",
@@ -2029,7 +2029,7 @@
             }
           },
           "position": {
-            "x": 1140,
+            "x": 1147,
             "y": 1380
           },
           "group": "nodes",
@@ -2055,7 +2055,7 @@
             }
           },
           "position": {
-            "x": 1230,
+            "x": 1237,
             "y": 1380
           },
           "group": "nodes",
@@ -2088,7 +2088,7 @@
             }
           },
           "position": {
-            "x": 1710,
+            "x": 1717,
             "y": 1560
           },
           "group": "nodes",
@@ -2130,7 +2130,7 @@
             }
           },
           "position": {
-            "x": 1710,
+            "x": 1717,
             "y": 1380
           },
           "group": "nodes",
@@ -2190,7 +2190,7 @@
             "idUnique": "cgx84xp9a9"
           },
           "position": {
-            "x": 480,
+            "x": 487,
             "y": 1260
           },
           "group": "nodes",
@@ -2250,7 +2250,7 @@
             "idUnique": "us5x6qoh09"
           },
           "position": {
-            "x": 720,
+            "x": 727,
             "y": 1260
           },
           "group": "nodes",
@@ -2310,7 +2310,7 @@
             "idUnique": "zkf3u9d5ph"
           },
           "position": {
-            "x": 1020,
+            "x": 1027,
             "y": 1260
           },
           "group": "nodes",
@@ -2370,7 +2370,7 @@
             "idUnique": "u9ww7w1oxv"
           },
           "position": {
-            "x": 1320,
+            "x": 1327,
             "y": 1260
           },
           "group": "nodes",
@@ -2430,7 +2430,7 @@
             "idUnique": "5f575828qu"
           },
           "position": {
-            "x": 1620,
+            "x": 1627,
             "y": 1470
           },
           "group": "nodes",
@@ -2487,7 +2487,7 @@
             "idUnique": "rzryebear2"
           },
           "position": {
-            "x": 466.31606379713133,
+            "x": 473.31606379713133,
             "y": 1680
           },
           "group": "nodes",
@@ -2503,9 +2503,9 @@
           "data": {
             "id": "r5krr9rgo0",
             "nodeType": "CONNECTION",
-            "connectionId": "f0c55efe299c81d34c0013fe8736c495",
+            "connectionId": "36f92d1faf2818b5fb7345e8b8d4d43f",
             "connectorId": "nodeConnector",
-            "name": "Node [2022-11-28]",
+            "name": "Node [2022-12-06]",
             "label": "Node [2022-10-20]",
             "status": "configured",
             "capabilityName": "startNode",
@@ -2521,7 +2521,7 @@
             "idUnique": "5fv9km97qr"
           },
           "position": {
-            "x": 286.31606379713133,
+            "x": 293.31606379713133,
             "y": 1890
           },
           "group": "nodes",
@@ -2581,7 +2581,7 @@
             "idUnique": "sn3p33bbxs"
           },
           "position": {
-            "x": 466.31606379713133,
+            "x": 473.31606379713133,
             "y": 1770
           },
           "group": "nodes",
@@ -2641,7 +2641,7 @@
             "idUnique": "4mr3d5ms49"
           },
           "position": {
-            "x": 466.31606379713133,
+            "x": 473.31606379713133,
             "y": 2070
           },
           "group": "nodes",
@@ -2660,7 +2660,7 @@
             "label": "Evaluator"
           },
           "position": {
-            "x": 376.31606379713133,
+            "x": 383.31606379713133,
             "y": 1890
           },
           "group": "nodes",
@@ -2676,9 +2676,9 @@
           "data": {
             "id": "9bg1r148fo",
             "nodeType": "CONNECTION",
-            "connectionId": "fc4aa8d2a2b83ef4d595d962d6ba8458",
+            "connectionId": "303fd8c46a2b1aa07349a7dbf25ae84b",
             "connectorId": "flowConnector",
-            "name": "Flow [2022-11-28]",
+            "name": "Flow [2022-12-06]",
             "label": "Flow [2022-10-18]",
             "status": "configured",
             "capabilityName": "oobStart",
@@ -2690,7 +2690,7 @@
             }
           },
           "position": {
-            "x": 556.3160637971314,
+            "x": 563.3160637971314,
             "y": 1890
           },
           "group": "nodes",
@@ -2726,7 +2726,7 @@
             }
           },
           "position": {
-            "x": 1126.3160637971314,
+            "x": 1133.3160637971314,
             "y": 1890
           },
           "group": "nodes",
@@ -2745,7 +2745,7 @@
             "label": "Evaluator"
           },
           "position": {
-            "x": 2418.47148962295,
+            "x": 2425.47148962295,
             "y": 535.3678724057373
           },
           "group": "nodes",
@@ -2761,9 +2761,9 @@
           "data": {
             "id": "g7o1an1wvu",
             "nodeType": "CONNECTION",
-            "connectionId": "f0c55efe299c81d34c0013fe8736c495",
+            "connectionId": "36f92d1faf2818b5fb7345e8b8d4d43f",
             "connectorId": "nodeConnector",
-            "name": "Node [2022-11-28]",
+            "name": "Node [2022-12-06]",
             "label": "Node [2022-10-20]",
             "status": "configured",
             "capabilityName": "goToNode",
@@ -2781,7 +2781,7 @@
             }
           },
           "position": {
-            "x": 2552.313457724384,
+            "x": 2559.313457724384,
             "y": 535.3678724057373
           },
           "group": "nodes",
@@ -2800,7 +2800,7 @@
             "label": "Evaluator"
           },
           "position": {
-            "x": 676.3160637971314,
+            "x": 683.3160637971314,
             "y": 1890
           },
           "group": "nodes",
@@ -2816,7 +2816,7 @@
           "data": {
             "id": "2a5y6spudn",
             "nodeType": "CONNECTION",
-            "connectionId": "15039e55bff47df02ad7a461d91878b1",
+            "connectionId": "8feedc8be98f17cecaf9544acce6205f",
             "connectorId": "notificationsConnector",
             "name": "PingOne Notifications",
             "label": "PingOne Notifications",
@@ -2845,7 +2845,7 @@
             }
           },
           "position": {
-            "x": 826.3160637971314,
+            "x": 833.3160637971314,
             "y": 1890
           },
           "group": "nodes",
@@ -2863,7 +2863,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 946.3160637971314,
+            "x": 953.3160637971314,
             "y": 1890
           },
           "group": "nodes",
@@ -2879,9 +2879,9 @@
           "data": {
             "id": "6mamd05dwt",
             "nodeType": "CONNECTION",
-            "connectionId": "fc4aa8d2a2b83ef4d595d962d6ba8458",
+            "connectionId": "303fd8c46a2b1aa07349a7dbf25ae84b",
             "connectorId": "flowConnector",
-            "name": "Flow [2022-11-28]",
+            "name": "Flow [2022-12-06]",
             "label": "Flow [2022-10-18]",
             "status": "configured",
             "capabilityName": "oobContinue",
@@ -2893,7 +2893,7 @@
             }
           },
           "position": {
-            "x": 556.3160637971314,
+            "x": 563.3160637971314,
             "y": 2160
           },
           "group": "nodes",
@@ -2912,7 +2912,7 @@
             "label": "Evaluator"
           },
           "position": {
-            "x": 676.3160637971314,
+            "x": 683.3160637971314,
             "y": 2160
           },
           "group": "nodes",
@@ -2928,9 +2928,9 @@
           "data": {
             "id": "5bxqq6j1j0",
             "nodeType": "CONNECTION",
-            "connectionId": "546c96db11cbec884d32ef79a7bbdef4",
+            "connectionId": "b985c8cc816b55240fe7038a7e41a4b7",
             "connectorId": "challengeConnector",
-            "name": "Challenge [2022-11-28]",
+            "name": "Challenge [2022-12-06]",
             "label": "Challenge [2022-10-26]",
             "status": "configured",
             "capabilityName": "updateChallenge",
@@ -2948,7 +2948,7 @@
             }
           },
           "position": {
-            "x": 826.3160637971314,
+            "x": 833.3160637971314,
             "y": 2160
           },
           "group": "nodes",
@@ -2967,7 +2967,7 @@
             "label": "Evaluator"
           },
           "position": {
-            "x": 946.3160637971314,
+            "x": 953.3160637971314,
             "y": 2160
           },
           "group": "nodes",
@@ -3006,7 +3006,7 @@
             }
           },
           "position": {
-            "x": 1126.3160637971314,
+            "x": 1133.3160637971314,
             "y": 2160
           },
           "group": "nodes",
@@ -3025,7 +3025,7 @@
             "label": "Evaluator"
           },
           "position": {
-            "x": 1246.3160637971314,
+            "x": 1253.3160637971314,
             "y": 1890
           },
           "group": "nodes",
@@ -3041,9 +3041,9 @@
           "data": {
             "id": "n4x0ncm1x1",
             "nodeType": "CONNECTION",
-            "connectionId": "546c96db11cbec884d32ef79a7bbdef4",
+            "connectionId": "b985c8cc816b55240fe7038a7e41a4b7",
             "connectorId": "challengeConnector",
-            "name": "Challenge [2022-11-28]",
+            "name": "Challenge [2022-12-06]",
             "label": "Challenge [2022-10-26]",
             "status": "configured",
             "capabilityName": "getChallenge",
@@ -3058,7 +3058,7 @@
             }
           },
           "position": {
-            "x": 1426.3160637971314,
+            "x": 1433.3160637971314,
             "y": 1890
           },
           "group": "nodes",
@@ -3077,7 +3077,7 @@
             "label": "Evaluator"
           },
           "position": {
-            "x": 1546.3160637971314,
+            "x": 1553.3160637971314,
             "y": 1890
           },
           "group": "nodes",
@@ -3113,7 +3113,7 @@
             }
           },
           "position": {
-            "x": 1696.3160637971314,
+            "x": 1703.3160637971314,
             "y": 1890
           },
           "group": "nodes",
@@ -3137,7 +3137,7 @@
             }
           },
           "position": {
-            "x": 1816.3160637971314,
+            "x": 1823.3160637971314,
             "y": 1890
           },
           "group": "nodes",
@@ -3153,9 +3153,9 @@
           "data": {
             "id": "k284u1rxut",
             "nodeType": "CONNECTION",
-            "connectionId": "f0c55efe299c81d34c0013fe8736c495",
+            "connectionId": "36f92d1faf2818b5fb7345e8b8d4d43f",
             "connectorId": "nodeConnector",
-            "name": "Node [2022-11-28]",
+            "name": "Node [2022-12-06]",
             "label": "Node [2022-10-20]",
             "status": "configured",
             "capabilityName": "returnBackToCallingNode",
@@ -3167,7 +3167,7 @@
             }
           },
           "position": {
-            "x": 2199.3160637971314,
+            "x": 2206.3160637971314,
             "y": 1890
           },
           "group": "nodes",
@@ -3204,7 +3204,7 @@
             }
           },
           "position": {
-            "x": 1966.3160637971314,
+            "x": 1973.3160637971314,
             "y": 2070
           },
           "group": "nodes",
@@ -3264,7 +3264,7 @@
             "idUnique": "yhtoj6rjm6"
           },
           "position": {
-            "x": 1036.3160637971314,
+            "x": 1043.3160637971314,
             "y": 1770
           },
           "group": "nodes",
@@ -3324,7 +3324,7 @@
             "idUnique": "5vi0jyrkei"
           },
           "position": {
-            "x": 1576.3160637971314,
+            "x": 1583.3160637971314,
             "y": 1770
           },
           "group": "nodes",
@@ -3384,7 +3384,7 @@
             "idUnique": "kbwqhb2vhj"
           },
           "position": {
-            "x": 1876.3160637971314,
+            "x": 1883.3160637971314,
             "y": 1980
           },
           "group": "nodes",
@@ -3444,7 +3444,7 @@
             "idUnique": "xgrqynde5m"
           },
           "position": {
-            "x": 736.3160637971314,
+            "x": 743.3160637971314,
             "y": 2070
           },
           "group": "nodes",
@@ -3460,9 +3460,9 @@
           "data": {
             "id": "5gvsn86mfc",
             "nodeType": "CONNECTION",
-            "connectionId": "c4b2032a1b63d370c5fbdd205522f1c5",
+            "connectionId": "9e8263f598b2d25e7780a76e0dfa5140",
             "connectorId": "analyticsConnector",
-            "name": "Flow Analytics",
+            "name": "Analytics [2022-12-06]",
             "label": "Flow Analytics",
             "status": "configured",
             "capabilityName": "logOutcome",
@@ -3483,7 +3483,7 @@
             }
           },
           "position": {
-            "x": 1401.2725320520485,
+            "x": 1408.2725320520485,
             "y": 883.3569894694666
           },
           "group": "nodes",
@@ -3501,7 +3501,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1508.346106533196,
+            "x": 1515.346106533196,
             "y": 883.3569894694666
           },
           "group": "nodes",
@@ -3519,7 +3519,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1508.346106533196,
+            "x": 1515.346106533196,
             "y": 1043.9673511911878
           },
           "group": "nodes",
@@ -3535,9 +3535,9 @@
           "data": {
             "id": "jwucq83maf",
             "nodeType": "CONNECTION",
-            "connectionId": "c4b2032a1b63d370c5fbdd205522f1c5",
+            "connectionId": "9e8263f598b2d25e7780a76e0dfa5140",
             "connectorId": "analyticsConnector",
-            "name": "Flow Analytics",
+            "name": "Analytics [2022-12-06]",
             "label": "Flow Analytics",
             "status": "configured",
             "capabilityName": "logOutcome",
@@ -3547,7 +3547,7 @@
                 "value": "PASSWORD_LOGIN"
               },
               "outcomeStatus": {
-                "value": "error"
+                "value": "PASSWORD_LOGIN_ERROR"
               },
               "shouldContinueOnError": {
                 "value": true
@@ -3559,7 +3559,7 @@
             "idUnique": "ch0pr3z86q"
           },
           "position": {
-            "x": 1401.2725320520485,
+            "x": 1408.2725320520485,
             "y": 1043.9673511911878
           },
           "group": "nodes",
@@ -3575,9 +3575,9 @@
           "data": {
             "id": "rcee6wfs0i",
             "nodeType": "CONNECTION",
-            "connectionId": "c4b2032a1b63d370c5fbdd205522f1c5",
+            "connectionId": "9e8263f598b2d25e7780a76e0dfa5140",
             "connectorId": "analyticsConnector",
-            "name": "Flow Analytics",
+            "name": "Analytics [2022-12-06]",
             "label": "Flow Analytics",
             "status": "configured",
             "capabilityName": "logOutcome",
@@ -3599,7 +3599,7 @@
             "idUnique": "ijmik3ndqa"
           },
           "position": {
-            "x": 1410,
+            "x": 1417,
             "y": 1380
           },
           "group": "nodes",
@@ -3615,9 +3615,9 @@
           "data": {
             "id": "vupdbsre3n",
             "nodeType": "CONNECTION",
-            "connectionId": "c4b2032a1b63d370c5fbdd205522f1c5",
+            "connectionId": "9e8263f598b2d25e7780a76e0dfa5140",
             "connectorId": "analyticsConnector",
-            "name": "Flow Analytics",
+            "name": "Analytics [2022-12-06]",
             "label": "Flow Analytics",
             "status": "configured",
             "capabilityName": "logOutcome",
@@ -3639,7 +3639,7 @@
             "idUnique": "m5buzzmtmv"
           },
           "position": {
-            "x": 1410,
+            "x": 1417,
             "y": 1560
           },
           "group": "nodes",
@@ -3657,7 +3657,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1530,
+            "x": 1537,
             "y": 1560
           },
           "group": "nodes",
@@ -3673,9 +3673,9 @@
           "data": {
             "id": "33qanxdlri",
             "nodeType": "CONNECTION",
-            "connectionId": "c4b2032a1b63d370c5fbdd205522f1c5",
+            "connectionId": "9e8263f598b2d25e7780a76e0dfa5140",
             "connectorId": "analyticsConnector",
-            "name": "Flow Analytics",
+            "name": "Analytics [2022-12-06]",
             "label": "Flow Analytics",
             "status": "configured",
             "capabilityName": "logOutcome",
@@ -3697,7 +3697,7 @@
             "idUnique": "0b44y10cvt"
           },
           "position": {
-            "x": 1959.3160637971314,
+            "x": 1966.3160637971314,
             "y": 1890
           },
           "group": "nodes",
@@ -3715,7 +3715,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2079.3160637971314,
+            "x": 2086.3160637971314,
             "y": 1890
           },
           "group": "nodes",
@@ -3731,9 +3731,9 @@
           "data": {
             "id": "5d8juu8kbc",
             "nodeType": "CONNECTION",
-            "connectionId": "c4b2032a1b63d370c5fbdd205522f1c5",
+            "connectionId": "9e8263f598b2d25e7780a76e0dfa5140",
             "connectorId": "analyticsConnector",
-            "name": "Flow Analytics",
+            "name": "Analytics [2022-12-06]",
             "label": "Flow Analytics",
             "status": "configured",
             "capabilityName": "logOutcome",
@@ -3755,7 +3755,7 @@
             "idUnique": "rvrca237l1"
           },
           "position": {
-            "x": 839.1362660260243,
+            "x": 846.1362660260243,
             "y": 401.525904304303
           },
           "group": "nodes",
@@ -3771,9 +3771,9 @@
           "data": {
             "id": "s9egwsr57x",
             "nodeType": "CONNECTION",
-            "connectionId": "c4b2032a1b63d370c5fbdd205522f1c5",
+            "connectionId": "9e8263f598b2d25e7780a76e0dfa5140",
             "connectorId": "analyticsConnector",
-            "name": "Flow Analytics",
+            "name": "Analytics [2022-12-06]",
             "label": "Flow Analytics",
             "status": "configured",
             "capabilityName": "logOutcome",
@@ -3795,7 +3795,7 @@
             "idUnique": "x5xbhitw6m"
           },
           "position": {
-            "x": 2846.7657875475393,
+            "x": 2853.7657875475393,
             "y": 401.525904304303
           },
           "group": "nodes",
@@ -3813,7 +3813,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2953.839362028687,
+            "x": 2960.839362028687,
             "y": 401.525904304303
           },
           "group": "nodes",
@@ -3831,7 +3831,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2686.1554258258184,
+            "x": 2693.1554258258184,
             "y": 428.2942979245899
           },
           "group": "nodes",
@@ -3849,7 +3849,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2686.1554258258184,
+            "x": 2693.1554258258184,
             "y": 455.06269154487677
           },
           "group": "nodes",
@@ -3867,7 +3867,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 678.5259043043031,
+            "x": 685.5259043043031,
             "y": 401.525904304303
           },
           "group": "nodes",
@@ -3885,7 +3885,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 946.2098405071717,
+            "x": 953.2098405071717,
             "y": 401.525904304303
           },
           "group": "nodes",
@@ -3903,7 +3903,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1830,
+            "x": 1837,
             "y": 1380
           },
           "group": "nodes",
@@ -3921,7 +3921,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1530,
+            "x": 1537,
             "y": 1380
           },
           "group": "nodes",
@@ -5403,6 +5403,6 @@
     }
   },
   "flowColor": "#ff661c",
-  "savedDate": 1670246424389,
+  "savedDate": 1670327783819,
   "variables": []
 }
