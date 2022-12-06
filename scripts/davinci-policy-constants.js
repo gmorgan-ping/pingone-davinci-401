@@ -31,13 +31,13 @@ const EX_4_AUTHENTICATION_START_POLICY_ID = "7612452db2dadc84647aa37a82320807"
 const EX_4_AUTHENTICATION_COMPLETED_POLICY_ID = "e90274f1fd7d4fa53316929d09a61ed3"
 
 /************************************************************************************
-* EXERCISE 5 POLICIES
+* EXERCISE 5 POLICIES - MAGIC LINK
 ************************************************************************************/
 const EX_5_AUTHENTICATION_START_POLICY_ID = "03624fd347d876edd67cc7ff452d3a35"
 const EX_5_AUTHENTICATION_COMPLETED_POLICY_ID = "d59b68ec4b6f0dd40f9a6d29e613f9f2"
 
 /************************************************************************************
-* EXERCISE 6 POLICIES
+* EXERCISE 6 POLICIES - ANALYTICS
 ************************************************************************************/
 const EX_6_AUTHENTICATION_START_POLICY_ID = "ff7737adff7f6212ec06810e13a08ff5"
 const EX_6_AUTHENTICATION_COMPLETED_POLICY_ID = "a09a00680d70bde5f96a69358850e630"

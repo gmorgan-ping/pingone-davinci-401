@@ -17,7 +17,7 @@
   "customerId": "f3e47d945ae971a4b4142ec75012d155",
   "description": "\n",
   "flowStatus": "enabled",
-  "name": "401-5 Sign In with Magic Link",
+  "name": "401-5: COMPLETED Sign In with Magic Link",
   "publishedVersion": 41,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
